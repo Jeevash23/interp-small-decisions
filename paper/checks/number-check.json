@@ -5070,7 +5070,7 @@
   "detail": ""
  },
  {
-  "name": "text (v5): repository address and the marked DOI placeholder",
+  "name": "text (v6): repository address and the release archive DOI, no placeholder left",
   "ok": true,
   "detail": ""
  },

@@ -1,14 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite the paper and this repository."
 title: "Small decisions, mostly separate parts: code, frozen protocols and saved outputs"
-abstract: "Code, frozen protocols, held-out material and saved outputs behind the paper 'Small decisions, mostly separate parts: how small language models indent code, choose ordinal suffixes and write in capitals' (version 5, 2026-11-11)."
+abstract: "Code, frozen protocols, held-out material and saved outputs behind the paper 'Small decisions, mostly separate parts: how small language models indent code, choose ordinal suffixes and write in capitals' (version 6, 2026-11-12)."
 type: software
 authors:
   - family-names: "Jeevash"
     given-names: "Richard"
     affiliation: "Independent researcher"
     orcid: "https://orcid.org/0009-0005-7812-0939"
-version: "1.0"
+version: "1.1"
+doi: 10.5281/zenodo.24150048
 license: MIT
 repository-code: "https://github.com/Jeevash23/interp-small-decisions"
 keywords:
@@ -25,4 +26,4 @@ preferred-citation:
       given-names: "Richard"
       orcid: "https://orcid.org/0009-0005-7812-0939"
   year: 2026
-  notes: "Preprint, version 5 (2026-11-11); the reference will be added when it is public."
+  notes: "Preprint, version 6 (2026-11-12); the reference will be added when it is public."

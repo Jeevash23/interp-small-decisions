@@ -168,5 +168,8 @@ MIT (`LICENSE`) for the code and the studies' records and outputs; the third-par
 keeps its own terms.
 
 Richard Jeevash. *Small decisions, mostly separate parts: how small language models indent code, choose ordinal
-suffixes and write in capitals*. Preprint, version 5 (2026-11-11), 2026. See `CITATION.cff`; the
+suffixes and write in capitals*. Preprint, version 6 (2026-11-12), 2026. See `CITATION.cff`; the
 preprint's link will be added here when it is public.
+
+Archived on Zenodo: all versions https://doi.org/10.5281/zenodo.24150048 (concept DOI); release v1.0
+https://doi.org/10.5281/zenodo.24150049.

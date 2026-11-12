@@ -1,0 +1,22 @@
+{
+ "query": "language:Python created:>=2026-09-01 fork:false archived:false stars:>=3 license:{}",
+ "licences": [
+  "mit",
+  "apache-2.0",
+  "bsd-3-clause",
+  "bsd-2-clause",
+  "cc0-1.0",
+  "unlicense"
+ ],
+ "fetched_utc": "2026-11-10T15:28:24Z",
+ "repos_listed": 1404,
+ "repos_after_exclusion": 1068,
+ "excluded_names": 837,
+ "repos_used": 274,
+ "files": 1000,
+ "bytes": 9460326,
+ "dropped": {
+  "raw_fail": 4,
+  "file_licence": 1
+ }
+}

@@ -1,0 +1,23 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{Round 2, \qsix{}, head \hd{23}{2}: frozen predictions and results on held-out material. Natural code: \nv{d3.c2.q.n.ded} unmarked dedents, \nv{d3.c2.q.n.same} same-level lines and \nv{d3.c2.q.n.term} terminal dedents; generated: \nv{d3.c2.qg.n.terminal} programs ending a block with a terminal statement. Changes are in mean log-probability of the true indent unless stated. Intervals resample repositories (2{,}000 resamples) and are descriptive.}
+\label{tab:d3-conf2q}
+\begin{tabularx}{\linewidth}{@{}lYYl@{}}
+\toprule
+& Prediction & Result & Verdict \\
+\midrule
+Q1 & Attention to the innermost open header's \code{:\textbackslash n} at unmarked dedents $\geq 0.30$ and $\geq 2.5\times$ that at same-level lines & \nv{d3.c2.q.att_inner_ded}\ci{\nv{d3.c2.q.ci.att_inner_ded.lo}}{\nv{d3.c2.q.ci.att_inner_ded.hi}}; \nv{d3.c2.q.att_inner_same} & \nv{d3.c2.v.Q1} \\
+Q2 & Knocking out that token, unmarked dedents: $\leq -0.05$, below every other layer-23 head, and at least twice the largest absolute change among them & \nv{d3.c2.q.ko_inner_ded}\ci{\nv{d3.c2.q.ci.ko_inner_ded.lo}}{\nv{d3.c2.q.ci.ko_inner_ded.hi}}; others \nv{d3.c2.q.others_lo} to \nv{d3.c2.q.others_hi} & \nv{d3.c2.v.Q2} \\
+Q3 & Same knock-out: same-level lines $\geq -0.02$; terminal dedents at most a quarter of Q2 in size & \nv{d3.c2.q.ko_inner_same}; \nv{d3.c2.q.ko_inner_term} & \nv{d3.c2.v.Q3} \\
+Q4 & Knocking out the latest closed header instead: at most half of the open-header knock-out on the same points & \nv{d3.c2.q.ko_closed_ded} against \nv{d3.c2.q.ko_inner_ded_closedsub} & \nv{d3.c2.v.Q4} \\
+Q5 & Most-attended open header is the target where the target is not the innermost: $\geq 0.60$; over all multi-header dedents, beats the innermost rule by $\geq 0.02$ & \nv{d3.c2.q.pick_not_inner}\ci{\nv{d3.c2.q.ci.pick_not_inner.lo}}{\nv{d3.c2.q.ci.pick_not_inner.hi}}; \nv{d3.c2.q.pick_all_multi} against \nv{d3.c2.q.innermost_rule_all_multi} & \nv{d3.c2.v.Q5} \\
+Q6 & Steering, natural unmarked dedents: rise $\geq 1.0$ and $\geq 5\times$ the control; becomes top in a share $\geq$ control $+\,0.05$ & \nv{d3.c2.q.steer_dedent_head_dlq} (control \nv{d3.c2.q.steer_dedent_ctrl_dlq}); \nv{d3.c2.q.steer_dedent_head_top} (\nv{d3.c2.q.steer_dedent_ctrl_top}) & \nv{d3.c2.v.Q6} \\
+Q7 & Knocking out the true-level header: $\leq -0.10$ & \nv{d3.c2.q.ko_true_ded} & \nv{d3.c2.v.Q7} \\
+Q8 & Steering, generated terminal targets: rise $\geq 1.0$ and $\geq 5\times$ control; top in $\geq 0.20$ and $\geq$ control $+\,0.10$ & \nv{d3.c2.qg.steer_term_head_dlq} (control \nv{d3.c2.qg.steer_term_ctrl_dlq}); \nv{d3.c2.qg.steer_term_head_top} (\nv{d3.c2.qg.steer_term_ctrl_top}) & \nv{d3.c2.v.Q8} \\
+Q9 & \code{return}: removing the decision-token-to-keyword edge in all layers closes $\geq 0.40$ of the gap to the neutral line & \nv{d3.c2.qg.share_blk_kw_return}\ci{\nv{d3.c2.qg.ci.share.lo}}{\nv{d3.c2.qg.ci.share.hi}} & \nv{d3.c2.v.Q9} \\
+Q10 & Largest single-layer share at most $0.35\times$ the Q9 share & \nv{d3.c2.qg.share_layer_return_max} (layer \nv{d3.c2.qg.layer_return_arg}) & \nv{d3.c2.v.Q10} \\
+Q11 & \hd{0}{2} ablated on the terminal line and decision token: the probability $q$ of staying at the current indent changes by at most 0.05 & \nv{d3.c2.qg.l0h2_line_dqcur_term}\ci{\nv{d3.c2.qg.ci.l0h2.lo}}{\nv{d3.c2.qg.ci.l0h2.hi}} & \nv{d3.c2.v.Q11} \\
+\bottomrule
+\end{tabularx}
+\end{table}

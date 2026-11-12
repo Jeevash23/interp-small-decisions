@@ -1,0 +1,68 @@
+{"fid": "dates-067afe13", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "Our anniversary dinner is booked for the {N}"}
+{"fid": "dates-1946f755", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "The concert was postponed until the {N}"}
+{"fid": "dates-30b7a5ac", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "The match was played on Saturday the {N}"}
+{"fid": "dates-4580ed9f", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "The results will be published on the {N}"}
+{"fid": "dates-47e24884", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "The rent is due on the {N}"}
+{"fid": "dates-580c061f", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "Payment must be received before the {N}"}
+{"fid": "dates-628ded1c", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "School starts again on the {N}"}
+{"fid": "dates-68d8e03a", "family": "dates", "part": "explore", "lo": 1, "hi": 31, "text": "The festival is held every year on the {N}"}
+{"fid": "dates-715d9727", "family": "dates", "part": "conf", "lo": 1, "hi": 31, "text": "Her birthday falls on the {N}"}
+{"fid": "dates-a47c3b52", "family": "dates", "part": "conf", "lo": 1, "hi": 31, "text": "The wedding took place on the {N}"}
+{"fid": "dates-afc4e87f", "family": "dates", "part": "conf", "lo": 1, "hi": 31, "text": "The deadline has been moved to the {N}"}
+{"fid": "dates-b46c05c1", "family": "dates", "part": "conf", "lo": 1, "hi": 31, "text": "The shop reopens on Monday the {N}"}
+{"fid": "dates-b8e73788", "family": "dates", "part": "conf", "lo": 1, "hi": 31, "text": "We are flying out on the {N}"}
+{"fid": "dates-bade3312", "family": "dates", "part": "reserve", "lo": 1, "hi": 31, "text": "The next board meeting is on the {N}"}
+{"fid": "dates-c928319f", "family": "dates", "part": "reserve", "lo": 1, "hi": 31, "text": "The parcel should arrive by the {N}"}
+{"fid": "dates-eb384fc0", "family": "dates", "part": "reserve", "lo": 1, "hi": 31, "text": "Applications close on the {N}"}
+{"fid": "centuries-13521584", "family": "centuries", "part": "explore", "lo": 1, "hi": 21, "text": "The empire collapsed in the {N}"}
+{"fid": "centuries-18af08e1", "family": "centuries", "part": "explore", "lo": 1, "hi": 21, "text": "Most of the castle walls date from the {N}"}
+{"fid": "centuries-47cc365e", "family": "centuries", "part": "explore", "lo": 1, "hi": 21, "text": "These coins were minted in the early {N}"}
+{"fid": "centuries-518ec4b3", "family": "centuries", "part": "explore", "lo": 1, "hi": 21, "text": "The custom spread across Europe in the {N}"}
+{"fid": "centuries-6b0a3431", "family": "centuries", "part": "explore", "lo": 1, "hi": 21, "text": "The chapel was built in the {N}"}
+{"fid": "centuries-80bf669a", "family": "centuries", "part": "explore", "lo": 1, "hi": 21, "text": "The tradition goes back to the {N}"}
+{"fid": "centuries-8ec69050", "family": "centuries", "part": "conf", "lo": 1, "hi": 21, "text": "The bridge was rebuilt during the {N}"}
+{"fid": "centuries-9d68aed1", "family": "centuries", "part": "conf", "lo": 1, "hi": 21, "text": "The poem was written in the late {N}"}
+{"fid": "centuries-a1c816cd", "family": "centuries", "part": "conf", "lo": 1, "hi": 21, "text": "The manuscript dates from the {N}"}
+{"fid": "centuries-cc6f7ba2", "family": "centuries", "part": "conf", "lo": 1, "hi": 21, "text": "The painting is thought to come from the {N}"}
+{"fid": "centuries-e12ffc60", "family": "centuries", "part": "reserve", "lo": 1, "hi": 21, "text": "Trade with the east grew rapidly during the {N}"}
+{"fid": "centuries-fa3e54da", "family": "centuries", "part": "reserve", "lo": 1, "hi": 21, "text": "The town was founded in the {N}"}
+{"fid": "rankings-0103739b", "family": "rankings", "part": "explore", "lo": 1, "hi": 9999, "text": "Out of all the runners in the city marathon, she finished {N}"}
+{"fid": "rankings-0473e4e4", "family": "rankings", "part": "explore", "lo": 1, "hi": 9999, "text": "Among the thousands of entries, his photograph was ranked {N}"}
+{"fid": "rankings-18b7cd6f", "family": "rankings", "part": "explore", "lo": 1, "hi": 9999, "text": "In the national spelling contest, she came {N}"}
+{"fid": "rankings-3116c3c6", "family": "rankings", "part": "explore", "lo": 1, "hi": 9999, "text": "Out of every cyclist in the race, he crossed the line {N}"}
+{"fid": "rankings-37b5d7a3", "family": "rankings", "part": "explore", "lo": 1, "hi": 9999, "text": "Among all the cities surveyed, ours was rated {N}"}
+{"fid": "rankings-495218fb", "family": "rankings", "part": "explore", "lo": 1, "hi": 9999, "text": "In the world rankings, the player has dropped to {N}"}
+{"fid": "rankings-74122d0a", "family": "rankings", "part": "explore", "lo": 1, "hi": 9999, "text": "In the online chess tournament, she finished {N}"}
+{"fid": "rankings-8f3fbd6b", "family": "rankings", "part": "conf", "lo": 1, "hi": 9999, "text": "In this year's league table, the university is now placed {N}"}
+{"fid": "rankings-9cb07047", "family": "rankings", "part": "conf", "lo": 1, "hi": 9999, "text": "In the annual league table, the school came {N}"}
+{"fid": "rankings-a5135434", "family": "rankings", "part": "conf", "lo": 1, "hi": 9999, "text": "On the bestseller chart this week, the novel is {N}"}
+{"fid": "rankings-b951da75", "family": "rankings", "part": "conf", "lo": 1, "hi": 9999, "text": "In the final standings, the team ended up {N}"}
+{"fid": "rankings-bed7b461", "family": "rankings", "part": "reserve", "lo": 1, "hi": 9999, "text": "On the global list of the largest companies, the firm sits {N}"}
+{"fid": "rankings-c4b9bbe7", "family": "rankings", "part": "reserve", "lo": 1, "hi": 9999, "text": "In the city's list of busiest streets, this road comes {N}"}
+{"fid": "rankings-ffe6a992", "family": "rankings", "part": "reserve", "lo": 1, "hi": 9999, "text": "Of the many applicants, he was placed {N}"}
+{"fid": "anniversaries-18376b87", "family": "anniversaries", "part": "explore", "lo": 1, "hi": 999, "text": "Next month the cathedral celebrates its {N}"}
+{"fid": "anniversaries-1b37bb09", "family": "anniversaries", "part": "explore", "lo": 1, "hi": 999, "text": "Friends gathered at the pub for his {N}"}
+{"fid": "anniversaries-293b5730", "family": "anniversaries", "part": "explore", "lo": 1, "hi": 999, "text": "The village fair is celebrating its {N}"}
+{"fid": "anniversaries-3751c8e8", "family": "anniversaries", "part": "explore", "lo": 1, "hi": 999, "text": "The university marked its {N}"}
+{"fid": "anniversaries-44ae764e", "family": "anniversaries", "part": "explore", "lo": 1, "hi": 999, "text": "Last week the company celebrated its {N}"}
+{"fid": "anniversaries-561f2cc1", "family": "anniversaries", "part": "explore", "lo": 1, "hi": 999, "text": "The couple are celebrating their {N}"}
+{"fid": "anniversaries-72d16b9c", "family": "anniversaries", "part": "conf", "lo": 1, "hi": 999, "text": "This year the club will celebrate its {N}"}
+{"fid": "anniversaries-b7b0f845", "family": "anniversaries", "part": "conf", "lo": 1, "hi": 999, "text": "The museum opened a new wing to mark its {N}"}
+{"fid": "anniversaries-c0624705", "family": "anniversaries", "part": "conf", "lo": 1, "hi": 999, "text": "The school held a party for its {N}"}
+{"fid": "anniversaries-e5347461", "family": "anniversaries", "part": "conf", "lo": 1, "hi": 999, "text": "The town is preparing to mark its {N}"}
+{"fid": "anniversaries-f30518bd", "family": "anniversaries", "part": "reserve", "lo": 1, "hi": 999, "text": "Yesterday my grandmother celebrated her {N}"}
+{"fid": "anniversaries-f5a2615b", "family": "anniversaries", "part": "reserve", "lo": 1, "hi": 999, "text": "The newspaper is printing a special issue for its {N}"}
+{"fid": "positions-161b094e", "family": "positions", "part": "explore", "lo": 1, "hi": 9999, "text": "The parliament is now in its {N}"}
+{"fid": "positions-370c8d19", "family": "positions", "part": "explore", "lo": 1, "hi": 9999, "text": "The assembly opened its {N}"}
+{"fid": "positions-3dcdfde8", "family": "positions", "part": "explore", "lo": 1, "hi": 9999, "text": "She tried the password again and finally got in on the {N}"}
+{"fid": "positions-71e58ea2", "family": "positions", "part": "explore", "lo": 1, "hi": 9999, "text": "The festival is now in its {N}"}
+{"fid": "positions-7fd5f71a", "family": "positions", "part": "explore", "lo": 1, "hi": 9999, "text": "The catalogue has many items, and the one you want is the {N}"}
+{"fid": "positions-8a4df2f5", "family": "positions", "part": "explore", "lo": 1, "hi": 9999, "text": "The spreadsheet has thousands of rows, and the error is in the {N}"}
+{"fid": "positions-9dc5dfc6", "family": "positions", "part": "explore", "lo": 1, "hi": 9999, "text": "The pages are numbered, and the quote appears on the {N}"}
+{"fid": "positions-ae79d2f0", "family": "positions", "part": "conf", "lo": 1, "hi": 9999, "text": "The tower has many floors, and our office is on the {N}"}
+{"fid": "positions-ba6cbef0", "family": "positions", "part": "conf", "lo": 1, "hi": 9999, "text": "The sequence is long, and the value we need is the {N}"}
+{"fid": "positions-c16cdace", "family": "positions", "part": "conf", "lo": 1, "hi": 9999, "text": "Among the many visitors that day, she was the {N}"}
+{"fid": "positions-c9c06ca2", "family": "positions", "part": "conf", "lo": 1, "hi": 9999, "text": "The lift stopped at the {N}"}
+{"fid": "positions-d08381f9", "family": "positions", "part": "reserve", "lo": 1, "hi": 9999, "text": "The novel is now in its {N}"}
+{"fid": "positions-dc6cc207", "family": "positions", "part": "reserve", "lo": 1, "hi": 9999, "text": "The orchestra performed the symphony for the {N}"}
+{"fid": "positions-df166754", "family": "positions", "part": "reserve", "lo": 1, "hi": 9999, "text": "The magazine has just released its {N}"}

@@ -1,0 +1,16 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{Other one-token-per-digit models, held out: mean ablation of early heads at the last position. ``Pull'' is the mean suffix margin of non-teen numbers; random sets are 20 sets of the same size from layers 0--1.}
+\label{tab:d4-other}
+\begin{tabular}{@{}l l c c c c@{}}
+\toprule
+Model & Heads & Digits & Teen effect kept & Pull kept & Lowest random set \\
+\midrule
+Qwen3-1.7B-Base & PREV \hd{0}{2}+\hd{1}{6} & 3 / 4 & \nv{d4.r2.x.q17.3.PREV.teen} / \nv{d4.r2.x.q17.4.PREV.teen} & \textbf{\nv{d4.r2.x.q17.3.PREV.pull}} / \textbf{\nv{d4.r2.x.q17.4.PREV.pull}} & \nv{d4.r2.x.q17.3.PREV.rmin} / \nv{d4.r2.x.q17.4.PREV.rmin} (teen) \\
+ & CUR \hd{0}{3}+\hd{0}{7} & 3 / 4 & \nv{d4.r2.x.q17.3.CUR.teen} / \nv{d4.r2.x.q17.4.CUR.teen} & \nv{d4.r2.x.q17.3.CUR.pull} / \nv{d4.r2.x.q17.4.CUR.pull} & \nv{d4.r2.x.q17.3.CUR.rmin} / \nv{d4.r2.x.q17.4.CUR.rmin} (pull) \\
+SmolLM2-1.7B & PREV \hd{0}{6}+\hd{0}{8} & 3 / 4 & \nv{d4.r2.x.smol.3.PREV.teen} / \nv{d4.r2.x.smol.4.PREV.teen} & \nv{d4.r2.x.smol.3.PREV.pull} / \nv{d4.r2.x.smol.4.PREV.pull} & \nv{d4.r2.x.smol.3.PREV.rmin} / \nv{d4.r2.x.smol.4.PREV.rmin} (teen) \\
+Gemma-4-E2B & PREV \hd{0}{4} & 3 / 4 & \nv{d4.r2.x.gemma.3.PREV.teen} / \nv{d4.r2.x.gemma.4.PREV.teen} & \nv{d4.r2.x.gemma.3.PREV.pull} / \nv{d4.r2.x.gemma.4.PREV.pull} & \nv{d4.r2.x.gemma.3.PREV.rmin} / \nv{d4.r2.x.gemma.4.PREV.rmin} (teen) \\
+\bottomrule
+\end{tabular}
+\end{table}

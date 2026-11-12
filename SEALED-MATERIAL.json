@@ -1,0 +1,40 @@
+{
+ "about": "Held-out material that no model has read (or has read only in part) is not shipped, so it can still serve as held-out material. Each file's SHA-256 equals the one in its study's FROZEN.md, so it can be checked when it is released. The paper's number scripts read the counts they quote from here.",
+ "files": {
+  "D3-indentation/data/r2gen/part-held.jsonl": {
+   "sha256": "c7f9083b85a9adc4adf5acb31d3741c89b1d7d598d9a402323d34fcfa8ff5e79",
+   "bytes": 3748064,
+   "lines": 4000,
+   "why_not_shipped": "D3 round-2 reserve: 4,000 generated programs (seeds 200000-203999), sealed 8 Nov 2026 and never read by a model or script for results (PROTOCOL-2.md: 'not used and stays sealed as a reserve')"
+  },
+  "D4-ordinal-suffixes/data/part-reserve.jsonl": {
+   "sha256": "729004f4b3416685ca41c288d3878eb866a36d4ae3bac2f61271efc85711b99a",
+   "bytes": 994791,
+   "lines": 7145,
+   "why_not_shipped": "D4 round-1 reserve part (items in round-1 reserve frames), sealed 7 Nov 2026 and never read as a file; X1's ordinal material later used its frames and half of its numbers (X1-shared-parts/data/ord/)"
+  },
+  "D4-ordinal-suffixes/data2/frames2.jsonl": {
+   "sha256": "fd5831171747233f250d41a715466e7dbf45abd9d07248f0c74bd3790a7b3072",
+   "bytes": 7482,
+   "lines": 48,
+   "why_not_shipped": "D4 round-2 held-out frames: holds the 5 date frames that no model has read (the tests used the 19 ranking, position and anniversary frames, whose items are in the round-2 confirmation outputs); the frozen loader checks the whole file's digest, so it cannot be shipped without them",
+   "frames_by_family_and_part": {
+    "rankings|explore2": 7,
+    "rankings|held2": 7,
+    "positions|explore2": 7,
+    "positions|held2": 7,
+    "anniversaries|explore2": 5,
+    "anniversaries|held2": 5,
+    "dates|explore2": 5,
+    "dates|held2": 5
+   }
+  },
+  "D5-capitals/data/headings-reserve.jsonl": {
+   "sha256": "d3cdc3e7ed17539c0b0554fb7db8a786586888e5a01598c9ae7da13629562335",
+   "bytes": 1114338,
+   "lines": 1335,
+   "why_not_shipped": "D5 round-2 held-out heading items: items 0-499 (after the loader's seed-0 shuffle) were read by the round-2 confirmation; the other 835 of 1,335 were never read",
+   "distinct_pageid": 541
+  }
+ }
+}

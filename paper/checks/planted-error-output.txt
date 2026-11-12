@@ -1,0 +1,27 @@
+# Planted-error test, v5, 11 Nov 2026: a copy of numbers.tex with twenty values changed (v4's thirteen, and seven for the v5 round-3 keys)
+# d3.c2.q.ko_inner_ded: −0.148 -> −0.149; d4.r2.q.4.R5.share: 0.781 -> 0.782; d5.r2.q.W_named_upper: 0.029 -> 0.020; x1m.m.L17H6.LBw: 0.706 -> 0.707; dx.npass: 151 -> 152; dx.ord.nfurther: 5 -> 6; dx.d4r1.npred: 13 -> 14; dx.d4r2.nfailpred.word: one -> two; dx.ordgate.ngated: 8 -> 7; dx.capsgate.ngated.word: six -> four; dx.gemma.effB: 2.3 -> 2.0; x1m.o.L11H9.gT: below -> in; x1m.ph.A3rule.L11H9: met -> not met; r3.r1.H5: −0.032 -> −0.031; r3.e.E1: −0.027 -> −0.028; r3.r2.Q6: +2.74 -> +2.75; r3.e.verdict: confirmed -> not confirmed; r3.npass: 49 -> 48; r3.mat.nchunks: 2,764 -> 2,765; r3.o2.G1: −0.775 -> −0.774
+# Command: scripts/check_numbers.py --numbers <copy>. The checker must fail on each.
+
+1277 checks, 21 failed (numbers file: <scratch folder>)
+FAILED d3: source paper's independent checker on this paper's values (907 checks) value c2.q.ko_inner_ded: text −0.149 vs recomputed -0.148000
+FAILED d4: source paper's independent checker on this paper's values (847 checks) round 2: numbers.json and numbers.tex agree on every r2./thr2. key: ['r2.q.4.R5.share']; round-2 recount: r2.q.4.R5.share: text 0.782 vs recomputed 0.781397; range claim: abstract, MLP24 writes this share of the teen effect (r2.q.4.R5.share–r2.q.6.R5.share) is the min–max of its set: min 0.7814, max
+FAILED d5: source paper's independent checker on this paper's values (1408 checks) recount: r2.q.W_named_upper: text 0.020 vs recomputed 0.029038; every number used in the text was recomputed by this script: ['r2.q.W_named_upper']
+FAILED x1m: x1m.m.L17H6.LBw 0.707 vs 0.706
+FAILED x1m: x1m.o.L11H9.gT in vs below
+FAILED x1m: x1m.ph.A3rule.L11H9 not met vs met
+FAILED dx.npass 151
+FAILED dx.ord.nfurther recounted from the ordinal study's records 6 vs ['gemma4-e2b', 'gpt2', 'pythia-1b', 'qwen3-17b', 'smollm2-17b']
+FAILED dx.d4r1.npred: numbered round-1 predictions in the ordinal study's record 13
+FAILED dx.d4r2.nfailpred.word: distinct failed predictions ['X:qwen3-17b:PREV@3', 'X:qwen3-17b:PREV@4']
+FAILED dx.ordgate.ngated / npass (8, 7)
+FAILED dx.capsgate.ngated.word / npass.word {'gate_gemma': True, 'gate_olmo1b': False, 'gate_pythia-1b': False, 'gate_qwen3-17b': True, 'gate_smollm2': False, 'x1:qwen3-06b': False}
+FAILED dx.gemma.effB / totB against the saved model-card excerpt  2.3B effective <br> (5.1B with embeddings) 
+FAILED r3.mat.nchunks (recomputed from raw records) 2,765 vs 2,764
+FAILED r3.r1.H5 (recomputed from raw records) −0.031 vs −0.032
+FAILED r3.r2.Q6 (recomputed from raw records) +2.75 vs +2.74
+FAILED r3.o2.G1 (recomputed from raw records) −0.774 vs −0.775
+FAILED r3.e.verdict (recomputed from raw records) not confirmed vs confirmed
+FAILED r3.e.E1 (recomputed from raw records) −0.028 vs −0.027
+FAILED r3.npass (recomputed from raw records) 48 vs 49
+FAILED claim: L17H6 and L11H9, and no other single head, meet the criterion frozen for a shared part (A3) {'L17H6': 'met', 'L11H9': 'not met', 'L0H2': 'not met', 'L0H3': 'not met'}
+exit 0

@@ -1,0 +1,442 @@
+\documentclass[11pt]{article}
+
+% Reproducible PDF bytes: no creation date, no random trailer identifier, no producer banner.
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\usepackage{mathptmx}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage[font=small,labelfont=bf,skip=4pt]{caption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks,pdftitle={Two routes to a dedent: how small language models decide to leave a block of Python, and how far},pdfauthor={},pdfcreator={},pdfproducer={}]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.12}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\crefname{appendix}{Appendix}{Appendices}
+
+% Every number from the saved outputs is a macro generated from those outputs by a script.
+\input{numbers}
+\makeatletter
+\newcommand{\nv}[1]{\ifcsname nv@#1\endcsname\csname nv@#1\endcsname\else\PackageError{numbers}{Unknown number key #1}{}\fi}
+\makeatother
+\newcommand{\ci}[2]{\,[#1,\,#2]}
+\newcommand{\qw}{Qwen3-0.6B-Base}
+\newcommand{\hd}[2]{L#1H#2}
+\newcommand{\ded}{\textsc{ded}}
+\newcommand{\term}{\textsc{term}}
+\newcommand{\carry}{\textsc{carry}}
+\newcommand{\ol}{OLMo-2-0425-1B}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{\textbf{Two routes to a dedent:\\ how small language models decide to leave a block of Python, and how far}}
+\author{[Author line to be added]}
+\date{\vspace{-1.5em}November 2026 (second draft)}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\begin{abstract}
+\noindent
+Before it writes the next line of Python, a language model must choose how far to indent it, and in particular whether to leave one or more blocks, without having seen the next keyword. We asked how small pretrained models make this choice, in two rounds. Each round explored under a frozen charter and then tested frozen predictions, with thresholds and random or same-layer controls, once on sealed code that no model had read. Round~1 (\nv{c.npass} of \nv{c.ntests} predictions held) found two routes to a dedent in \qw{}. Round~2 (\nv{c2.npass} of \nv{c2.ntests} held) explains how each route gets its information and finds both in a second model, OLMo-2-0425-1B. After \code{return} and similar statements, the decision token reads the keyword directly, through many heads in many layers. Removing its attention to the keyword closes \nv{c2.qg.share_blk_kw_return} of the gap to a neutral line in \qw{} and \nv{c2.og.share_blk_kw_return} in OLMo-2. Dedents that nothing announces need a block-end route built around one late head, \hd{23}{2} in \qw{} and \hd{13}{1} in OLMo-2. This head attends to the token that ends the header of an open block and copies that header's indent. Which open header it attends to sets how far to dedent: steering its attention to another open header changes the log-probability of that header's indent by \nv{c2.q.steer_dedent_head_dlq} nats in \qw{} (control head \nv{c2.q.steer_dedent_ctrl_dlq}). In the published OLMo-2 training checkpoints, terminal dedents are learned within the first 21 billion tokens and the block-end reader forms later, at a different head from the released model's, whose weights come from another training run.
+\end{abstract}
+
+%======================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Python marks blocks by indentation. After each newline a model writing Python must choose the next line's indent: one level deeper after a line ending in a colon, the same level inside a block, or shallower when a block ends. The choice is made before the next keyword appears, so a dedent is a bet on the structure of the program: whether the current block is finished, and which of the open blocks the next line belongs to. Small models do this well; we wanted to know how.
+
+The closest work describes how indentation is represented. \citet{bassi2026geometry} probed per-token indent level (zero to five levels of four spaces) in Gemma-2-2B, Gemma-2-9B and Qwen3-4B. They found low-dimensional, ordered geometry and used activation patching on probe accuracy, and they note that this tests where information is concentrated, not whether generation depends on it. \citet{gao2025weightsparse} include an indentation task among the hand-made Python tasks on which they find circuits in weight-sparse models trained for the purpose. We know of no account of which components of a pretrained model choose the next line's indent, or of how a model decides to dedent.
+
+We studied this in two rounds, each in two stages and under the same rules. Under a frozen charter we first required behavioural competence, then explored, with attention analysis, ablation, activation patching~\citep{meng2022locating,heimersheim2024patching,zhang2024patching} and probes, until a candidate mechanism appeared. We then wrote down what the candidate predicts, froze those predictions with their thresholds and code, and tested them once on sealed material. Round~1 found two routes to a dedent in \qw{}: a block-end route for dedents that nothing announces, and a terminal-statement route for dedents after \code{return} and similar statements. Round~2 asked how each route gets its information, what decides how far to dedent, and whether a second model, OLMo-2-0425-1B, has the same routes. This note reports both rounds, and keeps exploratory, prospective and post hoc results apart.
+
+%======================================================================
+\section{Setting}
+\label{sec:setting}
+
+\paragraph{Material.} We used two sources, each split before any model read it.
+\begin{itemize}
+\item \emph{Natural code.} \nv{mat.nc.files} Python files (\nv{mat.nc.mb}\,MB) from \nv{mat.nc.repos} public GitHub repositories created on or after 1 September 2026, after the release of every model studied. Files with tabs, non-ASCII text or parse errors were dropped (\nv{mat.nc.norm} files remained). Long files were cut into chunks of whole top-level statements of at most 1{,}400 characters, so every chunk starts at indent zero. This gave \nv{mat.nc.chunks} chunks, split by a hash of the repository name into an exploration part (\nv{mat.nc.explore.chunks} chunks, \nv{mat.nc.explore.repos} repositories) and a held-out part (\nv{mat.nc.conf.chunks} chunks, \nv{mat.nc.conf.repos} repositories). We call the exploration code \emph{post-cut-off}: no model can have seen it in training, but we read it freely. Only the second part is \emph{held out}.
+\item \emph{Generated programs.} A seeded generator wrote valid programs with nested blocks, terminal statements, blank lines, comments and decoys such as \code{"return early"} inside a string. Indent widths were 2, 3 or 4 spaces, or \emph{mixed}, where each nesting level draws its own width, so that some multiples of a unit are never opened. Programs were split by a hash of the seed into \nv{mat.gen.explore} for exploration and \nv{mat.gen.conf} held out.
+\end{itemize}
+Both held-out parts were sealed by digest and made unreadable to the analysis code until the confirmation protocol was frozen.
+
+\paragraph{Round 2 material.} Round~2 sealed new held-out material before any model read it: \nv{mat2.code.chunks} chunks of Python from \nv{mat2.code.repos} repositories created on or after 1 September 2026 with 5 to 9 stars (round~1 used 15 or more), none used in round~1 or in the companion cross-study test; and \nv{mat2.gen2.held} \emph{targeted programs}. A targeted program opens a function and a chain of two to four nested blocks, ends the innermost block with a plain or a terminal statement, and then returns to a randomly chosen open level; a neutral twin replaces a terminal statement with \code{value = value}. Programs were split by a hash of the seed into \nv{mat2.gen2.explore} for exploration and \nv{mat2.gen2.held} held out. Round~2 explored on round~1's exploration parts, on material from the companion test that had already been read, and on the exploration half of the targeted programs. Round~1's held-out parts, read in its confirmation, were not used again.
+
+\paragraph{Decision points and classes.} A decision point is the start of a line that begins a new logical line, follows a line that ended one, and is neither blank nor a comment. We label it by its true indent and the indentation stack: \emph{header} (the previous line opens a block), \emph{same}, \emph{terminal dedent} (shallower, after a terminal statement) or \emph{other dedent} (any other shallower line, for example the first line after an \code{if} body that ended with an ordinary statement).
+
+\paragraph{Measure.} Tokenisers write indentation differently. Pythia~\citep{biderman2023pythia} and Gemma~4~\citep{gemma2026gemma4} write the newline and then one token for the whole run of spaces. Qwen3~\citep{qwen2025qwen3} merges a colon with the newline and writes a run one space short, followed by a word with a leading space. GPT-2~\citep{radford2019language} writes single spaces. For each candidate indent $k$ we take the probability of the tokens that commit the model to exactly $k$ spaces along the tokeniser's own way of writing it. We stop at the first token that tells $k$ apart from every other candidate, but never before the last token that holds a newline. We renormalise over $k$ and call the result $q$. The \emph{decision token} is the last token shared by every candidate. For \qw{} it is the token that ends the previous line (\code{:\textbackslash n}, \code{\textbackslash n} and so on), and every candidate is told apart by the next token.
+
+\paragraph{Gate.} Before any internal analysis, the charter required on the post-cut-off code that: (1) after a header the true indent is the top candidate in at least 90\% of cases; (2) after a terminal statement at least 0.7 of $q$ lies on open shallower levels and the true level is top in at least half of cases; and (3) top-1 accuracy beats copying the previous indent by at least 10 points. Separately, (4) in two-space, three-space and mixed generated code at most 0.10 of $q$ at dedents may fall on shallower levels that were never opened. Pythia-410M was the planned main model, and \qw{} the fallback if Pythia-410M failed and \qw{} passed. GPT-2 and Gemma-4-E2B were contrasts. Round~2's charter fixed the order for a second model: the first of OLMo-2-0425-1B, Qwen3-1.7B-Base and SmolLM2-1.7B to pass the same gate.
+
+\paragraph{Interventions.} \emph{Mean ablation} replaces chosen heads' outputs (at the input of the attention output projection) at every decision token with their mean over all decision tokens of the same material. Every ablation is compared with random head sets that replace each head by another head of the same layer. \emph{Pair patching} uses programs in which the line before a terminal dedent is replaced by \code{value = value} at the same indent. The score is $\log q(\text{true}) - \log q(\text{current level})$, and a set of heads is patched at the decision token from the clean run into the corrupt one (sufficiency) or the other way (necessity), as a share of the mean gap. Round~2 added three tools at the decision token. An \emph{attention knock-out} recomputes one head's output from its clean attention with chosen source positions removed and the rest renormalised. \emph{Steering} sets a head's attention all-on one source token, so that its output becomes that token's value vector. \emph{Edge removal} masks the attention from one position to another in chosen layers. Head-level effects are compared with every other head of the same layer, or with one drawn with a fixed seed. All runs used bfloat16, which we checked against float32 on the exploration scans.
+
+%======================================================================
+\section{Behaviour and the gate}
+\label{sec:gate}
+
+\begin{table}[t]
+\centering\small
+\caption{The gate, on the exploration part of the post-cut-off code (items 1--3) and of the generated programs (item 4). Values after the measurement fix described in the text; \cref{app:prefix} gives both versions. \ol{} was gated in round~2 on the same material.}
+\label{tab:gate}
+\begin{tabularx}{\linewidth}{@{}lYYYYYY@{}}
+\toprule
+Model & points & header top-1 & terminal top-1 & terminal mass on open levels & top-1 minus copy & never-opened mass (worst width) \\
+\midrule
+Pythia-410M & \nv{gate.post.py.n} & \nv{gate.post.py.head} & \nv{gate.post.py.termt} & \nv{gate.post.py.terms} & \nv{gate.post.py.marg} & \nv{gate.post.py.open} \\
+\qw{} & \nv{gate.post.qw.n} & \nv{gate.post.qw.head} & \nv{gate.post.qw.termt} & \nv{gate.post.qw.terms} & \nv{gate.post.qw.marg} & \nv{gate.post.qw.open} \\
+\ol{} & \nv{gate.post.ol.n} & \nv{gate.post.ol.head} & \nv{gate.post.ol.termt} & \nv{gate.post.ol.terms} & \nv{gate.post.ol.marg} & \nv{gate.post.ol.open} \\
+Gemma-4-E2B & \nv{gate.post.ge.n} & \nv{gate.post.ge.head} & \nv{gate.post.ge.termt} & \nv{gate.post.ge.terms} & \nv{gate.post.ge.marg} & \nv{gate.post.ge.open} \\
+GPT-2 & \nv{gate.post.g2.n} & \nv{gate.post.g2.head} & \nv{gate.post.g2.termt} & \nv{gate.post.g2.terms} & \nv{gate.post.g2.marg} & \nv{gate.post.g2.open} \\
+\midrule
+bar & & $\geq 0.90$ & $\geq 0.5$ & $\geq 0.7$ & $\geq 0.10$ & $\leq 0.10$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\Cref{tab:gate} gives the gate. \qw{} passed every item and became the main model under the fallback rule. Gemma-4-E2B also passed. In round~2, \ol{} passed every item and became the second model; the two later models in the order were not needed.
+\begin{itemize}
+\item \emph{Pythia-410M} failed item 1 (\nv{gate.post.py.head} against 0.90) while passing the rest. Its misses are almost all on the first indented line of a chunk, where nothing earlier fixes the width. There its top-1 was \nv{py.first.top1} over \nv{py.first.n} points, with $q$ split on average \nv{py.first.q4} on four spaces and \nv{py.first.q8} on eight. Every other header scored \nv{py.rest.top1} (\nv{py.rest.n} points). \qw{} assumes four spaces from the start. We did not change the bar.
+\item \emph{GPT-2} failed every item. At most newlines it expects a blank line: on average \nv{gate.post.g2.other} of its probability lies outside the candidate indents. Its tokeniser writes a paragraph break before a word as two separate newline tokens, so in its training a lone newline was usually followed by another.
+\item \emph{All three competent models} put almost no probability on levels that were never opened, even in mixed-width code where a fixed unit would point to them.
+\end{itemize}
+
+\paragraph{A measurement error, found and fixed.} The first version of the measure kept a decision point only if every candidate left the tokenisation before the decision token unchanged. Pythia's and GPT-2's tokenisers write a run of blank lines differently before a line at column zero than before an indented line, so for these models every point after a blank line was silently dropped. Pythia kept \nv{gate.v1.py.termpts} terminal dedents where \qw{} kept \nv{gate.post.qw.ntermpts} on the same code. We found the error after seeing the first gate results and fixed it as a dated amendment, adding back only the dropped points. It changed no model's gate verdict; \cref{app:prefix} gives both tables.
+
+%======================================================================
+\section{Round 1: two routes to a dedent}
+\label{sec:explore}
+
+\subsection{Exploration (exploratory)}
+
+Everything in this subsection is exploratory, on exploration material, and in \qw{}. Round~1 called the dedents that no terminal statement announces \emph{other dedents}; from round~2 on we call them \emph{unmarked dedents}.
+
+\paragraph{Where heads look.} From the decision token, a group of late heads attends to the start of the previous line when the indent is kept. After a terminal statement the same heads spread over the starts of the open shallower lines. For example, \hd{22}{9} puts \nv{x.att.L22H9.same.prev} on the previous line's start in same-level lines, and \nv{x.att.L22H9.term.open} on open-level starts after terminal statements (\hd{20}{14}: \nv{x.att.L20H14.term.open}; \hd{19}{3}: \nv{x.att.L19H3.term.open}). Early heads read the previous line's first word: \hd{1}{0} after headers (\nv{x.att.L1H0.head.word}) and \hd{5}{6} after terminal statements (\nv{x.att.L5H6.term.word}).
+
+\paragraph{Single components do not find the terminal route.} We mean-ablated each of \nv{x.e2.ncomp} heads and MLPs singly on post-cut-off code. None lowered the mean log-probability of the true indent at terminal dedents by more than \nv{x.e2.maxterm}. Other dedents were more sensitive: ablating \hd{23}{2} alone changed their mean log-probability by \nv{x.e2.L23H2.ded}.
+
+\paragraph{Groups do.} Ablating five heads together, \ded{} = \{\hd{23}{2}, \hd{17}{3}, \hd{17}{4}, \hd{17}{5}, \hd{18}{6}\}, took mean $\log q(\text{true})$ at other dedents from \nv{x.e6.base.ded} to \nv{x.e6.ded.ded}. Random sets from the same layers gave \nv{x.e6.rand.lo} to \nv{x.e6.rand.hi}. The probability of keeping the current level rose from \nv{x.e6.base.psame} to \nv{x.e6.ded.psame}, while terminal dedents kept \nv{x.e6.ded.termopen} of $q$ on open shallower levels. Leaving \hd{23}{2} out of the set reduced the effect to \nv{x.loo.no23}. Leaving out any other single head left \nv{x.loo.lo} to \nv{x.loo.hi}.
+
+\paragraph{The terminal statement reaches the newline through mid-layer heads.} In \nv{x.e4.n} generated return-versus-assignment pairs (mean gap \nv{x.e4.gap} nats), patching the residual stream at the decision token showed when the terminal signal arrives (\cref{fig:resid}). It was near zero up to layer 4 (sufficiency \nv{x.e4.r4.suf}), \nv{x.e4.r5.suf} at layer 5, \nv{x.e4.r16.suf} at layer 16 and \nv{x.e4.r17.suf} at layer 17. The largest single head, \hd{17}{4}, carried \nv{x.e4.L17H4.nec} of the gap by necessity. Patching six heads together, \carry{} = \{\hd{17}{4}, \hd{11}{9}, \hd{5}{6}, \hd{17}{6}, \hd{16}{2}, \hd{6}{5}\}, carried \nv{x.e8.top6.nec} by necessity and \nv{x.e8.top6.suf} by sufficiency. Random sets carried at most \nv{x.e8.top6.rnec} and \nv{x.e8.top6.rsuf}.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.72\linewidth,height=4.6cm,xlabel={layer of the residual stream at the decision token},ylabel={share of gap},ymin=-0.05,ymax=1.05,xmin=-0.5,xmax=27.5,legend pos=south east,legend style={font=\small},tick label style={font=\small},label style={font=\small}]
+\addplot[thick,mark=*,mark size=1.2pt] table[x=layer,y=suf] {fig-resid.dat};
+\addplot[thick,dashed,mark=o,mark size=1.2pt] table[x=layer,y=nec] {fig-resid.dat};
+\legend{sufficiency,necessity}
+\end{axis}
+\end{tikzpicture}
+\caption{Exploratory. Patching the whole residual stream at the decision token between a terminal statement and \code{value = value} (\nv{x.e4.n} generated pairs). The signal that the previous line was a terminal statement arrives from layer 5 and is mostly in place by layer 17.}
+\label{fig:resid}
+\end{figure}
+
+\paragraph{Roles from direct logit attribution.} At terminal dedents in post-cut-off code we split each head's direct contribution to $\log$-odds of the true indent's token over the current level's token into a part that raises the true token and a part that lowers the current one. \hd{23}{2} mostly raises the target (\nv{x.e7.term.L23H2.t} and \nv{x.e7.term.L23H2.c}). \hd{22}{8} mostly lowers the current level (\nv{x.e7.term.L22H8.t} and \nv{x.e7.term.L22H8.c}); it attends to the previous line's start, so it acts as an anti-copy head. The last MLP works against the dedent (net \nv{x.e7.term.mlp27}).
+
+\paragraph{What the model does not compute linearly.} Ridge probes on \nv{x.e5.n} decision tokens recovered the previous indent from layer 3 ($R^2$ \nv{x.e5.prev3}) and the true next indent late ($R^2$ \nv{x.e5.true28} at the last layer). At dedents, however, the number of levels dedented reached at most $R^2$ \nv{x.e5.ndedmax} (layer \nv{x.e5.ndedarg}). How far to dedent is not held as a linear count at the decision token.
+
+\paragraph{Two accounts that failed.}
+\begin{itemize}
+\item \emph{A first-token reader.} If the terminal signal were read from the previous line's first token, a line such as \code{return\_value = x}, whose first token is \code{return} in all three tokenisers, should cause false dedents. Over \nv{x.e9.n} generated items it did not. The mass on shallower open levels was \nv{x.e9.return.kw} after \code{return\_}-prefixed names, against \nv{x.e9.return.ctl} after a control prefix and \nv{x.e9.return.real} after a real \code{return}. A \code{return} inside a string changed it by \nv{x.e9.strret}. Across \qw{}, Pythia-410M and Gemma-4-E2B and all five keywords, the effect of a prefixed name was at most \nv{x.e9.maxratio} of a real statement's.
+\item \emph{A fixed four-space step.} Some late components helped the true indent in mostly four-space natural code and hurt it in generated code, so we guessed they carry a four-space prior. Ablating the main one, \hd{25}{9}, changed other-dedent $\log q$ by \nv{x.e10.h25.ded.w2} in two-space and \nv{x.e10.h25.ded.w4} in four-space code, the reverse of the prediction.
+\end{itemize}
+In generated code, unlike natural code, \ded{} also supported terminal dedents (change \nv{x.e6g.ded.term}; random sets never below \nv{x.e6g.ded.termr}). The protocol therefore made no claim of sparing there.
+
+\subsection{Confirmation (prospective)}
+\label{sec:conf}
+
+The protocol was frozen at \nv{freeze.protocol} on 8 November 2026 and run once on the held-out parts: \nv{c.nchunks.nc} natural chunks (\nv{c.n.nc.header} header, \nv{c.n.nc.same} same-level, \nv{c.n.nc.term} terminal-dedent and \nv{c.n.nc.dedent} other-dedent points) and \nv{c.nchunks.gen} generated programs, from which \nv{c.pairs} pairs were built (mean gap \nv{c.gap} nats). The intact model's mean $\log q(\text{true})$ on held-out natural code was \nv{c.base.nc.header}, \nv{c.base.nc.same}, \nv{c.base.nc.term} and \nv{c.base.nc.dedent} in the four classes; at other dedents it put \nv{c.base.nc.psame} on keeping the current level. Head sets were fixed in advance: \ded{} as above, \carry{} as above, and \term{} = \{\hd{11}{9}, \hd{5}{6}, \hd{17}{6}, \hd{16}{2}, \hd{23}{6}, \hd{22}{8}, \hd{23}{3}, \hd{25}{9}, \hd{19}{6}\}. Each was compared with twenty random sets drawn with fixed seeds; \textsc{term+ded} had no random sets. Thresholds came from the exploration values with margins.
+
+\begin{table}[t]
+\centering\small
+\caption{The frozen predictions and their results on held-out material. Changes are in mean log-probability of the true indent unless stated. Intervals resample repositories or programs (2{,}000 resamples); they are descriptive and were not used for verdicts.}
+\label{tab:conf}
+\begin{tabularx}{\linewidth}{@{}lYlll@{}}
+\toprule
+& Prediction & Result & Random sets & Verdict \\
+\midrule
+H1 & \ded{}, natural, other dedents: change $\leq -0.40$, below every random set & \nv{c.H1}\ci{\nv{c.H1.lo}}{\nv{c.H1.hi}} & lowest \nv{c.H1.r} & pass \\
+H2 & same points: probability of keeping the current level rises $\geq 0.10$, above every random set & \nv{c.H2}\ci{\nv{c.H2.lo}}{\nv{c.H2.hi}} & highest \nv{c.H2.r} & pass \\
+H3 & \ded{}, terminal dedents: mass on open levels $\geq 0.95$; change at most a quarter of H1's & \nv{c.H3.open}; \nv{c.H3.d} & -- & pass \\
+H4 & \ded{}, same-level lines: change $\geq -0.01$ & \nv{c.H4}\ci{\nv{c.H4.lo}}{\nv{c.H4.hi}} & -- & pass \\
+H5 & \term{}, terminal dedents: change $\leq -0.03$, below every random set & \nv{c.H5}\ci{\nv{c.H5.lo}}{\nv{c.H5.hi}} & lowest \nv{c.H5.r} & pass \\
+H6 & \term{}, other dedents: absolute change $\leq 0.10$ & \nv{c.H6}\ci{\nv{c.H6.lo}}{\nv{c.H6.hi}} & -- & pass \\
+H7 & \textsc{term+ded}, terminal dedents: change below the sum of the two alone & \nv{c.H7} (sum \nv{c.H7.sum}) & -- & pass \\
+H8 & \ded{}, generated, other dedents: change $\leq -0.25$, below every random set & \nv{c.H8}\ci{\nv{c.H8.lo}}{\nv{c.H8.hi}} & lowest \nv{c.H8.r} & pass \\
+H9 & \carry{}, generated pairs: necessity $\geq 0.40$, sufficiency $\geq 0.20$, each above every random set & \nv{c.H9.nec}, \nv{c.H9.suf} & \nv{c.H9.rnec}, \nv{c.H9.rsuf} & pass \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+All \nv{c.npass} predictions held (\cref{tab:conf}). The protocol called the candidate confirmed if H1, H2, H3, H5 and H6 all passed.
+\begin{itemize}
+\item \emph{The block-end route.} Without \ded{}, mean $\log q(\text{true})$ at other dedents fell by \nv{c.H1.abs} nats, and the probability of keeping the current level rose to \nv{c.H2.after}. Same-level lines became slightly more certain (\nv{c.H4}), as expected if the heads' job is to signal that a block may end. The effect held in generated code (\nv{c.H8}).
+\item \emph{The terminal route.} Terminal dedents kept \nv{c.H3.open} of $q$ on open levels without \ded{}; the change, \nv{c.H3.d}, was \nv{c.H3.ratio} of the H1 change. Ablating \term{} changed their mean log-probability by \nv{c.H5}, while no random set went below \nv{c.H5.r}, and left other dedents almost unchanged (\nv{c.H6}). In pairs, \carry{} carried \nv{c.H9.nec} of the gap by necessity and \nv{c.H9.suf} by sufficiency. As a descriptive aside, \ded{} carried \nv{c.dedpairs.nec} by necessity in the same pairs.
+\item \emph{Back-up.} Removing both routes changed terminal dedents by \nv{c.H7}, below the \nv{c.H7.sum} expected from adding the two single changes, and raised the probability of keeping the current level there to \nv{c.H7.psame}.
+\end{itemize}
+
+%======================================================================
+\section{Round 2: how the routes get their information (exploratory)}
+\label{sec:r2explore}
+
+Round 2 asked four questions under a second frozen charter: what the block-end heads read, what decides how far to dedent, how the terminal statement reaches the newline, and whether a second model has the same two routes. Everything in this section is exploratory. It was run on exploration material: round~1's exploration parts, the parts of the companion cross-study test that had already been read, and the exploration half of a new set of targeted programs (\cref{sec:setting}). The numbers come from the confirmation scripts run on exploration material before the protocol was frozen (\emph{calibration runs}: \nv{cal.q.n.chunks} chunks of post-cut-off code and \nv{cal.qg.n.programs} targeted programs), unless another source is named.
+
+\subsection{What the block-end head reads}
+\label{sec:reads}
+
+\paragraph{One head, one token.} A scan of every head's attention from the decision token found one head that stands out in \qw{}. At dedents that no terminal statement marks (\emph{unmarked dedents}), \hd{23}{2} puts \nv{cal.q.att_inner_ded} of its attention on the \code{:\textbackslash n} token that ends the header of the innermost open block, against \nv{cal.q.att_inner_same} at same-level lines. The next head on this measure, \nv{x2.scan.q.next}, puts \nv{x2.scan.q.nextded} there. In Qwen3's tokeniser that token is where the header line ends and the block begins.
+
+\paragraph{Removing that token from its attention.} We recomputed \hd{23}{2}'s output at the decision token from its clean attention with one source position removed and the rest renormalised (an \emph{attention knock-out}).
+\begin{itemize}
+\item Removing the innermost open header's \code{:\textbackslash n} lowered mean $\log q(\text{true})$ at unmarked dedents by \nv{cal.q.ko_inner_ded}. The same knock-out for each of the other fifteen heads of layer 23 gave \nv{cal.q.others_lo} to \nv{cal.q.others_hi}.
+\item On a separate sample (\nv{x2.ko.n} unmarked dedents), removing that one token cost \nv{x2.ko.tok}, about as much as removing the whole header line (\nv{x2.ko.line}).
+\item Removing instead the most recent header that is already closed changed little: \nv{cal.q.ko_closed_ded}, against \nv{cal.q.ko_inner_ded_closedsub} for the open header on the same points. The head reads the header of the block that is ending, not just a recent colon.
+\end{itemize}
+
+\paragraph{What it copies.} \hd{23}{2}'s direct contribution to the output from an open header's \code{:\textbackslash n} favours that header's own indent among the candidates in \nv{x2.ov.ded} of cases at unmarked dedents, where chance is about one in eight. So the head copies the indent of the header it attends to.
+
+\paragraph{What tells it to look.} Mean-ablating each earlier head and MLP at the decision token, one at a time, never lowered \hd{23}{2}'s attention to the enclosing header by more than \nv{x2.qc.top1v} (\nv{x2.qc.top1}; next \nv{x2.qc.top2}, \nv{x2.qc.top2v}) from a base of \nv{x2.qc.base}. The signal that a block may be ending is spread over many components. The other block-end heads of round~1, in layers 17 and 18, do not act through it: ablating them together cost \nv{x2.ko.abl17} at unmarked dedents but moved \hd{23}{2}'s attention to the enclosing header only from \nv{x2.ko.att} to \nv{x2.ko.att17}.
+
+\subsection{How far to dedent}
+\label{sec:howfar}
+
+When two or more blocks are open, the model must choose among the open shallower levels. Round~1 found no linear count of levels at the decision token. Round~2 found the choice in \hd{23}{2}'s attention.
+
+\paragraph{The head attends to the level it returns to.} At dedents with two or more open headers whose true level is not the innermost one, \hd{23}{2}'s most-attended open header was the true one in \nv{cal.q.pick_not_inner} of cases. Over all dedents with two or more open headers, the most-attended header was the true level in \nv{cal.q.pick_all_multi} of cases, against \nv{cal.q.innermost_rule_all_multi} for the rule ``return to the innermost open level''. In the head scan no other head combined strong attention with this choice: the next best at picking, \nv{x2.scan.q.nextpick} (\nv{x2.scan.q.nextpickv}), puts little attention on header ends.
+
+\paragraph{Steering its attention moves the dedent.} We set \hd{23}{2}'s attention at the decision token all-on one open header's \code{:\textbackslash n}, so that its output became that token's value vector, and repeated this for every open header. For headers whose indent was not already the top candidate:
+\begin{itemize}
+\item at unmarked dedents in post-cut-off code, the log-probability of that header's indent rose by \nv{cal.q.steer_dedent_head_dlq} on average, and it became the top candidate in \nv{cal.q.steer_dedent_head_top} of cases. The same edit to another layer-23 head gave \nv{cal.q.steer_dedent_ctrl_dlq} and \nv{cal.q.steer_dedent_ctrl_top};
+\item in targeted programs that end a block with a terminal statement and then return to a randomly chosen open level, it rose by \nv{cal.q.steer_term_head_dlq} and became top in \nv{cal.q.steer_term_head_top} of cases (control \nv{cal.q.steer_term_ctrl_dlq} and \nv{cal.q.steer_term_ctrl_top}).
+\end{itemize}
+Removing the true-level header's \code{:\textbackslash n} from its attention cost \nv{cal.q.ko_true_ded} at unmarked dedents.
+
+So the level is chosen by which open header the late head reads, and its indent is copied from there. This fits round~1's finding that the number of levels is barely decodable linearly at the decision token: a model that points to the target header has no need to count levels.
+
+\subsection{The terminal route: the keyword is read directly}
+\label{sec:kw}
+
+Round~1 found that the terminal signal reaches the decision token from layer~5 onwards, carried by mid-layer heads. In the targeted programs we removed single attention edges with the attention mask, and measured $q$ on the current level at the target line. Base and neutral values (where the terminal line is replaced by \code{value = value}) were \nv{cal.q.qcur_base_term} and \nv{cal.q.qcur_neutral_term}.
+\begin{itemize}
+\item Removing the edge from the decision token to the keyword token in every layer closed \nv{cal.q.share_blk_kw_return} of the gap for \code{return} programs. Removing also the edges from the rest of the terminal line to the keyword added little. The decision token reads the keyword itself.
+\item No single layer carried much of this. The largest single-layer share for \code{return} was \nv{cal.q.share_layer_return_max}. The eight heads that attend most to the keyword (led by \hd{1}{0}, attention \nv{x2.kw.L1H0att}) closed \nv{x2.kw.top8} of the gap together on another sample, and random head sets from the same layers at most \nv{x2.kw.randhi}.
+\item The share differs by keyword: \nv{cal.q.share_blk_kw_raise} for \code{raise}, \nv{cal.q.share_blk_kw_break} for \code{break}, \nv{cal.q.share_blk_kw_continue} for \code{continue} and \nv{cal.q.share_blk_kw_pass} for \code{pass}. For \code{pass} the model does not need the keyword at the newline.
+\item The companion cross-study test found, as an exploratory lead, that ablating the previous-token head \hd{0}{2} everywhere reduces terminal dedents in generated code. Ablating it only on the terminal line and at the decision token changed $q$ on the current level by \nv{cal.q.l0h2_line_dqcur_term} (everywhere: \nv{cal.q.l0h2_all_dqcur_term}). Its effect does not travel through the terminal line.
+\end{itemize}
+
+\subsection{A second model}
+\label{sec:olmo}
+
+The charter fixed the order in which models on disk would be gated: OLMo-2-0425-1B~\citep{olmo2025olmo2}, then Qwen3-1.7B-Base, then SmolLM2-1.7B. OLMo-2-0425-1B (16 layers of 16 heads) passed every item of round~1's frozen gate on round~1's exploration material (\cref{tab:gate}), and so became the second model. It is from another model family, trained on other data, and it writes indentation exactly as \qw{} does.
+
+\paragraph{The same block-end route.} Round~1's single-component ablation scan in OLMo-2 found four heads that matter for unmarked dedents and not for terminal ones: \hd{13}{1} (\nv{x2.oe2.L13H1}), \hd{10}{12} (\nv{x2.oe2.L10H12}), \hd{11}{0} (\nv{x2.oe2.L11H0}) and \hd{15}{4} (\nv{x2.oe2.L15H4}), each changing terminal dedents by at most \nv{x2.oe2.L13H1.t} in absolute value. No head changed terminal dedents by more than \nv{x2.oe2.maxheadterm}. Ablating the four together, \textsc{ded-o}, changed unmarked dedents by \nv{cal.g.d_lq_dedent}, while twenty random sets from the same layers gave \nv{cal.g.rand_d_lq_dedent_min} to \nv{cal.g.rand_d_lq_dedent_max}. Terminal dedents changed by only \nv{cal.g.d_lq_term} and kept \nv{cal.g.p_open_term_ablated} of $q$ on open levels. This is round~1's dissociation, in a second model.
+
+\paragraph{The same reading head.} \hd{13}{1}, at the same relative depth as \hd{23}{2}, is the head that reads open headers. It attends \nv{cal.o.att_inner_ded} to the innermost open header's \code{:\textbackslash n} at unmarked dedents (same-level lines \nv{cal.o.att_inner_same}). Removing that token from its attention cost \nv{cal.o.ko_inner_ded}, against \nv{cal.o.others_lo} to \nv{cal.o.others_hi} for the other heads of layer~13. Steering it moved the dedent as in \qw{}: \nv{cal.o.steer_dedent_head_dlq} in natural code (control \nv{cal.o.steer_dedent_ctrl_dlq}) and \nv{cal.o.steer_term_head_dlq} in targeted programs (control \nv{cal.o.steer_term_ctrl_dlq}). It picks the target level less sharply: \nv{cal.o.pick_not_inner} where the target is not the innermost level, and over all multi-header dedents \nv{cal.o.pick_all_multi}, below the innermost rule (\nv{cal.o.innermost_rule_all_multi}). The terminal keyword is read directly here too: removing the keyword edge closed \nv{cal.o.share_blk_kw_return} of the gap for \code{return}, with no single layer above \nv{cal.o.share_layer_return_max}.
+
+\subsection{When the routes form (OLMo-2 checkpoints)}
+\label{sec:ckpt}
+
+OLMo-2-0425-1B belongs to the OLMo~2 family, whose developers release intermediate training checkpoints~\citep{olmo2025olmo2}. Its published checkpoints are labelled by stage and tokens seen: stage~1 runs to about four trillion tokens, and stage~2 continues from the end of stage~1 in three separate runs of about fifty billion tokens each. We measured six stage-1 checkpoints, an early and the last checkpoint of the first stage-2 run, the last checkpoints of the other two runs, and the released model, all on the same \nv{ck.n} chunks of post-cut-off code (\cref{tab:ckpt}). For each checkpoint we followed the three heads that read open headers in any of them.
+
+\begin{table}[t]
+\centering\small
+\caption{Exploratory. OLMo-2-0425-1B during training, on the same post-cut-off code. Left: top-1 accuracy of the indent at unmarked dedents, terminal dedents and same-level lines. Right, for three heads: attention to the innermost open header's \code{:\textbackslash n} at unmarked dedents, and how often the head's most-attended open header is the target level at multi-level dedents. Stage-1 rows are labelled by tokens seen; stage-2 rows by tokens seen in that run.}
+\label{tab:ckpt}
+\begin{tabularx}{\linewidth}{@{}lYYYYYY@{}}
+\toprule
+& \multicolumn{3}{c}{top-1 accuracy} & \multicolumn{3}{c}{attention\,/\,pick} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Checkpoint & unmarked & terminal & same & \hd{11}{9} & \hd{13}{1} & \hd{15}{9} \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Stage~1 (tokens seen)}} \\
+1B & \nv{ck.1B.ded} & \nv{ck.1B.term} & \nv{ck.1B.same} & \nv{ck.1B.L11H9.att}\,/\,\nv{ck.1B.L11H9.pick} & \nv{ck.1B.L13H1.att}\,/\,\nv{ck.1B.L13H1.pick} & \nv{ck.1B.L15H9.att}\,/\,\nv{ck.1B.L15H9.pick} \\
+21B & \nv{ck.21B.ded} & \nv{ck.21B.term} & \nv{ck.21B.same} & \nv{ck.21B.L11H9.att}\,/\,\nv{ck.21B.L11H9.pick} & \nv{ck.21B.L13H1.att}\,/\,\nv{ck.21B.L13H1.pick} & \nv{ck.21B.L15H9.att}\,/\,\nv{ck.21B.L15H9.pick} \\
+84B & \nv{ck.84B.ded} & \nv{ck.84B.term} & \nv{ck.84B.same} & \nv{ck.84B.L11H9.att}\,/\,\nv{ck.84B.L11H9.pick} & \nv{ck.84B.L13H1.att}\,/\,\nv{ck.84B.L13H1.pick} & \nv{ck.84B.L15H9.att}\,/\,\nv{ck.84B.L15H9.pick} \\
+420B & \nv{ck.420B.ded} & \nv{ck.420B.term} & \nv{ck.420B.same} & \nv{ck.420B.L11H9.att}\,/\,\nv{ck.420B.L11H9.pick} & \nv{ck.420B.L13H1.att}\,/\,\nv{ck.420B.L13H1.pick} & \nv{ck.420B.L15H9.att}\,/\,\nv{ck.420B.L15H9.pick} \\
+1,007B & \nv{ck.1007B.ded} & \nv{ck.1007B.term} & \nv{ck.1007B.same} & \nv{ck.1007B.L11H9.att}\,/\,\nv{ck.1007B.L11H9.pick} & \nv{ck.1007B.L13H1.att}\,/\,\nv{ck.1007B.L13H1.pick} & \nv{ck.1007B.L15H9.att}\,/\,\nv{ck.1007B.L15H9.pick} \\
+4,001B (end) & \nv{ck.4001B.ded} & \nv{ck.4001B.term} & \nv{ck.4001B.same} & \nv{ck.4001B.L11H9.att}\,/\,\nv{ck.4001B.L11H9.pick} & \nv{ck.4001B.L13H1.att}\,/\,\nv{ck.4001B.L13H1.pick} & \nv{ck.4001B.L15H9.att}\,/\,\nv{ck.4001B.L15H9.pick} \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Stage~2 (three runs from the end of stage~1)}} \\
+\quad run~1, +3B & \nv{ck.iax3B.ded} & \nv{ck.iax3B.term} & \nv{ck.iax3B.same} & \nv{ck.iax3B.L11H9.att}\,/\,\nv{ck.iax3B.L11H9.pick} & \nv{ck.iax3B.L13H1.att}\,/\,\nv{ck.iax3B.L13H1.pick} & \nv{ck.iax3B.L15H9.att}\,/\,\nv{ck.iax3B.L15H9.pick} \\
+\quad run~1, +51B & \nv{ck.iax51B.ded} & \nv{ck.iax51B.term} & \nv{ck.iax51B.same} & \nv{ck.iax51B.L11H9.att}\,/\,\nv{ck.iax51B.L11H9.pick} & \nv{ck.iax51B.L13H1.att}\,/\,\nv{ck.iax51B.L13H1.pick} & \nv{ck.iax51B.L15H9.att}\,/\,\nv{ck.iax51B.L15H9.pick} \\
+\quad run~2, +51B & \nv{ck.ibx51B.ded} & \nv{ck.ibx51B.term} & \nv{ck.ibx51B.same} & \nv{ck.ibx51B.L11H9.att}\,/\,\nv{ck.ibx51B.L11H9.pick} & \nv{ck.ibx51B.L13H1.att}\,/\,\nv{ck.ibx51B.L13H1.pick} & \nv{ck.ibx51B.L15H9.att}\,/\,\nv{ck.ibx51B.L15H9.pick} \\
+\quad run~3, +51B & \nv{ck.icx51B.ded} & \nv{ck.icx51B.term} & \nv{ck.icx51B.same} & \nv{ck.icx51B.L11H9.att}\,/\,\nv{ck.icx51B.L11H9.pick} & \nv{ck.icx51B.L13H1.att}\,/\,\nv{ck.icx51B.L13H1.pick} & \nv{ck.icx51B.L15H9.att}\,/\,\nv{ck.icx51B.L15H9.pick} \\
+\midrule
+Released & \nv{ck.final.ded} & \nv{ck.final.term} & \nv{ck.final.same} & \nv{ck.final.L11H9.att}\,/\,\nv{ck.final.L11H9.pick} & \nv{ck.final.L13H1.att}\,/\,\nv{ck.final.L13H1.pick} & \nv{ck.final.L15H9.att}\,/\,\nv{ck.final.L15H9.pick} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Terminal dedents are learned first.} By 21B tokens the model already chose the right indent at \nv{ck.21B.term} of terminal dedents, about as well as at the end of training. Unmarked dedents came slowly: \nv{ck.21B.ded} at 21B tokens, \nv{ck.84B.ded} at 84B and \nv{ck.1007B.ded} by 1,007B. The terminal route is the easy one, and is in place long before the block-end route is complete.
+
+\paragraph{A block-end reader forms in stage~1, at other heads.} Early on, \hd{11}{9} attends to the innermost open header at unmarked dedents (\nv{ck.21B.L11H9.att} at 21B tokens) but picks the target level weakly (\nv{ck.84B.L11H9.pick} at 84B). From 420B tokens \hd{15}{9} does the job: its most-attended open header is the target level at \nv{ck.420B.L15H9.pick} of multi-level dedents at 420B and \nv{ck.4001B.L15H9.pick} at the end of stage~1. All three stage-2 runs keep it (\nv{ck.icx51B.L15H9.pick} to \nv{ck.iax51B.L15H9.pick} at their last checkpoints). In none of these checkpoints does \hd{13}{1} attend to open headers (at most \nv{ck.21B.L13H1.att}).
+
+\paragraph{The released model is not the end of this series.} In the released model \hd{13}{1} is the reader (attention \nv{ck.final.L13H1.att}, pick \nv{ck.final.L13H1.pick}) and \hd{15}{9} is silent (\nv{ck.final.L15H9.att}). A merge of the three stage-2 runs cannot produce this, since all three use \hd{15}{9}. We therefore compared the weights directly. The relative distance $\lVert a-b\rVert/\lVert a\rVert$ between the released weights and the end of stage~1 is \nv{ck.dist.fin_s1end.rel}, and the cosine between their token embeddings is \nv{ck.dist.fin_s1end.emb}. For the end of the first stage-2 run against the end of stage~1 the figures are \nv{ck.dist.s1end_ia51.rel} and \nv{ck.dist.s1end_ia51.emb}; for two stage-2 runs against each other, \nv{ck.dist.ia51_ib51.rel}; and even for two stage-1 checkpoints three trillion tokens apart, \nv{ck.dist.s1mid_s1end.rel} and \nv{ck.dist.s1mid_s1end.emb}. The released weights are not a descendant of the published checkpoints: they come from another training run, which we cannot identify.
+
+So the checkpoints do not show the released model's reading head forming. They show something else: two training runs of one architecture put the block-end reader in different heads, \hd{15}{9} in one and \hd{13}{1} in the other, with nearly the same behaviour (unmarked dedents \nv{ck.icx51B.ded} to \nv{ck.iax51B.ded} at the ends of the three stage-2 runs, against \nv{ck.final.ded} in the released model). Which head carries the role is an accident of the run; the role itself recurs.
+
+%======================================================================
+\section{Round 2: confirmation (prospective)}
+\label{sec:r2conf}
+
+The round-2 protocol was frozen at \nv{freeze.protocol2} on 9 November 2026, after the calibration runs, and run once on sealed material that no model had read: \nv{c2.q.n.chunks} chunks of natural code from \nv{c2.q.n.repos} repositories (created after 1 September 2026, none used before) and \nv{c2.qg.n.programs} targeted programs. It held \nv{c2.ntests} predictions: eleven for \qw{} (\cref{tab:conf2q}) and fourteen for OLMo-2 (\cref{tab:conf2o}). Thresholds came from the calibration values with margins, and every head-level effect was compared with every other head of the same layer, or with a head of the same layer drawn with a fixed seed.
+
+\begin{table}[t]
+\centering\small
+\caption{Round 2, \qw{}, head \hd{23}{2}: frozen predictions and results on held-out material. Natural code: \nv{c2.q.n.ded} unmarked dedents, \nv{c2.q.n.same} same-level lines and \nv{c2.q.n.term} terminal dedents; generated: \nv{c2.qg.n.terminal} programs ending a block with a terminal statement. Changes are in mean log-probability of the true indent unless stated. Intervals resample repositories (2{,}000 resamples) and are descriptive.}
+\label{tab:conf2q}
+\begin{tabularx}{\linewidth}{@{}lYYl@{}}
+\toprule
+& Prediction & Result & Verdict \\
+\midrule
+Q1 & Attention to the innermost open header's \code{:\textbackslash n} at unmarked dedents $\geq 0.30$ and $\geq 2.5\times$ that at same-level lines & \nv{c2.q.att_inner_ded}\ci{\nv{c2.q.ci.att_inner_ded.lo}}{\nv{c2.q.ci.att_inner_ded.hi}}; \nv{c2.q.att_inner_same} & \nv{c2.v.Q1} \\
+Q2 & Knocking out that token, unmarked dedents: $\leq -0.05$, below every other layer-23 head, and at least twice the largest absolute change among them & \nv{c2.q.ko_inner_ded}\ci{\nv{c2.q.ci.ko_inner_ded.lo}}{\nv{c2.q.ci.ko_inner_ded.hi}}; others \nv{c2.q.others_lo} to \nv{c2.q.others_hi} & \nv{c2.v.Q2} \\
+Q3 & Same knock-out: same-level lines $\geq -0.02$; terminal dedents at most a quarter of Q2 in size & \nv{c2.q.ko_inner_same}; \nv{c2.q.ko_inner_term} & \nv{c2.v.Q3} \\
+Q4 & Knocking out the latest closed header instead: at most half of the open-header knock-out on the same points & \nv{c2.q.ko_closed_ded} against \nv{c2.q.ko_inner_ded_closedsub} & \nv{c2.v.Q4} \\
+Q5 & Most-attended open header is the target where the target is not the innermost: $\geq 0.60$; over all multi-header dedents, beats the innermost rule by $\geq 0.02$ & \nv{c2.q.pick_not_inner}\ci{\nv{c2.q.ci.pick_not_inner.lo}}{\nv{c2.q.ci.pick_not_inner.hi}}; \nv{c2.q.pick_all_multi} against \nv{c2.q.innermost_rule_all_multi} & \nv{c2.v.Q5} \\
+Q6 & Steering, natural unmarked dedents: rise $\geq 1.0$ and $\geq 5\times$ the control; becomes top in a share $\geq$ control $+\,0.05$ & \nv{c2.q.steer_dedent_head_dlq} (control \nv{c2.q.steer_dedent_ctrl_dlq}); \nv{c2.q.steer_dedent_head_top} (\nv{c2.q.steer_dedent_ctrl_top}) & \nv{c2.v.Q6} \\
+Q7 & Knocking out the true-level header: $\leq -0.10$ & \nv{c2.q.ko_true_ded} & \nv{c2.v.Q7} \\
+Q8 & Steering, generated terminal targets: rise $\geq 1.0$ and $\geq 5\times$ control; top in $\geq 0.20$ and $\geq$ control $+\,0.10$ & \nv{c2.qg.steer_term_head_dlq} (control \nv{c2.qg.steer_term_ctrl_dlq}); \nv{c2.qg.steer_term_head_top} (\nv{c2.qg.steer_term_ctrl_top}) & \nv{c2.v.Q8} \\
+Q9 & \code{return}: removing the decision-token-to-keyword edge in all layers closes $\geq 0.40$ of the gap to the neutral line & \nv{c2.qg.share_blk_kw_return}\ci{\nv{c2.qg.ci.share.lo}}{\nv{c2.qg.ci.share.hi}} & \nv{c2.v.Q9} \\
+Q10 & Largest single-layer share at most $0.35\times$ the Q9 share & \nv{c2.qg.share_layer_return_max} (layer \nv{c2.qg.layer_return_arg}) & \nv{c2.v.Q10} \\
+Q11 & \hd{0}{2} ablated on the terminal line and decision token: $q$ on the current level changes by at most 0.05 & \nv{c2.qg.l0h2_line_dqcur_term}\ci{\nv{c2.qg.ci.l0h2.lo}}{\nv{c2.qg.ci.l0h2.hi}} & \nv{c2.v.Q11} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Round 2, OLMo-2-0425-1B: head \hd{13}{1} (O1--O10) and the block-end set \textsc{ded-o} = \{\hd{13}{1}, \hd{10}{12}, \hd{11}{0}, \hd{15}{4}\} (G1--G4), on the same held-out material. O-predictions repeat the Q-predictions with the thresholds shown.}
+\label{tab:conf2o}
+\begin{tabularx}{\linewidth}{@{}lYYl@{}}
+\toprule
+& Prediction & Result & Verdict \\
+\midrule
+O1 & As Q1 with $\geq 0.20$ and $\geq 1.4\times$ & \nv{c2.o.att_inner_ded}; \nv{c2.o.att_inner_same} & \nv{c2.v.O1} \\
+O2 & As Q2 (other layer-13 heads) & \nv{c2.o.ko_inner_ded}; others \nv{c2.o.others_lo} to \nv{c2.o.others_hi} & \nv{c2.v.O2} \\
+O3 & As Q3 & \nv{c2.o.ko_inner_same}; \nv{c2.o.ko_inner_term} & \nv{c2.v.O3} \\
+O4 & As Q4 & \nv{c2.o.ko_closed_ded} against \nv{c2.o.ko_inner_ded_closedsub} & \nv{c2.v.O4} \\
+O5 & Target is most attended in $\geq 0.45$ of non-innermost cases, and at least 0.15 more often than the innermost & \nv{c2.o.pick_not_inner} against \nv{c2.o.pick_inner_attended_not_inner} & \nv{c2.v.O5} \\
+O6 & As Q6 with rise $\geq 0.8$ and $\geq 4\times$ control & \nv{c2.o.steer_dedent_head_dlq} (\nv{c2.o.steer_dedent_ctrl_dlq}); \nv{c2.o.steer_dedent_head_top} (\nv{c2.o.steer_dedent_ctrl_top}) & \nv{c2.v.O6} \\
+O7 & True-level knock-out $\leq -0.08$ & \nv{c2.o.ko_true_ded} & \nv{c2.v.O7} \\
+O8 & As Q8 with rise $\geq 0.8$, $\geq 4\times$ control, top $\geq 0.15$ & \nv{c2.og.steer_term_head_dlq} (\nv{c2.og.steer_term_ctrl_dlq}); \nv{c2.og.steer_term_head_top} (\nv{c2.og.steer_term_ctrl_top}) & \nv{c2.v.O8} \\
+O9 & As Q9 & \nv{c2.og.share_blk_kw_return} & \nv{c2.v.O9} \\
+O10 & As Q10 & \nv{c2.og.share_layer_return_max} & \nv{c2.v.O10} \\
+\midrule
+G1 & \textsc{ded-o} ablated, unmarked dedents: $\leq -0.30$ and below all twenty random sets & \nv{c2.g.d_lq_dedent}\ci{\nv{c2.g.ci.lo}}{\nv{c2.g.ci.hi}}; random \nv{c2.g.rand_d_lq_dedent_min} to \nv{c2.g.rand_d_lq_dedent_max} & \nv{c2.v.G1} \\
+G2 & Terminal dedents: at most a quarter of G1 in size; open-level mass $\geq 0.90$ & \nv{c2.g.d_lq_term} (ratio \nv{c2.g.ratio}); \nv{c2.g.p_open_term_ablated} & \nv{c2.v.G2} \\
+G3 & Same-level lines: $\geq -0.02$ & \nv{c2.g.d_lq_same} & \nv{c2.v.G3} \\
+G4 & Unmarked dedents: mass on the current level rises $\geq 0.08$ & \nv{c2.g.d_psame_dedent} & \nv{c2.v.G4} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+All \nv{c2.npass} predictions held, and so all five of the protocol's questions were answered as predicted.
+\begin{itemize}
+\item \emph{What the block-end head reads.} On held-out code \hd{23}{2} put \nv{c2.q.att_inner_ded} of its attention on the innermost open header's \code{:\textbackslash n} at unmarked dedents. Removing that token from its attention cost \nv{c2.q.ko_inner_ded}, while no other head of layer~23 changed by more than \nv{c2.q.others_maxabs} under the same edit. Removing the most recent \emph{closed} header instead did almost nothing (\nv{c2.q.ko_closed_ded}), and same-level lines and terminal dedents were untouched (Q3).
+\item \emph{How far to dedent.} Where the target level was not the innermost, the head's most-attended open header was the target in \nv{c2.q.pick_not_inner} of cases; over all multi-header dedents it beat the innermost rule (\nv{c2.q.pick_all_multi} against \nv{c2.q.innermost_rule_all_multi}). Steering moved the prediction in natural code and in targeted programs alike (Q6, Q8), and removing the true-level header cost \nv{c2.q.ko_true_ded}.
+\item \emph{The terminal route.} Removing the keyword edge closed \nv{c2.qg.share_blk_kw_return} of the gap for \code{return}, with no single layer above \nv{c2.qg.share_layer_return_max}. \hd{0}{2}, ablated on the terminal line and the decision token, changed $q$ on the current level by only \nv{c2.qg.l0h2_line_dqcur_term}. The share again differed by keyword (descriptive: \nv{c2.qg.share_blk_kw_raise} for \code{raise}, \nv{c2.qg.share_blk_kw_pass} for \code{pass}).
+\item \emph{OLMo-2.} \hd{13}{1} behaved as \hd{23}{2} on every prediction made for it, with weaker attention (\nv{c2.o.att_inner_ded}) and a similar knock-out cost (\nv{c2.o.ko_inner_ded}; other layer-13 heads at most \nv{c2.o.others_maxabs}). Ablating \textsc{ded-o} changed unmarked dedents by \nv{c2.g.d_lq_dedent}, against \nv{c2.g.rand_d_lq_dedent_min} to \nv{c2.g.rand_d_lq_dedent_max} for twenty random sets, and terminal dedents by \nv{c2.g.d_lq_term}. One difference from \qw{} held as well: \hd{13}{1}'s most-attended header is more often the target than the innermost header is where they differ (O5), but over all multi-header dedents it does not beat the innermost rule (\nv{c2.o.pick_all_multi} against \nv{c2.o.innermost_rule_all_multi}; no prediction was made about this). In OLMo-2 the keyword edge carried even more of the terminal route than in \qw{} (\nv{c2.og.share_blk_kw_return}).
+\end{itemize}
+
+%======================================================================
+\section{Links to other behaviours in the same model}
+\label{sec:x1}
+
+A companion cross-study test (unpublished; \nv{x1.npass} of \nv{x1.ntests} frozen predictions held) switched off the head sets named by four studies of \qw{}, at the decision positions of each other's tasks: line-breaking in prose, indentation (this study), ordinal suffixes and capitals. It bears on the terminal route.
+\begin{itemize}
+\item \emph{\hd{17}{6}} belongs to \carry{} and \term{}. It is a strong reader for line-breaking: ablating it alone kept only \nv{x1.L17H6.width} of the effect of line width on where the model breaks a line. Its own part in the dedent after \code{return} is small (\nv{x1.L17H6.term} on generated programs, though below all twenty random heads of its layer, lowest \nv{x1.L17H6.termr}). It is the only way \carry{} and \term{} touch line-breaking: with it, they keep \nv{x1.carry.width} and \nv{x1.term.width} of the width effect; without it, \nv{x1.carrynoL17H6.width} and \nv{x1.termnoL17H6.width}.
+\item \emph{\hd{11}{9}}, also in \carry{} and \term{}, attends to the current token and holds part of the ordinal suffix choice. Its own effect on indentation is small: at most \nv{x1.L11H9.ind} in absolute value on four indentation measures.
+\item The block-end heads \ded{} are separate from line-breaking: without them the model kept \nv{x1.ded.lbw} of the width effect and \nv{x1.ded.lbs} of its separation between break and non-break points near the margin.
+\end{itemize}
+So the terminal route shares at most one head with another behaviour, and the block-end route shares none of those tested.
+
+%======================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+Both models reach a dedent by two routes, and round~2 shows where each gets its information.
+\begin{itemize}
+\item \emph{The terminal route} needs no record of the program's structure. The keyword itself, read from the decision token through many heads, says that the block ends; which level to return to then follows from the open levels the model already tracks.
+\item \emph{The block-end route} rests on one late head that looks back at the headers of open blocks and copies the indent of the one it attends to. Its attention is the choice of how far to dedent: steering it moves the prediction, and removing the attended header from it costs more than removing any other head's view of that token. What tells the head that a block may end is spread over many earlier components.
+\end{itemize}
+This settles the question round~1 left open. How far to dedent is not held as a count at the decision token; it is the indent of the header the block-end head attends to. The same arrangement, at the same relative depth, appears in a model from another family trained on other data. In two training runs of OLMo-2 the attention to open headers sits in different heads, with nearly the same behaviour, so the role recurs where the particular head does not.
+
+\paragraph{What this does not show.}
+\begin{itemize}
+\item \emph{Two models, one language.} The account was found in \qw{} and tested in OLMo-2-0425-1B. Both are under two billion parameters, and both write indentation with the same kind of tokens. Pythia-410M and Gemma-4-E2B were measured behaviourally only.
+\item \emph{Interventions on single positions and heads.} The knock-outs and steering edit one head's attention at the decision token. Mean ablation of head sets, and edge removal through the attention mask, are the only multi-component tools used. We did not trace which earlier components write what \hd{23}{2} reads at the header token, or which components turn the copied indent into the output beyond the direct path.
+\item \emph{What tells the block-end head to look} is spread over many components (\cref{sec:reads}). We did not find a small set that carries it.
+\item \emph{The terminal route} is read directly from the keyword in both models, but spread over many heads and layers. Its single-head parts are small, and the shares differ by keyword.
+\item \emph{Training dynamics} were measured on ten published checkpoints of one training run, on \nv{ck.n} chunks, and are exploratory. The released OLMo-2 weights come from a different run, so we did not see its reading head form.
+\item \emph{Generated code differs.} There the model is much less accurate at unmarked dedents (round~1: \nv{c.base.gen.dedent}, against \nv{c.base.nc.dedent} on natural code), and \ded{} also supports terminal dedents.
+\end{itemize}
+
+\paragraph{Relation to representation work.} \citet{bassi2026geometry} describe how indent level is laid out in larger models and test whether subspaces concentrate probe-relevant information. Our results concern the next line's indent and which components the model's output depends on, in two models under two billion parameters. The block-end head reads the indent from the header token and copies it; whether that value lives in the geometry they describe is untested.
+
+%======================================================================
+\section*{Use of language-model assistants}
+Language-model assistants were used to write analysis code, run experiments under the frozen protocols and draft this text. The study design, frozen documents and all numbers are recorded with digests, and every number in the text was checked by a script against the saved outputs.
+
+{\small
+\bibliographystyle{plainnat}
+\bibliography{refs}
+}
+
+\appendix
+\section{The gate before and after the measurement fix}
+\label{app:prefix}
+
+\begin{table}[H]
+\centering\small
+\caption{Gate on post-cut-off code with the first (pre-fix) and corrected (post-fix) measure. Gemma-4-E2B's first run failed at load and has no pre-fix row.}
+\label{tab:prefix}
+\begin{tabularx}{\linewidth}{@{}llYYYYY@{}}
+\toprule
+Model & measure & points & header top-1 & terminal top-1 & terminal mass on open levels & top-1 minus copy \\
+\midrule
+Pythia-410M & pre-fix & \nv{gate.pre.py.n} & \nv{gate.pre.py.head} & \nv{gate.pre.py.termt} & \nv{gate.pre.py.terms} & \nv{gate.pre.py.marg} \\
+Pythia-410M & post-fix & \nv{gate.post.py.n} & \nv{gate.post.py.head} & \nv{gate.post.py.termt} & \nv{gate.post.py.terms} & \nv{gate.post.py.marg} \\
+\qw{} & pre-fix & \nv{gate.pre.qw.n} & \nv{gate.pre.qw.head} & \nv{gate.pre.qw.termt} & \nv{gate.pre.qw.terms} & \nv{gate.pre.qw.marg} \\
+\qw{} & post-fix & \nv{gate.post.qw.n} & \nv{gate.post.qw.head} & \nv{gate.post.qw.termt} & \nv{gate.post.qw.terms} & \nv{gate.post.qw.marg} \\
+GPT-2 & pre-fix & \nv{gate.pre.g2.n} & \nv{gate.pre.g2.head} & \nv{gate.pre.g2.termt} & \nv{gate.pre.g2.terms} & \nv{gate.pre.g2.marg} \\
+GPT-2 & post-fix & \nv{gate.post.g2.n} & \nv{gate.post.g2.head} & \nv{gate.post.g2.termt} & \nv{gate.post.g2.terms} & \nv{gate.post.g2.marg} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Process notes}
+\label{app:process}
+\begin{itemize}
+\item Round~1's charter was frozen at \nv{freeze.charter} on 7 November 2026, and its protocol at \nv{freeze.protocol} on 8 November.
+\item A 30-program smoke test of the behaviour script ran on the generated exploration part three minutes before that part's digests were written. No sealed file was opened.
+\item Round~1's charter puts the gate before any internal analysis, but one attention scan (Pythia-410M, generated exploration programs) ran a few minutes before the natural-code gate result was in. The queued internal analyses were stopped until the gate was settled. The scan read only exploration material.
+\item Scans from the early hours of 8 November used bfloat16 after a check against float32 on \nv{x.bf16.ncomp} components of the ablation scan: base values differed by at most \nv{x.bf16.base}, and component effects correlated at $r \geq \nv{x.bf16.r}$ for every measure.
+\item No crash, deviation or exclusion occurred in round~1's confirmation run.
+\item Round~2's charter was frozen at \nv{freeze.charter2} on 8 November 2026, before any round-2 material was built. Its held-out material was sealed before any model read it. Its protocol was frozen at \nv{freeze.protocol2} on 9 November.
+\item Round~2's charter ruled out downloading model weights. The download of six OLMo-2 training checkpoints was approved afterwards and recorded as a dated amendment before the protocol was frozen. The checkpoint analysis stays exploratory, and no prediction about it was frozen.
+\item Round~2's thresholds were set from calibration runs of the confirmation scripts on exploration material, never on held-out material.
+\item Round~2's confirmation ran once, from 09:55 to 14:20 on 9 November, in GPU sessions of at most 1{,}000 seconds of work that resumed from saved records. Every script covered all of its material. No crash, deviation or exclusion occurred beyond the exclusions the protocol fixed.
+\item The four stage-2 OLMo-2 checkpoints were downloaded after the protocol was frozen, for the exploratory checkpoint analysis only. The weight comparison with the released model was made after we found that all three stage-2 runs keep \hd{15}{9}.
+\end{itemize}
+
+\end{document}

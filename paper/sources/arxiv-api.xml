@@ -1,0 +1,2719 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/NNpCQSWljETQVW9gwPzGVQSsnpE</id>
+  <title>arXiv Query: search_query=&amp;id_list=2507.00322,2010.04303,2105.11115,2312.03656,2604.22128,2502.18499,1506.02078,2312.09230,2305.15054,2406.20086,2406.19384,2508.02513,2311.04131,2106.06087,2410.06496,2305.16130,2310.15213,2310.15916,2502.07424,2310.08744,2605.08348,2606.05378,2607.12279,2401.12181,2410.01434,2410.11781,2601.04480,2304.01373,2505.09388,2607.02770,2202.05262,2404.15255,2309.16042,2607.04167,2511.13653,2501.00656,2502.02737,2305.00586,2410.21272,2402.14903,2211.00593,2304.05969,2303.08112,2012.14913,1610.01644,2308.10248,2209.11895,2402.10588,2312.06681,2310.06824,2311.03658,2306.03819,2608.03711,2010.11936&amp;start=0&amp;max_results=100</title>
+  <updated>2026-11-09T10:32:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=100&amp;id_list=2507.00322,2010.04303,2105.11115,2312.03656,2604.22128,2502.18499,1506.02078,2312.09230,2305.15054,2406.20086,2406.19384,2508.02513,2311.04131,2106.06087,2410.06496,2305.16130,2310.15213,2310.15916,2502.07424,2310.08744,2605.08348,2606.05378,2607.12279,2401.12181,2410.01434,2410.11781,2601.04480,2304.01373,2505.09388,2607.02770,2202.05262,2404.15255,2309.16042,2607.04167,2511.13653,2501.00656,2502.02737,2305.00586,2410.21272,2402.14903,2211.00593,2304.05969,2303.08112,2012.14913,1610.01644,2308.10248,2209.11895,2402.10588,2312.06681,2310.06824,2311.03658,2306.03819,2608.03711,2010.11936" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>54</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2401.12181v1</id>
+    <title>Universal Neurons in GPT2 Language Models</title>
+    <updated>2024-01-22T18:11:01Z</updated>
+    <link href="https://arxiv.org/abs/2401.12181v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.12181v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A basic question within the emerging field of mechanistic interpretability is the degree to which neural networks learn the same underlying mechanisms. In other words, are neural mechanisms universal across different models? In this work, we study the universality of individual neurons across GPT2 models trained from different initial random seeds, motivated by the hypothesis that universal neurons are likely to be interpretable. In particular, we compute pairwise correlations of neuron activations over 100 million tokens for every neuron pair across five different seeds and find that 1-5\% of neurons are universal, that is, pairs of neurons which consistently activate on the same inputs. We then study these universal neurons in detail, finding that they usually have clear interpretations and taxonomize them into a small number of neuron families. We conclude by studying patterns in neuron weights to establish several universal functional roles of neurons in simple circuits: deactivating attention heads, changing the entropy of the next token distribution, and predicting the next token to (not) be within a particular set.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-22T18:11:01Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Wes Gurnee</name>
+    </author>
+    <author>
+      <name>Theo Horsley</name>
+    </author>
+    <author>
+      <name>Zifan Carl Guo</name>
+    </author>
+    <author>
+      <name>Tara Rezaei Kheirkhah</name>
+    </author>
+    <author>
+      <name>Qinyi Sun</name>
+    </author>
+    <author>
+      <name>Will Hathaway</name>
+    </author>
+    <author>
+      <name>Neel Nanda</name>
+    </author>
+    <author>
+      <name>Dimitris Bertsimas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.01373v2</id>
+    <title>Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling</title>
+    <updated>2023-05-31T17:54:07Z</updated>
+    <link href="https://arxiv.org/abs/2304.01373v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.01373v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>How do large language models (LLMs) develop and evolve over the course of training? How do these patterns change as models scale? To answer these questions, we introduce \textit{Pythia}, a suite of 16 LLMs all trained on public data seen in the exact same order and ranging in size from 70M to 12B parameters. We provide public access to 154 checkpoints for each one of the 16 models, alongside tools to download and reconstruct their exact training dataloaders for further study. We intend \textit{Pythia} to facilitate research in many areas, and we present several case studies including novel results in memorization, term frequency effects on few-shot performance, and reducing gender bias. We demonstrate that this highly controlled setup can be used to yield novel insights toward LLMs and their training dynamics. Trained models, analysis code, training code, and training data can be found at \url{https://github.com/EleutherAI/pythia}.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-03T20:58:15Z</published>
+    <arxiv:comment>Code at https://github.com/EleutherAI/pythia</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Stella Biderman</name>
+    </author>
+    <author>
+      <name>Hailey Schoelkopf</name>
+    </author>
+    <author>
+      <name>Quentin Anthony</name>
+    </author>
+    <author>
+      <name>Herbie Bradley</name>
+    </author>
+    <author>
+      <name>Kyle O'Brien</name>
+    </author>
+    <author>
+      <name>Eric Hallahan</name>
+    </author>
+    <author>
+      <name>Mohammad Aflah Khan</name>
+    </author>
+    <author>
+      <name>Shivanshu Purohit</name>
+    </author>
+    <author>
+      <name>USVSN Sai Prashanth</name>
+    </author>
+    <author>
+      <name>Edward Raff</name>
+    </author>
+    <author>
+      <name>Aviya Skowron</name>
+    </author>
+    <author>
+      <name>Lintang Sutawika</name>
+    </author>
+    <author>
+      <name>Oskar van der Wal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.06087v3</id>
+    <title>Causal Analysis of Syntactic Agreement Mechanisms in Neural Language Models</title>
+    <updated>2021-06-22T05:40:01Z</updated>
+    <link href="https://arxiv.org/abs/2106.06087v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.06087v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Targeted syntactic evaluations have demonstrated the ability of language models to perform subject-verb agreement given difficult contexts. To elucidate the mechanisms by which the models accomplish this behavior, this study applies causal mediation analysis to pre-trained neural language models. We investigate the magnitude of models' preferences for grammatical inflections, as well as whether neurons process subject-verb agreement similarly across sentences with different syntactic structures. We uncover similarities and differences across architectures and model sizes -- notably, that larger models do not necessarily learn stronger preferences. We also observe two distinct mechanisms for producing subject-verb agreement depending on the syntactic structure of the input sentence. Finally, we find that language models rely on similar sets of neurons when given sentences with similar syntactic structure.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-10T23:50:51Z</published>
+    <arxiv:comment>Accepted to ACL-IJCNLP 2021</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Matthew Finlayson</name>
+    </author>
+    <author>
+      <name>Aaron Mueller</name>
+    </author>
+    <author>
+      <name>Sebastian Gehrmann</name>
+    </author>
+    <author>
+      <name>Stuart Shieber</name>
+    </author>
+    <author>
+      <name>Tal Linzen</name>
+    </author>
+    <author>
+      <name>Yonatan Belinkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.11115v3</id>
+    <title>Self-Attention Networks Can Process Bounded Hierarchical Languages</title>
+    <updated>2023-03-13T01:47:55Z</updated>
+    <link href="https://arxiv.org/abs/2105.11115v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.11115v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite their impressive performance in NLP, self-attention networks were recently proved to be limited for processing formal languages with hierarchical structure, such as $\mathsf{Dyck}_k$, the language consisting of well-nested parentheses of $k$ types. This suggested that natural language can be approximated well with models that are too weak for formal languages, or that the role of hierarchy and recursion in natural language might be limited. We qualify this implication by proving that self-attention networks can process $\mathsf{Dyck}_{k, D}$, the subset of $\mathsf{Dyck}_{k}$ with depth bounded by $D$, which arguably better captures the bounded hierarchical structure of natural language. Specifically, we construct a hard-attention network with $D+1$ layers and $O(\log k)$ memory size (per token per layer) that recognizes $\mathsf{Dyck}_{k, D}$, and a soft-attention network with two layers and $O(\log k)$ memory size that generates $\mathsf{Dyck}_{k, D}$. Experiments show that self-attention networks trained on $\mathsf{Dyck}_{k, D}$ generalize to longer inputs with near-perfect accuracy, and also verify the theoretical memory advantage of self-attention networks over recurrent networks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-24T06:42:58Z</published>
+    <arxiv:comment>ACL 2021. 19 pages with extended appendix. Fixed a small typo in the formula at the end of page 5 (thank to Gabriel Faria). Code: https://github.com/princeton-nlp/dyck-transformer</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shunyu Yao</name>
+    </author>
+    <author>
+      <name>Binghui Peng</name>
+    </author>
+    <author>
+      <name>Christos Papadimitriou</name>
+    </author>
+    <author>
+      <name>Karthik Narasimhan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1610.01644v4</id>
+    <title>Understanding intermediate layers using linear classifier probes</title>
+    <updated>2018-11-22T23:40:00Z</updated>
+    <link href="https://arxiv.org/abs/1610.01644v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1610.01644v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural network models have a reputation for being black boxes. We propose to monitor the features at every layer of a model and measure how suitable they are for classification. We use linear classifiers, which we refer to as "probes", trained entirely independently of the model itself.
+  This helps us better understand the roles and dynamics of the intermediate layers. We demonstrate how this can be used to develop a better intuition about models and to diagnose potential problems.
+  We apply this technique to the popular models Inception v3 and Resnet-50. Among other things, we observe experimentally that the linear separability of features increase monotonically along the depth of the model.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-10-05T20:59:01Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Guillaume Alain</name>
+    </author>
+    <author>
+      <name>Yoshua Bengio</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.11781v2</id>
+    <title>Language Models Encode Numbers Using Digit Representations in Base 10</title>
+    <updated>2025-02-02T20:27:54Z</updated>
+    <link href="https://arxiv.org/abs/2410.11781v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.11781v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) frequently make errors when handling even simple numerical problems, such as comparing two small numbers. A natural hypothesis is that these errors stem from how LLMs represent numbers, and specifically, whether their representations of numbers capture their numeric values. We tackle this question from the observation that LLM errors on numerical tasks are often distributed across the digits of the answer rather than normally around its numeric value. Through a series of probing experiments and causal interventions, we show that LLMs internally represent numbers with individual circular representations per-digit in base 10. This digit-wise representation, as opposed to a value representation, sheds light on the error patterns of models on tasks involving numerical reasoning and could serve as a basis for future studies on analyzing numerical mechanisms in LLMs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-15T17:00:15Z</published>
+    <arxiv:comment>Accepted at NAACL 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Amit Arnold Levy</name>
+    </author>
+    <author>
+      <name>Mor Geva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.09388v1</id>
+    <title>Qwen3 Technical Report</title>
+    <updated>2025-05-14T13:41:34Z</updated>
+    <link href="https://arxiv.org/abs/2505.09388v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.09388v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work, we present Qwen3, the latest version of the Qwen model family. Qwen3 comprises a series of large language models (LLMs) designed to advance performance, efficiency, and multilingual capabilities. The Qwen3 series includes models of both dense and Mixture-of-Expert (MoE) architectures, with parameter scales ranging from 0.6 to 235 billion. A key innovation in Qwen3 is the integration of thinking mode (for complex, multi-step reasoning) and non-thinking mode (for rapid, context-driven responses) into a unified framework. This eliminates the need to switch between different models--such as chat-optimized models (e.g., GPT-4o) and dedicated reasoning models (e.g., QwQ-32B)--and enables dynamic mode switching based on user queries or chat templates. Meanwhile, Qwen3 introduces a thinking budget mechanism, allowing users to allocate computational resources adaptively during inference, thereby balancing latency and performance based on task complexity. Moreover, by leveraging the knowledge from the flagship models, we significantly reduce the computational resources required to build smaller-scale models, while ensuring their highly competitive performance. Empirical evaluations demonstrate that Qwen3 achieves state-of-the-art results across diverse benchmarks, including tasks in code generation, mathematical reasoning, agent tasks, etc., competitive against larger MoE models and proprietary models. Compared to its predecessor Qwen2.5, Qwen3 expands multilingual support from 29 to 119 languages and dialects, enhancing global accessibility through improved cross-lingual understanding and generation capabilities. To facilitate reproducibility and community-driven research and development, all Qwen3 models are publicly accessible under Apache 2.0.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-14T13:41:34Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>An Yang</name>
+    </author>
+    <author>
+      <name>Anfeng Li</name>
+    </author>
+    <author>
+      <name>Baosong Yang</name>
+    </author>
+    <author>
+      <name>Beichen Zhang</name>
+    </author>
+    <author>
+      <name>Binyuan Hui</name>
+    </author>
+    <author>
+      <name>Bo Zheng</name>
+    </author>
+    <author>
+      <name>Bowen Yu</name>
+    </author>
+    <author>
+      <name>Chang Gao</name>
+    </author>
+    <author>
+      <name>Chengen Huang</name>
+    </author>
+    <author>
+      <name>Chenxu Lv</name>
+    </author>
+    <author>
+      <name>Chujie Zheng</name>
+    </author>
+    <author>
+      <name>Dayiheng Liu</name>
+    </author>
+    <author>
+      <name>Fan Zhou</name>
+    </author>
+    <author>
+      <name>Fei Huang</name>
+    </author>
+    <author>
+      <name>Feng Hu</name>
+    </author>
+    <author>
+      <name>Hao Ge</name>
+    </author>
+    <author>
+      <name>Haoran Wei</name>
+    </author>
+    <author>
+      <name>Huan Lin</name>
+    </author>
+    <author>
+      <name>Jialong Tang</name>
+    </author>
+    <author>
+      <name>Jian Yang</name>
+    </author>
+    <author>
+      <name>Jianhong Tu</name>
+    </author>
+    <author>
+      <name>Jianwei Zhang</name>
+    </author>
+    <author>
+      <name>Jianxin Yang</name>
+    </author>
+    <author>
+      <name>Jiaxi Yang</name>
+    </author>
+    <author>
+      <name>Jing Zhou</name>
+    </author>
+    <author>
+      <name>Jingren Zhou</name>
+    </author>
+    <author>
+      <name>Junyang Lin</name>
+    </author>
+    <author>
+      <name>Kai Dang</name>
+    </author>
+    <author>
+      <name>Keqin Bao</name>
+    </author>
+    <author>
+      <name>Kexin Yang</name>
+    </author>
+    <author>
+      <name>Le Yu</name>
+    </author>
+    <author>
+      <name>Lianghao Deng</name>
+    </author>
+    <author>
+      <name>Mei Li</name>
+    </author>
+    <author>
+      <name>Mingfeng Xue</name>
+    </author>
+    <author>
+      <name>Mingze Li</name>
+    </author>
+    <author>
+      <name>Pei Zhang</name>
+    </author>
+    <author>
+      <name>Peng Wang</name>
+    </author>
+    <author>
+      <name>Qin Zhu</name>
+    </author>
+    <author>
+      <name>Rui Men</name>
+    </author>
+    <author>
+      <name>Ruize Gao</name>
+    </author>
+    <author>
+      <name>Shixuan Liu</name>
+    </author>
+    <author>
+      <name>Shuang Luo</name>
+    </author>
+    <author>
+      <name>Tianhao Li</name>
+    </author>
+    <author>
+      <name>Tianyi Tang</name>
+    </author>
+    <author>
+      <name>Wenbiao Yin</name>
+    </author>
+    <author>
+      <name>Xingzhang Ren</name>
+    </author>
+    <author>
+      <name>Xinyu Wang</name>
+    </author>
+    <author>
+      <name>Xinyu Zhang</name>
+    </author>
+    <author>
+      <name>Xuancheng Ren</name>
+    </author>
+    <author>
+      <name>Yang Fan</name>
+    </author>
+    <author>
+      <name>Yang Su</name>
+    </author>
+    <author>
+      <name>Yichang Zhang</name>
+    </author>
+    <author>
+      <name>Yinger Zhang</name>
+    </author>
+    <author>
+      <name>Yu Wan</name>
+    </author>
+    <author>
+      <name>Yuqiong Liu</name>
+    </author>
+    <author>
+      <name>Zekun Wang</name>
+    </author>
+    <author>
+      <name>Zeyu Cui</name>
+    </author>
+    <author>
+      <name>Zhenru Zhang</name>
+    </author>
+    <author>
+      <name>Zhipeng Zhou</name>
+    </author>
+    <author>
+      <name>Zihan Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.04167v1</id>
+    <title>Geometry of Ordinal Representations in Language Models</title>
+    <updated>2026-07-05T08:13:26Z</updated>
+    <link href="https://arxiv.org/abs/2607.04167v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.04167v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent work showed that language models represent character counts on curved 1D manifolds, with attention heads performing geometric transformations to enable computation. We test whether this generalizes across four ordinal tasks (bracket depth, indentation, table position, numeric magnitude) in Gemma-2-2B, Gemma-2-9B, and Qwen3-4B. We find that 1D manifolds with place-cell feature tiling emerge for tasks where the ordinal variable is locally computable from token identity, while tasks requiring cross-position integration or semantic extraction produce higher-dimensional or incoherent representations. Geometric computation is architecture-dependent: Qwen3-4B shows substantially stronger twisting than Gemma models for indentation, and its twisters preserve ordinal order, unlike its numeric twisters. Activation patching confirms that the identified manifold subspaces concentrate task-relevant information, with manifold-direction ablation causing dramatically larger probe accuracy drops than random-direction controls.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-05T08:13:26Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Mechanistic Interpretability Workshop at the 43rd International Conference on Machine Learning, Seoul, South Korea, 2026</arxiv:journal_ref>
+    <author>
+      <name>Saksham Bassi</name>
+    </author>
+    <author>
+      <name>Sharvi Tomar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.03658v2</id>
+    <title>The Linear Representation Hypothesis and the Geometry of Large Language Models</title>
+    <updated>2024-07-17T22:24:27Z</updated>
+    <link href="https://arxiv.org/abs/2311.03658v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.03658v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Informally, the 'linear representation hypothesis' is the idea that high-level concepts are represented linearly as directions in some representation space. In this paper, we address two closely related questions: What does "linear representation" actually mean? And, how do we make sense of geometric notions (e.g., cosine similarity or projection) in the representation space? To answer these, we use the language of counterfactuals to give two formalizations of "linear representation", one in the output (word) representation space, and one in the input (sentence) space. We then prove these connect to linear probing and model steering, respectively. To make sense of geometric notions, we use the formalization to identify a particular (non-Euclidean) inner product that respects language structure in a sense we make precise. Using this causal inner product, we show how to unify all notions of linear representation. In particular, this allows the construction of probes and steering vectors using counterfactual pairs. Experiments with LLaMA-2 demonstrate the existence of linear representations of concepts, the connection to interpretation and control, and the fundamental role of the choice of inner product.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-07T01:59:11Z</published>
+    <arxiv:comment>Accepted for a presentation at ICML 2024 and an oral presentation at NeurIPS 2023 Workshop on Causal Representation Learning. Code is available at https://github.com/KihoPark/linear_rep_geometry</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>In Proceedings of the 41st International Conference on Machine Learning (ICML), 2024</arxiv:journal_ref>
+    <author>
+      <name>Kiho Park</name>
+    </author>
+    <author>
+      <name>Yo Joong Choe</name>
+    </author>
+    <author>
+      <name>Victor Veitch</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.22128v2</id>
+    <title>Dissociating Decodability and Causal Use in Bracket-Sequence Transformers</title>
+    <updated>2026-06-16T03:20:04Z</updated>
+    <link href="https://arxiv.org/abs/2604.22128v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.22128v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When trained on tasks requiring an understanding of hierarchical structure, transformers have been found to represent this hierarchy in distinct ways: in the geometry of the residual stream, and in stack-like attention patterns maintaining a last-in, first-out ordering. However, it remains unclear whether these representations are causally used or merely decodable. We examine this gap in transformers trained on the Dyck language (a formal language of balanced bracket sequences), where the hierarchical ground truth is explicit. By probing and intervening on the residual stream and attention patterns, we find that depth, distance, and top-of-stack signals are all decodable, yet their causal roles diverge. Specifically, masking attention to the true top-of-stack position causes a sharp drop in long-distance accuracy, while ablating low-dimensional residual stream subspaces has comparatively little effect. These results, which extend to a templated natural language setting, suggest that even in a controlled setting where the relevant hierarchical variables are known, decodability alone does not imply causal use.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-24T00:26:34Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Aryan Sharma</name>
+    </author>
+    <author>
+      <name>Cutter Dawes</name>
+    </author>
+    <author>
+      <name>Shivam Raval</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.21272v2</id>
+    <title>Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics</title>
+    <updated>2025-05-20T16:29:40Z</updated>
+    <link href="https://arxiv.org/abs/2410.21272v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.21272v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Do large language models (LLMs) solve reasoning tasks by learning robust generalizable algorithms, or do they memorize training data? To investigate this question, we use arithmetic reasoning as a representative task. Using causal analysis, we identify a subset of the model (a circuit) that explains most of the model's behavior for basic arithmetic logic and examine its functionality. By zooming in on the level of individual circuit neurons, we discover a sparse set of important neurons that implement simple heuristics. Each heuristic identifies a numerical input pattern and outputs corresponding answers. We hypothesize that the combination of these heuristic neurons is the mechanism used to produce correct arithmetic answers. To test this, we categorize each neuron into several heuristic types-such as neurons that activate when an operand falls within a certain range-and find that the unordered combination of these heuristic types is the mechanism that explains most of the model's accuracy on arithmetic prompts. Finally, we demonstrate that this mechanism appears as the main source of arithmetic accuracy early in training. Overall, our experimental results across several LLMs show that LLMs perform arithmetic using neither robust algorithms nor memorization; rather, they rely on a "bag of heuristics".</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-28T17:59:06Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yaniv Nikankin</name>
+    </author>
+    <author>
+      <name>Anja Reusch</name>
+    </author>
+    <author>
+      <name>Aaron Mueller</name>
+    </author>
+    <author>
+      <name>Yonatan Belinkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.06681v4</id>
+    <title>Steering Llama 2 via Contrastive Activation Addition</title>
+    <updated>2024-07-05T15:30:45Z</updated>
+    <link href="https://arxiv.org/abs/2312.06681v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.06681v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Contrastive Activation Addition (CAA), an innovative method for steering language models by modifying their activations during forward passes. CAA computes "steering vectors" by averaging the difference in residual stream activations between pairs of positive and negative examples of a particular behavior, such as factual versus hallucinatory responses. During inference, these steering vectors are added at all token positions after the user's prompt with either a positive or negative coefficient, allowing precise control over the degree of the targeted behavior. We evaluate CAA's effectiveness on Llama 2 Chat using multiple-choice behavioral question datasets and open-ended generation tasks. We demonstrate that CAA significantly alters model behavior, is effective over and on top of traditional methods like finetuning and system prompt design, and minimally reduces capabilities. Moreover, we gain deeper insights into CAA's mechanisms by employing various activation space interpretation methods. CAA accurately steers model outputs and sheds light on how high-level concepts are represented in Large Language Models (LLMs).</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-09T04:40:46Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Nina Panickssery</name>
+    </author>
+    <author>
+      <name>Nick Gabrieli</name>
+    </author>
+    <author>
+      <name>Julian Schulz</name>
+    </author>
+    <author>
+      <name>Meg Tong</name>
+    </author>
+    <author>
+      <name>Evan Hubinger</name>
+    </author>
+    <author>
+      <name>Alexander Matt Turner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.02737v1</id>
+    <title>SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model</title>
+    <updated>2025-02-04T21:43:16Z</updated>
+    <link href="https://arxiv.org/abs/2502.02737v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.02737v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While large language models have facilitated breakthroughs in many applications of artificial intelligence, their inherent largeness makes them computationally expensive and challenging to deploy in resource-constrained settings. In this paper, we document the development of SmolLM2, a state-of-the-art "small" (1.7 billion parameter) language model (LM). To attain strong performance, we overtrain SmolLM2 on ~11 trillion tokens of data using a multi-stage training process that mixes web text with specialized math, code, and instruction-following data. We additionally introduce new specialized datasets (FineMath, Stack-Edu, and SmolTalk) at stages where we found existing datasets to be problematically small or low-quality. To inform our design decisions, we perform both small-scale ablations as well as a manual refinement process that updates the dataset mixing rates at each stage based on the performance at the previous stage. Ultimately, we demonstrate that SmolLM2 outperforms other recent small LMs including Qwen2.5-1.5B and Llama3.2-1B. To facilitate future research on LM development as well as applications of small LMs, we release both SmolLM2 as well as all of the datasets we prepared in the course of this project.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-04T21:43:16Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Loubna Ben Allal</name>
+    </author>
+    <author>
+      <name>Anton Lozhkov</name>
+    </author>
+    <author>
+      <name>Elie Bakouch</name>
+    </author>
+    <author>
+      <name>Gabriel Martín Blázquez</name>
+    </author>
+    <author>
+      <name>Guilherme Penedo</name>
+    </author>
+    <author>
+      <name>Lewis Tunstall</name>
+    </author>
+    <author>
+      <name>Andrés Marafioti</name>
+    </author>
+    <author>
+      <name>Hynek Kydlíček</name>
+    </author>
+    <author>
+      <name>Agustín Piqueres Lajarín</name>
+    </author>
+    <author>
+      <name>Vaibhav Srivastav</name>
+    </author>
+    <author>
+      <name>Joshua Lochner</name>
+    </author>
+    <author>
+      <name>Caleb Fahlgren</name>
+    </author>
+    <author>
+      <name>Xuan-Son Nguyen</name>
+    </author>
+    <author>
+      <name>Clémentine Fourrier</name>
+    </author>
+    <author>
+      <name>Ben Burtenshaw</name>
+    </author>
+    <author>
+      <name>Hugo Larcher</name>
+    </author>
+    <author>
+      <name>Haojun Zhao</name>
+    </author>
+    <author>
+      <name>Cyril Zakka</name>
+    </author>
+    <author>
+      <name>Mathieu Morlon</name>
+    </author>
+    <author>
+      <name>Colin Raffel</name>
+    </author>
+    <author>
+      <name>Leandro von Werra</name>
+    </author>
+    <author>
+      <name>Thomas Wolf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.16042v2</id>
+    <title>Towards Best Practices of Activation Patching in Language Models: Metrics and Methods</title>
+    <updated>2024-01-17T04:07:06Z</updated>
+    <link href="https://arxiv.org/abs/2309.16042v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.16042v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mechanistic interpretability seeks to understand the internal mechanisms of machine learning models, where localization -- identifying the important model components -- is a key step. Activation patching, also known as causal tracing or interchange intervention, is a standard technique for this task (Vig et al., 2020), but the literature contains many variants with little consensus on the choice of hyperparameters or methodology. In this work, we systematically examine the impact of methodological details in activation patching, including evaluation metrics and corruption methods. In several settings of localization and circuit discovery in language models, we find that varying these hyperparameters could lead to disparate interpretability results. Backed by empirical observations, we give conceptual arguments for why certain metrics or methods may be preferred. Finally, we provide recommendations for the best practices of activation patching going forwards.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-27T21:53:56Z</published>
+    <arxiv:comment>27 pages. ICLR 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Fred Zhang</name>
+    </author>
+    <author>
+      <name>Neel Nanda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.15916v1</id>
+    <title>In-Context Learning Creates Task Vectors</title>
+    <updated>2023-10-24T15:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2310.15916v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.15916v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In-context learning (ICL) in Large Language Models (LLMs) has emerged as a powerful new learning paradigm. However, its underlying mechanism is still not well understood. In particular, it is challenging to map it to the "standard" machine learning framework, where one uses a training set $S$ to find a best-fitting function $f(x)$ in some hypothesis class. Here we make progress on this problem by showing that the functions learned by ICL often have a very simple structure: they correspond to the transformer LLM whose only inputs are the query $x$ and a single "task vector" calculated from the training set. Thus, ICL can be seen as compressing $S$ into a single task vector $\boldsymbolθ(S)$ and then using this task vector to modulate the transformer to produce the output. We support the above claim via comprehensive experiments across a range of models and tasks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-24T15:17:14Z</published>
+    <arxiv:comment>Accepted at Findings of EMNLP 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Roee Hendel</name>
+    </author>
+    <author>
+      <name>Mor Geva</name>
+    </author>
+    <author>
+      <name>Amir Globerson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.06824v3</id>
+    <title>The Geometry of Truth: Emergent Linear Structure in Large Language Model Representations of True/False Datasets</title>
+    <updated>2024-08-19T01:18:41Z</updated>
+    <link href="https://arxiv.org/abs/2310.06824v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.06824v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have impressive capabilities, but are prone to outputting falsehoods. Recent work has developed techniques for inferring whether a LLM is telling the truth by training probes on the LLM's internal activations. However, this line of work is controversial, with some authors pointing out failures of these probes to generalize in basic ways, among other conceptual issues. In this work, we use high-quality datasets of simple true/false statements to study in detail the structure of LLM representations of truth, drawing on three lines of evidence: 1. Visualizations of LLM true/false statement representations, which reveal clear linear structure. 2. Transfer experiments in which probes trained on one dataset generalize to different datasets. 3. Causal evidence obtained by surgically intervening in a LLM's forward pass, causing it to treat false statements as true and vice versa. Overall, we present evidence that at sufficient scale, LLMs linearly represent the truth or falsehood of factual statements. We also show that simple difference-in-mean probes generalize as well as other probing techniques while identifying directions which are more causally implicated in model outputs.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-10T17:54:39Z</published>
+    <arxiv:comment>Conference on Language Modeling, 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Samuel Marks</name>
+    </author>
+    <author>
+      <name>Max Tegmark</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.03819v4</id>
+    <title>LEACE: Perfect linear concept erasure in closed form</title>
+    <updated>2025-04-03T01:51:37Z</updated>
+    <link href="https://arxiv.org/abs/2306.03819v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.03819v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Concept erasure aims to remove specified features from an embedding. It can improve fairness (e.g. preventing a classifier from using gender or race) and interpretability (e.g. removing a concept to observe changes in model behavior). We introduce LEAst-squares Concept Erasure (LEACE), a closed-form method which provably prevents all linear classifiers from detecting a concept while changing the embedding as little as possible, as measured by a broad class of norms. We apply LEACE to large language models with a novel procedure called "concept scrubbing," which erases target concept information from every layer in the network. We demonstrate our method on two tasks: measuring the reliance of language models on part-of-speech information, and reducing gender bias in BERT embeddings. Code is available at https://github.com/EleutherAI/concept-erasure.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-06T16:07:24Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nora Belrose</name>
+    </author>
+    <author>
+      <name>David Schneider-Joseph</name>
+    </author>
+    <author>
+      <name>Shauli Ravfogel</name>
+    </author>
+    <author>
+      <name>Ryan Cotterell</name>
+    </author>
+    <author>
+      <name>Edward Raff</name>
+    </author>
+    <author>
+      <name>Stella Biderman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.02513v1</id>
+    <title>Modular Arithmetic: Language Models Solve Math Digit by Digit</title>
+    <updated>2025-08-04T15:18:41Z</updated>
+    <link href="https://arxiv.org/abs/2508.02513v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.02513v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While recent work has begun to uncover the internal strategies that Large Language Models (LLMs) employ for simple arithmetic tasks, a unified understanding of their underlying mechanisms is still lacking. We extend recent findings showing that LLMs represent numbers in a digit-wise manner and present evidence for the existence of digit-position-specific circuits that LLMs use to perform simple arithmetic tasks, i.e. modular subgroups of MLP neurons that operate independently on different digit positions (units, tens, hundreds). Notably, such circuits exist independently of model size and of tokenization strategy, i.e. both for models that encode longer numbers digit-by-digit and as one token. Using Feature Importance and Causal Interventions, we identify and validate the digit-position-specific circuits, revealing a compositional and interpretable structure underlying the solving of arithmetic problems in LLMs. Our interventions selectively alter the model's prediction at targeted digit positions, demonstrating the causal role of digit-position circuits in solving arithmetic tasks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-04T15:18:41Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Tanja Baeumel</name>
+    </author>
+    <author>
+      <name>Daniil Gurgurov</name>
+    </author>
+    <author>
+      <name>Yusser al Ghussin</name>
+    </author>
+    <author>
+      <name>Josef van Genabith</name>
+    </author>
+    <author>
+      <name>Simon Ostermann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.15213v2</id>
+    <title>Function Vectors in Large Language Models</title>
+    <updated>2024-02-25T18:32:18Z</updated>
+    <link href="https://arxiv.org/abs/2310.15213v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.15213v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We report the presence of a simple neural mechanism that represents an input-output function as a vector within autoregressive transformer language models (LMs). Using causal mediation analysis on a diverse range of in-context-learning (ICL) tasks, we find that a small number attention heads transport a compact representation of the demonstrated task, which we call a function vector (FV). FVs are robust to changes in context, i.e., they trigger execution of the task on inputs such as zero-shot and natural text settings that do not resemble the ICL contexts from which they are collected. We test FVs across a range of tasks, models, and layers and find strong causal effects across settings in middle layers. We investigate the internal structure of FVs and find while that they often contain information that encodes the output space of the function, this information alone is not sufficient to reconstruct an FV. Finally, we test semantic vector composition in FVs, and find that to some extent they can be summed to create vectors that trigger new complex tasks. Our findings show that compact, causal internal vector representations of function abstractions can be explicitly extracted from LLMs. Our code and data are available at https://functions.baulab.info.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-23T17:55:24Z</published>
+    <arxiv:comment>ICLR 2024. 52 pages, 30 figures, 23 tables. Code and data at https://functions.baulab.info</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Eric Todd</name>
+    </author>
+    <author>
+      <name>Millicent L. Li</name>
+    </author>
+    <author>
+      <name>Arnab Sen Sharma</name>
+    </author>
+    <author>
+      <name>Aaron Mueller</name>
+    </author>
+    <author>
+      <name>Byron C. Wallace</name>
+    </author>
+    <author>
+      <name>David Bau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00656v3</id>
+    <title>2 OLMo 2 Furious</title>
+    <updated>2025-10-08T07:50:45Z</updated>
+    <link href="https://arxiv.org/abs/2501.00656v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00656v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present OLMo 2, the next generation of our fully open language models. OLMo 2 includes a family of dense autoregressive language models at 7B, 13B and 32B scales with fully released artifacts -- model weights, full training data, training code and recipes, training logs and thousands of intermediate checkpoints. In this work, we describe our modified model architecture and training recipe, focusing on techniques for achieving better training stability and improved per-token efficiency. Our updated pretraining data mixture introduces a new, specialized data mix called Dolmino Mix 1124, which significantly improves model capabilities across many downstream task benchmarks when introduced via late-stage curriculum training (i.e. specialized data during the annealing phase of pretraining). Finally, we incorporate best practices from Tülu 3 to develop OLMo 2-Instruct, focusing on permissive data and extending our final-stage reinforcement learning with verifiable rewards (RLVR). Our OLMo 2 base models sit at the Pareto frontier of performance to training compute, often matching or outperforming open-weight only models like Llama 3.1, Qwen 2.5, and Gemma 2 while using fewer FLOPs and with fully transparent training data, code, and recipe. Our fully open OLMo 2-Instruct models are competitive with open-weight only models of comparable size and even some proprietary models like GPT-3.5 Turbo and GPT 4o Mini.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T21:55:10Z</published>
+    <arxiv:comment>Shorter version accepted to COLM 2025. Updated to include 32B results. Model demo available at playground.allenai.org</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Team OLMo</name>
+    </author>
+    <author>
+      <name>Pete Walsh</name>
+    </author>
+    <author>
+      <name>Luca Soldaini</name>
+    </author>
+    <author>
+      <name>Dirk Groeneveld</name>
+    </author>
+    <author>
+      <name>Kyle Lo</name>
+    </author>
+    <author>
+      <name>Shane Arora</name>
+    </author>
+    <author>
+      <name>Akshita Bhagia</name>
+    </author>
+    <author>
+      <name>Yuling Gu</name>
+    </author>
+    <author>
+      <name>Shengyi Huang</name>
+    </author>
+    <author>
+      <name>Matt Jordan</name>
+    </author>
+    <author>
+      <name>Nathan Lambert</name>
+    </author>
+    <author>
+      <name>Dustin Schwenk</name>
+    </author>
+    <author>
+      <name>Oyvind Tafjord</name>
+    </author>
+    <author>
+      <name>Taira Anderson</name>
+    </author>
+    <author>
+      <name>David Atkinson</name>
+    </author>
+    <author>
+      <name>Faeze Brahman</name>
+    </author>
+    <author>
+      <name>Christopher Clark</name>
+    </author>
+    <author>
+      <name>Pradeep Dasigi</name>
+    </author>
+    <author>
+      <name>Nouha Dziri</name>
+    </author>
+    <author>
+      <name>Allyson Ettinger</name>
+    </author>
+    <author>
+      <name>Michal Guerquin</name>
+    </author>
+    <author>
+      <name>David Heineman</name>
+    </author>
+    <author>
+      <name>Hamish Ivison</name>
+    </author>
+    <author>
+      <name>Pang Wei Koh</name>
+    </author>
+    <author>
+      <name>Jiacheng Liu</name>
+    </author>
+    <author>
+      <name>Saumya Malik</name>
+    </author>
+    <author>
+      <name>William Merrill</name>
+    </author>
+    <author>
+      <name>Lester James V. Miranda</name>
+    </author>
+    <author>
+      <name>Jacob Morrison</name>
+    </author>
+    <author>
+      <name>Tyler Murray</name>
+    </author>
+    <author>
+      <name>Crystal Nam</name>
+    </author>
+    <author>
+      <name>Jake Poznanski</name>
+    </author>
+    <author>
+      <name>Valentina Pyatkin</name>
+    </author>
+    <author>
+      <name>Aman Rangapur</name>
+    </author>
+    <author>
+      <name>Michael Schmitz</name>
+    </author>
+    <author>
+      <name>Sam Skjonsberg</name>
+    </author>
+    <author>
+      <name>David Wadden</name>
+    </author>
+    <author>
+      <name>Christopher Wilhelm</name>
+    </author>
+    <author>
+      <name>Michael Wilson</name>
+    </author>
+    <author>
+      <name>Luke Zettlemoyer</name>
+    </author>
+    <author>
+      <name>Ali Farhadi</name>
+    </author>
+    <author>
+      <name>Noah A. Smith</name>
+    </author>
+    <author>
+      <name>Hannaneh Hajishirzi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.00322v2</id>
+    <title>Failure by Interference: Language Models Make Balanced Parentheses Errors When Faulty Mechanisms Overshadow Sound Ones</title>
+    <updated>2026-06-08T15:24:04Z</updated>
+    <link href="https://arxiv.org/abs/2507.00322v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.00322v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite remarkable advances in coding capabilities, language models (LMs) still struggle with simple syntactic tasks such as generating balanced parentheses. In this study, we investigate the underlying mechanisms behind the persistence of these errors across LMs of varying sizes (124M-7B) to both understand and mitigate the errors. Our study reveals that LMs rely on a number of components (attention heads and FF neurons) that independently make their own predictions. While some components reliably promote correct answers across a generalized range of inputs (i.e., implementing "sound mechanisms''), others are less reliable and introduce noise by promoting incorrect tokens (i.e., implementing "faulty mechanisms''). Errors occur when the faulty mechanisms overshadow the sound ones and dominantly affect the predictions. Motivated by this insight, we introduce RASteer, a steering method to systematically identify and increase the contribution of reliable components for improving model performance. RASteer substantially improves performance on balanced parentheses tasks, boosting accuracy of some models from $0$% to around $100$% without impairing the models' general coding ability. We further demonstrate its broader applicability in arithmetic reasoning tasks, achieving performance gains of up to around $20$%.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-30T23:35:19Z</published>
+    <arxiv:comment>23 pages, 10 figures, accepted for NeurIPS 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Daking Rai</name>
+    </author>
+    <author>
+      <name>Samuel Miller</name>
+    </author>
+    <author>
+      <name>Kevin Moran</name>
+    </author>
+    <author>
+      <name>Ziyu Yao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.11936v1</id>
+    <title>UniCase -- Rethinking Casing in Language Models</title>
+    <updated>2020-10-22T17:58:44Z</updated>
+    <link href="https://arxiv.org/abs/2010.11936v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.11936v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce a new approach to dealing with the problem of case-sensitiveness in Language Modelling (LM). We propose simple architecture modification to the RoBERTa language model, accompanied by a new tokenization strategy, which we named Unified Case LM (UniCase). We tested our solution on the GLUE benchmark, which led to increased performance by 0.42 points. Moreover, we prove that the UniCase model works much better when we have to deal with text data, where all tokens are uppercased (+5.88 point).</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-22T17:58:44Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Rafal Powalski</name>
+    </author>
+    <author>
+      <name>Tomasz Stanislawek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.15054v2</id>
+    <title>A Mechanistic Interpretation of Arithmetic Reasoning in Language Models using Causal Mediation Analysis</title>
+    <updated>2023-10-20T12:13:27Z</updated>
+    <link href="https://arxiv.org/abs/2305.15054v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.15054v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mathematical reasoning in large language models (LMs) has garnered significant attention in recent work, but there is a limited understanding of how these models process and store information related to arithmetic tasks within their architecture. In order to improve our understanding of this aspect of language models, we present a mechanistic interpretation of Transformer-based LMs on arithmetic questions using a causal mediation analysis framework. By intervening on the activations of specific model components and measuring the resulting changes in predicted probabilities, we identify the subset of parameters responsible for specific predictions. This provides insights into how information related to arithmetic is processed by LMs. Our experimental results indicate that LMs process the input by transmitting the information relevant to the query from mid-sequence early layers to the final token using the attention mechanism. Then, this information is processed by a set of MLP modules, which generate result-related information that is incorporated into the residual stream. To assess the specificity of the observed activation dynamics, we compare the effects of different model components on arithmetic queries with other tasks, including number retrieval from prompts and factual knowledge questions.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-24T11:43:47Z</published>
+    <arxiv:comment>EMNLP 2023. 18 pages, 19 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Alessandro Stolfo</name>
+    </author>
+    <author>
+      <name>Yonatan Belinkov</name>
+    </author>
+    <author>
+      <name>Mrinmaya Sachan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.16130v3</id>
+    <title>Language Models Implement Simple Word2Vec-style Vector Arithmetic</title>
+    <updated>2024-04-03T16:27:31Z</updated>
+    <link href="https://arxiv.org/abs/2305.16130v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.16130v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A primary criticism towards language models (LMs) is their inscrutability. This paper presents evidence that, despite their size and complexity, LMs sometimes exploit a simple vector arithmetic style mechanism to solve some relational tasks using regularities encoded in the hidden space of the model (e.g., Poland:Warsaw::China:Beijing). We investigate a range of language model sizes (from 124M parameters to 176B parameters) in an in-context learning setting, and find that for a variety of tasks (involving capital cities, uppercasing, and past-tensing) a key part of the mechanism reduces to a simple additive update typically applied by the feedforward (FFN) networks. We further show that this mechanism is specific to tasks that require retrieval from pretraining memory, rather than retrieval from local context. Our results contribute to a growing body of work on the interpretability of LMs, and offer reason to be optimistic that, despite the massive and non-linear nature of the models, the strategies they ultimately use to solve tasks can sometimes reduce to familiar and even intuitive algorithms.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-25T15:04:01Z</published>
+    <arxiv:comment>NAACL</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jack Merullo</name>
+    </author>
+    <author>
+      <name>Carsten Eickhoff</name>
+    </author>
+    <author>
+      <name>Ellie Pavlick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.00586v5</id>
+    <title>How does GPT-2 compute greater-than?: Interpreting mathematical abilities in a pre-trained language model</title>
+    <updated>2023-11-02T10:55:18Z</updated>
+    <link href="https://arxiv.org/abs/2305.00586v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.00586v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pre-trained language models can be surprisingly adept at tasks they were not explicitly trained on, but how they implement these capabilities is poorly understood. In this paper, we investigate the basic mathematical abilities often acquired by pre-trained language models. Concretely, we use mechanistic interpretability techniques to explain the (limited) mathematical abilities of GPT-2 small. As a case study, we examine its ability to take in sentences such as "The war lasted from the year 1732 to the year 17", and predict valid two-digit end years (years &gt; 32). We first identify a circuit, a small subset of GPT-2 small's computational graph that computes this task's output. Then, we explain the role of each circuit component, showing that GPT-2 small's final multi-layer perceptrons boost the probability of end years greater than the start year. Finally, we find related tasks that activate our circuit. Our results suggest that GPT-2 small computes greater-than using a complex but general mechanism that activates across diverse contexts.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-30T21:44:21Z</published>
+    <arxiv:comment>NeurIPS 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Michael Hanna</name>
+    </author>
+    <author>
+      <name>Ollie Liu</name>
+    </author>
+    <author>
+      <name>Alexandre Variengien</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.14903v1</id>
+    <title>Tokenization counts: the impact of tokenization on arithmetic in frontier LLMs</title>
+    <updated>2024-02-22T18:14:09Z</updated>
+    <link href="https://arxiv.org/abs/2402.14903v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.14903v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tokenization, the division of input text into input tokens, is an often overlooked aspect of the large language model (LLM) pipeline and could be the source of useful or harmful inductive biases. Historically, LLMs have relied on byte pair encoding, without care to specific input domains. With the increased use of LLMs for reasoning, various number-specific tokenization schemes have been adopted, with popular models like LLaMa and PaLM opting for single-digit tokenization while GPT-3.5 and GPT-4 have separate tokens for each 1-, 2-, and 3-digit numbers. In this work, we study the effect this choice has on numerical reasoning through the use of arithmetic tasks. We consider left-to-right and right-to-left tokenization for GPT-3.5 and -4, finding that right-to-left tokenization (enforced by comma separating numbers at inference time) leads to largely improved performance. Furthermore, we find that model errors when using standard left-to-right tokenization follow stereotyped error patterns, suggesting that model computations are systematic rather than approximate. We show that the model is able to convert between tokenizations easily, thus allowing chain-of-thought-inspired approaches to recover performance on left-to-right tokenized inputs. We also find the gap between tokenization directions decreases when models are scaled, possibly indicating that larger models are better able to override this tokenization-dependent inductive bias. In summary, our work performs the first study of how number tokenization choices lead to differences in model performance on arithmetic tasks, accompanied by a thorough analysis of error patterns. We hope this work inspires practitioners to more carefully ablate number tokenization-related choices when working towards general models of numerical reasoning.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-22T18:14:09Z</published>
+    <arxiv:comment>21 pages, 18 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Aaditya K. Singh</name>
+    </author>
+    <author>
+      <name>DJ Strouse</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.13653v1</id>
+    <title>Weight-sparse transformers have interpretable circuits</title>
+    <updated>2025-11-17T18:02:06Z</updated>
+    <link href="https://arxiv.org/abs/2511.13653v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.13653v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Finding human-understandable circuits in language models is a central goal of the field of mechanistic interpretability. We train models to have more understandable circuits by constraining most of their weights to be zeros, so that each neuron only has a few connections. To recover fine-grained circuits underlying each of several hand-crafted tasks, we prune the models to isolate the part responsible for the task. These circuits often contain neurons and residual channels that correspond to natural concepts, with a small number of straightforwardly interpretable connections between them. We study how these models scale and find that making weights sparser trades off capability for interpretability, and scaling model size improves the capability-interpretability frontier. However, scaling sparse models beyond tens of millions of nonzero parameters while preserving interpretability remains a challenge. In addition to training weight-sparse models de novo, we show preliminary results suggesting our method can also be adapted to explain existing dense models. Our work produces circuits that achieve an unprecedented level of human understandability and validates them with considerable rigor.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T18:02:06Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Leo Gao</name>
+    </author>
+    <author>
+      <name>Achyuta Rajaram</name>
+    </author>
+    <author>
+      <name>Jacob Coxon</name>
+    </author>
+    <author>
+      <name>Soham V. Govande</name>
+    </author>
+    <author>
+      <name>Bowen Baker</name>
+    </author>
+    <author>
+      <name>Dan Mossing</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.04480v1</id>
+    <title>When Models Manipulate Manifolds: The Geometry of a Counting Task</title>
+    <updated>2026-01-08T01:33:42Z</updated>
+    <link href="https://arxiv.org/abs/2601.04480v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.04480v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Language models can perceive visual properties of text despite receiving only sequences of tokens-we mechanistically investigate how Claude 3.5 Haiku accomplishes one such task: linebreaking in fixed-width text. We find that character counts are represented on low-dimensional curved manifolds discretized by sparse feature families, analogous to biological place cells. Accurate predictions emerge from a sequence of geometric transformations: token lengths are accumulated into character count manifolds, attention heads twist these manifolds to estimate distance to the line boundary, and the decision to break the line is enabled by arranging estimates orthogonally to create a linear decision boundary. We validate our findings through causal interventions and discover visual illusions--character sequences that hijack the counting mechanism. Our work demonstrates the rich sensory processing of early layers, the intricacy of attention algorithms, and the importance of combining feature-based and geometric views of interpretability.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T01:33:42Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Wes Gurnee</name>
+    </author>
+    <author>
+      <name>Emmanuel Ameisen</name>
+    </author>
+    <author>
+      <name>Isaac Kauvar</name>
+    </author>
+    <author>
+      <name>Julius Tarng</name>
+    </author>
+    <author>
+      <name>Adam Pearce</name>
+    </author>
+    <author>
+      <name>Chris Olah</name>
+    </author>
+    <author>
+      <name>Joshua Batson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.10248v5</id>
+    <title>Steering Language Models With Activation Engineering</title>
+    <updated>2024-10-10T13:20:13Z</updated>
+    <link href="https://arxiv.org/abs/2308.10248v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.10248v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prompt engineering and finetuning aim to maximize language model performance on a given metric (like toxicity reduction). However, these methods do not fully elicit a model's capabilities. To reduce this gap, we introduce activation engineering: the inference-time modification of activations in order to control (or steer) model outputs. Specifically, we introduce the Activation Addition (ActAdd) technique, which contrasts the intermediate activations on prompt pairs (such as "Love" versus "Hate") to compute a steering vector (Subramani et al. 2022). By tactically adding in e.g. the "Love" - "Hate" steering vector during the forward pass, we achieve SOTA on negative-to-positive sentiment shift and detoxification using models including LLaMA-3 and OPT. ActAdd yields inference-time control over high-level output properties (like topic and sentiment) while preserving performance on off-target tasks. ActAdd is lightweight: it does not require any machine optimization and works with a single pair of data points, which enables rapid iteration over steering. ActAdd demonstrates the power of activation engineering.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-20T12:21:05Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Alexander Matt Turner</name>
+    </author>
+    <author>
+      <name>Lisa Thiergart</name>
+    </author>
+    <author>
+      <name>Gavin Leech</name>
+    </author>
+    <author>
+      <name>David Udell</name>
+    </author>
+    <author>
+      <name>Juan J. Vazquez</name>
+    </author>
+    <author>
+      <name>Ulisse Mini</name>
+    </author>
+    <author>
+      <name>Monte MacDiarmid</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.12279v1</id>
+    <title>A Shared Subcircuit Lets LLMs Count Down Across Tasks</title>
+    <updated>2026-07-14T02:30:45Z</updated>
+    <link href="https://arxiv.org/abs/2607.12279v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.12279v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Writing a sentence of exactly twelve words; ending a DNA sequence at the right codon; formatting an ASCII table. These are all tasks that language models can do that requires tracking how many tokens remain before a target. In this work, we identify in Llama-3.1-70B-Instruct a general mechanism for performing these tasks: a "countdown subcircuit" that compares the current position to a goal length and estimates the time remaining until then. We first isolate a countdown subcircuit in a controlled setting, in which the model is tasked with writing a fixed-length sentence ending in a specified word. We then investigate the geometry of the representations used by the subcircuit, and find that the subcircuit uses an identical motif previously identified in a frontier LLM on a separate task, thus suggesting that this motif is shared across models. Finally, we use unsupervised probing on a natural language dataset to find a variety of other tasks where this subcircuit is used, including tasks where the goal length is inferred from context rather than explicitly stated. Our work suggests that reverse-engineering subcircuits allows us to understand how behaviors generalize from a single example to many different tasks and even models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-14T02:30:45Z</published>
+    <arxiv:comment>12 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jacob Dunefsky</name>
+    </author>
+    <author>
+      <name>Wes Gurnee</name>
+    </author>
+    <author>
+      <name>Emmanuel Ameisen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.02770v2</id>
+    <title>Gemma 4 Technical Report</title>
+    <updated>2026-07-24T13:10:45Z</updated>
+    <link href="https://arxiv.org/abs/2607.02770v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.02770v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Gemma 4, a new generation of open-weight, natively multimodal language models in the Gemma model family. Designed to advance compute efficiency and reasoning, the Gemma 4 model suite features dense and Mixture-of-Experts architectures, ranging from 2.3B to 31B parameters. Alongside improved vision and audio encoders for all model sizes, we propose a unified, encoder-free architecture for our 12B model, which ingests raw audio and image patches. Furthermore, we integrate a thinking mode, enabling Gemma models to generate reasoning traces prior to responding. We improve inference speed, memory, and compute efficiency, as well as long-context abilities through critical design choices. Gemma 4 establishes a leap in performance across STEM, multimodal, and long-context benchmarks, and rivals larger, frontier open models in human-rated tasks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-02T21:08:53Z</published>
+    <arxiv:comment>17 pages, 2 figures, technical report, updated</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name> Gemma Team</name>
+    </author>
+    <author>
+      <name>Sherif El Abd</name>
+    </author>
+    <author>
+      <name>Vaibhav Aggarwal</name>
+    </author>
+    <author>
+      <name>Robin Algayres</name>
+    </author>
+    <author>
+      <name>Alek Andreev</name>
+    </author>
+    <author>
+      <name>Olivier Bachem</name>
+    </author>
+    <author>
+      <name>Ian Ballantyne</name>
+    </author>
+    <author>
+      <name>Cormac Brick</name>
+    </author>
+    <author>
+      <name>Victor Cărbune</name>
+    </author>
+    <author>
+      <name>Michelle Casbon</name>
+    </author>
+    <author>
+      <name>Mayank Chaturvedi</name>
+    </author>
+    <author>
+      <name>Aditya Chawla</name>
+    </author>
+    <author>
+      <name>Victor Cotruta</name>
+    </author>
+    <author>
+      <name>Alice Coucke</name>
+    </author>
+    <author>
+      <name>Phil Culliton</name>
+    </author>
+    <author>
+      <name>Robert Dadashi</name>
+    </author>
+    <author>
+      <name>Lucas Dixon</name>
+    </author>
+    <author>
+      <name>Mohamed Elhawaty</name>
+    </author>
+    <author>
+      <name>Utku Evci</name>
+    </author>
+    <author>
+      <name>Clément Farabet</name>
+    </author>
+    <author>
+      <name>Johan Ferret</name>
+    </author>
+    <author>
+      <name>Filippo Galgani</name>
+    </author>
+    <author>
+      <name>Sertan Girgin</name>
+    </author>
+    <author>
+      <name>Jean-Bastien Grill</name>
+    </author>
+    <author>
+      <name>Maarten Grootendorst</name>
+    </author>
+    <author>
+      <name>Jiaxian Guo</name>
+    </author>
+    <author>
+      <name>Cassidy Hardin</name>
+    </author>
+    <author>
+      <name>Yanzhang He</name>
+    </author>
+    <author>
+      <name>Steven M. Hernandez</name>
+    </author>
+    <author>
+      <name>Omri Homburger</name>
+    </author>
+    <author>
+      <name>Léonard Hussenot</name>
+    </author>
+    <author>
+      <name>Juyeong Ji</name>
+    </author>
+    <author>
+      <name>Armand Joulin</name>
+    </author>
+    <author>
+      <name>Aishwarya Kamath</name>
+    </author>
+    <author>
+      <name>Parnian Kassraie</name>
+    </author>
+    <author>
+      <name>Olivier Lacombe</name>
+    </author>
+    <author>
+      <name>Preethi Lahoti</name>
+    </author>
+    <author>
+      <name>Gaël Liu</name>
+    </author>
+    <author>
+      <name>Gus Martins</name>
+    </author>
+    <author>
+      <name>Luciano Martins</name>
+    </author>
+    <author>
+      <name>Tatiana Matejovicova</name>
+    </author>
+    <author>
+      <name>Ramona Merhej</name>
+    </author>
+    <author>
+      <name>Nikola Momchev</name>
+    </author>
+    <author>
+      <name>Sneha Mondal</name>
+    </author>
+    <author>
+      <name>Ryan Mullins</name>
+    </author>
+    <author>
+      <name>Sindhu Raghuram Panyam</name>
+    </author>
+    <author>
+      <name>Shreya Pathak</name>
+    </author>
+    <author>
+      <name>Sarah Perrin</name>
+    </author>
+    <author>
+      <name>André Susano Pinto</name>
+    </author>
+    <author>
+      <name>Etienne Pot</name>
+    </author>
+    <author>
+      <name>Angéline Pouget</name>
+    </author>
+    <author>
+      <name>Alexandre Ramé</name>
+    </author>
+    <author>
+      <name>Sabela Ramos</name>
+    </author>
+    <author>
+      <name>Douglas Reid</name>
+    </author>
+    <author>
+      <name>David Rim</name>
+    </author>
+    <author>
+      <name>Morgane Rivière</name>
+    </author>
+    <author>
+      <name>Karsten Roth</name>
+    </author>
+    <author>
+      <name>Louis Rouillard</name>
+    </author>
+    <author>
+      <name>Omar Sanseviero</name>
+    </author>
+    <author>
+      <name>Pier Giuseppe Sessa</name>
+    </author>
+    <author>
+      <name>Shane Settle</name>
+    </author>
+    <author>
+      <name>Danila Sinopalnikov</name>
+    </author>
+    <author>
+      <name>Sara Smoot</name>
+    </author>
+    <author>
+      <name>Piotr Stanczyk</name>
+    </author>
+    <author>
+      <name>Andreas Steiner</name>
+    </author>
+    <author>
+      <name>Lawrence Stewart</name>
+    </author>
+    <author>
+      <name>Ilya Tolstikhin</name>
+    </author>
+    <author>
+      <name>Michael Tschannen</name>
+    </author>
+    <author>
+      <name>Anton Tsitsulin</name>
+    </author>
+    <author>
+      <name>Nino Vieillard</name>
+    </author>
+    <author>
+      <name>Renjie Wu</name>
+    </author>
+    <author>
+      <name>Pingmei Xu</name>
+    </author>
+    <author>
+      <name>Haichuan Yang</name>
+    </author>
+    <author>
+      <name>Edouard Yvinec</name>
+    </author>
+    <author>
+      <name>Biao Zhang</name>
+    </author>
+    <author>
+      <name>Li Zhang</name>
+    </author>
+    <author>
+      <name>Joe Zou</name>
+    </author>
+    <author>
+      <name>Nicolas Aagnes</name>
+    </author>
+    <author>
+      <name>Abdelrahman Abdelhamed</name>
+    </author>
+    <author>
+      <name>Jakub Adamek</name>
+    </author>
+    <author>
+      <name>Shivani Agrawal</name>
+    </author>
+    <author>
+      <name>Shubham Agrawal</name>
+    </author>
+    <author>
+      <name>Ibrahim Alabdulmohsin</name>
+    </author>
+    <author>
+      <name>Jean Baptiste Alayrac</name>
+    </author>
+    <author>
+      <name>Uri Alon</name>
+    </author>
+    <author>
+      <name>Chandramouli Amarnath</name>
+    </author>
+    <author>
+      <name>Ankesh Anand</name>
+    </author>
+    <author>
+      <name>Chrysovalantis Anastasiou</name>
+    </author>
+    <author>
+      <name>Setareh Ariafar</name>
+    </author>
+    <author>
+      <name>François-Xavier Aubet</name>
+    </author>
+    <author>
+      <name>Kyriakos Axiotis</name>
+    </author>
+    <author>
+      <name>Federico Barbero</name>
+    </author>
+    <author>
+      <name>Joelle Barral</name>
+    </author>
+    <author>
+      <name>Alexei Bendebury</name>
+    </author>
+    <author>
+      <name>Urs Bergmann</name>
+    </author>
+    <author>
+      <name>Stanley Bileschi</name>
+    </author>
+    <author>
+      <name>Kat Black</name>
+    </author>
+    <author>
+      <name>Mathieu Blondel</name>
+    </author>
+    <author>
+      <name>Sebastian Borgeaud</name>
+    </author>
+    <author>
+      <name>Arthur Bražinskas</name>
+    </author>
+    <author>
+      <name>Ryan Burnell</name>
+    </author>
+    <author>
+      <name>Robert Busa-Fekete</name>
+    </author>
+    <author>
+      <name>Mu Cai</name>
+    </author>
+    <author>
+      <name>Daniele Calandriello</name>
+    </author>
+    <author>
+      <name>Glenn Cameron</name>
+    </author>
+    <author>
+      <name>Charlotte Caucheteux</name>
+    </author>
+    <author>
+      <name>Rahma Chaabouni</name>
+    </author>
+    <author>
+      <name>Garima Chadha</name>
+    </author>
+    <author>
+      <name>Jetha Chan</name>
+    </author>
+    <author>
+      <name>Blake Jianhang Chen</name>
+    </author>
+    <author>
+      <name>Jesse Chen</name>
+    </author>
+    <author>
+      <name>Lin Chen</name>
+    </author>
+    <author>
+      <name>Xu Chen</name>
+    </author>
+    <author>
+      <name>Derek Cheng</name>
+    </author>
+    <author>
+      <name>Tzu-hsiang Chien</name>
+    </author>
+    <author>
+      <name>Nikolai Chinaev</name>
+    </author>
+    <author>
+      <name>Yi Chou</name>
+    </author>
+    <author>
+      <name>Zhaohui Chu</name>
+    </author>
+    <author>
+      <name>Benjamin Coleman</name>
+    </author>
+    <author>
+      <name>Pooja Consul</name>
+    </author>
+    <author>
+      <name>Sam Conway-Rahman</name>
+    </author>
+    <author>
+      <name>Scott Crowell</name>
+    </author>
+    <author>
+      <name>Dylan Cutler</name>
+    </author>
+    <author>
+      <name>Vivek Dani</name>
+    </author>
+    <author>
+      <name>Samira Daruki</name>
+    </author>
+    <author>
+      <name>Anil Das</name>
+    </author>
+    <author>
+      <name>Daniel Deutsch</name>
+    </author>
+    <author>
+      <name>Nishanth Dikkala</name>
+    </author>
+    <author>
+      <name>Li Ding</name>
+    </author>
+    <author>
+      <name>Qiuhan Ding</name>
+    </author>
+    <author>
+      <name>Shenil Dodhia</name>
+    </author>
+    <author>
+      <name>Konstantin Donhauser</name>
+    </author>
+    <author>
+      <name>Tulsee Doshi</name>
+    </author>
+    <author>
+      <name>Anca Dragan</name>
+    </author>
+    <author>
+      <name>Alex Druinsky</name>
+    </author>
+    <author>
+      <name>Sahil Dua</name>
+    </author>
+    <author>
+      <name>Zoltan Egyed</name>
+    </author>
+    <author>
+      <name>Danielle Eisenbud</name>
+    </author>
+    <author>
+      <name>Daniel Eppens</name>
+    </author>
+    <author>
+      <name>Cindy Fan</name>
+    </author>
+    <author>
+      <name>Bahare Fatemi</name>
+    </author>
+    <author>
+      <name>Yassir Fathullah</name>
+    </author>
+    <author>
+      <name>Vlad Feinberg</name>
+    </author>
+    <author>
+      <name>Milen Ferev</name>
+    </author>
+    <author>
+      <name>Sebastian Flennerhag</name>
+    </author>
+    <author>
+      <name>Takumi Fujimoto</name>
+    </author>
+    <author>
+      <name>João Gabriel Oliveira</name>
+    </author>
+    <author>
+      <name>Isaac Galatzer-Levy</name>
+    </author>
+    <author>
+      <name>João Gante</name>
+    </author>
+    <author>
+      <name>Simon Geisler</name>
+    </author>
+    <author>
+      <name>Soham Ghosal</name>
+    </author>
+    <author>
+      <name>Antonious M. Girgis</name>
+    </author>
+    <author>
+      <name>Tamara von Glehn</name>
+    </author>
+    <author>
+      <name>Alec Go</name>
+    </author>
+    <author>
+      <name>Alhaad Gokhale</name>
+    </author>
+    <author>
+      <name>Alex Grills</name>
+    </author>
+    <author>
+      <name>Yiming Gu</name>
+    </author>
+    <author>
+      <name>Mayank Gupta</name>
+    </author>
+    <author>
+      <name>Pramod Gupta</name>
+    </author>
+    <author>
+      <name>Guru Guruganesh</name>
+    </author>
+    <author>
+      <name>Raia Hadsell</name>
+    </author>
+    <author>
+      <name>Hamza Harkous</name>
+    </author>
+    <author>
+      <name>Jitendra Harlalka</name>
+    </author>
+    <author>
+      <name>Demis Hassabis</name>
+    </author>
+    <author>
+      <name>Anja Hauth</name>
+    </author>
+    <author>
+      <name>Joe Heyward</name>
+    </author>
+    <author>
+      <name>Arian Hosseini</name>
+    </author>
+    <author>
+      <name>Chih-Yang Hsia</name>
+    </author>
+    <author>
+      <name>I-Hung Hsu</name>
+    </author>
+    <author>
+      <name>Xiaopeng Huang</name>
+    </author>
+    <author>
+      <name>Yangsibo Huang</name>
+    </author>
+    <author>
+      <name>Kevin Hui</name>
+    </author>
+    <author>
+      <name>Adrian Hutter</name>
+    </author>
+    <author>
+      <name>Te I</name>
+    </author>
+    <author>
+      <name>Fotis Iliopoulos</name>
+    </author>
+    <author>
+      <name>Advait Jain</name>
+    </author>
+    <author>
+      <name>Ganesh Jawahar</name>
+    </author>
+    <author>
+      <name>Ziwei Ji</name>
+    </author>
+    <author>
+      <name>Qilin Jin</name>
+    </author>
+    <author>
+      <name>Melvin Johnson</name>
+    </author>
+    <author>
+      <name>Kandarp Joshi</name>
+    </author>
+    <author>
+      <name>Arun Kandoor</name>
+    </author>
+    <author>
+      <name>Wang-Cheng Kang</name>
+    </author>
+    <author>
+      <name>Koray Kavukcuoglu</name>
+    </author>
+    <author>
+      <name>Mehran Kazemi</name>
+    </author>
+    <author>
+      <name>Kathleen Kenealy</name>
+    </author>
+    <author>
+      <name>Amr Khalifa</name>
+    </author>
+    <author>
+      <name>Phoebe Kirk</name>
+    </author>
+    <author>
+      <name>Ivan Korotkov</name>
+    </author>
+    <author>
+      <name>Suraj Kothawade</name>
+    </author>
+    <author>
+      <name>Vitaly Kovalev</name>
+    </author>
+    <author>
+      <name>Neel Kovelamudi</name>
+    </author>
+    <author>
+      <name>Adam Kraft</name>
+    </author>
+    <author>
+      <name>Ravin Kumar</name>
+    </author>
+    <author>
+      <name>Vivek Kumar</name>
+    </author>
+    <author>
+      <name>Harish Kuppam</name>
+    </author>
+    <author>
+      <name>Justin Lannin</name>
+    </author>
+    <author>
+      <name>Chen-Yu Lee</name>
+    </author>
+    <author>
+      <name>Seungji Lee</name>
+    </author>
+    <author>
+      <name>Dmitry Lepikhin</name>
+    </author>
+    <author>
+      <name>Alon Levkovitch</name>
+    </author>
+    <author>
+      <name>Dongdong Li</name>
+    </author>
+    <author>
+      <name>Qiujia Li</name>
+    </author>
+    <author>
+      <name>Valentin Liévin</name>
+    </author>
+    <author>
+      <name>Ethan Lin</name>
+    </author>
+    <author>
+      <name>Ziqian Lin</name>
+    </author>
+    <author>
+      <name>Casper Liu</name>
+    </author>
+    <author>
+      <name>Tianlin Liu</name>
+    </author>
+    <author>
+      <name>Tianqi Liu</name>
+    </author>
+    <author>
+      <name>Xin Liu</name>
+    </author>
+    <author>
+      <name>Ivan Lobov</name>
+    </author>
+    <author>
+      <name>Mayank Lunayach</name>
+    </author>
+    <author>
+      <name>Min Ma</name>
+    </author>
+    <author>
+      <name>Gagan Madan</name>
+    </author>
+    <author>
+      <name>Andrii Maksai</name>
+    </author>
+    <author>
+      <name>Eric Malmi</name>
+    </author>
+    <author>
+      <name>Michal Matuszak</name>
+    </author>
+    <author>
+      <name>Daniel McDuff</name>
+    </author>
+    <author>
+      <name>Gaurav Menghani</name>
+    </author>
+    <author>
+      <name>Maciej Mikuła</name>
+    </author>
+    <author>
+      <name>Daniil Mirylenka</name>
+    </author>
+    <author>
+      <name>Karolis Misiunas</name>
+    </author>
+    <author>
+      <name>Vedant Misra</name>
+    </author>
+    <author>
+      <name>Andreea Mitran</name>
+    </author>
+    <author>
+      <name>Kareem Mohamed</name>
+    </author>
+    <author>
+      <name>Maksim Mukha</name>
+    </author>
+    <author>
+      <name>Eric Noland</name>
+    </author>
+    <author>
+      <name>James O'Donnell</name>
+    </author>
+    <author>
+      <name>Brendan O'Donoghue</name>
+    </author>
+    <author>
+      <name>Kate Olszewska</name>
+    </author>
+    <author>
+      <name>Bernett Orlando</name>
+    </author>
+    <author>
+      <name>Wanqiong Pan</name>
+    </author>
+    <author>
+      <name>Rina Panigrahy</name>
+    </author>
+    <author>
+      <name>Unnati Parekh</name>
+    </author>
+    <author>
+      <name>Nicolas Perez-Nieves</name>
+    </author>
+    <author>
+      <name>Chunjong Park</name>
+    </author>
+    <author>
+      <name>Eric Paskie</name>
+    </author>
+    <author>
+      <name>Liqian Peng</name>
+    </author>
+    <author>
+      <name>Bryce Petrini</name>
+    </author>
+    <author>
+      <name>Slav Petrov</name>
+    </author>
+    <author>
+      <name>Jonas Pfeiffer</name>
+    </author>
+    <author>
+      <name>Bilal Piot</name>
+    </author>
+    <author>
+      <name>Martyna Plomecka</name>
+    </author>
+    <author>
+      <name>Siim Poder</name>
+    </author>
+    <author>
+      <name>Octavio Ponce</name>
+    </author>
+    <author>
+      <name>Arijit Pramanik</name>
+    </author>
+    <author>
+      <name>David Racz</name>
+    </author>
+    <author>
+      <name>Anish Rajan</name>
+    </author>
+    <author>
+      <name>Michelle Ramanovich</name>
+    </author>
+    <author>
+      <name>Anand Rao</name>
+    </author>
+    <author>
+      <name>Marvin Ritter</name>
+    </author>
+    <author>
+      <name>Vitor Rodrigues</name>
+    </author>
+    <author>
+      <name>Evan Rosen</name>
+    </author>
+    <author>
+      <name>Mikołaj Rybiński</name>
+    </author>
+    <author>
+      <name>Noveen Sachdeva</name>
+    </author>
+    <author>
+      <name>Michaël E. Sander</name>
+    </author>
+    <author>
+      <name>Rohit Sathyanarayana</name>
+    </author>
+    <author>
+      <name>Sagar Savla</name>
+    </author>
+    <author>
+      <name>Samuel Schmidgall</name>
+    </author>
+    <author>
+      <name>Tal Schuster</name>
+    </author>
+    <author>
+      <name>George Scrivener</name>
+    </author>
+    <author>
+      <name>Benoit Seguin</name>
+    </author>
+    <author>
+      <name>Andrew Sellergren</name>
+    </author>
+    <author>
+      <name>Aliaksei Severyn</name>
+    </author>
+    <author>
+      <name>Izhak Shafran</name>
+    </author>
+    <author>
+      <name>Dhruv Shah</name>
+    </author>
+    <author>
+      <name>Bobak Shahriari</name>
+    </author>
+    <author>
+      <name>Yuan Shangguan</name>
+    </author>
+    <author>
+      <name>Ashish Shenoy</name>
+    </author>
+    <author>
+      <name>Pradeep Shenoy</name>
+    </author>
+    <author>
+      <name>Rakesh Shivanna</name>
+    </author>
+    <author>
+      <name>Pauline Sho</name>
+    </author>
+    <author>
+      <name>Lucas Spangher</name>
+    </author>
+    <author>
+      <name>Wojciech Stokowiec</name>
+    </author>
+    <author>
+      <name>Tim Strother</name>
+    </author>
+    <author>
+      <name>Yao Su</name>
+    </author>
+    <author>
+      <name>Yinghao Sun</name>
+    </author>
+    <author>
+      <name>Mukund Sundararajan</name>
+    </author>
+    <author>
+      <name>Andrea Tacchetti</name>
+    </author>
+    <author>
+      <name>Mor Hazan Taege</name>
+    </author>
+    <author>
+      <name>Pouya Tafti</name>
+    </author>
+    <author>
+      <name>Jean Tarbouriech</name>
+    </author>
+    <author>
+      <name>Chetan Tekur</name>
+    </author>
+    <author>
+      <name>Shantanu Thakoor</name>
+    </author>
+    <author>
+      <name>Rahul Thapa</name>
+    </author>
+    <author>
+      <name>Madeleine Traverse</name>
+    </author>
+    <author>
+      <name>Lenart Treven</name>
+    </author>
+    <author>
+      <name>Tao Tu</name>
+    </author>
+    <author>
+      <name>Chien Te Tung</name>
+    </author>
+    <author>
+      <name>Çağlar Ünlü</name>
+    </author>
+    <author>
+      <name>Petar Veličković</name>
+    </author>
+    <author>
+      <name>Malini Pooni Venkat</name>
+    </author>
+    <author>
+      <name>Sagar Gubbi Venkatesh</name>
+    </author>
+    <author>
+      <name>Vidya Venkiteswaran</name>
+    </author>
+    <author>
+      <name>Francesco Visin</name>
+    </author>
+    <author>
+      <name>Alex Vitvitskyi</name>
+    </author>
+    <author>
+      <name>Kiran Vodrahalli</name>
+    </author>
+    <author>
+      <name>Weiyi Wang</name>
+    </author>
+    <author>
+      <name>Xin Wang</name>
+    </author>
+    <author>
+      <name>Tris Warkentin</name>
+    </author>
+    <author>
+      <name>Jan Wassenberg</name>
+    </author>
+    <author>
+      <name>John Wieting</name>
+    </author>
+    <author>
+      <name>Cindy Wu</name>
+    </author>
+    <author>
+      <name>Lechao Xiao</name>
+    </author>
+    <author>
+      <name>Hao Xu</name>
+    </author>
+    <author>
+      <name>Yuhui Xu</name>
+    </author>
+    <author>
+      <name>Fuzhao Xue</name>
+    </author>
+    <author>
+      <name>Arun Yadav</name>
+    </author>
+    <author>
+      <name>Jun Yan</name>
+    </author>
+    <author>
+      <name>Antoine Yang</name>
+    </author>
+    <author>
+      <name>Lin Yang</name>
+    </author>
+    <author>
+      <name>Ming-Hsuan Yang</name>
+    </author>
+    <author>
+      <name>Ziyu Ying</name>
+    </author>
+    <author>
+      <name>Jae Hyeon Yoo</name>
+    </author>
+    <author>
+      <name>Morteza Zadimoghaddam</name>
+    </author>
+    <author>
+      <name>Sajjad Zafar</name>
+    </author>
+    <author>
+      <name>Fred Zhang</name>
+    </author>
+    <author>
+      <name>Jiageng Zhang</name>
+    </author>
+    <author>
+      <name>Jianyi Zhang</name>
+    </author>
+    <author>
+      <name>Xiaofan Zhang</name>
+    </author>
+    <author>
+      <name>Chao Zhao</name>
+    </author>
+    <author>
+      <name>David Zhou</name>
+    </author>
+    <author>
+      <name>Chen Zou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.09230v1</id>
+    <title>Successor Heads: Recurring, Interpretable Attention Heads In The Wild</title>
+    <updated>2023-12-14T18:55:47Z</updated>
+    <link href="https://arxiv.org/abs/2312.09230v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.09230v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we present successor heads: attention heads that increment tokens with a natural ordering, such as numbers, months, and days. For example, successor heads increment 'Monday' into 'Tuesday'. We explain the successor head behavior with an approach rooted in mechanistic interpretability, the field that aims to explain how models complete tasks in human-understandable terms. Existing research in this area has found interpretable language model components in small toy models. However, results in toy models have not yet led to insights that explain the internals of frontier models and little is currently understood about the internal operations of large language models. In this paper, we analyze the behavior of successor heads in large language models (LLMs) and find that they implement abstract representations that are common to different architectures. They form in LLMs with as few as 31 million parameters, and at least as many as 12 billion parameters, such as GPT-2, Pythia, and Llama-2. We find a set of 'mod-10 features' that underlie how successor heads increment in LLMs across different architectures and sizes. We perform vector arithmetic with these features to edit head behavior and provide insights into numeric representations within LLMs. Additionally, we study the behavior of successor heads on natural language data, identifying interpretable polysemanticity in a Pythia successor head.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-14T18:55:47Z</published>
+    <arxiv:comment>12 main text pages, with appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Rhys Gould</name>
+    </author>
+    <author>
+      <name>Euan Ong</name>
+    </author>
+    <author>
+      <name>George Ogden</name>
+    </author>
+    <author>
+      <name>Arthur Conmy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.05969v2</id>
+    <title>Localizing Model Behavior with Path Patching</title>
+    <updated>2023-05-16T16:24:55Z</updated>
+    <link href="https://arxiv.org/abs/2304.05969v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.05969v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Localizing behaviors of neural networks to a subset of the network's components or a subset of interactions between components is a natural first step towards analyzing network mechanisms and possible failure modes. Existing work is often qualitative and ad-hoc, and there is no consensus on the appropriate way to evaluate localization claims. We introduce path patching, a technique for expressing and quantitatively testing a natural class of hypotheses expressing that behaviors are localized to a set of paths. We refine an explanation of induction heads, characterize a behavior of GPT-2, and open source a framework for efficiently running similar experiments.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-12T16:46:43Z</published>
+    <arxiv:comment>20 pages, 16 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nicholas Goldowsky-Dill</name>
+    </author>
+    <author>
+      <name>Chris MacLeod</name>
+    </author>
+    <author>
+      <name>Lucas Sato</name>
+    </author>
+    <author>
+      <name>Aryaman Arora</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.00593v1</id>
+    <title>Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small</title>
+    <updated>2022-11-01T17:08:44Z</updated>
+    <link href="https://arxiv.org/abs/2211.00593v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.00593v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Research in mechanistic interpretability seeks to explain behaviors of machine learning models in terms of their internal components. However, most previous work either focuses on simple behaviors in small models, or describes complicated behaviors in larger models with broad strokes. In this work, we bridge this gap by presenting an explanation for how GPT-2 small performs a natural language task called indirect object identification (IOI). Our explanation encompasses 26 attention heads grouped into 7 main classes, which we discovered using a combination of interpretability approaches relying on causal interventions. To our knowledge, this investigation is the largest end-to-end attempt at reverse-engineering a natural behavior "in the wild" in a language model. We evaluate the reliability of our explanation using three quantitative criteria--faithfulness, completeness and minimality. Though these criteria support our explanation, they also point to remaining gaps in our understanding. Our work provides evidence that a mechanistic understanding of large ML models is feasible, opening opportunities to scale our understanding to both larger models and more complex tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-01T17:08:44Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Kevin Wang</name>
+    </author>
+    <author>
+      <name>Alexandre Variengien</name>
+    </author>
+    <author>
+      <name>Arthur Conmy</name>
+    </author>
+    <author>
+      <name>Buck Shlegeris</name>
+    </author>
+    <author>
+      <name>Jacob Steinhardt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.04303v1</id>
+    <title>How Can Self-Attention Networks Recognize Dyck-n Languages?</title>
+    <updated>2020-10-09T00:03:17Z</updated>
+    <link href="https://arxiv.org/abs/2010.04303v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.04303v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We focus on the recognition of Dyck-n ($\mathcal{D}_n$) languages with self-attention (SA) networks, which has been deemed to be a difficult task for these networks. We compare the performance of two variants of SA, one with a starting symbol (SA$^+$) and one without (SA$^-$). Our results show that SA$^+$ is able to generalize to longer sequences and deeper dependencies. For $\mathcal{D}_2$, we find that SA$^-$ completely breaks down on long sequences whereas the accuracy of SA$^+$ is 58.82$\%$. We find attention maps learned by $\text{SA}{^+}$ to be amenable to interpretation and compatible with a stack-based language recognizer. Surprisingly, the performance of SA networks is at par with LSTMs, which provides evidence on the ability of SA to learn hierarchies without recursion.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-09T00:03:17Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>Findings of EMNLP 2020</arxiv:journal_ref>
+    <author>
+      <name>Javid Ebrahimi</name>
+    </author>
+    <author>
+      <name>Dhruv Gelda</name>
+    </author>
+    <author>
+      <name>Wei Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.05262v5</id>
+    <title>Locating and Editing Factual Associations in GPT</title>
+    <updated>2023-01-13T15:16:16Z</updated>
+    <link href="https://arxiv.org/abs/2202.05262v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.05262v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze the storage and recall of factual associations in autoregressive transformer language models, finding evidence that these associations correspond to localized, directly-editable computations. We first develop a causal intervention for identifying neuron activations that are decisive in a model's factual predictions. This reveals a distinct set of steps in middle-layer feed-forward modules that mediate factual predictions while processing subject tokens. To test our hypothesis that these computations correspond to factual association recall, we modify feed-forward weights to update specific factual associations using Rank-One Model Editing (ROME). We find that ROME is effective on a standard zero-shot relation extraction (zsRE) model-editing task, comparable to existing methods. To perform a more sensitive evaluation, we also evaluate ROME on a new dataset of counterfactual assertions, on which it simultaneously maintains both specificity and generalization, whereas other methods sacrifice one or another. Our results confirm an important role for mid-layer feed-forward modules in storing factual associations and suggest that direct manipulation of computational mechanisms may be a feasible approach for model editing. The code, dataset, visualizations, and an interactive demo notebook are available at https://rome.baulab.info/</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-10T18:59:54Z</published>
+    <arxiv:comment>NeurIPS 2022. 35 pages, 30 figures. Code and data at https://rome.baulab.info/</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Kevin Meng</name>
+    </author>
+    <author>
+      <name>David Bau</name>
+    </author>
+    <author>
+      <name>Alex Andonian</name>
+    </author>
+    <author>
+      <name>Yonatan Belinkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.04131v6</id>
+    <title>Towards Interpretable Sequence Continuation: Analyzing Shared Circuits in Large Language Models</title>
+    <updated>2024-10-04T20:34:02Z</updated>
+    <link href="https://arxiv.org/abs/2311.04131v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.04131v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While transformer models exhibit strong capabilities on linguistic tasks, their complex architectures make them difficult to interpret. Recent work has aimed to reverse engineer transformer models into human-readable representations called circuits that implement algorithmic functions. We extend this research by analyzing and comparing circuits for similar sequence continuation tasks, which include increasing sequences of Arabic numerals, number words, and months. By applying circuit interpretability analysis, we identify a key sub-circuit in both GPT-2 Small and Llama-2-7B responsible for detecting sequence members and for predicting the next member in a sequence. Our analysis reveals that semantically related sequences rely on shared circuit subgraphs with analogous roles. Additionally, we show that this sub-circuit has effects on various math-related prompts, such as on intervaled circuits, Spanish number word and months continuation, and natural language word problems. Overall, documenting shared computational structures enables better model behavior predictions, identification of errors, and safer editing procedures. This mechanistic understanding of transformers is a critical step towards building more robust, aligned, and interpretable language models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-07T16:58:51Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Michael Lan</name>
+    </author>
+    <author>
+      <name>Philip Torr</name>
+    </author>
+    <author>
+      <name>Fazl Barez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.03656v2</id>
+    <title>Interpretability Illusions in the Generalization of Simplified Models</title>
+    <updated>2024-06-05T15:03:37Z</updated>
+    <link href="https://arxiv.org/abs/2312.03656v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.03656v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A common method to study deep learning systems is to use simplified model representations--for example, using singular value decomposition to visualize the model's hidden states in a lower dimensional space. This approach assumes that the results of these simplifications are faithful to the original model. Here, we illustrate an important caveat to this assumption: even if the simplified representations can accurately approximate the full model on the training set, they may fail to accurately capture the model's behavior out of distribution. We illustrate this by training Transformer models on controlled datasets with systematic generalization splits, including the Dyck balanced-parenthesis languages and a code completion task. We simplify these models using tools like dimensionality reduction and clustering, and then explicitly test how these simplified proxies match the behavior of the original model. We find consistent generalization gaps: cases in which the simplified proxies are more faithful to the original model on the in-distribution evaluations and less faithful on various tests of systematic generalization. This includes cases where the original model generalizes systematically but the simplified proxies fail, and cases where the simplified proxies generalize better. Together, our results raise questions about the extent to which mechanistic interpretations derived using tools like SVD can reliably predict what a model will do in novel situations.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-06T18:25:53Z</published>
+    <arxiv:comment>ICML 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dan Friedman</name>
+    </author>
+    <author>
+      <name>Andrew Lampinen</name>
+    </author>
+    <author>
+      <name>Lucas Dixon</name>
+    </author>
+    <author>
+      <name>Danqi Chen</name>
+    </author>
+    <author>
+      <name>Asma Ghandeharioun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.20086v3</id>
+    <title>Token Erasure as a Footprint of Implicit Vocabulary Items in LLMs</title>
+    <updated>2024-10-11T16:20:16Z</updated>
+    <link href="https://arxiv.org/abs/2406.20086v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.20086v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLMs process text as sequences of tokens that roughly correspond to words, where less common words are represented by multiple tokens. However, individual tokens are often semantically unrelated to the meanings of the words/concepts they comprise. For example, Llama-2-7b's tokenizer splits the word "northeastern" into the tokens ['_n', 'ort', 'he', 'astern'], none of which correspond to semantically meaningful units like "north" or "east." Similarly, the overall meanings of named entities like "Neil Young" and multi-word expressions like "break a leg" cannot be directly inferred from their constituent tokens. Mechanistically, how do LLMs convert such arbitrary groups of tokens into useful higher-level representations? In this work, we find that last token representations of named entities and multi-token words exhibit a pronounced "erasure" effect, where information about previous and current tokens is rapidly forgotten in early layers. Using this observation, we propose a method to "read out" the implicit vocabulary of an autoregressive LLM by examining differences in token representations across layers, and present results of this method for Llama-2-7b and Llama-3-8B. To our knowledge, this is the first attempt to probe the implicit vocabulary of an LLM.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-28T17:54:47Z</published>
+    <arxiv:comment>13 pages, 14 figures. Code and data at https://footprints.baulab.info/</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Sheridan Feucht</name>
+    </author>
+    <author>
+      <name>David Atkinson</name>
+    </author>
+    <author>
+      <name>Byron Wallace</name>
+    </author>
+    <author>
+      <name>David Bau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.10588v4</id>
+    <title>Do Llamas Work in English? On the Latent Language of Multilingual Transformers</title>
+    <updated>2024-06-08T11:15:14Z</updated>
+    <link href="https://arxiv.org/abs/2402.10588v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.10588v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We ask whether multilingual language models trained on unbalanced, English-dominated corpora use English as an internal pivot language -- a question of key importance for understanding how language models function and the origins of linguistic bias. Focusing on the Llama-2 family of transformer models, our study uses carefully constructed non-English prompts with a unique correct single-token continuation. From layer to layer, transformers gradually map an input embedding of the final prompt token to an output embedding from which next-token probabilities are computed. Tracking intermediate embeddings through their high-dimensional space reveals three distinct phases, whereby intermediate embeddings (1) start far away from output token embeddings; (2) already allow for decoding a semantically correct next token in the middle layers, but give higher probability to its version in English than in the input language; (3) finally move into an input-language-specific region of the embedding space. We cast these results into a conceptual model where the three phases operate in "input space", "concept space", and "output space", respectively. Crucially, our evidence suggests that the abstract "concept space" lies closer to English than to other languages, which may have important consequences regarding the biases held by multilingual language models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-16T11:21:28Z</published>
+    <arxiv:comment>12 pages. 28 with appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Chris Wendler</name>
+    </author>
+    <author>
+      <name>Veniamin Veselovsky</name>
+    </author>
+    <author>
+      <name>Giovanni Monea</name>
+    </author>
+    <author>
+      <name>Robert West</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18499v1</id>
+    <title>Mechanistic Understanding of Language Models in Syntactic Code Completion</title>
+    <updated>2025-02-20T21:35:20Z</updated>
+    <link href="https://arxiv.org/abs/2502.18499v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.18499v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, language models (LMs) have shown impressive proficiency in code generation tasks, especially when fine-tuned on code-specific datasets, commonly known as Code LMs. However, our understanding of the internal decision-making processes of Code LMs, such as how they use their (syntactic or semantic) knowledge, remains limited, which could lead to unintended harm as they are increasingly used in real life. This motivates us to conduct one of the first Mechanistic Interpretability works to understand how Code LMs perform a syntactic completion task, specifically the closing parenthesis task, on the CodeLlama-7b model (Roziere et al. 2023). Our findings reveal that the model requires middle-later layers until it can confidently predict the correct label for the closing parenthesis task. Additionally, we identify that while both multi-head attention (MHA) and feed-forward (FF) sub-layers play essential roles, MHA is particularly crucial. Furthermore, we also discover attention heads that keep track of the number of already closed parentheses precisely but may or may not promote a correct number of closing parentheses that are still missing, leading to a positive or negative impact on the model's performance.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-20T21:35:20Z</published>
+    <arxiv:comment>10 pages, 4 figures, accepted to the AAAI 2025 Workshop on Towards Knowledgeable Foundation Models</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Samuel Miller</name>
+    </author>
+    <author>
+      <name>Daking Rai</name>
+    </author>
+    <author>
+      <name>Ziyu Yao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.07424v3</id>
+    <title>RomanLens: The Role Of Latent Romanization In Multilinguality In LLMs</title>
+    <updated>2025-06-09T05:33:37Z</updated>
+    <link href="https://arxiv.org/abs/2502.07424v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.07424v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) exhibit strong multilingual performance despite being predominantly trained on English-centric corpora. This raises a fundamental question: How do LLMs achieve such multilingual capabilities? Focusing on languages written in non-Roman scripts, we investigate the role of Romanization - the representation of non-Roman scripts using Roman characters - as a potential bridge in multilingual processing. Using mechanistic interpretability techniques, we analyze next-token generation and find that intermediate layers frequently represent target words in Romanized form before transitioning to native script, a phenomenon we term Latent Romanization. Further, through activation patching experiments, we demonstrate that LLMs encode semantic concepts similarly across native and Romanized scripts, suggesting a shared underlying representation. Additionally, for translation into non-Roman script languages, our findings reveal that when the target language is in Romanized form, its representations emerge earlier in the model's layers compared to native script. These insights contribute to a deeper understanding of multilingual representation in LLMs and highlight the implicit role of Romanization in facilitating language transfer.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-11T10:10:26Z</published>
+    <arxiv:comment>19 pages, 19 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>Findings of the Association for Computational Linguistics: ACL 2025, pages 26410-26429, Vienna, July 2025</arxiv:journal_ref>
+    <author>
+      <name>Alan Saji</name>
+    </author>
+    <author>
+      <name>Jaavid Aktar Husain</name>
+    </author>
+    <author>
+      <name>Thanmay Jayakumar</name>
+    </author>
+    <author>
+      <name>Raj Dabre</name>
+    </author>
+    <author>
+      <name>Anoop Kunchukuttan</name>
+    </author>
+    <author>
+      <name>Ratish Puduppully</name>
+    </author>
+    <arxiv:doi>10.18653/v1/2025.findings-acl.1354</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.18653/v1/2025.findings-acl.1354" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.01434v3</id>
+    <title>Circuit Compositions: Exploring Modular Structures in Transformer-Based Language Models</title>
+    <updated>2025-06-23T09:05:58Z</updated>
+    <link href="https://arxiv.org/abs/2410.01434v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.01434v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A fundamental question in interpretability research is to what extent neural networks, particularly language models, implement reusable functions through subnetworks that can be composed to perform more complex tasks. Recent advances in mechanistic interpretability have made progress in identifying $\textit{circuits}$, which represent the minimal computational subgraphs responsible for a model's behavior on specific tasks. However, most studies focus on identifying circuits for individual tasks without investigating how functionally similar circuits $\textit{relate}$ to each other. To address this gap, we study the modularity of neural networks by analyzing circuits for highly compositional subtasks within a transformer-based language model. Specifically, given a probabilistic context-free grammar, we identify and compare circuits responsible for ten modular string-edit operations. Our results indicate that functionally similar circuits exhibit both notable node overlap and cross-task faithfulness. Moreover, we demonstrate that the circuits identified can be reused and combined through set operations to represent more complex functional model capabilities.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-02T11:36:45Z</published>
+    <arxiv:comment>ACL 2025 main, 22 pages, 21 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Philipp Mondorf</name>
+    </author>
+    <author>
+      <name>Sondre Wold</name>
+    </author>
+    <author>
+      <name>Barbara Plank</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05378v1</id>
+    <title>Pattern Selectivity is Not Task-Causal Structure: A Cross-Architecture Mechanistic Study of Composed-Task Circuits in 1B-Class Language Models</title>
+    <updated>2026-06-03T19:27:07Z</updated>
+    <link href="https://arxiv.org/abs/2606.05378v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05378v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We test whether a single screen-and-ablate recipe -- identify attention-head circuits by task-pattern selectivity, then verify by causal ablation against a matched-random null -- produces consistent mechanistic claims across model families. The recipe ports across pipelines; the specific circuit it identifies does not. Across four composed tasks (indirect-object identification, greater-than, successor sequences, variable binding) and three 1B-class language models from distinct training pipelines (Pythia 1B / Pile / dense; OLMo 1B / DCLM / dense; OLMoE 1B-7B / DCLM / mixture-of-experts), we run a unified protocol with the matched-random null sampled across ten seeds per cell. The resulting 12 (task, model) cells contain no two that share the same primary causal screen at comparable effect size: the same task, with the same behavioral capability, is implemented through different attention-pattern types across models.
+  We introduce a five-category screen-outcome taxonomy -- primary cause, secondary cause, correlate, interferer, null -- with quantitative thresholds, and show that all five outcomes appear in the panel. We propose a falsifiable hypothesis: the MoE model in our panel builds composed-task circuits on top of a foundational previous-token positional substrate (the prev-token-circuit ablation is the strongest causal screen on 3 of 4 tasks for OLMoE 1B-7B), with the IOI exception consistent with IOI being a final-position name-copying task whose structure directly probes a different pattern. The hypothesis comes with explicit predictions for other MoE language models.
+  We frame the methodology honestly: the spectral participation-ratio signal from the companion methodology paper is a general indicator of specialized computation; what makes a finding task-specific is the task-pattern screen plus a per-model causal verification.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T19:27:07Z</published>
+    <arxiv:comment>27 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yongzhong Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.11895v1</id>
+    <title>In-context Learning and Induction Heads</title>
+    <updated>2022-09-24T00:43:19Z</updated>
+    <link href="https://arxiv.org/abs/2209.11895v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.11895v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>"Induction heads" are attention heads that implement a simple algorithm to complete token sequences like [A][B] ... [A] -&gt; [B]. In this work, we present preliminary and indirect evidence for a hypothesis that induction heads might constitute the mechanism for the majority of all "in-context learning" in large transformer models (i.e. decreasing loss at increasing token indices). We find that induction heads develop at precisely the same point as a sudden sharp increase in in-context learning ability, visible as a bump in the training loss. We present six complementary lines of evidence, arguing that induction heads may be the mechanistic source of general in-context learning in transformer models of any size. For small attention-only models, we present strong, causal evidence; for larger models with MLPs, we present correlational evidence.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-24T00:43:19Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Catherine Olsson</name>
+    </author>
+    <author>
+      <name>Nelson Elhage</name>
+    </author>
+    <author>
+      <name>Neel Nanda</name>
+    </author>
+    <author>
+      <name>Nicholas Joseph</name>
+    </author>
+    <author>
+      <name>Nova DasSarma</name>
+    </author>
+    <author>
+      <name>Tom Henighan</name>
+    </author>
+    <author>
+      <name>Ben Mann</name>
+    </author>
+    <author>
+      <name>Amanda Askell</name>
+    </author>
+    <author>
+      <name>Yuntao Bai</name>
+    </author>
+    <author>
+      <name>Anna Chen</name>
+    </author>
+    <author>
+      <name>Tom Conerly</name>
+    </author>
+    <author>
+      <name>Dawn Drain</name>
+    </author>
+    <author>
+      <name>Deep Ganguli</name>
+    </author>
+    <author>
+      <name>Zac Hatfield-Dodds</name>
+    </author>
+    <author>
+      <name>Danny Hernandez</name>
+    </author>
+    <author>
+      <name>Scott Johnston</name>
+    </author>
+    <author>
+      <name>Andy Jones</name>
+    </author>
+    <author>
+      <name>Jackson Kernion</name>
+    </author>
+    <author>
+      <name>Liane Lovitt</name>
+    </author>
+    <author>
+      <name>Kamal Ndousse</name>
+    </author>
+    <author>
+      <name>Dario Amodei</name>
+    </author>
+    <author>
+      <name>Tom Brown</name>
+    </author>
+    <author>
+      <name>Jack Clark</name>
+    </author>
+    <author>
+      <name>Jared Kaplan</name>
+    </author>
+    <author>
+      <name>Sam McCandlish</name>
+    </author>
+    <author>
+      <name>Chris Olah</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.15255v1</id>
+    <title>How to use and interpret activation patching</title>
+    <updated>2024-04-23T17:42:29Z</updated>
+    <link href="https://arxiv.org/abs/2404.15255v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.15255v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Activation patching is a popular mechanistic interpretability technique, but has many subtleties regarding how it is applied and how one may interpret the results. We provide a summary of advice and best practices, based on our experience using this technique in practice. We include an overview of the different ways to apply activation patching and a discussion on how to interpret the results. We focus on what evidence patching experiments provide about circuits, and on the choice of metric and associated pitfalls.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-23T17:42:29Z</published>
+    <arxiv:comment>A tutorial on activation patching. 13 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Stefan Heimersheim</name>
+    </author>
+    <author>
+      <name>Neel Nanda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.14913v2</id>
+    <title>Transformer Feed-Forward Layers Are Key-Value Memories</title>
+    <updated>2021-09-05T17:32:27Z</updated>
+    <link href="https://arxiv.org/abs/2012.14913v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.14913v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Feed-forward layers constitute two-thirds of a transformer model's parameters, yet their role in the network remains under-explored. We show that feed-forward layers in transformer-based language models operate as key-value memories, where each key correlates with textual patterns in the training examples, and each value induces a distribution over the output vocabulary. Our experiments show that the learned patterns are human-interpretable, and that lower layers tend to capture shallow patterns, while upper layers learn more semantic ones. The values complement the keys' input patterns by inducing output distributions that concentrate probability mass on tokens likely to appear immediately after each pattern, particularly in the upper layers. Finally, we demonstrate that the output of a feed-forward layer is a composition of its memories, which is subsequently refined throughout the model's layers via residual connections to produce the final output distribution.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-29T19:12:05Z</published>
+    <arxiv:comment>EMNLP 2021</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mor Geva</name>
+    </author>
+    <author>
+      <name>Roei Schuster</name>
+    </author>
+    <author>
+      <name>Jonathan Berant</name>
+    </author>
+    <author>
+      <name>Omer Levy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1506.02078v2</id>
+    <title>Visualizing and Understanding Recurrent Networks</title>
+    <updated>2015-11-17T02:42:24Z</updated>
+    <link href="https://arxiv.org/abs/1506.02078v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.02078v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recurrent Neural Networks (RNNs), and specifically a variant with Long Short-Term Memory (LSTM), are enjoying renewed interest as a result of successful applications in a wide range of machine learning problems that involve sequential data. However, while LSTMs provide exceptional results in practice, the source of their performance and their limitations remain rather poorly understood. Using character-level language models as an interpretable testbed, we aim to bridge this gap by providing an analysis of their representations, predictions and error types. In particular, our experiments reveal the existence of interpretable cells that keep track of long-range dependencies such as line lengths, quotes and brackets. Moreover, our comparative analysis with finite horizon n-gram models traces the source of the LSTM improvements to long-range structural dependencies. Finally, we provide analysis of the remaining errors and suggests areas for further study.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-05T22:33:04Z</published>
+    <arxiv:comment>changing style, adding references, minor changes to text</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Andrej Karpathy</name>
+    </author>
+    <author>
+      <name>Justin Johnson</name>
+    </author>
+    <author>
+      <name>Li Fei-Fei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.08744v3</id>
+    <title>Circuit Component Reuse Across Tasks in Transformer Language Models</title>
+    <updated>2024-05-06T14:31:32Z</updated>
+    <link href="https://arxiv.org/abs/2310.08744v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.08744v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent work in mechanistic interpretability has shown that behaviors in language models can be successfully reverse-engineered through circuit analysis. A common criticism, however, is that each circuit is task-specific, and thus such analysis cannot contribute to understanding the models at a higher level. In this work, we present evidence that insights (both low-level findings about specific heads and higher-level findings about general algorithms) can indeed generalize across tasks. Specifically, we study the circuit discovered in Wang et al. (2022) for the Indirect Object Identification (IOI) task and 1.) show that it reproduces on a larger GPT2 model, and 2.) that it is mostly reused to solve a seemingly different task: Colored Objects (Ippolito &amp; Callison-Burch, 2023). We provide evidence that the process underlying both tasks is functionally very similar, and contains about a 78% overlap in in-circuit attention heads. We further present a proof-of-concept intervention experiment, in which we adjust four attention heads in middle layers in order to 'repair' the Colored Objects circuit and make it behave like the IOI circuit. In doing so, we boost accuracy from 49.6% to 93.7% on the Colored Objects task and explain most sources of error. The intervention affects downstream attention heads in specific ways predicted by their interactions in the IOI circuit, indicating that this subcircuit behavior is invariant to the different task inputs. Overall, our results provide evidence that it may yet be possible to explain large language models' behavior in terms of a relatively small number of interpretable task-general algorithmic building blocks and computational components.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-12T22:12:28Z</published>
+    <arxiv:comment>Accepted at ICLR 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jack Merullo</name>
+    </author>
+    <author>
+      <name>Carsten Eickhoff</name>
+    </author>
+    <author>
+      <name>Ellie Pavlick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.08112v6</id>
+    <title>Eliciting Latent Predictions from Transformers with the Tuned Lens</title>
+    <updated>2025-11-11T01:13:28Z</updated>
+    <link href="https://arxiv.org/abs/2303.08112v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.08112v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze transformers from the perspective of iterative inference, seeking to understand how model predictions are refined layer by layer. To do so, we train an affine probe for each block in a frozen pretrained model, making it possible to decode every hidden state into a distribution over the vocabulary. Our method, the tuned lens, is a refinement of the earlier "logit lens" technique, which yielded useful insights but is often brittle.
+  We test our method on various autoregressive language models with up to 20B parameters, showing it to be more predictive, reliable and unbiased than the logit lens. With causal experiments, we show the tuned lens uses similar features to the model itself. We also find the trajectory of latent predictions can be used to detect malicious inputs with high accuracy. All code needed to reproduce our results can be found at https://github.com/AlignmentResearch/tuned-lens.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-14T17:47:09Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nora Belrose</name>
+    </author>
+    <author>
+      <name>Igor Ostrovsky</name>
+    </author>
+    <author>
+      <name>Lev McKinney</name>
+    </author>
+    <author>
+      <name>Zach Furman</name>
+    </author>
+    <author>
+      <name>Logan Smith</name>
+    </author>
+    <author>
+      <name>Danny Halawi</name>
+    </author>
+    <author>
+      <name>Stella Biderman</name>
+    </author>
+    <author>
+      <name>Jacob Steinhardt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.19384v3</id>
+    <title>The Remarkable Robustness of LLMs: Stages of Inference?</title>
+    <updated>2025-06-16T10:21:00Z</updated>
+    <link href="https://arxiv.org/abs/2406.19384v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.19384v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the robustness of Large Language Models (LLMs) to structural interventions by deleting and swapping adjacent layers during inference. Surprisingly, models retain 72-95% of their original top-1 prediction accuracy without any fine-tuning. We find that performance degradation is not uniform across layers: interventions to the early and final layers cause the most degradation, while the model is remarkably robust to dropping middle layers. This pattern of localized sensitivity motivates our hypothesis of four stages of inference, observed across diverse model families and sizes: (1) detokenization, where local context is integrated to lift raw token embeddings into higher-level representations; (2) feature engineering, where task- and entity-specific features are iteratively refined; (3) prediction ensembling, where hidden states are aggregated into plausible next-token predictions; and (4) residual sharpening, where irrelevant features are suppressed to finalize the output distribution. Synthesizing behavioral and mechanistic evidence, we provide a framework for interpreting depth-dependent computations in LLMs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-27T17:57:03Z</published>
+    <arxiv:comment>For Github code see https://github.com/vdlad/Remarkable-Robustness-of-LLMs. Send all correspondence to the first author</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Vedang Lad</name>
+    </author>
+    <author>
+      <name>Jin Hwa Lee</name>
+    </author>
+    <author>
+      <name>Wes Gurnee</name>
+    </author>
+    <author>
+      <name>Max Tegmark</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.06496v1</id>
+    <title>On the Similarity of Circuits across Languages: a Case Study on the Subject-verb Agreement Task</title>
+    <updated>2024-10-09T02:49:56Z</updated>
+    <link href="https://arxiv.org/abs/2410.06496v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.06496v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Several algorithms implemented by language models have recently been successfully reversed-engineered. However, these findings have been concentrated on specific tasks and models, leaving it unclear how universal circuits are across different settings. In this paper, we study the circuits implemented by Gemma 2B for solving the subject-verb agreement task across two different languages, English and Spanish. We discover that both circuits are highly consistent, being mainly driven by a particular attention head writing a `subject number' signal to the last residual stream, which is read by a small set of neurons in the final MLPs. Notably, this subject number signal is represented as a direction in the residual stream space, and is language-independent. We demonstrate that this direction has a causal effect on the model predictions, effectively flipping the Spanish predicted verb number by intervening with the direction found in English. Finally, we present evidence of similar behavior in other models within the Gemma 1 and Gemma 2 families.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T02:49:56Z</published>
+    <arxiv:comment>Accepted at EMNLP 2024 Findings</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Javier Ferrando</name>
+    </author>
+    <author>
+      <name>Marta R. Costa-jussà</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03711v1</id>
+    <title>Attention is Case-Sensitive</title>
+    <updated>2026-08-04T14:16:06Z</updated>
+    <link href="https://arxiv.org/abs/2608.03711v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03711v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In human visual perception, uppercase lettering serves as a natural salience cue that captures attention within lowercase text. In this paper, we present a systematic empirical characterization study revealing that Large Language Models (LLMs) exhibit an analogous property: letter casing modulates internal attention allocation. Through analysis across 13 models, nine LLMs and four Vision-Language Models (VLMs), with diverse tokenization schemes, we show that formatting target information in alternating or uppercase against a lowercase context concentrates attention on those textual spans. In text this effect is universal, holding across every evaluated non-reasoning model. We frame it as a previously under-explored latent property of pretrained transformers rather than a prescriptive method. Our investigation reveals a central attention-performance divergence: while this "casing effect" robustly shifts attention, its impact on downstream accuracy is non-trivial, increased concentration does not inherently improve task accuracy and, in high-entropy contexts like alternating case, can degrade it. We further identify a boundary condition: the deliberative "thinking" phase in reasoning models acts as a semantic buffer that mitigates typographic sensitivity in text. Extending the study to VLMs, we find the effect transfers partially: the same prompt-side casing reorganizes cross-modal attention along two coupled axes, predominantly a macroscopic disengagement from the image toward the text prompt, and secondarily a concentration of the residual visual attention on the target region. By isolating casing as a zero-shot mechanism for attention steering that requires no model access or fine-tuning, we provide a new foundational understanding of how pretraining internalizes typographic emphasis.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T14:16:06Z</published>
+    <arxiv:comment>Accepted at ECCV 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Maximilian Dillitzer</name>
+    </author>
+    <author>
+      <name>Tin Stribor Sohn</name>
+    </author>
+    <author>
+      <name>Jason J. Corso</name>
+    </author>
+    <author>
+      <name>Michael Auerbach</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.08348v3</id>
+    <title>How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits</title>
+    <updated>2026-10-07T22:59:12Z</updated>
+    <link href="https://arxiv.org/abs/2605.08348v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.08348v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The circuits framework in mechanistic interpretability aims to identify sparse subgraphs of model components that are causally responsible for a behavior, typically evaluated by measuring necessity and sufficiency. But these criteria say little about whether a circuit consistently captures how a model performs a task, or if it is specific to that task. We study these two properties, consistency and specificity, across six tasks and five models, extracting circuits at the component level (attention heads and MLP blocks) and at the level of individual MLP neurons. We find that component-level circuits are highly consistent and causally important for most tasks, but they are not specific: for a given task, ablating its own circuit drops accuracy by about as much as ablating another task's circuit. Neuron-level circuits, on the other hand, exhibit higher specificity across tasks, but far less consistency within tasks. This is explained by circuit overlap: component-level circuits share most of their components across tasks, related or not, while neuron-level circuits overlap only between closely related tasks. In a case study of the components shared by the task circuits of Llama-3.2-3B, we show that they consist mostly of MLP blocks, while the few attention heads within turn out to have general-purpose roles. Overall, our findings raise questions about the degree to which circuits can support targeted understanding of, and intervention on, model behavior.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T18:01:03Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Michael Li</name>
+    </author>
+    <author>
+      <name>Nishant Subramani</name>
+    </author>
+  </entry>
+</feed>

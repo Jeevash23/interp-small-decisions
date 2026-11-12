@@ -1,0 +1,18 @@
+{
+ "files": 1000,
+ "normalised": 652,
+ "dup_old": 9,
+ "dup": 83,
+ "old_hashes": 23664,
+ "old_part_files": 13,
+ "held_chunks": 2764,
+ "held_repos": 225,
+ "licences": {
+  "Apache-2.0": 1192,
+  "BSD-2-Clause": 156,
+  "BSD-3-Clause": 471,
+  "CC0-1.0": 203,
+  "MIT": 573,
+  "Unlicense": 169
+ }
+}

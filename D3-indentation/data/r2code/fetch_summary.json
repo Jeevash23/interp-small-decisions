@@ -1,0 +1,10 @@
+{
+ "query": "language:Python created:>=2026-09-01 fork:false archived:false stars:5..9",
+ "fetched_utc": "2026-11-08T11:49:29Z",
+ "repos_listed": 500,
+ "repos_after_exclusion": 500,
+ "excluded_names": 502,
+ "repos_used": 335,
+ "files": 1202,
+ "bytes": 10879555
+}

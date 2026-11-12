@@ -1,0 +1,21 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{The frozen predictions and their results on held-out material. Changes are in mean log-probability of the true indent unless stated. Intervals resample repositories or programs (2{,}000 resamples); they are descriptive and were not used for verdicts.}
+\label{tab:d3-conf}
+\begin{tabularx}{\linewidth}{@{}lYlll@{}}
+\toprule
+& Prediction & Result & Random sets & Verdict \\
+\midrule
+H1 & \ded{}, natural, other dedents: change $\leq -0.40$, below every random set & \nv{d3.c.H1}\ci{\nv{d3.c.H1.lo}}{\nv{d3.c.H1.hi}} & lowest \nv{d3.c.H1.r} & pass \\
+H2 & same points: probability of keeping the current level rises $\geq 0.10$, above every random set & \nv{d3.c.H2}\ci{\nv{d3.c.H2.lo}}{\nv{d3.c.H2.hi}} & highest \nv{d3.c.H2.r} & pass \\
+H3 & \ded{}, terminal dedents: mass on open levels $\geq 0.95$; change at most a quarter of H1's & \nv{d3.c.H3.open}; \nv{d3.c.H3.d} & -- & pass \\
+H4 & \ded{}, same-level lines: change $\geq -0.01$ & \nv{d3.c.H4}\ci{\nv{d3.c.H4.lo}}{\nv{d3.c.H4.hi}} & -- & pass \\
+H5 & \term{}, terminal dedents: change $\leq -0.03$, below every random set & \nv{d3.c.H5}\ci{\nv{d3.c.H5.lo}}{\nv{d3.c.H5.hi}} & lowest \nv{d3.c.H5.r} & pass \\
+H6 & \term{}, other dedents: absolute change $\leq 0.10$ & \nv{d3.c.H6}\ci{\nv{d3.c.H6.lo}}{\nv{d3.c.H6.hi}} & -- & pass \\
+H7 & \textsc{term+ded}, terminal dedents: change below the sum of the two alone & \nv{d3.c.H7} (sum \nv{d3.c.H7.sum}) & -- & pass \\
+H8 & \ded{}, generated, other dedents: change $\leq -0.25$, below every random set & \nv{d3.c.H8}\ci{\nv{d3.c.H8.lo}}{\nv{d3.c.H8.hi}} & lowest \nv{d3.c.H8.r} & pass \\
+H9 & \carry{}, generated pairs: necessity $\geq 0.40$, sufficiency $\geq 0.20$, each above every random set & \nv{d3.c.H9.nec}, \nv{d3.c.H9.suf} & \nv{d3.c.H9.rnec}, \nv{d3.c.H9.rsuf} & pass \\
+\bottomrule
+\end{tabularx}
+\end{table}

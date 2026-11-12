@@ -1,0 +1,543 @@
+\documentclass[11pt]{article}
+
+% Reproducible PDF bytes: no creation date, no random trailer identifier, no producer banner.
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\usepackage{mathptmx}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage[font=small,labelfont=bf,skip=4pt]{caption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{pgfplots}
+\usetikzlibrary{positioning,arrows.meta}
+\pgfplotsset{compat=1.18}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks,pdftitle={Small decisions, mostly separate parts: how small language models indent code, choose ordinal suffixes and write in capitals},pdfauthor={Richard Jeevash},pdfcreator={},pdfproducer={}]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+\usepackage{xurl}
+
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.12}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{1.25cm}}
+\crefname{appendix}{Appendix}{Appendices}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\bibfont}{\small}
+\setlength{\bibsep}{2pt}
+
+% Every number from the saved outputs is a macro generated from those outputs by a script (scripts/make_numbers.py).
+\input{numbers}
+\makeatletter
+\newcommand{\nv}[1]{\ifcsname nv@#1\endcsname\csname nv@#1\endcsname\else\PackageError{numbers}{Unknown number key #1}{}\fi}
+\makeatother
+\newcommand{\ci}[2]{\,[#1,\,#2]}
+\newcommand{\hd}[2]{L#1H#2}
+\newcommand{\mlp}[1]{MLP#1}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\sfx}[1]{\textit{#1}}
+\newcommand{\ded}{\textsc{ded}}
+\newcommand{\term}{\textsc{term}}
+\newcommand{\carry}{\textsc{carry}}
+\newcommand{\qsix}{Qwen3-0.6B-Base}
+\newcommand{\qbig}{Qwen3-1.7B-Base}
+\newcommand{\olmo}{OLMo-2-0425-1B}
+\newcommand{\gm}{Gemma-4-E2B}
+\newcommand{\Uc}{\ensuremath{U}}
+\newcommand{\Lc}{\ensuremath{L_c}}
+\newcommand{\Lr}{\ensuremath{L_r}}
+% study-prefixed shorthands (the capitals study's tables use them)
+\newcommand{\DG}[1]{\nv{d5.c.g.#1}}
+\newcommand{\DQ}[1]{\nv{d5.c.q.#1}}
+\newcommand{\DGI}[1]{\nv{d5.c.g.#1}\ci{\nv{d5.c.g.#1.lo}}{\nv{d5.c.g.#1.hi}}}
+\newcommand{\DQI}[1]{\nv{d5.c.q.#1}\ci{\nv{d5.c.q.#1.lo}}{\nv{d5.c.q.#1.hi}}}
+\newcommand{\DEG}[1]{\nv{d5.e.g.#1}}
+\newcommand{\DEQ}[1]{\nv{d5.e.q.#1}}
+\newcommand{\DRQ}[1]{\nv{d5.r2.q.#1}}
+\newcommand{\DRG}[1]{\nv{d5.r2.g.#1}}
+\newcommand{\DRQI}[1]{\nv{d5.r2.q.#1}\ci{\nv{d5.r2.q.#1.lo}}{\nv{d5.r2.q.#1.hi}}}
+\newcommand{\DRGI}[1]{\nv{d5.r2.g.#1}\ci{\nv{d5.r2.g.#1.lo}}{\nv{d5.r2.g.#1.hi}}}
+\newcommand{\DXQ}[1]{\nv{d5.r2e.q.#1}}
+\newcommand{\DXG}[1]{\nv{d5.r2e.g.#1}}
+% the cross-study matrix: \xm{group}{measure} and its random range
+\newcommand{\xm}[2]{\nv{x1m.m.#1.#2}}
+\newcommand{\xr}[2]{\nv{x1m.m.#1.#2.rlo} to \nv{x1m.m.#1.#2.rhi}}
+% post hoc mark for a matrix cell outside the range of its twenty random groups: dagger below, double dagger above
+\newcommand{\xo}[2]{\ifnum\pdfstrcmp{\nv{x1m.o.#1.#2}}{below}=0 \textsuperscript{$\dagger$}\else\ifnum\pdfstrcmp{\nv{x1m.o.#1.#2}}{above}=0 \textsuperscript{$\ddagger$}\fi\fi}
+
+\title{\textbf{Small decisions, mostly separate parts:\\ how small language models indent code, choose ordinal suffixes\\ and write in capitals}}
+\author{Richard Jeevash\\ Independent researcher\\ \texttt{jeevash@richardjeevash.com}\\ ORCID \href{https://orcid.org/0009-0005-7812-0939}{0009-0005-7812-0939}}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\begin{abstract}
+\noindent
+Small language models make many small formatting and morphology decisions correctly: how far to indent the next line of Python, whether a number takes \sfx{st} or \sfx{th}, whether the next word continues a passage written in capitals. We asked how they make three of these decisions, and then whether the mechanisms share parts. Each study explored under a frozen charter, then wrote down what the explored account predicts and tested those predictions, with thresholds and layer-matched random controls, once on held-out material, so the tests show whether each account repeats on new material. \emph{Indentation} (\qsix{} and \olmo{}): dedents reach the model by two routes. After \code{return} and similar statements the keyword is read directly from the decision token through many heads. Unmarked dedents depend on a small set of late heads, chief among them one that attends to the line-ending token of an open block's header and copies that header's indent; which open header it attends to sets how far to dedent, and steering its attention moves the prediction. \emph{Ordinal suffixes} (\qsix{}, \olmo{} and \nv{dx.ord.nfurther.word} further models): to write ``112th'', \qsix{} uses an early previous-token head to bring the tens digit to the last digit; the first MLP reads it, and a late MLP writes a teen override towards \sfx{th} that does not consult the last digit, while a different MLP writes the last digit's own suffix. In \olmo{}, where the tokeniser can put the tens digit in another token, the signal arrives too faint, and a thousands separator repairs the errors; early previous-token heads carry part of the check in three further models. In the ordinal study's second round \nv{dx.d4r2.nfail.word} tests failed, the \nv{dx.d4r2.nfaillen.word} number lengths of \nv{dx.d4r2.nfailpred.word} prediction. \emph{Capitals} (\qbig{} and \gm{}): the next word is chosen in a lower-case-like form and turned into capitals in the last layers along one direction, which is written by a few late components and fed by heads that carry the passage's case; the switch to capitals needs the MLPs after it. A prospective cross-study test (line-breaking, indentation and ordinals in \qsix{}; capitals in \qbig{}, with heads matched by index) finds less sharing than earlier reports of component reuse. The early heads the studies named are general movers of the previous or the current token. Of the later heads, two have a small second role: \hd{17}{6} is shared between line-breaking and indentation, and \hd{11}{9} serves both the ordinal suffix choice and the dedent after a terminal statement, a role first noticed after the cross-study test and then confirmed by a frozen test on new material. The groups that do most of each task's work harm the other tasks no more than random groups do. A third round re-ran every code-based test of the indentation and cross-study work on permissively licensed and newly generated code, which can be redistributed, and all of them held again.
+\end{abstract}
+
+%======================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Much of what a language model writes is decided by small rules of form. A model writing Python must choose how far to indent each line before it sees the next keyword. A model writing an ordinal must apply the exception that makes ``11th'' and ``112th'' rather than ``11st'' and ``112nd''. A model continuing a passage in capitals must keep the capitals and still choose the right word, although its vocabulary spells upper-case words differently. Small models get all three mostly right. This paper asks how, in small open-weight base models, and then asks a second question that only a set of such studies can answer: do these mechanisms share parts?
+
+Each behaviour has close relatives in earlier work, and we state our claims against them (\cref{sec:related}).
+\begin{itemize}
+\item \emph{Indentation.} Indentation has been studied as a representation~\citep{bassi2026geometry}, in models trained for the purpose~\citep{gao2025weightsparse}, and in recurrent networks and very small transformers~\citep{karpathy2015visualizing,janiak2023polysemantic}. A late head that attends to the still-open bracket is known from parenthesis closing in a pretrained code model~\citep{rai2025interference}, and attention to the top of a stack of open brackets from models of bracket languages~\citep{ebrahimi2020dyck,yao2021bounded,sharma2026dyck}. To our knowledge, no earlier work gives a causal account of which components of a pretrained language model choose the next line's indent, or of how such a model chooses how far to dedent among open blocks.
+\item \emph{Ordinal suffixes.} To our knowledge no earlier work explains how a model applies the teen exception. Its parts are familiar: early layers that assemble multi-token units~\citep{feucht2024erasure,lad2024stages}, digit-wise and modular number representations~\citep{levy2025digits,gould2024successor,baeumel2025modular}, and tokenisation effects on numeracy~\citep{singh2024tokenization}.
+\item \emph{Capitals.} Earlier work found that an in-context ``capitalise this word'' function is applied late by an additive feed-forward update along one transferable vector~\citep{merullo2024word2vec}, and sparse-autoencoder studies report features that promote all-capitals tokens~\citep{bloom2024saelogitlens}. To our knowledge, no earlier work explains how a model keeps writing a passage in capitals: where the passage's case is carried, which components write and read it, and how it interacts with the choice of word.
+\item \emph{Shared parts.} That circuits reuse components across tasks is established~\citep{merullo2024reuse,lan2024sequence,li2026circuits}. We test reuse prospectively across four behaviours whose parts were named by separate studies; the fourth is line-breaking in prose, which a companion preprint studies with the same design~\citep{jeevash2026linebreaking}. We find general early heads, as those reports do, but less reuse among the task-specific parts: the groups that do most of each task's work are separate, and two heads have a small role in a second behaviour, both confirmed by frozen tests; the second was first read post hoc and then tested on new material.
+\end{itemize}
+
+All four studies followed one design (\cref{sec:methods}). Under a frozen charter we first required behavioural competence, then explored with ablation, patching, attention analysis, the logit lens and steering until a candidate mechanism appeared. We then wrote down what the candidate predicts, especially effects nobody would predict without it, froze those predictions with their thresholds, controls and code, and tested them once on material sealed before any model read it. The indentation, ordinal and capitals studies each ran two such rounds, the second tracing the first round's account into its parts. Because the predictions were written after exploration, these tests show that each explored account repeats on held-out material, not that it predicted effects nobody had looked for; the counts of tests passed are a record of that replication, not a measure of how surprising the accounts are. We count \emph{tests}, the units that each frozen protocol scores as pass or fail: a test is one prediction read in one model and, where a protocol reads number lengths separately, at one length, so one prediction can be several tests. Throughout, we label results \emph{exploratory} (chose what to test), \emph{prospective} (tested once against frozen predictions) or \emph{post hoc} (computed after a test, and changing no verdict). Intervals, and a few values that we call descriptive, accompany prospective results and decide no test. The code of the first two indentation rounds and of the cross-study test came from public repositories, many without a licence that allows it to be redistributed. A third round therefore re-ran every test that used natural code, with the frozen thresholds and code, on permissively licensed code and newly generated programs, and added a frozen test of a post hoc reading from the cross-study test (\cref{sec:r3}); this is the material the code release ships. \Cref{tab:overview} summarises the four studies; \cref{fig:overview} shows the parts they found and where they meet.
+
+\begin{table}[t]
+\centering\small
+\caption{The four studies. The round columns count tests passed, as each frozen protocol scores them, passed on held-out material and summed over models: a record of held-out replication of each explored account. A test is one frozen prediction, written after exploration, read in one model and, where the protocol reads number lengths separately, at one length. The \nv{dx.nfail} failed tests are one prediction of the ordinal study's second round at its \nv{dx.d4r2.nfaillen.word} number lengths (\cref{sec:ord-r2}). Round~3 re-ran the code-based tests of the first two columns on shareable material and, for shared parts, adds the six tests of \hd{11}{9}'s second role (\cref{sec:r3}); totals elsewhere in the text are over rounds 1 and 2.}
+\label{tab:overview}
+\begin{tabularx}{\linewidth}{@{}l Y >{\raggedright\arraybackslash}p{2.6cm} l l l@{}}
+\toprule
+Study & Decision and main finding & Models & Round 1 & Round 2 & Round 3 \\
+\midrule
+Indentation & next line's indent: a terminal-keyword route and a set of block-end heads, the chief of which reads open headers & \qsix{}, \olmo{} & \nv{d3.c.npass} of \nv{d3.c.ntests} & \nv{d3.c2.npass} of \nv{d3.c2.ntests} & \nv{r3.ind.npass} of \nv{r3.ind.ntests} \\
+Ordinals & suffix after a number: an early copy of the tens digit, a teen override at a late MLP (path traced in \qsix{}) & \qsix{}, \olmo{} and \nv{dx.ord.nfurther.word} others & \nv{d4.c.npass} of \nv{d4.c.ntests} & \nv{d4.r2.npass} of \nv{d4.r2.ntests} & -- \\
+Capitals & case of the next word: lower case first, capitals added late along one direction & \qbig{}, \gm{} & \nv{d5.c.npass} of \nv{d5.c.ntests} & \nv{d5.r2.npass} of \nv{d5.r2.ntests} & -- \\
+Shared parts & the named heads, switched off at each other's decision positions & \qsix{} (capitals: \qbig{}) & \nv{x1m.npass} of \nv{x1m.ntests} & -- & \nv{r3.xe.npass} of \nv{r3.xe.ntests} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[font=\scriptsize,
+  task/.style={draw,rounded corners=2pt,align=center,inner sep=3pt,text width=3.2cm,minimum height=0.9cm,fill=gray!8},
+  part/.style={draw,align=center,inner sep=3pt,text width=3.2cm,minimum height=1.1cm},
+  gen/.style={draw,dashed,align=center,inner sep=3pt,text width=2.9cm,minimum height=0.8cm},
+  arr/.style={-{Stealth[length=3.5pt]},thin}]
+\node[task] (lb) at (0,0) {Line-breaking\\ (companion preprint)};
+\node[task] (ind) at (3.85,0) {Indentation};
+\node[task] (ord) at (7.7,0) {Ordinal suffix};
+\node[task] (cap) at (11.55,0) {Capitals};
+\node[part] (plb) at (0,1.75) {counters, newline writers and readers};
+\node[part] (pind) at (3.85,1.75) {block-end head \hd{23}{2} with \ded{}; keyword read directly (\term{})};
+\node[part] (pord) at (7.7,1.75) {\mlp{0} $\to$ \mlp{24} teen override; \mlp{18} last digit's suffix};
+\node[part] (pcap) at (11.55,1.75) {writers, carriers and late MLP readers of the capitals direction};
+\node[draw,thick,align=center,inner sep=3pt,text width=3.2cm,minimum height=0.8cm] (l176) at (1.9,3.75) {\hd{17}{6}: format reader in line-breaking and indentation};
+\node[gen] (l02) at (5.6,3.75) {\hd{0}{2}: general previous-token head};
+\node[gen] (l03) at (9.0,3.75) {\hd{0}{3}: general current-token head};
+\node[draw,thick,align=center,inner sep=3pt,text width=2.9cm,minimum height=0.8cm] (l119) at (12.4,3.75) {\hd{11}{9}: suffix choice and terminal dedent};
+\foreach \a/\b in {plb/lb,pind/ind,pord/ord,pcap/cap} \draw[arr] (\a) -- (\b);
+\draw[arr] (l176) -- (plb.north); \draw[arr] (l176) -- (pind.north);
+\draw[arr] (l02) -- (pord.north); \draw[arr] (l02.south west) -- (plb.north east);
+\draw[arr] (l03) -- (pord.north); \draw[arr] (l03) -- (pcap.north); \draw[arr] (l03.south west) to[bend right=8] (plb.north east);
+\draw[arr] (l119.south west) -- (pord.north east);
+\draw[arr] ([xshift=3pt]l119.south west) -- ([xshift=-3pt]pind.north east);
+\end{tikzpicture}
+\caption{The parts found by the three studies (middle row) and the heads tested across studies (top). Solid frames: heads confirmed by frozen tests as shared by two behaviours; \hd{11}{9}'s role in indentation was first read post hoc and then confirmed on new material in round~3 (\cref{sec:x1,sec:r3}). Dashed frames: the two general early movers. Arrows mark effects confirmed on held-out material in \qsix{}. Capitals were tested in \qbig{} with heads matched by index, and the line-breaking parts come from the companion preprint~\citep{jeevash2026linebreaking}.}
+\label{fig:overview}
+\end{figure}
+
+%======================================================================
+\section{Shared methods}
+\label{sec:methods}
+
+\paragraph{Models.} We used small base models. Seven have fewer than two billion parameters: \qsix{} and \qbig{}~\citep{qwen2025qwen3}, \olmo{}~\citep{olmo2024olmo2}, SmolLM2-1.7B~\citep{benallal2025smollm2}, Pythia-410M and Pythia-1B~\citep{biderman2023pythia}, and GPT-2~\citep{radford2019language}. The eighth, \gm{}~\citep{gemma2026gemma4}, has \nv{dx.gemma.effB} billion ``effective'' parameters by its developers' count, and \nv{dx.gemma.totB} billion when its per-layer embedding tables are counted. Each study's charter named its candidate models and a behavioural gate that a model had to pass before any internal analysis, with a fallback order fixed in advance. Gates decided which models were studied: Pythia-410M failed the indentation gate on the first indented line of a chunk of code, GPT-2 failed it entirely, and Qwen3-0.6B failed the capitals gate on choosing the same word (\cref{app:gates}).
+
+\paragraph{Decision positions.} Each behaviour is measured at one position, and every intervention acts there unless stated. For indentation it is the token that ends the previous line; for ordinals, the number's last token; for capitals, the position that predicts the start of the next word. Measures are each study's own: the log-probability of the right indent under $q$, the model's next-token distribution renormalised over the candidate indents; the logit margin $m$ between the suffix the last digit calls for and \sfx{th}, with the \emph{teen effect} the mean $m$ of non-teens minus that of teens and the last digit's \emph{pull} the mean $m$ of non-teen numbers ending in 1--3; and, for capitals, whether the top next token is upper case and whether it is the same word as in the lower-case passage.
+
+\paragraph{Interventions and controls.} \emph{Mean ablation} replaces chosen heads' outputs at the decision position with their mean over decision positions of the same material~\citep{heimersheim2024patching,zhang2024patching}. Every named set is compared with twenty random sets that replace each head by another head of the same layer; a set counts as special only if it beats every random set. \emph{Activation patching}~\citep{meng2022locating} copies a component's output from a source run into a target run; \emph{path patching}~\citep{wang2023ioi,goldowskydill2023path} lets the change reach one receiver only. For single heads we also edit attention directly: an \emph{attention knock-out} removes one source position and renormalises, and \emph{attention steering} sets a head's attention all on one source token. The \emph{logit lens}~\citep{nostalgebraist2020logitlens,belrose2023tuned} reads each layer's residual stream through the final normalisation and unembedding. Directions found as differences of mean activations are added or removed to steer the model~\citep{turner2023steering,panickssery2023caa}. Probes are regularised linear models~\citep{alain2016probes}.
+
+\paragraph{Explore, then confirm.} Each study's charter fixed the question, models, tools, budget, what would count as a candidate and when to stop, and was frozen with its digest before exploration. Held-out material was split by a hash (of repository, article, frame or number) and sealed before any model read it: Python from repositories created after every model studied was trained, which we call \emph{post-cut-off} code, and programs from a seeded generator (indentation), hand-written sentence frames and numbers up to ten digits (ordinals), and paragraphs and headings from English Wikipedia articles created in 2025--26, after the models were trained (capitals). New repositories and pages can contain older code and text, so overlap with the training data remains possible. Each protocol froze its predictions with thresholds set from exploration values with margins, the controls and the code, and was run once. Decisions use point estimates; intervals, where given, resample repositories, programs, numbers or paragraphs and are descriptive. All runs used bfloat16, checked against float32 on exploration scans.
+
+%======================================================================
+\section{Indentation: two routes to a dedent}
+\label{sec:ind}
+
+Python marks blocks by indentation, so after each newline a model must choose the next line's indent: deeper after a header, the same inside a block, or shallower when a block ends. A dedent is a bet on the program's structure, made before the next keyword appears. We call a dedent after \code{return}, \code{raise}, \code{break}, \code{continue} or \code{pass} \emph{terminal}, and any other dedent \emph{unmarked}. \qsix{} was the main model; \olmo{} was the second model in the second round, chosen by a gate order fixed in advance.
+
+\subsection{Round 1: two routes}
+
+Exploration found that no single component matters much for terminal dedents, while unmarked dedents depend on a group of late heads, \ded{} = \{\hd{23}{2}, \hd{17}{3}, \hd{17}{4}, \hd{17}{5}, \hd{18}{6}\}, most of all on \hd{23}{2}. The signal that the previous line was a terminal statement reaches the decision token from layer 5 and is mostly in place by layer 17, carried by mid-layer heads (\carry{} and the related set \term{}, \cref{app:ind}). Two accounts failed in exploration and were dropped. The terminal signal is not read from the previous line's first token: a name such as \code{return\_value} moved the mass on shallower open levels to \nv{d3.x.e9.return.kw}, against \nv{d3.x.e9.return.ctl} for a control prefix and \nv{d3.x.e9.return.real} after a real \code{return}. Nor is how far to dedent held as a linear count at the decision token: probes reached at most $R^2$ \nv{d3.x.e5.ndedmax} for the number of levels dedented.
+
+The round-1 protocol (frozen at \nv{d3.freeze.protocol} on 8 November 2026) was run once on \nv{d3.c.nchunks.nc} held-out chunks of natural code and \nv{d3.c.nchunks.gen} generated programs, and all \nv{d3.c.npass} tests passed (\cref{tab:d3-conf}). Without \ded{}, mean log-probability of the true indent at unmarked dedents fell by \nv{d3.c.H1.abs} nats (change \nv{d3.c.H1}\ci{\nv{d3.c.H1.lo}}{\nv{d3.c.H1.hi}}; no random set below \nv{d3.c.H1.r}), and the probability of keeping the current level rose to \nv{d3.c.H2.after}; terminal dedents kept \nv{d3.c.H3.open} of their probability on open levels. Ablating \term{} instead changed terminal dedents by \nv{d3.c.H5} and left unmarked dedents almost unchanged (\nv{d3.c.H6}). Removing both routes changed terminal dedents by \nv{d3.c.H7}, more than the \nv{d3.c.H7.sum} expected from the two alone, so the routes back each other up. In return-versus-assignment pairs, \carry{} carried \nv{d3.c.H9.nec} of the gap by necessity and \nv{d3.c.H9.suf} by sufficiency, against at most \nv{d3.c.H9.rnec} and \nv{d3.c.H9.rsuf} for random sets.
+
+\subsection{Round 2: how each route gets its information}
+
+\paragraph{The block-end head reads the open header.} At unmarked dedents, \hd{23}{2} puts much of its attention on the token that ends the header of the innermost open block (in Qwen3's tokeniser a merged colon and newline, \code{:\textbackslash n}). Knocking that one token out of its attention lowers the log-probability of the true indent, while the same knock-out in any other head of the layer barely matters; knocking out the most recent \emph{closed} header instead does little. The head's direct output from an open header favours that header's own indent among the candidates. So the head reads the header of the block that is ending and copies its indent. What tells it to look is spread over many earlier components: the largest change in its attention to the enclosing header from ablating any single earlier head or MLP was \nv{d3.x2.qc.top1v} (exploratory).
+
+\paragraph{Its attention is the choice of how far to dedent.} When several blocks are open, the open header that \hd{23}{2} attends to most is, in most cases, the level the line returns to, including where that is not the innermost level. Setting the head's attention all on one open header moves the prediction to that header's indent. This answers the question round~1 left open: how far to dedent is not a count at the decision token but the indent of the header the block-end head reads.
+
+\paragraph{The terminal route reads the keyword directly.} Removing only the attention edge from the decision token to the keyword, in every layer, closes much of the gap between a \code{return} line and a neutral line, and no single layer carries much of this. The share differs by keyword and is small for \code{pass}.
+
+\paragraph{Held-out results.} The round-2 protocol (frozen at \nv{d3.freeze.protocol2} on 9 November 2026) was run once on \nv{d3.c2.q.n.chunks} new chunks from \nv{d3.c2.q.n.repos} repositories and \nv{d3.c2.qg.n.programs} targeted programs, which open a chain of blocks and return to a randomly chosen open level. All \nv{d3.c2.npass} tests passed (\cref{tab:ind-r2}; \cref{tab:d3-conf2q,tab:d3-conf2o} list them). In \qsix{}, knocking the innermost open header out of \hd{23}{2}'s attention cost \nv{d3.c2.q.ko_inner_ded} nats at unmarked dedents, while no other layer-23 head changed by more than \nv{d3.c2.q.others_maxabs} under the same edit. Where the target level was not the innermost, the most-attended open header was the target in \nv{d3.c2.q.pick_not_inner} of cases, and over all dedents with two or more open headers the head beat the rule ``return to the innermost level'' (\nv{d3.c2.q.pick_all_multi} against \nv{d3.c2.q.innermost_rule_all_multi}). Steering raised the log-probability of the steered header's indent by \nv{d3.c2.q.steer_dedent_head_dlq} nats in natural code (another layer-23 head: \nv{d3.c2.q.steer_dedent_ctrl_dlq}) and by \nv{d3.c2.qg.steer_term_head_dlq} in targeted programs (control \nv{d3.c2.qg.steer_term_ctrl_dlq}). The keyword edge closed \nv{d3.c2.qg.share_blk_kw_return} of the gap for \code{return}, with no single layer above \nv{d3.c2.qg.share_layer_return_max}; for \code{pass} it closed \nv{d3.c2.qg.share_blk_kw_pass}.
+
+\begin{table}[t]
+\centering\small
+\caption{Indentation, round 2: selected held-out results in the two models (\qsix{}: head \hd{23}{2}; \olmo{}: head \hd{13}{1} and the block-end set \textsc{ded-o}). Changes are in mean log-probability of the true indent. Every test passed; \cref{app:ind} gives all \nv{d3.c2.ntests} with their thresholds. The \olmo{} entry in the row on all multi-header dedents is not a tested prediction: there the head does not beat the innermost rule, shown in brackets.}
+\label{tab:ind-r2}
+\begin{tabularx}{\linewidth}{@{}Y ll@{}}
+\toprule
+Measure & \qsix{} & \olmo{} \\
+\midrule
+Attention to the innermost open header, unmarked dedents (same-level lines) & \nv{d3.c2.q.att_inner_ded} (\nv{d3.c2.q.att_inner_same}) & \nv{d3.c2.o.att_inner_ded} (\nv{d3.c2.o.att_inner_same}) \\
+Knocking that token out: change (largest absolute change, other heads of the layer) & \nv{d3.c2.q.ko_inner_ded} (\nv{d3.c2.q.others_maxabs}) & \nv{d3.c2.o.ko_inner_ded} (\nv{d3.c2.o.others_maxabs}) \\
+Knocking out the latest closed header instead & \nv{d3.c2.q.ko_closed_ded} & \nv{d3.c2.o.ko_closed_ded} \\
+Steering to another open header: rise in its indent (control head) & \nv{d3.c2.q.steer_dedent_head_dlq} (\nv{d3.c2.q.steer_dedent_ctrl_dlq}) & \nv{d3.c2.o.steer_dedent_head_dlq} (\nv{d3.c2.o.steer_dedent_ctrl_dlq}) \\
+Most-attended header is the target, all multi-header dedents (innermost rule) & \nv{d3.c2.q.pick_all_multi} (\nv{d3.c2.q.innermost_rule_all_multi}) & \nv{d3.c2.o.pick_all_multi} (\nv{d3.c2.o.innermost_rule_all_multi}) \\
+Keyword edge removed, \code{return}: share of the gap closed & \nv{d3.c2.qg.share_blk_kw_return} & \nv{d3.c2.og.share_blk_kw_return} \\
+Block-end set ablated, unmarked dedents (twenty random sets) & -- & \nv{d3.c2.g.d_lq_dedent} (\nv{d3.c2.g.rand_d_lq_dedent_min} to \nv{d3.c2.g.rand_d_lq_dedent_max}) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{A second model.} \olmo{} (16 layers of 16 heads) passed the round-1 gate and has both routes. Four heads, \textsc{ded-o} = \{\hd{13}{1}, \hd{10}{12}, \hd{11}{0}, \hd{15}{4}\}, are needed for unmarked dedents and not for terminal ones (\nv{d3.c2.g.d_lq_dedent} against \nv{d3.c2.g.d_lq_term}). \hd{13}{1}, at the same relative depth as \hd{23}{2}, reads open headers, and steering it moves the dedent. One difference held: its most-attended header is the target more often than the innermost header where the two differ, but over all multi-header dedents it does not beat the innermost rule (no prediction was made about this). The keyword edge carries even more of the terminal route than in \qsix{}.
+
+\paragraph{The OLMo-2 checkpoints come from another run (exploratory).} \olmo{}'s developers publish intermediate checkpoints of a training run of the same recipe. In those checkpoints terminal dedents are learnt first (\cref{tab:d3-ckpt}): top-1 accuracy at terminal dedents was \nv{d3.ck.21B.term} by 21 billion tokens, while unmarked dedents rose slowly (\nv{d3.ck.21B.ded} at 21 billion, \nv{d3.ck.1007B.ded} by 1{,}007 billion). A block-end reader forms during stage~1, but at \hd{15}{9} (its most-attended header is the target at \nv{d3.ck.4001B.L15H9.pick} of multi-level dedents at the end of stage~1), and all three published stage-2 runs keep it there. In the released model, by contrast, \hd{13}{1} is the reader (attention \nv{d3.ck.final.L13H1.att}) and \hd{15}{9} is silent (\nv{d3.ck.final.L15H9.att}). A weight comparison explains this: the cosine between the released model's token embeddings and those at the end of stage~1 is \nv{d3.ck.dist.fin_s1end.emb}, against \nv{d3.ck.dist.s1end_ia51.emb} between the end of stage~1 and a stage-2 run that continues from it. The released weights do not descend from the published checkpoints, so the checkpoints do not show the released model's reader forming. They show instead that two training runs of one recipe put the block-end reader in different heads with nearly the same behaviour.
+
+\subsection{Round 3: replication on shareable material}
+\label{sec:r3}
+
+The natural code of the first two rounds, and of the cross-study test (\cref{sec:x1}), was cut from public repositories, many of which carry no licence that allows their code to be redistributed. So that the material behind every code-based result can be shared, a third round re-ran those tests on new material. The new natural code is \nv{r3.mat.nfiles} Python files from \nv{r3.mat.nrepos} repositories created after the models were trained, each under an MIT, Apache, BSD, CC0 or Unlicense licence and pinned to a commit, which gave \nv{r3.mat.nchunks} chunks from \nv{r3.mat.nchunkrepos} repositories; it was joined by \nv{r3.mat.ngen} new programs from the round-1 generator and \nv{r3.mat.ngen2} from the round-2 generator, all with unused seeds. A charter and protocol, frozen with digests on 10 November 2026 before any model read this material, fixed the tests: every code-based test of rounds 1 and 2 and the indentation side of the cross-study test, run by byte-identical copies of the frozen scripts with their frozen thresholds and verdict rules, plus six new tests of \hd{11}{9} (\cref{sec:x1}). Thresholds for the new tests that no earlier protocol fixed were set from runs on material that earlier rounds had already read.
+
+All \nv{r3.r1.ntests} round-1 tests passed again, so by the frozen rule the two-route account is confirmed again: without \ded{}, unmarked dedents changed by \nv{r3.r1.H1} (round 1: \nv{r3.o1.H1}; no random set below \nv{r3.r1.H1.r}), and the terminal route's set \term{} changed terminal dedents by \nv{r3.r1.H5}, just past its frozen bar of $-0.03$ (round 1: \nv{r3.o1.H5}). All \nv{r3.r2.ntests} round-2 tests passed, with values close to the originals, and all \nv{r3.r2.nq} questions were confirmed again in both models: knocking out the open header cost \nv{r3.r2.Q2} at unmarked dedents in \qsix{} (round 2: \nv{r3.o2.Q2}), steering raised the steered header's indent by \nv{r3.r2.Q6} nats (round 2: \nv{r3.o2.Q6}), and \olmo{}'s block-end set changed unmarked dedents by \nv{r3.r2.G1} (random \nv{r3.r2.G1.rlo} to \nv{r3.r2.G1.rhi}). All \nv{r3.x.ntests} indentation-side tests of the cross-study test passed again (\cref{sec:x1}). On the new code the gate reads as before: \nv{r3.gate.npassall} of the \nv{r3.gate.nmodels} models gated pass every item, Pythia-410M again misses only the header item (\nv{r3.gate.p410.head}), and GPT-2 fails every item. \Cref{tab:r3} lists each test with its original and round-3 value.
+
+%======================================================================
+\section{Ordinal suffixes: an early copy and a late override}
+\label{sec:ord}
+
+English ordinals follow a short rule with one exception: the last digit chooses the suffix (1 \sfx{st}, 2 \sfx{nd}, 3 \sfx{rd}, otherwise \sfx{th}) unless the tens digit is 1, in which case the suffix is \sfx{th}. A model must combine two digits that its tokeniser may have put in different tokens. Qwen3, SmolLM2 and Gemma~4 write one token per digit; OLMo~2 cuts a run of digits into chunks of three from the left, so ``1112'' becomes \texttt{111} and \texttt{2}; GPT-2 and Pythia use byte-pair chunks of varying length. Sentences come from hand-written frames in five families (dates, centuries, rankings, anniversaries and positions) that end just before the suffix. The \emph{teen AUROC} is the probability that a non-teen number ending in 1--3 has a higher margin $m$ than a teen number; it is unaffected by a model's overall pull towards \sfx{th}. \nv{d4.gate.n.qualify} of \nv{d4.gate.n.models} models passed the first round's gate, and \qbig{}, added for the second round, \nv{dx.ordgate.q17} the same gate before any internal analysis (\cref{app:gates}). Besides \qsix{} and \olmo{}, the study used \nv{dx.ord.nfurther.word} further models: GPT-2, Pythia-1B, SmolLM2-1.7B and \gm{} in the first round, and \qbig{}, SmolLM2-1.7B and \gm{} for the early heads in the second.
+
+\subsection{Round 1: token boundaries and an early copy}
+
+The first round's protocol was frozen on 8 November 2026 and run once. All \nv{d4.c.npass} tests passed: the \nv{dx.d4r1.npred} predictions of \cref{tab:d4-tests}, of which the last on token boundaries is read separately in \nv{dx.d4r1.B5.nmodels.word} models.
+
+\paragraph{Behaviour follows token boundaries.} \olmo{} fails exactly where its chunks of three leave the last digit alone in its token. On held-out items its teen AUROC was \nv{d4.c.olmo.4p.auroc} at four digits and \nv{d4.c.olmo.7p.auroc} at seven, while every length at which one token holds both digits stayed at \nv{d4.c.olmo.B2.min} or above (\cref{fig:auroc,tab:d4-olmo}). Plain four-digit teens were given \sfx{th} in only \nv{d4.c.olmo.4p.acct} of cases. With a thousands separator, which puts the last three digits in one token at every length, the AUROC rose to \nv{d4.c.olmo.4c.auroc} and \nv{d4.c.olmo.7c.auroc}. GPT-2 and Pythia-1B show the same failure on the few numbers their tokenisers split before the last digit (teen accuracy \nv{d4.c.gpt2.boundary.acct} and \nv{d4.c.p1b.boundary.acct}, against \nv{d4.c.gpt2.control.acct} and \nv{d4.c.p1b.control.acct} on controls), though these sets hold only \nv{d4.c.gpt2.boundary.nnum} distinct teen numbers each: the boundary test passes its frozen criterion in both models, but on too few numbers to show that the failure holds beyond them.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.52\linewidth,height=5cm,legend cell align=left,xlabel={Digits in the number},ylabel={Teen AUROC},xmin=1.7,xmax=7.3,ymin=0.6,ymax=1.02,xtick={2,3,4,5,6,7},
+  legend style={font=\scriptsize,at={(1.03,0.5)},anchor=west,draw=none},
+  tick label style={font=\small},label style={font=\small},unbounded coords=jump]
+\addplot[thick,black,mark=*] table[x=digits,y=olmo_plain]{fig-d4-auroc.dat};
+\addlegendentry{\olmo{}, plain (held out)}
+\addplot[thick,black,dashed,mark=o] table[x=digits,y=olmo_comma]{fig-d4-auroc.dat};
+\addlegendentry{\olmo{}, thousands separator (held out)}
+\addplot[gray,mark=triangle*,mark options={solid}] table[x=digits,y=q3]{fig-d4-auroc.dat};
+\addlegendentry{\qsix{} (exploration)}
+\addplot[gray,dotted,mark=square*,mark options={solid}] table[x=digits,y=smol]{fig-d4-auroc.dat};
+\addlegendentry{SmolLM2-1.7B (exploration)}
+\addplot[gray,dashdotted,mark=diamond*,mark options={solid}] table[x=digits,y=gemma]{fig-d4-auroc.dat};
+\addlegendentry{\gm{} (exploration)}
+\end{axis}
+\end{tikzpicture}
+\caption{Teen AUROC by number length. \olmo{} falls only at four and seven digits, where its chunks of three leave the last digit in a token of its own; the separator removes the dip. Models with one token per digit show no such pattern.}
+\label{fig:auroc}
+\end{figure}
+
+\paragraph{\qsix{}: an early copy of the tens digit.} In \qsix{}, the layer-0 head \hd{0}{2} attends from the last digit to the tens digit and was the top head when patching teen pairs (\nv{d4.c.q3.p3d_intoteen.L0H2} of the logit difference at three digits). Ablating it with \hd{1}{6}, a weaker head with the same pattern, left \nv{d4.c.q3.3.kept} and \nv{d4.c.q3.4.kept} of the teen effect at three and four digits, while every random pair of heads from layers 0--2 kept at least \nv{d4.c.q3.4.rmin} (\cref{tab:d4-qwen}). Two-digit teens largely survived (\nv{d4.c.q3.2.kept}), so they have a further route.
+
+\paragraph{\olmo{}: heads needed only across the boundary.} Three layer-0 heads that attend to the previous token (\hd{0}{5}, \hd{0}{0}, \hd{0}{9}) carry almost all of what remains of the teen effect where the tens digit is in the previous token (kept \nv{d4.c.ol.4.kept} and \nv{d4.c.ol.7.kept} at four and seven digits) and nothing where one token holds both digits (\nv{d4.c.ol.3.kept} and \nv{d4.c.ol.5.kept}; \cref{tab:d4-olmoabl}). One margin was narrow: at seven digits the lowest random triple kept \nv{d4.c.ol.7.rmin}, just above the \nv{d4.thr.O1.rand} bar.
+
+\subsection{Round 2: from the copied digit to the suffix}
+\label{sec:ord-r2}
+
+The second round asked what happens after the copy. New frames were written and split, and numbers of six to ten digits were set aside, before any model read them; three- to five-digit numbers could not be fresh, so the held-out tests use round-1 confirmation and reserve numbers in new frames. The protocol was frozen on 9 November 2026 and run once. Of its \nv{d4.r2.ntests} tests, \nv{d4.r2.npass} passed (\cref{tab:d4-r2tests}).
+
+\paragraph{\mlp{0} reads the copy and \mlp{24} decides.} Of the teen effect that \hd{0}{2}'s ablation removes, \nv{d4.r2.q.4.R1.via} (four digits) and \nv{d4.r2.q.6.R1.via} (six digits) is removed when the ablation reaches \mlp{0}'s input alone. The signal then spreads thinly over many middle-layer components (exploratory) and comes together at \mlp{24}: among \mlp{12}--\mlp{27} it is the largest mediator of \hd{0}{2}'s teen effect (\nv{d4.r2.q.4.R3.l0h2_mlp24} and \nv{d4.r2.q.6.R3.l0h2_mlp24} of it), the logit lens shows the teen effect rising most sharply from layer 23 to 24 (by \nv{d4.r2.q.4.R4.rise} and \nv{d4.r2.q.6.R4.rise} logits), and \mlp{24}'s own output accounts directly for \nv{d4.r2.q.4.R5.share} and \nv{d4.r2.q.6.R5.share} of the teen effect, with no other MLP above \nv{d4.r2.q.4.R5.other}.
+
+\paragraph{Two writers that do not consult each other.} For teens, \mlp{24} raises \sfx{th} above the mean of the other three suffixes by \nv{d4.r2.q.6.R6.thlo}--\nv{d4.r2.q.4.R6.thhi} logits whatever the last digit, and favours the last digit's own suffix by at most \nv{d4.r2.q.6.R6.spec24}: it says ``teen, so \sfx{th}'' without knowing which suffix it overrides. The last digit's suffix is written by \mlp{18}, which favours it by \nv{d4.r2.q.6.R6.s18lo}--\nv{d4.r2.q.4.R6.s18hi} logits to much the same degree for teens and non-teens. The model does not compute the rule as a conditional: one component writes the last digit's suffix, another writes a teen override, and the override wins in the logits when the tens digit is 1. This fits the picture of MLPs as stores of input patterns that promote output tokens~\citep{geva2021kv}. \Cref{fig:path} shows the path.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[font=\small, node distance=4mm and 8mm,
+  box/.style={draw, rounded corners=2pt, align=center, inner sep=3pt, minimum height=7mm},
+  arr/.style={-{Latex[length=2mm]}, thick}]
+\node[box] (tens) {tens digit\\(previous token)};
+\node[box, right=of tens] (h02) {\hd{0}{2}\\previous-token head};
+\node[box, right=of h02] (m0) {\mlp{0}\\reads the copy};
+\node[box, right=of m0] (mid) {many middle-layer\\components};
+\node[box, below=7mm of mid] (m24) {\mlp{24}\\teen $\Rightarrow$ \sfx{th}};
+\node[box, below=7mm of h02] (h119) {\hd{11}{9}\\current-token head};
+\node[box, right=18mm of m24] (logit) {suffix\\logits};
+\node[box, below=7mm of h119] (last) {last digit\\(current token)};
+\node[box, right=of last] (h03) {\hd{0}{3}\\current-token head};
+\node[box, right=of h03] (m18) {\mlp{18}\\last digit's own suffix};
+\draw[arr] (tens) -- (h02); \draw[arr] (h02) -- (m0); \draw[arr] (m0) -- (mid); \draw[arr] (mid) -- (m24);
+\draw[arr] (h119) -- (m24); \draw[arr] (m24) -- (logit);
+\draw[arr] (last) -- (h03); \draw[arr] (h03) -- (m18); \draw[arr] (m18.east) -| (logit.south);
+\end{tikzpicture}
+\caption{The path from digits to suffix in \qsix{}. The teen route (top) is copied early, read by \mlp{0}, spread over many components and gathered at \mlp{24}, which writes a teen override. The last digit's suffix is written separately (bottom); \hd{0}{3}'s role rests on exploration and on the cross-study test (\cref{sec:x1}). The two routes meet only in the logits.}
+\label{fig:path}
+\end{figure}
+
+\paragraph{Backup heads.} When \hd{0}{2} and \hd{1}{6} are removed, two later previous-token heads, \hd{2}{4} and \hd{5}{2}, carry part of the tens digit, mostly for two-digit numbers: removing them as well lowers the two-digit teen effect kept from \nv{d4.r2.s.2.a} to \nv{d4.r2.s.2.ab}, below every control pair (\cref{tab:d4-backup}). Even then \nv{d4.r2.s.2.ab} of the two-digit effect remains, and we did not find the route that carries it.
+
+\paragraph{\olmo{}: a weak route, not a missing one.} On held-out numbers of three to ten digits the token account held at every new length (\cref{tab:d4-olmo2}). Where the tens digit sits in the previous token, the tens digit does arrive at the last token, but faintly: the teen direction there is at most \nv{d4.r2.o.4.vmax}, \nv{d4.r2.o.7.vmax} and \nv{d4.r2.o.10.vmax} of the three-digit one in size at four, seven and ten digits. The late layers can still use a signal of normal size: adding the three-digit teen direction at layer~8 to non-teen numbers lowers the suffix margin by \nv{d4.r2.o.4.steer}, \nv{d4.r2.o.7.steer} and \nv{d4.r2.o.10.steer} logits, while random directions of the same size move it by at most \nv{d4.r2.o.4.rand}, \nv{d4.r2.o.7.rand} and \nv{d4.r2.o.10.rand}. The reader works; what reaches it is too faint.
+
+\paragraph{Other models, and the two failed tests.} In \qbig{}, SmolLM2-1.7B and \gm{}, heads in layers 0--1 that put at least half of the last token's attention on the previous token carry part of the teen effect, while random heads from the same layers carry almost none (\cref{tab:d4-other}). Of the \nv{d4.r2.other.n} tests for these models, \nv{d4.r2.other.pass} passed. The \nv{dx.d4r2.nfail.word} that failed are \nv{dx.d4r2.nfailpred.word} prediction at its \nv{dx.d4r2.nfaillen.word} number lengths: that in \qbig{} these previous-token heads would leave the last digit's pull intact. They also removed much of it (\nv{d4.r2.x.q17.3.PREV.pull} and \nv{d4.r2.x.q17.4.PREV.pull} kept at three and four digits, against the \nv{d4.thr2.X.pull} required). In that model the two kinds of early head divide the work less cleanly than in \qsix{}.
+
+\paragraph{Checkpoints of another run (exploratory).} Six stage-1 checkpoints of the published OLMo-2 training run were measured on exploration items (\cref{tab:d4-ckpt}). As the indentation study found, the released \olmo{} weights do not descend from this run: the released model's token embeddings have cosine \nv{d4.post.lin.emb} with those at the end of stage~1, while the four published stage-2 checkpoints keep at least \nv{d4.post.lin.s2min} (a post hoc comparison). In this run the in-token teen check forms early and the cross-token check stays near chance until about a trillion tokens and is still weak at the end of the stage. This shows how the recipe can learn the check, not when the released model learnt it, and the checkpoints support no inference about how the released model's cross-token route formed.
+
+%======================================================================
+\section{Capitals: lower case first, capitals last}
+\label{sec:caps}
+
+Text in capitals is a small fraction of what a model reads, and its tokens differ: a vocabulary may have one token for ``the'' but spell ``THE'' and longer upper-case words out of pieces. The study gated its \nv{dx.capsgate.ncharter.word} candidate models on English Wikipedia paragraphs, and two passed: \gm{}, whose vocabulary has many whole-word upper-case tokens, and \qbig{}, which splits upper-case words into pieces. All \nv{dx.capsgate.ncharter.word} kept the case; the cost of capitals lay in choosing the word, and SmolLM2-1.7B (same word \nv{d5.gate.s.c2}) and Pythia-1B (\nv{d5.gate.p.c2}) failed the 0.60 bar on it. Two more models were later put through the same gate and failed the same condition: \olmo{}, for the question of training dynamics below, and \qsix{}, for the cross-study test (\cref{sec:x1}). In all, \nv{dx.capsgate.npass.word} of \nv{dx.capsgate.ngated.word} gated models passed. The material was split by article into exploration, confirmation and reserve parts before any model read it; round~1 was confirmed on the confirmation part and round~2 on the reserve part and on headings from the same articles. \Uc{} is the coming word's first token in capitals, \Lc{} the same word's first token in lower case, and \Lr{} the lower-case first token of another word of the paragraph.
+
+\subsection{Round 1: one direction carries the case}
+
+All \nv{d5.c.npass} tests of the first round passed, \nv{d5.c.g.ntests} in \gm{} and \nv{d5.c.q.ntests} in \qbig{} (\cref{tab:d5-preds}).
+
+\paragraph{Lower case first.} On held-out upper-case passages, the logit lens ranked \Lc{} above \Uc{} at the direction layer $\ell$ (24 of 35 in \gm{}, 22 of 28 in \qbig{}) at \DG{lens_Lc_gt_U_at_l} and \DQ{lens_Lc_gt_U_at_l} of positions, while another word's lower-case token beat \Uc{} at only \DG{lens_Lr_gt_U_at_l} and \DQ{lens_Lr_gt_U_at_l}. \Uc{} took over for good only from layer \DG{firstlow} and \DQ{firstlow}, the last three layers of each model (\cref{fig:lens}). Read post hoc across depth, the lens shows a general lean towards lower-case tokens at the first layers and the coming word only from mid depth; ``lower case first'' means that once the word can be read through the lens, it reads in lower case.
+
+\paragraph{One direction switches the case.} The \emph{capitals direction} $d$ at a layer is the mean residual at word-start prediction positions in upper-case passages minus that in lower-case passages, estimated on exploration paragraphs. Adding it at $\ell$ to a lower-case passage made the next word upper case at \DG{add_dir_L24_flip} of positions in \gm{} and \DQ{add_dir_L22_flip} in \qbig{}, and subtracting it from an upper-case passage made it lower case at \DG{sub_dir_L24_flip} and \DQ{sub_dir_L22_flip}; random directions of the same norm flipped at most \DG{sub_rand_L24_flip}. The direction is needed, though not alone: setting the residual's component along $d$ to the midpoint of the two passages' means left the next word in capitals at \DG{rm_dir_upper_share} and \DQ{rm_dir_upper_share} of upper-case positions. Adding $d$ in ordinary mixed-case prose also capitalised the next word (\DG{orig_add_dir_to_upper} and \DQ{orig_add_dir_to_upper}). The case follows the last few words: a lower-case passage whose last two words were in capitals gave an upper-case next word at \DG{upper_top1_L+u2} and \DQ{upper_top1_L+u2} of positions.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.49\textwidth,height=4.1cm,title={\small \gm{}},xlabel={\small layer},ylabel={\small share of positions},ymin=-0.02,ymax=1.02,xmin=0,xmax=34,tick label style={font=\scriptsize},legend style={font=\scriptsize,at={(0.02,0.02)},anchor=south west,draw=none,fill=white,fill opacity=0.8,text opacity=1},legend cell align=left]
+\addplot[thick,black] table[x=layer,y=LcU]{fig-d5-lens-g.dat};
+\addplot[thick,dashed,gray] table[x=layer,y=LrU]{fig-d5-lens-g.dat};
+\addplot[thick,dotted,black] table[x=layer,y=LcLr]{fig-d5-lens-g.dat};
+\draw[gray,thin] (axis cs:24,-0.02) -- (axis cs:24,1.02);
+\addlegendentry{$L_c$ above $U$}
+\addlegendentry{$L_r$ above $U$}
+\addlegendentry{$L_c$ above $L_r$}
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}
+\begin{axis}[width=0.49\textwidth,height=4.1cm,title={\small \qbig{}},xlabel={\small layer},ymin=-0.02,ymax=1.02,xmin=0,xmax=27,tick label style={font=\scriptsize}]
+\addplot[thick,black] table[x=layer,y=LcU]{fig-d5-lens-q.dat};
+\addplot[thick,dashed,gray] table[x=layer,y=LrU]{fig-d5-lens-q.dat};
+\addplot[thick,dotted,black] table[x=layer,y=LcLr]{fig-d5-lens-q.dat};
+\draw[gray,thin] (axis cs:22,-0.02) -- (axis cs:22,1.02);
+\end{axis}
+\end{tikzpicture}
+\caption{Held-out upper-case passages, logit lens by layer; the frozen tests read the lens at $\ell$, and the reading across all layers is post hoc. Solid: the coming word's lower-case first token above its upper-case one. Dashed: another word's lower-case token above it. Dotted: the coming word's lower-case token above the other word's. The vertical line marks the direction layer $\ell$.}
+\label{fig:lens}
+\end{figure}
+
+\subsection{Round 2: the parts that use the direction}
+
+The second round asked which components write the direction, which carry the passage's case to the prediction position, which read it, why the edit sometimes changes the word, and whether other capitals use it. A \emph{context-only} passage (A) is the upper-case passage with its last word in lower case; it ends in the same token as the lower-case passage (L), so what separates A from L at the prediction position came through attention. \emph{Directional ablation} moves only a component's write along $d$ to its value in L. All \nv{d5.r2.npass} tests passed, \nv{d5.r2.q.v.n_tests} in \qbig{} and \nv{d5.r2.g.v.n_tests} in \gm{} (\cref{tab:caps-r2}; all are listed in \cref{tab:d5-preds2}).
+
+\begin{table}[t]
+\centering\small
+\caption{Capitals, round 2: selected held-out results. ``Random'' gives the extreme of twenty matched random sets. All tests passed; \cref{app:caps} gives every measure with its threshold and interval.}
+\label{tab:caps-r2}
+\begin{tabularx}{\linewidth}{@{}Y ll@{}}
+\toprule
+Measure & \qbig{} & \gm{} \\
+\midrule
+Writers' writes along $d$ moved to lower-case values: upper-case top-1 (random, lowest) & \DRQ{W_named_upper} (\DRQ{W_random_upper.min}) & \DRG{W_named_upper} (\DRG{W_random_upper.min}) \\
+Add $d$ after $\ell$: flips to capitals; with the reader MLPs frozen & \DRQ{R_none_flip}; \DRQ{R_named_flip} & \DRG{R_none_flip}; \DRG{R_named_flip} \\
+Carriers patched in A: share of the excess along $d$ removed (random, highest) & \DRQ{CA_named_proj_removed} (\DRQ{CA_random_proj_removed.max}) & \DRG{CA_named_proj_removed} (\DRG{CA_random_proj_removed.max}) \\
+Edit changes the word: where real capitals change it; where they do not & \DRQ{E_change_if_up_changes}; \DRQ{E_change_if_up_keeps} & \DRG{E_change_if_up_changes}; \DRG{E_change_if_up_keeps} \\
+Remove $d$: acronyms kept in capitals; headings in capitals kept & \DRQ{A_acr_rm_keeps}; \DRQ{A_head_rm_keeps} & \DRG{A_acr_rm_keeps}; \DRG{A_head_rm_keeps} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Writers.} The writes along $d$ come almost entirely from a few components shortly before $\ell$: in \qbig{} MLPs 19--22 and head \hd{19}{0}, in \gm{} MLPs 22--24 and head \hd{24}{6}. Moving only their writes along $d$ to their lower-case values left an upper-case next word at \DRQ{W_named_upper} and \DRG{W_named_upper} of positions, against at least \DRQ{W_random_upper.min} and \DRG{W_random_upper.min} for random sets. The token embedding writes almost nothing along $d$, so the direction is not the current token's case itself.
+
+\paragraph{Carriers.} Four or five heads bring the earlier words' case to the prediction position (in \qbig{} \hd{19}{0}, \hd{17}{6}, \hd{18}{1}, \hd{18}{0}; in \gm{} \hd{14}{6}, \hd{14}{7}, \hd{14}{1}, \hd{15}{2}, \hd{24}{6}). One in each model looks mostly at the last few words (\hd{17}{6} puts \DRQ{attn_L17H6_recent8} of its attention on the last eight words, \hd{14}{7} \DRG{attn_L14H7_recent8}); the others look further back (\hd{19}{0}: \DRQ{attn_L19H0_recent8}). Patching them from L into A removed \DRQ{CA_named_proj_removed} and \DRG{CA_named_proj_removed} of A's excess along $d$. In \gm{} random sets reach higher (\DRG{CA_random_proj_removed.max}) because they share layer 14 with several named heads: attention at that layer carries case more widely than the named heads alone. \hd{17}{6} alone removed \DRQ{L17H6_proj_removed}, more than any of twenty random layer-17 heads.
+
+\paragraph{Readers.} With $d$ added after $\ell$, freezing the MLPs after $\ell$ at their unedited outputs stopped the flip (\DRQ{R_named_flip} and \DRG{R_named_flip}, from \DRQ{R_none_flip} and \DRG{R_none_flip}), while freezing matched heads did not. Freezing also stops whatever else these MLPs write, so this shows that the flip needs them, not that they do nothing else.
+
+\paragraph{The current token.} The current token's own case enters separately. In \qbig{}, the layer-0 head \hd{0}{3} attends almost only to the current token, and its output from another paragraph's lower-case passage moved \DQ{L0H3_other_lower_moved} of the gap between upper- and lower-case passages, while its output from another upper-case passage moved \DQ{L0H3_other_upper_moved} (\cref{tab:d5-head}). The cross-study test (\cref{sec:x1}) showed that this head attends to the current token in every task, so case is one of the token's properties that it passes on.
+
+\paragraph{Changed words and other capitals.} Where adding $d$ changes the word, it does so mostly where real capitals change it too (\DRQ{E_change_if_up_changes} and \DRG{E_change_if_up_changes} of flips, against \DRQ{E_change_if_up_keeps} and \DRG{E_change_if_up_keeps} where the upper-case passage keeps the word), and more often for words whose capitals form needs an extra token. The direction thus reproduces how the model writes capitals, word changes included. Acronyms and initial capitals do not use it: removing $d$ left acronyms in capitals at \DRQ{A_acr_rm_keeps} and \DRG{A_acr_rm_keeps} of positions. Headings written in capitals do: removing $d$ kept all capitals inside them at only \DRQ{A_head_rm_keeps} and \DRG{A_head_rm_keeps}, and at the first word after a heading the projection on $d$ had fallen back to \DRQ{A_head_after_excess} and \DRG{A_head_after_excess} of the gap, so the line break ends the capitals.
+
+\paragraph{Training dynamics.} The only checkpointed candidate, \olmo{}, failed the round-1 gate on the same-word condition (\nv{d5.gate.o.c2}), so the question of when the pattern forms stopped there, as the charter required.
+
+%======================================================================
+\section{Shared parts: a prospective test across four behaviours}
+\label{sec:x1}
+
+\paragraph{Question and design.} The three studies, and a companion study of line-breaking in prose with the same design~\citep{jeevash2026linebreaking}, named groups of heads with a role in one behaviour each. The line-breaking groups, all in \qsix{}, are the counters COUNT = \{\hd{4}{0}, \hd{4}{1}, \hd{5}{13}, \hd{6}{2}, \hd{7}{15}\}, the newline writers WRITE = \{\hd{5}{12}, \hd{5}{13}, \hd{6}{2}\} and the readers READ = \{\hd{7}{14}, \hd{15}{3}, \hd{17}{6}, \hd{22}{3}\}; the indentation sets \ded{}, \carry{} and \term{} are listed in \cref{sec:ind} and \cref{app:ind}. Three leads suggested that some might be the same parts: \hd{17}{6} was a reader in line-breaking and a member of the indentation sets \carry{} and \term{}; the early heads \hd{0}{2} and \hd{0}{3} appeared in the ordinal and capitals accounts; and \hd{11}{9}, also a member of \carry{} and \term{}, had appeared in the ordinal study's exploration. The cross-study test asked, under its own frozen charter and protocol, whether the groups overlap inside one model. Each named group was switched off by mean ablation at the decision positions of every task, with its own study's measures, and compared with twenty random groups that replace each head by an unnamed head of the same layer. Line-breaking, indentation and ordinals were tested in \qsix{}. Capitals used \qbig{} with heads matched by index, because \qsix{} failed the capitals gate (same word \nv{x1m.gate06b.c2}); the charter fixed this fallback in advance. All material was new and sealed before any model read it: a new batch of Wikipedia articles (\nv{x1m.n.LB.width} line-width items, \nv{x1m.n.LB.par} paragraphs; \nv{x1m.n.CAPS.pos} capitals word starts in \nv{x1m.n.CAPS.par} paragraphs), Python from repositories created after 1 October 2026 and generated programs with unused seeds (\nv{x1m.n.IND.cU} unmarked and \nv{x1m.n.IND.cT} terminal dedents in natural code, \nv{x1m.n.IND.gU} and \nv{x1m.n.IND.gT} in generated programs), and the ordinal study's unread reserve (\nv{x1m.n.ORD.teen4} teen and \nv{x1m.n.ORD.non4} non-teen numbers at four digits, and the same at five). The protocol predicted an effect by a threshold and, in most cases, by requiring the named group to fall below all twenty of its random groups; it predicted the absence of an effect by a fixed bound on the change, without reference to the random groups. It was frozen and run once, and all \nv{x1m.ntests} tests passed (\cref{tab:x1}; full matrices in \cref{app:x1}).
+
+\begin{table}[t]
+\centering\small
+\caption{Shared parts: each named group ablated at the decision positions of every task, held out. Line-breaking: width effect and break/non-break separation kept. Indentation: change in mean log-probability of the right indent at unmarked dedents in natural code and terminal dedents in generated programs. Ordinals: teen effect and last-digit pull kept at four digits. Capitals (\qbig{}, heads by index): $D_{\text{up}}$ and $D_{\text{low}}$ kept, the upper- and lower-case log-probability gaps. COUNT, WRITE and READ are the line-breaking counters, newline writers and readers (members in the text); ``--'': not run. Post hoc marks compare each value with the range of its twenty random groups, given in \cref{app:x1}: $\dagger$ below the range (more harm than any random group), $\ddagger$ above it.}
+\label{tab:x1}
+\setlength{\tabcolsep}{4pt}
+\input{tables/x1-summary.tex}
+\end{table}
+
+\paragraph{Line-breaking and indentation meet at \hd{17}{6}.} Without \hd{17}{6} the model kept \xm{L17H6}{LBw} of the effect of line width on where it breaks a line (twenty random layer-17 heads: \xr{L17H6}{LBw}). The head also adds a little to the dedent after \code{return}: its ablation changed terminal dedents in generated programs by \xm{L17H6}{gT}, small but below every random head of its layer (\xr{L17H6}{gT}). This was the protocol's criterion for a shared part: a change of at most $-0.010$ that is also below every random head. On the new material of round~3 it was met again (\nv{r3.x.XA3}, random \nv{r3.x.XA3.rlo} to \nv{r3.x.XA3.rhi}). Almost all of the indentation sets' effect on line-breaking passes through this head: \carry{} keeps \xm{CARRY}{LBw} of the width effect with it and \xm{CARRYnoL17H6}{LBw} without it; \term{} keeps \xm{TERM}{LBw} and \xm{TERMnoL17H6}{LBw}. Both remainders pass the frozen bound (at least 0.92 kept), but, read post hoc against their random groups, they are not nil: \term{} without \hd{17}{6} lies just below its random range for the width effect (\xr{TERMnoL17H6}{LBw}), and \carry{} without \hd{17}{6} raises the separation to \xm{CARRYnoL17H6}{LBs}, above its range (\xr{CARRYnoL17H6}{LBs}). In \qbig{}, by index, \hd{17}{6} trims the capitals gap (\xm{L17H6}{Du} kept) without changing which word is chosen (word log-probability change \xm{L17H6}{wl}), and in the capitals study it is the local carrier of passage case. Each role moves a fact about the recent text's format to where the format is decided.
+
+\paragraph{\hd{11}{9}: read post hoc, then confirmed on new material.} \hd{11}{9} sits in the indentation sets \carry{} and \term{}, attends to the current token (\nv{x1m.att.L11H9.self.min} to \nv{x1m.att.L11H9.self.max} of its attention) and holds part of the ordinal suffix choice in general rather than the teen check: teen effect kept \xm{L11H9}{t4} and pull kept \xm{L11H9}{p4} at four digits, each below every random head. The protocol predicted that it would not matter for line-breaking or indentation, and tested this with fixed bounds: at least 0.93 of both line-breaking measures kept, and an absolute change of at most 0.05 on each of the four indentation measures. Both tests passed, and the frozen verdict is a suffix head not shared with line-breaking or indentation. That bound was looser than the criterion applied to \hd{17}{6}, and the frozen tests did not compare \hd{11}{9}'s indentation values with its random heads. Read post hoc, its change at terminal dedents in generated programs, \xm{L11H9}{gT} (random \xr{L11H9}{gT}), meets the criterion that made \hd{17}{6} a shared part, and is the larger of the two. Because that reading was made after the run, round~3 tested it under a protocol frozen before any model read the new material (\cref{sec:r3}). There \hd{11}{9} alone changed terminal dedents in generated programs by \nv{r3.e.E1}, below all twenty random layer-11 heads (\nv{r3.e.E1.rlo} to \nv{r3.e.E1.rhi}): the criterion that made \hd{17}{6} a shared part. \carry{} and \term{}, run on held-out indentation material for the first time, met the same criterion (\nv{r3.e.E2.CARRY} and \nv{r3.e.E2.TERM}), and leaving \hd{11}{9} out made their changes less negative by \nv{r3.e.E3.CARRY.diff} and \nv{r3.e.E3.TERM.diff}. The head spared unmarked dedents (\nv{r3.e.E4.cU} in natural code, \nv{r3.e.E4.gU} in generated programs). In natural code its effect on terminal dedents was much smaller, \nv{r3.e.E5}, though still below its random range (\nv{r3.e.E5.rlo} to \nv{r3.e.E5.rhi}), because terminal dedents there are nearly certain. In return-versus-assignment pairs it carried \nv{r3.e.E6.nec} of the gap by necessity, against at most \nv{r3.e.E6.rnec} for random layer-11 heads. By the frozen rule (confirmed if the single-head and set tests both pass) its second role is \nv{r3.e.verdict}: \hd{11}{9} is shared, with a small role, between the ordinal suffix choice and the dedent after a terminal statement (\code{return}, \code{raise}, \code{break}, \code{continue} or \code{pass}), which agrees with the indentation study's having named it in \carry{} and \term{}. The cross-study test's own verdict, which bounded the head's indentation effect at 0.05, also stands; the two tests asked different questions. For comparison, \hd{17}{6} carried \nv{r3.e.E6.L17H6.nec} in the same pairs, above nineteen of its twenty random layer-17 heads; the twentieth was \hd{17}{4}, itself a \carry{} head (\nv{r3.e.E6.L17H6.rnec}), because the frozen draw rule excludes only the head under test. This comparison was not scored. Three further post hoc readings concern \hd{11}{9}. The indentation sets lower the ordinal measures by about as much as \hd{11}{9} alone, with or without \hd{17}{6} (teen effect kept \xm{CARRYnoL17H6}{t4} for \carry{} and \xm{TERMnoL17H6}{t4} for \term{} without \hd{17}{6}, below their random ranges). Its ablation raised both line-breaking measures a little above their random ranges (width effect \xm{L11H9}{LBw}, random \xr{L11H9}{LBw}; separation \xm{L11H9}{LBs}). And in \qbig{}, by index, it lowered both capitals gaps ($D_{\text{up}}$ kept \xm{L11H9}{Du}, $D_{\text{low}}$ kept \xm{L11H9}{Dl}), each below its random range.
+
+\paragraph{The groups that do most of each task's work are separate.} The line-breaking groups remove much of a line-breaking measure (COUNT keeps \xm{COUNT}{LBs} of the separation, WRITE \xm{WRITE}{LBw} of the width effect, READ without \hd{17}{6} \xm{READnoL17H6}{LBw}) and leave indentation inside the protocol's bounds (largest absolute change for COUNT: \xm{COUNT}{cU} in natural code). The block-end set \ded{} changes unmarked dedents by \xm{DED}{cU} (random \xr{DED}{cU}) and leaves line-breaking as it was (\xm{DED}{LBw} and \xm{DED}{LBs} kept). Read post hoc against the random ranges, none of these four groups harms another task's measure more than its random groups do, on any measure in \cref{app:x1}. The newline writers of line-breaking do not serve indentation, although both decisions are made at the same newline token.
+
+\paragraph{The early heads are general movers, not task parts.} \hd{0}{2} attends mainly to the previous token in prose, numbers and capitals text (\nv{x1m.att.L0H2.prev.LB}, \nv{x1m.att.L0H2.prev.ORD} and \nv{x1m.att.L0H2.prev.CAPS} of its attention at decision positions). It carries the tens digit for the teen check (\xm{L0H2}{t4} and \xm{L0H2}{t5} of the teen effect kept at four and five digits) and also matters for line-breaking (separation kept \xm{L0H2}{LBs}). \hd{0}{3} attends to the current token in every task (\nv{x1m.att.L0H3.self.min} to \nv{x1m.att.L0H3.self.max}). It carries the last digit (pull kept \xm{L0H3}{p4} and \xm{L0H3}{p5}), is needed for line-breaking decisions (separation kept \xm{L0H3}{LBs}), and in \qbig{} matters far more for choosing the next word than for keeping capitals ($D_{\text{low}}$ kept \xm{L0H3}{Dl}, $D_{\text{up}}$ kept \xm{L0H3}{Du}; word log-probability change \xm{L0H3}{wl}). The capitals study's finding that it reads a token's case is one use of reading the current token. Both heads passed the frozen bounds on indentation.
+
+\paragraph{What ``separate'' means here.} In the frozen tests, a part was predicted not to serve a task if its ablation stayed within a bound fixed in advance: for indentation an absolute change of at most 0.03, or 0.10 at unmarked dedents in generated programs, and 0.05 for \hd{11}{9}. Every such test passed, on these measures, at the decision positions. The range of twenty layer-matched random groups is a stricter standard, which the frozen tests applied only where they predicted an effect; \cref{tab:x1} and \cref{app:x1} mark every value outside its range, and these marks are post hoc. Beyond the cases above, the marked cross-task values belong to the general early movers or to sets that contain \hd{17}{6} or \hd{11}{9} (for example \carry{} in capitals, $D_{\text{up}}$ kept \xm{CARRY}{Du}), or are small: READ without \hd{17}{6} raises the ordinal measures (teen effect kept \xm{READnoL17H6}{t4}), and \hd{17}{6} in \qbig{} lowers $D_{\text{low}}$ to \xm{L17H6}{Dl}. Effects that pass through earlier positions are outside the test: in exploration, ablating \hd{0}{2} at every position did reduce terminal dedents, but the indentation study's second round showed that this effect does not travel through the terminal line (\hd{0}{2} ablated on that line and the decision token changed the probability $q$ of staying at the current indent by \nv{d3.c2.qg.l0h2_line_dqcur_term}). Sharing through MLPs and the residual stream is not excluded.
+
+%======================================================================
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Brackets, code and indentation.} Theory and experiments on bracket languages show that attention can track the top of a stack of open brackets~\citep{ebrahimi2020dyck,yao2021bounded}; simplified models of such tasks can mislead about the full model~\citep{friedman2024illusions}; and in trained bracket models masking attention to the true top of the stack hurts long-distance accuracy, while residual-stream subspaces that decode depth matter much less~\citep{sharma2026dyck}. In pretrained models, parenthesis closing has been traced to components of varying reliability, among them, in a code model, a late head that attends to the open parenthesis that has yet to be closed~\citep{rai2025interference}, and to heads that keep track of the number of parentheses already closed~\citep{miller2025codecompletion}, whose authors suggest that similar counting may serve Python indentation and propose to test such reuse. \hd{23}{2} is structurally of this kind, but it copies an indent from the header token rather than a bracket type, and its attention sets how far to dedent. Indentation itself has been studied in recurrent networks, where some cells grow with the depth of indentation~\citep{karpathy2015visualizing}, in a four-layer attention-only model with a head that attends to earlier tokens of similar indentation~\citep{janiak2023polysemantic}, in weight-sparse models trained on Python code, whose hand-made tasks include predicting the indent after a \code{for} line~\citep{gao2025weightsparse}, and as an ordered low-dimensional geometry of indent level in larger models, tested by patching probe accuracy~\citep{bassi2026geometry}. Whether the indent that \hd{23}{2} copies lives in that geometry is untested.
+
+\paragraph{Numbers and morphology.} Mechanistic studies of numbers have found circuits that compare years~\citep{hanna2023greaterthan}, attention that moves operands to the last token before MLPs compute the result~\citep{stolfo2023arithmetic}, neurons that each respond to a numerical pattern~\citep{nikankin2025heuristics}, digit-wise base-10 representations~\citep{levy2025digits}, digit-position MLP neurons~\citep{baeumel2025modular}, mod-10 features in successor heads~\citep{gould2024successor} and shared circuits for number sequences~\citep{lan2024sequence}. Early layers assemble multi-token units~\citep{feucht2024erasure,lad2024stages}, and tokenisation changes arithmetic accuracy, with commas helping~\citep{singh2024tokenization}. The ordinal account has this overall shape: \hd{0}{2} and \mlp{0} are a specific case of early assembly, and the separator result gives one concrete reason why commas help. Agreement and morphology circuits have been traced in other settings~\citep{finlayson2021agreement,ferrando2024agreement}. To our knowledge, what is new is the teen override at \mlp{24}, kept separate from \mlp{18}'s last-digit write, and the weak cross-token route in \olmo{}.
+
+\paragraph{Case, latent forms and directions.} \citet{merullo2024word2vec} found, for in-context uppercasing of single words among other tasks, that the word appears first and a mid-to-late feed-forward update along one transferable vector then makes it upper case. The capitals account shares this shape and extends it to passages in natural text, with named writers, carriers and readers, the split between headings and word-bound capitals, and the same roles in two tokenisers. Function and task vectors include capitalisation tasks~\citep{todd2024function,hendel2023taskvectors}; sparse-autoencoder features in GPT-2 small split the vocabulary by capitalisation and promote all-capitals tokens~\citep{bloom2024saelogitlens}. Models represent the answer in one form and write it late in another in multilingual settings~\citep{wendler2024llamas,saji2025romanlens}. Direction-based steering and erasure~\citep{turner2023steering,panickssery2023caa,marks2023geometry,park2023linear,belrose2023leace} supply the tools. On the input side, representing case apart from the word helps a masked model on upper-cased text~\citep{powalski2020unicase}, and upper-case or alternating-case spans in a prompt concentrate attention on themselves, with accuracy falling mainly for alternating case~\citep{dillitzer2026casing}; neither concerns how a model writes in capitals.
+
+\paragraph{Reuse of components.} \citet{merullo2024reuse} found that about 78\% of the heads in the indirect-object circuit of GPT-2 Medium are reused for a colour-object task. \citet{lan2024sequence} report shared sub-circuits for related sequence continuations, and \citet{mondorf2025compositions} composable circuits for related compositional tasks. \citet{li2026circuits}, across six tasks and five models including Qwen3-4B, find that component-level circuits share most of their parts across tasks, related or not, mostly MLP blocks and a few attention heads with general-purpose roles. \citet{xu2026selectivity}, with matched random controls in three 1B-class models, propose a previous-token substrate under task circuits in a mixture-of-experts model. \citet{dunefsky2026countdown} find a countdown subcircuit in a 70B model that serves tasks from sentence planning to aligning cells in ASCII tables, and \citet{gurnee2026manifolds} describe the line-breaking mechanism that the companion study~\citep{jeevash2026linebreaking} follows. General-purpose units recur across models~\citep{gurnee2024universal}, and previous-token heads are the substrate of induction~\citep{olsson2022induction}. Our test differs in being prospective and in comparing parts named by separate studies of unrelated behaviours. Its result agrees with the general-purpose roles of shared heads found by \citet{li2026circuits} and \citet{xu2026selectivity}, but finds the task-specific parts mostly unshared: the groups that do most of each task's work are separate, and beyond the general early movers two heads have a small role in a second behaviour, \hd{17}{6} by the cross-study test and \hd{11}{9} by a later frozen test on new material.
+
+%======================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{One pattern, three behaviours.} In each behaviour the decision combines a general signal, moved by heads that do the same job in every task, with a task-specific step late in the model. Indentation reads the open block's header with a late head, the chief of a small set, and copies its indent; ordinals copy the tens digit with a general previous-token head and decide ``teen'' at one late MLP; capitals carry the passage's case with a few heads and turn the chosen word into capitals with the last MLPs. Two of the three decisions are written as an override rather than a conditional: \mlp{24} writes \sfx{th} without consulting the last digit, and the capitals direction turns a lower-case choice into capitals rather than choosing among upper-case words. The cross-study test shows that the task-specific parts are mostly not shared, even between line-breaking and indentation, which are decided at the same newline token. Two heads have a small second role: \hd{17}{6} moves format facts in line-breaking and indentation, and \hd{11}{9}, confirmed on new material, reads the current token for the suffix choice and adds to the dedent after a terminal statement. Which head carries a role can differ between training runs, as the two OLMo-2 runs show for indentation, while the role recurs.
+
+\paragraph{Limitations.}
+\begin{itemize}
+\item \emph{Models and settings.} Small base models (the largest, \gm{}, has \nv{dx.gemma.effB} billion effective parameters), English text, Python only for indentation, numbers up to ten digits, and Wikipedia paragraphs and headings for capitals. Indentation was tested in two models, the ordinal path traced only in \qsix{}, and capitals in two models.
+\item \emph{Partial accounts.} In indentation, what tells the block-end head to look is spread over many components, and we did not trace what writes the indent it reads. In ordinals, the signal between \mlp{0} and \mlp{24} is spread thinly and untraced; \nv{d4.r2.s.2.ab} of the two-digit teen effect survives all four copying heads; the late components that fail to read \olmo{}'s faint cross-token signal were not found; and the frame-dependent errors of \qsix{} remain unexplained. In capitals, removing $d$ in round~1 left about half of the words in capitals, so case is also carried in ways one mean difference does not capture; the writers, carriers and readers were tested as sets, not path by path.
+\item \emph{Tools.} Mean ablation replaces outputs with averages that need not occur on real inputs; direct attribution linearises the final normalisation; the logit lens is brittle~\citep{belrose2023tuned}; and patching choices can change which components look important~\citep{heimersheim2024patching,zhang2024patching}. Random-set controls bound these concerns but do not remove them.
+\item \emph{The cross-study test} used one model family, with capitals heads matched by index, and ablation at decision positions only. Its frozen tests judged the absence of an effect by fixed bounds; the comparison of every value with its random range is post hoc, except for \hd{11}{9}'s second role and the indentation sets \carry{} and \term{}, which round~3 tested prospectively on new material. Round~3 re-ran only the code-based tests; the line-breaking, ordinal and capitals sides rest on the cross-study test's material alone.
+\item \emph{Held-out material} is held out from these analyses, not necessarily from the models' training data. The natural code and the Wikipedia articles come from repositories and pages created after the models were trained, but such repositories and pages can contain older code and text, so overlap with the training data remains possible.
+\item \emph{Training dynamics} are exploratory and come from a published training run that the released \olmo{} weights do not descend from.
+\end{itemize}
+
+\paragraph{Departures from plan.} Every threshold was set before its test from values measured on exploration material, and no test was rerun. The indentation gate's first measure left out decision points after blank lines for two tokenisers; a dated amendment corrected the measure, and no gate verdict changed (\cref{tab:d3-prefix} gives both measures). The indentation study's second round set its thresholds from runs of the confirmation scripts on exploration material, and a dated amendment, made before the protocol was frozen, permitted the download of OLMo-2 checkpoints, which the charter had excluded. In the ordinal study's second round, two draft thresholds were reset after a full run of the tests on exploration items and a third from the last exploration run, all before the freeze; a dated amendment moved the freeze later than planned, let one exploration run that was already queued finish, and allowed the checkpoint analysis to be completed as an exploratory result. No held-out material was read before the freeze. The indentation and ordinal studies planned their checkpoint analyses on the assumption that the published OLMo-2 checkpoints are ancestors of the released model. A post hoc weight comparison shows that they are not, so the ordinal study's report no longer infers from them when the released model's cross-token route formed, and no claim here rests on that assumption. In the capitals study the checkpoint question stopped at the gate. In round~3 of the indentation study, the frozen queue's cap on resumed passes ran out for \olmo{}'s set ablation before all its runs were saved; the same command was resumed from the saved record, which changed no computation. \Cref{app:process} lists the remaining notes.
+
+\paragraph{Code and data availability.} The code, the frozen charters and protocols with their file digests, the saved outputs, the exact model identifiers and the held-out material that may be redistributed are at \url{https://github.com/Jeevash23/interp-small-decisions}, archived at \url{https://doi.org/10.5281/zenodo.XXXXXXXX} (DOI to be filled in at release). The natural code of round~3, all under permissive licences, is included with each repository's licence text. The natural code of the first two indentation rounds and of the cross-study test is not distributed: for each file the repository lists its repository, path, licence and SHA-256, and the fetch scripts retrieve it again.
+
+\paragraph{Use of language-model assistants.} Language-model assistants were used throughout this work, under the author's direction, to help design the studies, to write and run the code for the exploration, the experiments and the analyses, to draft and revise the text and to check the references against their online records. The study designs, frozen documents and saved outputs are recorded with digests. All reported results come from the saved study outputs, and every number in the text was generated from those outputs and checked by an independent script.
+
+\label{dx:refstart}
+{\small\raggedright
+\bibliographystyle{plainnat}
+\bibliography{refs}
+}
+\label{dx:refend}
+
+%======================================================================
+\appendix
+\crefalias{section}{appendix}
+
+\section{Gates}
+\label{app:gates}
+
+Each study gated its candidate models on exploration material before any internal analysis, with bars and a fallback order fixed in its charter. \Cref{tab:d3-gate,tab:d3-prefix} give the indentation gate. In the ordinal study \nv{d4.gate.n.qualify} of the \nv{d4.gate.n.models} models gated in the first round qualified; Pythia-410M missed the second condition by \nv{d4.gate.p410.miss} and Pythia-1B took its place. \qbig{} was not gated in the first round; the second round's charter required the same gate of it, on exploration items, before any internal analysis, and it \nv{dx.ordgate.q17}. So \nv{dx.ordgate.npass} of the \nv{dx.ordgate.ngated} models gated for ordinals passed. In the capitals study, all \nv{dx.capsgate.ncharter.word} candidates kept the case (\nv{d5.gate.g.c1} to \nv{d5.gate.p.c1} of cased top-1 tokens upper case) and two chose the same word often enough: \gm{} (\nv{d5.gate.g.c2}) and \qbig{} (\nv{d5.gate.q.c2}); SmolLM2-1.7B (\nv{d5.gate.s.c2}) and Pythia-1B (\nv{d5.gate.p.c2}) did not, and the bar was not loosened although SmolLM2 missed it narrowly. Two further models were put through the capitals gate for other purposes and failed the same-word condition: \olmo{} (\nv{d5.gate.o.c2}), the only candidate with published checkpoints, and \qsix{} (\nv{x1m.gate06b.c2}), for the cross-study test. So \nv{dx.capsgate.npass.word} of the \nv{dx.capsgate.ngated.word} models put through the capitals gate passed.
+
+\input{tables/d3-gate.tex}
+\input{tables/d3-prefix.tex}
+
+\section{Indentation: all frozen predictions}
+\label{app:ind}
+
+\Cref{tab:d3-conf} lists the round-1 tests, \cref{tab:d3-conf2q,tab:d3-conf2o} the round-2 tests in the two models, \cref{tab:d3-ckpt} the exploratory checkpoint measurements, and \cref{tab:r3} the round-3 replication. Round~1 head sets: \ded{} as in \cref{sec:ind}; \carry{} = \{\hd{17}{4}, \hd{11}{9}, \hd{5}{6}, \hd{17}{6}, \hd{16}{2}, \hd{6}{5}\}; \term{} = \{\hd{11}{9}, \hd{5}{6}, \hd{17}{6}, \hd{16}{2}, \hd{23}{6}, \hd{22}{8}, \hd{23}{3}, \hd{25}{9}, \hd{19}{6}\}. Exploratory: patching the whole residual stream at the decision token between a terminal statement and \code{value = value} showed sufficiency near zero up to layer~4 (\nv{d3.x.e4.r4.suf}), \nv{d3.x.e4.r5.suf} at layer~5 and \nv{d3.x.e4.r17.suf} at layer~17.
+
+\input{tables/d3-conf.tex}
+\input{tables/d3-conf2q.tex}
+\input{tables/d3-conf2o.tex}
+\input{tables/d3-ckpt.tex}
+
+\begin{table}[H]
+\centering\small
+\caption{Round 3: every re-run and new test on the shareable material, with the original value (round 1, round 2 or the cross-study test) and the round-3 value. Changes are in mean log-probability of the true indent unless stated; the thresholds are those of the original protocols (\cref{tab:d3-conf,tab:d3-conf2q,tab:d3-conf2o,tab:x1}). R2 rows give the main tested quantity of each test. Every test passed.}
+\label{tab:r3}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}l Y l l | l Y l l@{}}
+\toprule
+Test & Quantity & Orig. & Round 3 & Test & Quantity & Orig. & Round 3 \\
+\midrule
+H1 & \ded{}, unmarked & \nv{r3.o1.H1} & \nv{r3.r1.H1} & Q1 & attention to open header & \nv{r3.o2.Q1} & \nv{r3.r2.Q1} \\
+H2 & \ded{}, mass kept at level & \nv{r3.o1.H2} & \nv{r3.r1.H2} & Q2 & knock-out & \nv{r3.o2.Q2} & \nv{r3.r2.Q2} \\
+H3 & \ded{}, terminal open mass & \nv{r3.o1.H3} & \nv{r3.r1.H3} & Q3 & knock-out, same level & \nv{r3.o2.Q3} & \nv{r3.r2.Q3} \\
+H4 & \ded{}, same level & \nv{r3.o1.H4} & \nv{r3.r1.H4} & Q4 & closed header & \nv{r3.o2.Q4} & \nv{r3.r2.Q4} \\
+H5 & \term{}, terminal & \nv{r3.o1.H5} & \nv{r3.r1.H5} & Q5 & picking, not innermost & \nv{r3.o2.Q5} & \nv{r3.r2.Q5} \\
+H6 & \term{}, unmarked & \nv{r3.o1.H6} & \nv{r3.r1.H6} & Q6 & steering rise & \nv{r3.o2.Q6} & \nv{r3.r2.Q6} \\
+H7 & both, terminal & \nv{r3.o1.H7} & \nv{r3.r1.H7} & Q7 & true-header knock-out & \nv{r3.o2.Q7} & \nv{r3.r2.Q7} \\
+H8 & \ded{}, generated & \nv{r3.o1.H8} & \nv{r3.r1.H8} & Q8 & steering, generated & \nv{r3.o2.Q8} & \nv{r3.r2.Q8} \\
+H9 & \carry{}, pair necessity & \nv{r3.o1.H9} & \nv{r3.r1.H9} & Q9 & keyword edge share & \nv{r3.o2.Q9} & \nv{r3.r2.Q9} \\
+XA3 & \hd{17}{6}, gen.\ terminal & \xm{L17H6}{gT} & \nv{r3.x.XA3} & Q10 & largest layer share & \nv{r3.o2.Q10} & \nv{r3.r2.Q10} \\
+XB4 & \ded{}, code unmarked & \xm{DED}{cU} & \nv{r3.x.XB4} & Q11 & \hd{0}{2} on the line & \nv{r3.o2.Q11} & \nv{r3.r2.Q11} \\
+XD3 & \hd{11}{9}, largest $|$change$|$ & -- & \nv{r3.x.XD3.max} & O1 & attention (\olmo{}) & \nv{r3.o2.O1} & \nv{r3.r2.O1} \\
+E1 & \hd{11}{9}, gen.\ terminal & \xm{L11H9}{gT} & \nv{r3.e.E1} & O2 & knock-out & \nv{r3.o2.O2} & \nv{r3.r2.O2} \\
+E2 & \carry{}; \term{} & -- & \nv{r3.e.E2.CARRY}; \nv{r3.e.E2.TERM} & O3 & knock-out, same level & \nv{r3.o2.O3} & \nv{r3.r2.O3} \\
+E3 & without \hd{11}{9}: weaker by & -- & \nv{r3.e.E3.CARRY.diff}; \nv{r3.e.E3.TERM.diff} & O4 & closed header & \nv{r3.o2.O4} & \nv{r3.r2.O4} \\
+E4 & \hd{11}{9}, unmarked & -- & \nv{r3.e.E4.cU}; \nv{r3.e.E4.gU} & O5 & picking, not innermost & \nv{r3.o2.O5} & \nv{r3.r2.O5} \\
+E5 & \hd{11}{9}, code terminal & \xm{L11H9}{cT} & \nv{r3.e.E5} & O6 & steering rise & \nv{r3.o2.O6} & \nv{r3.r2.O6} \\
+E6 & \hd{11}{9}, pair necessity & -- & \nv{r3.e.E6.nec} & O7 & true-header knock-out & \nv{r3.o2.O7} & \nv{r3.r2.O7} \\
+ & & & & O8 & steering, generated & \nv{r3.o2.O8} & \nv{r3.r2.O8} \\
+ & & & & O9 & keyword edge share & \nv{r3.o2.O9} & \nv{r3.r2.O9} \\
+ & & & & O10 & largest layer share & \nv{r3.o2.O10} & \nv{r3.r2.O10} \\
+ & & & & G1 & \textsc{ded-o}, unmarked & \nv{r3.o2.G1} & \nv{r3.r2.G1} \\
+ & & & & G2 & \textsc{ded-o}, terminal & \nv{r3.o2.G2} & \nv{r3.r2.G2} \\
+ & & & & G3 & \textsc{ded-o}, same level & \nv{r3.o2.G3} & \nv{r3.r2.G3} \\
+ & & & & G4 & \textsc{ded-o}, mass kept at level & \nv{r3.o2.G4} & \nv{r3.r2.G4} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The indentation-quiet tests of the cross-study test (XA5, XB1--XB3, XC3, XC6) passed again on the new material; their values are in the round-3 report released with the code.
+
+\section{Ordinal suffixes: all frozen predictions}
+\label{app:ord}
+
+\Cref{tab:d4-tests} lists the round-1 predictions, with their values in \cref{tab:d4-olmo,tab:d4-qwen,tab:d4-olmoabl}. \Cref{tab:d4-r2tests} summarises the round-2 tests by account, with their values in \cref{tab:d4-backup,tab:d4-olmo2,tab:d4-other}; \cref{tab:d4-ckpt} gives the exploratory checkpoint measurements.
+
+\input{tables/d4-tests.tex}
+\input{tables/d4-olmo.tex}
+\input{tables/d4-qwen.tex}
+\input{tables/d4-olmoabl.tex}
+\input{tables/d4-r2tests.tex}
+\input{tables/d4-backup.tex}
+\input{tables/d4-olmo2.tex}
+\input{tables/d4-other.tex}
+\input{tables/d4-ckpt.tex}
+
+\section{Capitals: all frozen predictions}
+\label{app:caps}
+
+\Cref{tab:d5-preds} lists the round-1 tests, \cref{tab:d5-head} the values for head \hd{0}{3}, and \cref{tab:d5-preds2} the round-2 tests.
+
+\input{tables/d5-preds.tex}
+\input{tables/d5-head.tex}
+\input{tables/d5-preds2.tex}
+
+\section{Shared parts: the full held-out matrices}
+\label{app:x1}
+
+Each cell gives the named group's value, with the range of its twenty random groups in brackets. ``Kept'' is the ablated value divided by the unablated one; ``change'' is ablated minus unablated. Unablated line-breaking values: width effect \nv{x1m.base.LBw}, separation \nv{x1m.base.LBs}. Post hoc marks, judged on unrounded values: $\dagger$ the named group's value is below the range of its random groups (more harm than any of them), $\ddagger$ above it. The frozen tests used the random range only where they predicted an effect, and fixed bounds elsewhere (\cref{sec:x1}).
+
+\input{tables/x1-LB.tex}
+\input{tables/x1-IND.tex}
+\input{tables/x1-ORD.tex}
+\input{tables/x1-CAPS.tex}
+
+\section{Process notes}
+\label{app:process}
+\begin{itemize}
+\item \emph{Freezes.} Each charter and protocol was frozen, with file digests, before the material it governs was read, in November 2026. Indentation: round-1 charter on the 7th and protocol on the 8th; round-2 charter on the 8th and protocol on the 9th. Ordinals: round-1 protocol on the 8th; round-2 charter on the 8th and protocol on the 9th. Capitals and the cross-study test: charters and protocols on the 7th and 8th. Each protocol was run once, after its freeze.
+\item \emph{Indentation, round 1.} A trial of the behaviour script on 30 programs read the generated exploration part before that part's digests were recorded; no held-out file was opened. One attention scan on exploration material ran before the natural-code gate result was known, although the charter placed internal analysis after the gate; the remaining internal analyses waited for the gate.
+\item \emph{Indentation, round 2.} The confirmation ran once, in several sessions that resumed from saved records; every script covered all of its material. The four stage-2 OLMo-2 checkpoints were downloaded after the protocol was frozen, for the exploratory checkpoint analysis only, and the weight comparison was made after all three stage-2 runs were found to keep \hd{15}{9}.
+\item \emph{Ordinals.} A dated amendment, written before any model read a number above 9{,}999, extended the hash split to seven-digit numbers. The second round's held-out date frames remain unread. Post hoc analyses are the make-up of the GPT-2 and Pythia-1B boundary sets, exploration AUROCs recomputed with ties counted as one half, and the weight comparison; the checkpoint analysis is exploratory.
+\item \emph{Capitals.} Round~2 used the round-1 confirmation part as exploration material, and the reserve part, unread until then, as held-out material. No run needed repeating in either round.
+\item \emph{Indentation, round 3.} Charter and protocol were frozen on 10 November and run once, on the 10th and 11th, by byte-identical copies of the frozen scripts. The material was fetched and sealed before any model read it; repositories used by any earlier round were excluded, and files whose own header named another licence were dropped. The new tests' margins were set from runs on material already read in earlier rounds.
+\item \emph{Cross-study test.} Capitals used \qbig{} by head index under the charter's fallback rule after \qsix{} failed the capitals gate. The ordinal reserve held too few three-digit teens, so four- and five-digit numbers were used. One exploratory all-position run was left unfinished; the protocol did not use it. The marks against the random ranges, and the reading of \hd{11}{9} by the criterion frozen for \hd{17}{6}, were made after the run and are post hoc; they change no verdict. The reading of \hd{11}{9} was then tested prospectively in round~3.
+\end{itemize}
+
+\end{document}

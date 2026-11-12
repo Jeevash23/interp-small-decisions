@@ -1,0 +1,2 @@
+key	repository	path	commit	licence	sha256	reason
+e99033a16e27ef45	masihsultani/whiteboard-animator	whiteboard_animator/component_ordering.py	e6e4dbcfc06e65b82490323a78bd9c277a9e2a0b	MIT	02df9e98238504f319cfa43ecf3b436ed2b302b687514b4589b343f320e37e7d	byte-identical to a file in a later repository that has no licence (fetched by an earlier round, which cut no chunks from it); left out at the owner's decision of 12 Nov 2026, although this repository's MIT licence would allow it, because the code's origin is uncertain

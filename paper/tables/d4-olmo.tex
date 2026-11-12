@@ -1,0 +1,17 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{\olmo{} on held-out items: teen AUROC with 95\% intervals (resampling distinct numbers) and plain-form teen accuracy.}
+\label{tab:d4-olmo}
+\begin{tabular}{@{}c l c c c c@{}}
+\toprule
+Digits & Plain tokens & Plain AUROC & Separator AUROC & Plain teen acc. & Teen numbers \\
+\midrule
+3 & one & \nv{d4.c.olmo.3p.auroc}\ci{\nv{d4.c.olmo.3p.lo}}{\nv{d4.c.olmo.3p.hi}} & -- & \nv{d4.c.olmo.3p.acct} & \nv{d4.c.olmo.3p.nnum} \\
+4 & 3+1 & \textbf{\nv{d4.c.olmo.4p.auroc}}\ci{\nv{d4.c.olmo.4p.lo}}{\nv{d4.c.olmo.4p.hi}} & \nv{d4.c.olmo.4c.auroc}\ci{\nv{d4.c.olmo.4c.lo}}{\nv{d4.c.olmo.4c.hi}} & \textbf{\nv{d4.c.olmo.4p.acct}} & \nv{d4.c.olmo.4p.nnum} \\
+5 & 3+2 & \nv{d4.c.olmo.5p.auroc}\ci{\nv{d4.c.olmo.5p.lo}}{\nv{d4.c.olmo.5p.hi}} & \nv{d4.c.olmo.5c.auroc}\ci{\nv{d4.c.olmo.5c.lo}}{\nv{d4.c.olmo.5c.hi}} & \nv{d4.c.olmo.5p.acct} & \nv{d4.c.olmo.5p.nnum} \\
+6 & 3+3 & \nv{d4.c.olmo.6p.auroc}\ci{\nv{d4.c.olmo.6p.lo}}{\nv{d4.c.olmo.6p.hi}} & \nv{d4.c.olmo.6c.auroc}\ci{\nv{d4.c.olmo.6c.lo}}{\nv{d4.c.olmo.6c.hi}} & \nv{d4.c.olmo.6p.acct} & \nv{d4.c.olmo.6p.nnum} \\
+7 & 3+3+1 & \textbf{\nv{d4.c.olmo.7p.auroc}}\ci{\nv{d4.c.olmo.7p.lo}}{\nv{d4.c.olmo.7p.hi}} & \nv{d4.c.olmo.7c.auroc}\ci{\nv{d4.c.olmo.7c.lo}}{\nv{d4.c.olmo.7c.hi}} & \nv{d4.c.olmo.7p.acct} & \nv{d4.c.olmo.7p.nnum} \\
+\bottomrule
+\end{tabular}
+\end{table}

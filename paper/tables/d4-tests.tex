@@ -1,0 +1,27 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{The frozen predictions and their outcome on held-out material. Effect kept is the share of the teen effect left after mean ablation at the last position; random sets are of the same size and from layers 0--2.}
+\label{tab:d4-tests}
+\begin{tabularx}{\linewidth}{@{}l Y Y c@{}}
+\toprule
+Test & Prediction & Result & \\
+\midrule
+B1 & \olmo{} plain 4- and 7-digit teen AUROC $\le$ \nv{d4.thr.B1} & \nv{d4.c.olmo.4p.auroc}, \nv{d4.c.olmo.7p.auroc} & pass \\
+B2 & the seven cells with both digits in the last token $\ge$ \nv{d4.thr.B2} & lowest \nv{d4.c.olmo.B2.min} & pass \\
+B3 & separator minus plain $\ge$ \nv{d4.thr.B3} at 4 and 7 digits & +\nv{d4.c.olmo.B3.d4}, +\nv{d4.c.olmo.B3.d7} & pass \\
+B4 & AUROC(5)$-$AUROC(4) and AUROC(6)$-$AUROC(7) $\ge$ \nv{d4.thr.B3}; teen accuracy $\le$ \nv{d4.thr.B4.acc4} at 4 digits, $\ge$ \nv{d4.thr.B4.acc3} at 3 & +\nv{d4.c.olmo.B4.r54}, +\nv{d4.c.olmo.B4.r67}; \nv{d4.c.olmo.4p.acct}, \nv{d4.c.olmo.3p.acct} & pass \\
+B5 & GPT-2 and Pythia-1B: boundary teen accuracy $\le$ \nv{d4.thr.B5.bd}, control $\ge$ \nv{d4.thr.B5.ct}, AUROC gap $\ge$ \nv{d4.thr.B3} & \nv{d4.c.gpt2.boundary.acct} vs \nv{d4.c.gpt2.control.acct}, gap \nv{d4.c.gpt2.gap}; \nv{d4.c.p1b.boundary.acct} vs \nv{d4.c.p1b.control.acct}, gap \nv{d4.c.p1b.gap} & pass \\
+\midrule
+Q1 & \qsix{}: \hd{0}{2}+\hd{1}{6} keep $\le$ \nv{d4.thr.Q1.kept} at 3 and 4 digits; every random pair $\ge$ \nv{d4.thr.Q1.rand} & \nv{d4.c.q3.3.kept}, \nv{d4.c.q3.4.kept}; random $\ge$ \nv{d4.c.q3.4.rmin} & pass \\
+Q2 & teen accuracy falls $\ge$ \nv{d4.thr.Q2.teen}, non-teen $\le$ \nv{d4.thr.Q2.end} & \nv{d4.c.q3.3.tdrop}, \nv{d4.c.q3.4.tdrop}; \nv{d4.c.q3.3.edrop}, \nv{d4.c.q3.4.edrop} & pass \\
+Q3 & 2 digits: kept $\ge$ \nv{d4.thr.Q3.kept}, teen accuracy after ablation $\ge$ \nv{d4.thr.Q3.acc} & \nv{d4.c.q3.2.kept}; \nv{d4.c.q3.2.tacc} & pass \\
+Q4 & \hd{0}{2} alone keeps $\le$ \nv{d4.thr.Q4.L0H2}; \hd{1}{6} alone $\ge$ \nv{d4.thr.Q4.L1H6} & \nv{d4.c.q3.3.L0H2}, \nv{d4.c.q3.4.L0H2}; \nv{d4.c.q3.3.L1H6}, \nv{d4.c.q3.4.L1H6} & pass \\
+Q5 & \hd{0}{2} the top head in teen patching, $\ge$ \nv{d4.thr.Q5}, at 3 and 4 digits & \nv{d4.c.q3.p3d_intoteen.L0H2}, \nv{d4.c.q3.p4d_intoteen.L0H2} & pass \\
+Q6 & last-digit patching: $|$\hd{0}{2}$|$ $\le$ \nv{d4.thr.Q6.abs}, top head $\ge$ \nv{d4.thr.Q6.top} & \nv{d4.c.q3.p3d_last.L0H2}, \nv{d4.c.q3.p4d_last.L0H2}; \nv{d4.c.q3.p3d_last.topv}, \nv{d4.c.q3.p4d_last.topv} & pass \\
+\midrule
+O1 & \olmo{}: \hd{0}{5}+\hd{0}{0}+\hd{0}{9} keep $\le$ \nv{d4.thr.O1.kept} at 4 and 7 digits; every random triple $\ge$ \nv{d4.thr.O1.rand} & \nv{d4.c.ol.4.kept}, \nv{d4.c.ol.7.kept}; random $\ge$ \nv{d4.c.ol.4.rmin}, $\ge$ \nv{d4.c.ol.7.rmin} & pass \\
+O2 & the same heads keep $\ge$ \nv{d4.thr.O2} at 3 and 5 digits & \nv{d4.c.ol.3.kept}, \nv{d4.c.ol.5.kept} & pass \\
+\bottomrule
+\end{tabularx}
+\end{table}

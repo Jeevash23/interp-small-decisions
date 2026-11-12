@@ -1,0 +1,11 @@
+{
+ "explore": 971,
+ "held": 863,
+ "files": 700,
+ "normalised": 432,
+ "dup": 17,
+ "dup_d3": 0,
+ "d3_chunk_hashes_excluded": 2991,
+ "explore_repos": 76,
+ "held_repos": 66
+}

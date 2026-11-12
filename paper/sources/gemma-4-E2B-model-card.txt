@@ -1,0 +1,9 @@
+Source: model card of google/gemma-4-E2B (Hugging Face), README.md as downloaded with the weights; excerpt copied 10 Nov 2026.
+The arXiv record of the Gemma 4 Technical Report (2607.02770, in arxiv-api.xml) gives the family range as 2.3B to 31B parameters.
+Weights on disk (model.safetensors header, counted 10 Nov 2026): 5.123B parameters in all, of which the language model 4.647B (per-layer embedding tables 2.349B, token embeddings 0.403B, layers 1.882B).
+
+| Property | E2B | E4B | 12B Unified | 31B Dense |
+| :---- | :---- | :---- | :---- | :---- |
+| **Total Parameters** | 2.3B effective <br> (5.1B with embeddings) | 4.5B effective <br> (8B with embeddings) | 11.95B | 30.7B |
+
+The "E" in E2B and E4B stands for "effective" parameters. The smaller models incorporate Per-Layer Embeddings (PLE) to maximize parameter efficiency in on-device deployments. Rather than adding more layers or parameters to the model, PLE gives each decoder layer its own small embedding for every token. These embedding tables are large but are only used for quick lookups, which is why the effective parameter count is much smaller than the total.

@@ -1,0 +1,18 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{Gate on post-cut-off code under the first measure, which left out decision points after blank lines for two tokenisers, and under the corrected measure. Gemma-4-E2B has no value under the first measure.}
+\label{tab:d3-prefix}
+\begin{tabularx}{\linewidth}{@{}llYYYYY@{}}
+\toprule
+Model & measure & points & header top-1 & terminal top-1 & terminal mass on open levels & top-1 minus copy \\
+\midrule
+Pythia-410M & first & \nv{d3.gate.pre.py.n} & \nv{d3.gate.pre.py.head} & \nv{d3.gate.pre.py.termt} & \nv{d3.gate.pre.py.terms} & \nv{d3.gate.pre.py.marg} \\
+Pythia-410M & corrected & \nv{d3.gate.post.py.n} & \nv{d3.gate.post.py.head} & \nv{d3.gate.post.py.termt} & \nv{d3.gate.post.py.terms} & \nv{d3.gate.post.py.marg} \\
+\qsix{} & first & \nv{d3.gate.pre.qw.n} & \nv{d3.gate.pre.qw.head} & \nv{d3.gate.pre.qw.termt} & \nv{d3.gate.pre.qw.terms} & \nv{d3.gate.pre.qw.marg} \\
+\qsix{} & corrected & \nv{d3.gate.post.qw.n} & \nv{d3.gate.post.qw.head} & \nv{d3.gate.post.qw.termt} & \nv{d3.gate.post.qw.terms} & \nv{d3.gate.post.qw.marg} \\
+GPT-2 & first & \nv{d3.gate.pre.g2.n} & \nv{d3.gate.pre.g2.head} & \nv{d3.gate.pre.g2.termt} & \nv{d3.gate.pre.g2.terms} & \nv{d3.gate.pre.g2.marg} \\
+GPT-2 & corrected & \nv{d3.gate.post.g2.n} & \nv{d3.gate.post.g2.head} & \nv{d3.gate.post.g2.termt} & \nv{d3.gate.post.g2.terms} & \nv{d3.gate.post.g2.marg} \\
+\bottomrule
+\end{tabularx}
+\end{table}

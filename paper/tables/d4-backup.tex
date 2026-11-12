@@ -1,0 +1,15 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{\qsix{}, held out: teen effect kept after mean ablation at the last position. A = \hd{0}{2} + \hd{1}{6}; B = \hd{2}{4} + \hd{5}{2}; controls are A plus 20 random pairs from layers 2--6.}
+\label{tab:d4-backup}
+\begin{tabular}{@{}c c c c c c c@{}}
+\toprule
+Digits & Teen effect & A & A + B & A + random pair & B alone & Drop from adding B \\
+\midrule
+2 & \nv{d4.r2.s.2.base} & \nv{d4.r2.s.2.a} & \textbf{\nv{d4.r2.s.2.ab}} & \nv{d4.r2.s.2.random_min}--\nv{d4.r2.s.2.random_max} & \nv{d4.r2.s.2.b} & \textbf{\nv{d4.r2.s.2.drop}} \\
+3 & \nv{d4.r2.s.3.base} & \nv{d4.r2.s.3.a} & \textbf{\nv{d4.r2.s.3.ab}} & \nv{d4.r2.s.3.random_min}--\nv{d4.r2.s.3.random_max} & \nv{d4.r2.s.3.b} & \nv{d4.r2.s.3.drop} \\
+4 & \nv{d4.r2.s.4.base} & \nv{d4.r2.s.4.a} & \textbf{\nv{d4.r2.s.4.ab}} & \nv{d4.r2.s.4.random_min}--\nv{d4.r2.s.4.random_max} & \nv{d4.r2.s.4.b} & \nv{d4.r2.s.4.drop} \\
+\bottomrule
+\end{tabular}
+\end{table}

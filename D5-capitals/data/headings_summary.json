@@ -1,0 +1,17 @@
+{
+ "explore": {
+  "items": 1417,
+  "articles": 549,
+  "multiword_headings": 810
+ },
+ "conf": {
+  "items": 1287,
+  "articles": 547,
+  "multiword_headings": 703
+ },
+ "reserve": {
+  "items": 1335,
+  "articles": 541,
+  "multiword_headings": 708
+ }
+}

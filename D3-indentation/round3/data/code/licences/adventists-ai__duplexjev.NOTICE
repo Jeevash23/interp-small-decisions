@@ -1,0 +1,25 @@
+DuplexJev
+Copyright 2026 Adventists.ai and the DuplexJev authors.
+
+Licensed under the Apache License, Version 2.0 (see LICENSE), except where noted below.
+
+Third-party components
+- Ultravox (https://github.com/fixie-ai/ultravox), MIT License, Copyright (c) 2023 Fixie.ai.
+  Training code in training/ patches and extends Ultravox; the projector design follows Ultravox.
+- Qwen3 / Qwen3-ASR (https://github.com/QwenLM), Apache License 2.0. duplexjev/encoder/ is derived from the
+  Qwen3-ASR encoder implementation.
+- Model weights released with this project contain only the trained fusion and projector parameters; the frozen
+  Qwen3-ASR-0.6B encoder and Qwen3-32B LLM must be obtained from their original sources under their licenses.
+
+Datasets
+- qa100 (https://huggingface.co/datasets/adventists-ai/qa100): created by the authors, released under CC-BY-4.0. Audio synthesised with VoxCPM2.
+- Training data (Ultravox v0.6 mixture: WenetSpeech, GigaSpeech, Common Voice 17, People's Speech, LibriSpeech,
+  Multilingual LibriSpeech, CoVoST 2, MUSAN) is NOT redistributed; see each dataset's license.
+- ZJU audio-gender-benchmark (https://github.com/Vsky-morigen/audio-gender-benchmark) is used for evaluation only and
+  is NOT redistributed here. Its main-language subset includes ODSQA audio whose redistribution terms are unclear.
+- duplexjev/_uv/: model code vendored from Ultravox (https://github.com/fixie-ai/ultravox, MIT License, Copyright (c)
+  Fixie.ai) with DuplexJev changes, and the portable Qwen3-ASR encoder code (Qwen3-ASR, Apache-2.0, Alibaba Cloud).
+- DuplexJev-32B-Para / DuplexJev-4B-Para training data (not redistributed): VocalSound (CC BY-SA 4.0),
+  NonVerbalSpeech-38K (CC BY-NC 4.0), NonverbalTTS, EARS (CC BY-NC 4.0), Expresso (CC BY-NC 4.0), VoxCeleb1,
+  AISHELL-1, LibriSpeech, ARC (CC BY-SA 4.0), OpenBookQA, CommonsenseQA. Project-page examples: VocalSound
+  (CC BY-SA 4.0), NonverbalTTS/VoxCeleb (CC BY 4.0), AISHELL-1 (Apache-2.0).

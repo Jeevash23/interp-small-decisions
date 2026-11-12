@@ -1,0 +1,15 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{\qsix{}: mean ablation at the last position on held-out items (96 teen and 96 non-teen numbers per length). Effect kept is relative to the unablated teen effect, given in logits.}
+\label{tab:d4-qwen}
+\begin{tabular}{@{}c c c c c c c c@{}}
+\toprule
+Digits & Teen effect & Both kept & \hd{0}{2} alone & \hd{1}{6} alone & Random pairs & Teen acc.\ drop & Non-teen drop \\
+\midrule
+2 & \nv{d4.c.q3.2.base} & \nv{d4.c.q3.2.kept} & \nv{d4.c.q3.2.L0H2} & \nv{d4.c.q3.2.L1H6} & \nv{d4.c.q3.2.rmin}--\nv{d4.c.q3.2.rmax} & \nv{d4.c.q3.2.tdrop} & \nv{d4.c.q3.2.edrop} \\
+3 & \nv{d4.c.q3.3.base} & \textbf{\nv{d4.c.q3.3.kept}} & \nv{d4.c.q3.3.L0H2} & \nv{d4.c.q3.3.L1H6} & \nv{d4.c.q3.3.rmin}--\nv{d4.c.q3.3.rmax} & \textbf{\nv{d4.c.q3.3.tdrop}} & \nv{d4.c.q3.3.edrop} \\
+4 & \nv{d4.c.q3.4.base} & \textbf{\nv{d4.c.q3.4.kept}} & \nv{d4.c.q3.4.L0H2} & \nv{d4.c.q3.4.L1H6} & \nv{d4.c.q3.4.rmin}--\nv{d4.c.q3.4.rmax} & \textbf{\nv{d4.c.q3.4.tdrop}} & \nv{d4.c.q3.4.edrop} \\
+\bottomrule
+\end{tabular}
+\end{table}

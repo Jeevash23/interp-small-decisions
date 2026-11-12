@@ -1,0 +1,34 @@
+.venv/
+__pycache__/
+paper/build/
+# The saved-output archives are attached to the GitHub release (v1.0), not kept in the repository; see README.md.
+data/saved-outputs/*.tar.xz
+# Written by `make unpack` (from the archives above and the .xz inputs).
+/*/outputs/
+/D3-indentation/round3/outputs/
+/D3-indentation/round3/x1/outputs/
+/D3-indentation/round3/data/code/raw/
+/D3-indentation/data/gen/part-conf.jsonl
+/D3-indentation/data/gen/part-explore.jsonl
+/D3-indentation/data/r2gen2/part-explore.jsonl
+/D3-indentation/data/r2gen2/part-held.jsonl
+/D3-indentation/data/stdlib/part-explore.jsonl
+/D3-indentation/round3/data/code/part-held.jsonl
+/D3-indentation/round3/data/gen/part-held.jsonl
+/D3-indentation/round3/data/gen2/part-held.jsonl
+/D4-ordinal-suffixes/data/part-conf.jsonl
+/D4-ordinal-suffixes/data/part-explore.jsonl
+/D5-capitals/data/headings-conf.jsonl
+/D5-capitals/data/headings-explore.jsonl
+/X1-shared-parts/data/gen/part-explore.jsonl
+/X1-shared-parts/data/gen/part-held.jsonl
+/X1-shared-parts/data/prose/extracts.jsonl
+# Written by `make unpack` (tools/make_links.py).
+/D3-indentation/round3/data/gen/part-conf.jsonl
+/D3-indentation/round3/data/gen/part-explore.jsonl
+/D3-indentation/round3/data/newcode/part-conf.jsonl
+/D3-indentation/round3/data/newcode/part-explore.jsonl
+/D3-indentation/round3/data/r2code/part-held.jsonl
+/D3-indentation/round3/data/r2gen2/part-held.jsonl
+/D3-indentation/round3/x1/data/code/part-held.jsonl
+/D3-indentation/round3/x1/data/gen/part-held.jsonl

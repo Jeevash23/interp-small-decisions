@@ -1,0 +1,19 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{The gate, on the exploration part of the post-cut-off code (items 1--3) and of the generated programs (item 4). Values use the corrected measure; \cref{tab:d3-prefix} gives both measures. ``Top-1 minus copy'' is the top-1 accuracy of the indent minus the accuracy of copying the previous line's indent; ``never-opened mass'' is the share of $q$ at dedents that falls on shallower indents that no open block has, for the indent width (two spaces, three spaces or mixed) where it is largest. \olmo{} was gated in round~2 on the same material.}
+\label{tab:d3-gate}
+\begin{tabularx}{\linewidth}{@{}lYYYYYY@{}}
+\toprule
+Model & points & header top-1 & terminal top-1 & terminal mass on open levels & top-1 minus copy & never-opened mass (worst width) \\
+\midrule
+Pythia-410M & \nv{d3.gate.post.py.n} & \nv{d3.gate.post.py.head} & \nv{d3.gate.post.py.termt} & \nv{d3.gate.post.py.terms} & \nv{d3.gate.post.py.marg} & \nv{d3.gate.post.py.open} \\
+\qsix{} & \nv{d3.gate.post.qw.n} & \nv{d3.gate.post.qw.head} & \nv{d3.gate.post.qw.termt} & \nv{d3.gate.post.qw.terms} & \nv{d3.gate.post.qw.marg} & \nv{d3.gate.post.qw.open} \\
+\olmo{} & \nv{d3.gate.post.ol.n} & \nv{d3.gate.post.ol.head} & \nv{d3.gate.post.ol.termt} & \nv{d3.gate.post.ol.terms} & \nv{d3.gate.post.ol.marg} & \nv{d3.gate.post.ol.open} \\
+Gemma-4-E2B & \nv{d3.gate.post.ge.n} & \nv{d3.gate.post.ge.head} & \nv{d3.gate.post.ge.termt} & \nv{d3.gate.post.ge.terms} & \nv{d3.gate.post.ge.marg} & \nv{d3.gate.post.ge.open} \\
+GPT-2 & \nv{d3.gate.post.g2.n} & \nv{d3.gate.post.g2.head} & \nv{d3.gate.post.g2.termt} & \nv{d3.gate.post.g2.terms} & \nv{d3.gate.post.g2.marg} & \nv{d3.gate.post.g2.open} \\
+\midrule
+bar & & $\geq 0.90$ & $\geq 0.5$ & $\geq 0.7$ & $\geq 0.10$ & $\leq 0.10$ \\
+\bottomrule
+\end{tabularx}
+\end{table}

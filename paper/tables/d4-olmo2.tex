@@ -1,0 +1,19 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{\olmo{}, held out (96 teen and 96 non-teen numbers per length, plain form). ``Three heads kept'' is the teen effect left after mean-ablating \hd{0}{5}, \hd{0}{0} and \hd{0}{9} at the last position; random triples are from layers 0--2.}
+\label{tab:d4-olmo2}
+\begin{tabular}{@{}c l c c c c c@{}}
+\toprule
+Digits & Tokens & Teen effect & AUROC & Three heads kept & Lowest random triple & Probe, layer 2 / 15 \\
+\midrule
+3 & \nv{d4.r2.o.3.pieces} & \nv{d4.r2.o.3.base} & \nv{d4.r2.o.3.auroc} & \nv{d4.r2.o.3.kept} & \nv{d4.r2.o.3.rmin} & \nv{d4.r2.o.3.p2} / \nv{d4.r2.o.3.p15} \\
+4 & \nv{d4.r2.o.4.pieces} & \nv{d4.r2.o.4.base} & \textbf{\nv{d4.r2.o.4.auroc}} & \textbf{\nv{d4.r2.o.4.kept}} & \nv{d4.r2.o.4.rmin} & \nv{d4.r2.o.4.p2} / \textbf{\nv{d4.r2.o.4.p15}} \\
+5 & \nv{d4.r2.o.5.pieces} & \nv{d4.r2.o.5.base} & \nv{d4.r2.o.5.auroc} & \nv{d4.r2.o.5.kept} & \nv{d4.r2.o.5.rmin} & \nv{d4.r2.o.5.p2} / \nv{d4.r2.o.5.p15} \\
+7 & \nv{d4.r2.o.7.pieces} & \nv{d4.r2.o.7.base} & \textbf{\nv{d4.r2.o.7.auroc}} & \textbf{\nv{d4.r2.o.7.kept}} & \nv{d4.r2.o.7.rmin} & \nv{d4.r2.o.7.p2} / \textbf{\nv{d4.r2.o.7.p15}} \\
+8 & \nv{d4.r2.o.8.pieces} & \nv{d4.r2.o.8.base} & \nv{d4.r2.o.8.auroc} & \nv{d4.r2.o.8.kept} & \nv{d4.r2.o.8.rmin} & \nv{d4.r2.o.8.p2} / \nv{d4.r2.o.8.p15} \\
+9 & \nv{d4.r2.o.9.pieces} & \nv{d4.r2.o.9.base} & \nv{d4.r2.o.9.auroc} & \nv{d4.r2.o.9.kept} & \nv{d4.r2.o.9.rmin} & \nv{d4.r2.o.9.p2} / \nv{d4.r2.o.9.p15} \\
+10 & \nv{d4.r2.o.10.pieces} & \nv{d4.r2.o.10.base} & \textbf{\nv{d4.r2.o.10.auroc}} & \textbf{\nv{d4.r2.o.10.kept}} & \nv{d4.r2.o.10.rmin} & \nv{d4.r2.o.10.p2} / \textbf{\nv{d4.r2.o.10.p15}} \\
+\bottomrule
+\end{tabular}
+\end{table}

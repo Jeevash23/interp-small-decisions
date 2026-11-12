@@ -1,0 +1,16 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{Second-round accounts and their prospective tests on held-out material.}
+\label{tab:d4-r2tests}
+\begin{tabularx}{\linewidth}{@{}l Y c c@{}}
+\toprule
+Tests & Account & Passed & Verdict \\
+\midrule
+R1--R6 & \qsix{}: \hd{0}{2} $\to$ \mlp{0} $\to$ \mlp{24}, which decides teen; \mlp{18} writes the last digit's suffix (4 and 6 digits) & \nv{d4.r2.path.pass} of \nv{d4.r2.path.n} & \nv{d4.r2.path.verdict} \\
+S1--S3 & \qsix{}: later previous-token heads back up the copy, mostly at two digits & \nv{d4.r2.backup.pass} of \nv{d4.r2.backup.n} & \nv{d4.r2.backup.verdict} \\
+O3--O8 & \olmo{}: a weak route across the token boundary, not a missing one (3--10 digits) & \nv{d4.r2.olmo.pass} of \nv{d4.r2.olmo.n} & \nv{d4.r2.olmo.verdict} \\
+X & three more one-token-per-digit models: early previous-token heads carry the teen check & \nv{d4.r2.other.pass} of \nv{d4.r2.other.n} & \nv{d4.r2.other.verdict} \\
+\bottomrule
+\end{tabularx}
+\end{table}

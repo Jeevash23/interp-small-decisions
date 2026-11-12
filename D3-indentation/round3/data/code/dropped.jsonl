@@ -1,0 +1,5 @@
+{"reason": "raw_fail", "repo": "amos689/paperdelta", "path": "validation/native-v2/implementation/src/paperdelta/latex.py", "err": "HTTP Error 429: Too Many Requests"}
+{"reason": "raw_fail", "repo": "kkw114514-lang/campus-job-application-workflow", "path": "tools/\u68c0\u67e5\u961f\u5217.py", "err": "'ascii' codec can't encode characters in position 99-102: ordinal not in range(1"}
+{"reason": "raw_fail", "repo": "kkw114514-lang/campus-job-application-workflow", "path": "\u770b\u677f/\u751f\u6210\u770b\u677f.py", "err": "'ascii' codec can't encode characters in position 93-94: ordinal not in range(12"}
+{"reason": "file_licence", "repo": "while-basic/bloodborne", "path": "play.py"}
+{"reason": "raw_fail", "repo": "Luofeng-Cloud/WeChat-AI-AutoReply", "path": "\u56de\u5f52\u6d4b\u8bd5_\u9632\u4e32\u53d1\u5339\u914d.py", "err": "'ascii' codec can't encode characters in position 80-83: ordinal not in range(12"}

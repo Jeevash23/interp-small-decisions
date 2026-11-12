@@ -1,0 +1,45 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\footnotesize
+\caption{The frozen predictions and their held-out outcome. Shares are of word starts unless stated; $d$ is the capitals direction and $r$ a random direction of the same norm; $\ell$ is layer 24 in \gm{} and 22 in \qbig{}; edits use the exploration directions at the prediction position. Held-out values are point estimates with 95\% intervals from 2{,}000 bootstrap resamples of paragraphs (\DG{lens_Lc_gt_U_at_l.np} paragraphs for the lens, \DG{add_dir_L24_flip.np} for the edits and recasing). The last column gives the exploration values (\gm{} / \qbig{}). Every prediction passed in both models.}
+\label{tab:d5-preds}
+\begin{tabularx}{\textwidth}{@{}l Y l l l l@{}}
+\toprule
+ & Measure & Threshold & \gm{} & \qbig{} & Exploration \\
+\midrule
+G1 & Gate repeated on held-out paragraphs: same word & $\ge 0.60$ & \DG{gate.c2} & \DQ{gate.c2} & \nv{d5.gate.g.c2} / \nv{d5.gate.q.c2} \\
+\addlinespace
+L1 & Lens at $\ell$: \Lc{} above \Uc{} & $\ge 0.60$ & \DGI{lens_Lc_gt_U_at_l} & \DQI{lens_Lc_gt_U_at_l} & \DEG{lens_Lc_gt_U_at_l} / \DEQ{lens_Lc_gt_U_at_l} \\
+ & Lens at $\ell$: \Lr{} above \Uc{} & $\le 0.30$ & \DGI{lens_Lr_gt_U_at_l} & \DQI{lens_Lr_gt_U_at_l} & \DEG{lens_Lr_gt_U_at_l} / \DEQ{lens_Lr_gt_U_at_l} \\
+ & Last layer: \Lc{} above \Uc{} & $\le 0.05$ & \DGI{lens_Lc_gt_U_last} & \DQI{lens_Lc_gt_U_last} & \DEG{lens_Lc_gt_U_last} / \DEQ{lens_Lc_gt_U_last} \\
+ & First layer from which \Lc{} $>$ \Uc{} stays below one half & last five & \DG{firstlow} & \DQ{firstlow} & \nv{d5.e.g.firstlow} / \nv{d5.e.q.firstlow} \\
+L2 & \Lc{} above \Lr{} at $\ell$, upper-case passages & $\ge 0.75$ & \DGI{lens_Lc_gt_Lr_upper_at_l} & \DQI{lens_Lc_gt_Lr_upper_at_l} & \DEG{lens_Lc_gt_Lr_upper_at_l} / \DEQ{lens_Lc_gt_Lr_upper_at_l} \\
+ & \dots\ lower-case passages (and within 0.05 of the above) & $\ge 0.75$ & \DGI{lens_Lc_gt_Lr_lower_at_l} & \DQI{lens_Lc_gt_Lr_lower_at_l} & \DEG{lens_Lc_gt_Lr_lower_at_l} / \DEQ{lens_Lc_gt_Lr_lower_at_l} \\
+\addlinespace
+D1 & Add $d$ at $\ell$ (lower case): flips to capitals & $\ge 0.80$ & \DGI{add_dir_L24_flip} & \DQI{add_dir_L22_flip} & \DEG{add_dir_L24_flip} / \DEQ{add_dir_L22_flip} \\
+ & \dots\ same word in capitals & $\ge 0.45$ & \DGI{add_dir_L24_same_word} & \DQI{add_dir_L22_same_word} & \DEG{add_dir_L24_same_word} / \DEQ{add_dir_L22_same_word} \\
+ & Subtract $d$ at $\ell$ (upper case): flips to lower case & $\ge 0.80$ & \DGI{sub_dir_L24_flip} & \DQI{sub_dir_L22_flip} & \DEG{sub_dir_L24_flip} / \DEQ{sub_dir_L22_flip} \\
+ & \dots\ same word in lower case & $\ge 0.45$ & \DGI{sub_dir_L24_same_word} & \DQI{sub_dir_L22_same_word} & \DEG{sub_dir_L24_same_word} / \DEQ{sub_dir_L22_same_word} \\
+ & Add $r$: flips & $\le 0.05$ & \DGI{add_rand_L24_flip} & \DQI{add_rand_L22_flip} & \DEG{add_rand_L24_flip} / \DEQ{add_rand_L22_flip} \\
+ & Subtract $r$: flips & $\le 0.05$ & \DGI{sub_rand_L24_flip} & \DQI{sub_rand_L22_flip} & \DEG{sub_rand_L24_flip} / \DEQ{sub_rand_L22_flip} \\
+D2 & Midpoint along $d$ (upper case): still upper case & $\le 0.70$ & \DGI{rm_dir_upper_share} & \DQI{rm_dir_upper_share} & \DEG{rm_dir_upper_share} / \DEQ{rm_dir_upper_share} \\
+ & \dots\ same word in either case & $\ge 0.60$ & \DGI{rm_dir_same_word_any_case} & \DQI{rm_dir_same_word_any_case} & \DEG{rm_dir_same_word_any_case} / \DEQ{rm_dir_same_word_any_case} \\
+ & Midpoint along $r$: still upper case & $\ge 0.95$ & \DGI{rm_rand_upper_share} & \DQI{rm_rand_upper_share} & \DEG{rm_rand_upper_share} / \DEQ{rm_rand_upper_share} \\
+D3 & Add $d$ in original prose: capitals & $\ge 0.75$ & \DGI{orig_add_dir_to_upper} & \DQI{orig_add_dir_to_upper} & \DEG{orig_add_dir_to_upper} / \DEQ{orig_add_dir_to_upper} \\
+ & \dots\ same word in capitals & $\ge 0.50$ & \DGI{orig_add_dir_to_upper_same_word} & \DQI{orig_add_dir_to_upper_same_word} & \DEG{orig_add_dir_to_upper_same_word} / \DEQ{orig_add_dir_to_upper_same_word} \\
+ & Add $r$ in original prose: capitals & $\le 0.05$ & \DGI{orig_add_rand_to_upper} & \DQI{orig_add_rand_to_upper} & \DEG{orig_add_rand_to_upper} / \DEQ{orig_add_rand_to_upper} \\
+D4 & Layer 16: add $d$, flips & $\le 0.15$ & \DGI{add_dir_L16_flip} & \DQI{add_dir_L16_flip} & \DEG{add_dir_L16_flip} / \DEQ{add_dir_L16_flip} \\
+ & Layer 16: subtract $d$, flips & $\ge 0.40$ & \DGI{sub_dir_L16_flip} & \DQI{sub_dir_L16_flip} & \DEG{sub_dir_L16_flip} / \DEQ{sub_dir_L16_flip} \\
+\addlinespace
+R1 & Lower case, last 2 words in capitals: upper-case top-1 & $\ge 0.50$ & \DGI{upper_top1_L+u2} & \DQI{upper_top1_L+u2} & \DEG{upper_top1_L+u2} / \DEQ{upper_top1_L+u2} \\
+ & \dots\ last 8 words in capitals & $\ge 0.85$ & \DGI{upper_top1_L+u8} & \DQI{upper_top1_L+u8} & \DEG{upper_top1_L+u8} / \DEQ{upper_top1_L+u8} \\
+ & Upper case, last 2 words in lower case: upper-case top-1 & $\le 0.25$ & \DGI{upper_top1_U+l2} & \DQI{upper_top1_U+l2} & \DEG{upper_top1_U+l2} / \DEQ{upper_top1_U+l2} \\
+ & \dots\ last 8 words in lower case & $\le 0.10$ & \DGI{upper_top1_U+l8} & \DQI{upper_top1_U+l8} & \DEG{upper_top1_U+l8} / \DEQ{upper_top1_U+l8} \\
+\addlinespace
+E1 & Changed word in the lower-case passage's top 5 & $\ge 0.50$ & \DGI{changed_word_top5} & \DQI{changed_word_top5} & \DEG{changed_word_top5} / \DEQ{changed_word_top5} \\
+ & Control word in the top 5 & $\le 0.10$ & \DGI{ctrl_word_top5} & \DQI{ctrl_word_top5} & \DEG{ctrl_word_top5} / \DEQ{ctrl_word_top5} \\
+\addlinespace
+H1 & \qbig{} only, head \hd{0}{3}: see \cref{tab:d5-head} & & & \DQ{H1} & \\
+\bottomrule
+\end{tabularx}
+\end{table}

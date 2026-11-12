@@ -1,0 +1,6 @@
+{"url": "https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens",
+ "checked": "2026-11-08",
+ "title": "interpreting GPT: the logit lens",
+ "author": "nostalgebraist",
+ "date": "2020/08/31",
+ "summary": "Applies GPT's final output projection to intermediate-layer activations to show the model's next-token guesses at each layer."}

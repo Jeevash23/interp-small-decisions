@@ -1,0 +1,21 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{Stage-one checkpoints of a published \olmo{} training run of the same recipe, from which the released weights do not descend; exploration items (64 teen and 64 non-teen numbers per length). The three heads are those at the released model's positions \hd{0}{5}, \hd{0}{0} and \hd{0}{9}; their ablation is shown only where the four-digit teen effect is at least \nv{d4.thr2.R1.read} logits.}
+\label{tab:d4-ckpt}
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}r c c c c c c c@{}}
+\toprule
+ & \multicolumn{4}{c}{Teen AUROC by digits} & \multicolumn{3}{c}{Four digits} \\
+\cmidrule(lr){2-5}\cmidrule(l){6-8}
+Tokens (billions) & 3 & 4 & 5 & 7 & Teen effect & Three heads kept & Probe, layer 2 / 14 \\
+\midrule
+1 & \nv{d4.r2.e6.1.auroc3} & \nv{d4.r2.e6.1.auroc4} & \nv{d4.r2.e6.1.auroc5} & \nv{d4.r2.e6.1.auroc7} & \nv{d4.r2.e6.1.base4} & \nv{d4.r2.e6.1.tri} & \nv{d4.r2.e6.1.p2} / \nv{d4.r2.e6.1.p14} \\
+21 & \nv{d4.r2.e6.21.auroc3} & \nv{d4.r2.e6.21.auroc4} & \nv{d4.r2.e6.21.auroc5} & \nv{d4.r2.e6.21.auroc7} & \nv{d4.r2.e6.21.base4} & \nv{d4.r2.e6.21.tri} & \nv{d4.r2.e6.21.p2} / \nv{d4.r2.e6.21.p14} \\
+84 & \nv{d4.r2.e6.84.auroc3} & \nv{d4.r2.e6.84.auroc4} & \nv{d4.r2.e6.84.auroc5} & \nv{d4.r2.e6.84.auroc7} & \nv{d4.r2.e6.84.base4} & \nv{d4.r2.e6.84.tri} & \nv{d4.r2.e6.84.p2} / \nv{d4.r2.e6.84.p14} \\
+420 & \nv{d4.r2.e6.420.auroc3} & \nv{d4.r2.e6.420.auroc4} & \nv{d4.r2.e6.420.auroc5} & \nv{d4.r2.e6.420.auroc7} & \nv{d4.r2.e6.420.base4} & \nv{d4.r2.e6.420.tri} & \nv{d4.r2.e6.420.p2} / \nv{d4.r2.e6.420.p14} \\
+1{,}007 & \nv{d4.r2.e6.1007.auroc3} & \nv{d4.r2.e6.1007.auroc4} & \nv{d4.r2.e6.1007.auroc5} & \nv{d4.r2.e6.1007.auroc7} & \nv{d4.r2.e6.1007.base4} & \nv{d4.r2.e6.1007.tri} & \nv{d4.r2.e6.1007.p2} / \nv{d4.r2.e6.1007.p14} \\
+4{,}001 & \nv{d4.r2.e6.4001.auroc3} & \nv{d4.r2.e6.4001.auroc4} & \nv{d4.r2.e6.4001.auroc5} & \nv{d4.r2.e6.4001.auroc7} & \nv{d4.r2.e6.4001.base4} & \nv{d4.r2.e6.4001.tri} & \nv{d4.r2.e6.4001.p2} / \nv{d4.r2.e6.4001.p14} \\
+\bottomrule
+\end{tabular}
+\end{table}

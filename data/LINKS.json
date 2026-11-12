@@ -1,0 +1,37 @@
+{
+ "about": "Links that D3 round 3's frozen scripts read their material through (the slots of the earlier rounds' file names); tools/make_links.py creates them.",
+ "links": {
+  "D3-indentation/round3/data/gen/part-conf.jsonl": {
+   "target": "part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/gen/part-held.jsonl"
+  },
+  "D3-indentation/round3/data/gen/part-explore.jsonl": {
+   "target": "part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/gen/part-held.jsonl"
+  },
+  "D3-indentation/round3/data/newcode/part-conf.jsonl": {
+   "target": "../code/part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/code/part-held.jsonl"
+  },
+  "D3-indentation/round3/data/newcode/part-explore.jsonl": {
+   "target": "../code/part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/code/part-held.jsonl"
+  },
+  "D3-indentation/round3/data/r2code/part-held.jsonl": {
+   "target": "../code/part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/code/part-held.jsonl"
+  },
+  "D3-indentation/round3/data/r2gen2/part-held.jsonl": {
+   "target": "../gen2/part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/gen2/part-held.jsonl"
+  },
+  "D3-indentation/round3/x1/data/code/part-held.jsonl": {
+   "target": "../../../data/code/part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/code/part-held.jsonl"
+  },
+  "D3-indentation/round3/x1/data/gen/part-held.jsonl": {
+   "target": "../../../data/gen/part-held.jsonl",
+   "resolves_to": "D3-indentation/round3/data/gen/part-held.jsonl"
+  }
+ }
+}

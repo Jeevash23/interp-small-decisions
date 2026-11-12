@@ -1,0 +1,41 @@
+{
+ "radford2019language": {
+  "title": "Language Models are Unsupervised Multitask Learners",
+  "year": "2019",
+  "authors": "Radford, Wu, Child, Luan, Amodei, Sutskever",
+  "how": "Technical report; entry carried over unchanged from D3 v2 and D4 v3, where it was checked against the PDF (their checks/REFERENCE-CHECK.md)."
+ },
+ "nostalgebraist2020logitlens": {
+  "title": "interpreting GPT: the logit lens",
+  "year": "2020",
+  "authors": "nostalgebraist",
+  "how": "LessWrong post; entry carried over unchanged from D5 v2, checked there against its saved page record (D5 v2 sources/logit-lens-page.json: posted 31 August 2020)."
+ },
+ "janiak2023polysemantic": {
+  "title": "Polysemantic Attention Head in a 4-Layer Transformer",
+  "year": "2023",
+  "authors": "Jett Janiak, cmathw, StefanHex",
+  "url": "https://www.lesswrong.com/posts/nuJFTS5iiJKT5G5yh/polysemantic-attention-head-in-a-4-layer-transformer",
+  "how": "LessWrong page read 9 November 2026: title, three authors, posted 9 November 2023; attention-only 4-layer model; head 1.4 attends to an earlier token with similar indentation; on the bigger-indentation task the correct token is top-ranked in 100% of clean runs and 4% of corrupted runs."
+ },
+ "bloom2024saelogitlens": {
+  "title": "Understanding SAE Features with the Logit Lens",
+  "year": "2024",
+  "authors": "Joseph Bloom, Johnny Lin",
+  "url": "https://www.lesswrong.com/posts/qykrYY6rXXM7EEs8Q/understanding-sae-features-with-the-logit-lens",
+  "how": "LessWrong page read 9 November 2026: title, authors Joseph Bloom and Johnny Lin, posted 11 March 2024; GPT-2 small, layer-8 residual stream; partition features split the vocabulary by capitalisation; feature 89 promotes all-capitals tokens."
+ },
+ "gurnee2026manifolds": {
+  "title": "When Models Manipulate Manifolds: The Geometry of a Counting Task",
+  "year": "2025",
+  "authors": "Gurnee, Ameisen, Kauvar, Tarng, Pearce, Olah, Batson",
+  "how": "Transformer Circuits Thread page https://transformer-circuits.pub/2025/linebreaks/index.html, read 10 Nov 2026; its own citation block gives journal \"Transformer Circuits Thread\", year 2025. Also posted as arXiv 2601.04480 (2026). Saved excerpt: sources/transformer-circuits-2025-linebreaks-citation.txt."
+ },
+ "jeevash2026linebreaking": {
+  "title": "Counting by dilution and a width stored at the newline: a partial account of line-breaking in {Pythia-410M}",
+  "year": "2026",
+  "authors": "Jeevash",
+  "how": "Companion preprint by the same author (paper A, D1 v6, 10 Nov 2026); concept DOI 10.5281/zenodo.24112443 given by the hub session on 11 Nov 2026 for paper A's archive; arXiv identifier to be added after announcement. check_numbers.py checks the title against the newest D1 version's main.tex.",
+  "doi": "10.5281/zenodo.24112443"
+ }
+}

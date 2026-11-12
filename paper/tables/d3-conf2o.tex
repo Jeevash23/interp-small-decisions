@@ -1,0 +1,27 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{Round 2, OLMo-2-0425-1B: head \hd{13}{1} (O1--O10) and the block-end set \textsc{ded-o} = \{\hd{13}{1}, \hd{10}{12}, \hd{11}{0}, \hd{15}{4}\} (G1--G4), on the same held-out material. O-predictions repeat the Q-predictions with the thresholds shown.}
+\label{tab:d3-conf2o}
+\begin{tabularx}{\linewidth}{@{}lYYl@{}}
+\toprule
+& Prediction & Result & Verdict \\
+\midrule
+O1 & As Q1 with $\geq 0.20$ and $\geq 1.4\times$ & \nv{d3.c2.o.att_inner_ded}; \nv{d3.c2.o.att_inner_same} & \nv{d3.c2.v.O1} \\
+O2 & As Q2 (other layer-13 heads) & \nv{d3.c2.o.ko_inner_ded}; others \nv{d3.c2.o.others_lo} to \nv{d3.c2.o.others_hi} & \nv{d3.c2.v.O2} \\
+O3 & As Q3 & \nv{d3.c2.o.ko_inner_same}; \nv{d3.c2.o.ko_inner_term} & \nv{d3.c2.v.O3} \\
+O4 & As Q4 & \nv{d3.c2.o.ko_closed_ded} against \nv{d3.c2.o.ko_inner_ded_closedsub} & \nv{d3.c2.v.O4} \\
+O5 & Target is most attended in $\geq 0.45$ of non-innermost cases, and at least 0.15 more often than the innermost & \nv{d3.c2.o.pick_not_inner} against \nv{d3.c2.o.pick_inner_attended_not_inner} & \nv{d3.c2.v.O5} \\
+O6 & As Q6 with rise $\geq 0.8$ and $\geq 4\times$ control & \nv{d3.c2.o.steer_dedent_head_dlq} (\nv{d3.c2.o.steer_dedent_ctrl_dlq}); \nv{d3.c2.o.steer_dedent_head_top} (\nv{d3.c2.o.steer_dedent_ctrl_top}) & \nv{d3.c2.v.O6} \\
+O7 & True-level knock-out $\leq -0.08$ & \nv{d3.c2.o.ko_true_ded} & \nv{d3.c2.v.O7} \\
+O8 & As Q8 with rise $\geq 0.8$, $\geq 4\times$ control, top $\geq 0.15$ & \nv{d3.c2.og.steer_term_head_dlq} (\nv{d3.c2.og.steer_term_ctrl_dlq}); \nv{d3.c2.og.steer_term_head_top} (\nv{d3.c2.og.steer_term_ctrl_top}) & \nv{d3.c2.v.O8} \\
+O9 & As Q9 & \nv{d3.c2.og.share_blk_kw_return} & \nv{d3.c2.v.O9} \\
+O10 & As Q10 & \nv{d3.c2.og.share_layer_return_max} & \nv{d3.c2.v.O10} \\
+\midrule
+G1 & \textsc{ded-o} ablated, unmarked dedents: $\leq -0.30$ and below all twenty random sets & \nv{d3.c2.g.d_lq_dedent}\ci{\nv{d3.c2.g.ci.lo}}{\nv{d3.c2.g.ci.hi}}; random \nv{d3.c2.g.rand_d_lq_dedent_min} to \nv{d3.c2.g.rand_d_lq_dedent_max} & \nv{d3.c2.v.G1} \\
+G2 & Terminal dedents: at most a quarter of G1 in size; open-level mass $\geq 0.90$ & \nv{d3.c2.g.d_lq_term} (ratio \nv{d3.c2.g.ratio}); \nv{d3.c2.g.p_open_term_ablated} & \nv{d3.c2.v.G2} \\
+G3 & Same-level lines: $\geq -0.02$ & \nv{d3.c2.g.d_lq_same} & \nv{d3.c2.v.G3} \\
+G4 & Unmarked dedents: mass on the current level rises $\geq 0.08$ & \nv{d3.c2.g.d_psame_dedent} & \nv{d3.c2.v.G4} \\
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,16 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{\olmo{}: mean ablation of three layer-0 heads at the last position on held-out items (96 teen and 96 non-teen numbers per length, plain form). Effect kept is relative to the unablated teen effect, given in logits.}
+\label{tab:d4-olmoabl}
+\begin{tabular}{@{}c l c c c c@{}}
+\toprule
+Digits & Tens digit & Teen effect & Three heads kept & \hd{0}{5} / \hd{0}{0} / \hd{0}{9} alone & Random triples \\
+\midrule
+3 & last token & \nv{d4.c.ol.3.base} & \nv{d4.c.ol.3.kept} & \nv{d4.c.ol.3.s05} / \nv{d4.c.ol.3.s00} / \nv{d4.c.ol.3.s09} & \nv{d4.c.ol.3.rmin}--\nv{d4.c.ol.3.rmax} \\
+4 & previous token & \nv{d4.c.ol.4.base} & \textbf{\nv{d4.c.ol.4.kept}} & \nv{d4.c.ol.4.s05} / \nv{d4.c.ol.4.s00} / \nv{d4.c.ol.4.s09} & \nv{d4.c.ol.4.rmin}--\nv{d4.c.ol.4.rmax} \\
+5 & last token & \nv{d4.c.ol.5.base} & \nv{d4.c.ol.5.kept} & \nv{d4.c.ol.5.s05} / \nv{d4.c.ol.5.s00} / \nv{d4.c.ol.5.s09} & \nv{d4.c.ol.5.rmin}--\nv{d4.c.ol.5.rmax} \\
+7 & previous token & \nv{d4.c.ol.7.base} & \textbf{\nv{d4.c.ol.7.kept}} & \nv{d4.c.ol.7.s05} / \nv{d4.c.ol.7.s00} / \nv{d4.c.ol.7.s09} & \nv{d4.c.ol.7.rmin}--\nv{d4.c.ol.7.rmax} \\
+\bottomrule
+\end{tabular}
+\end{table}

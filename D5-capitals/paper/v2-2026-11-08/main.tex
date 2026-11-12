@@ -1,0 +1,414 @@
+\documentclass[11pt]{article}
+
+% Reproducible PDF bytes: no creation date, no random trailer identifier, no producer banner.
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=-1
+
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\usepackage{mathptmx}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage[font=small,labelfont=bf,skip=4pt]{caption}
+\usepackage{enumitem}
+\usepackage{float}
+% (no float barriers: tables float to the nearest page with room)
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks,pdftitle={Lower case first, capitals last: how two small language models write in capitals, and which parts do it},pdfauthor={},pdfcreator={},pdfproducer={}]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.12}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{1.25cm}}
+\crefname{appendix}{Appendix}{Appendices}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\bibfont}{\small}
+\setlength{\bibsep}{2pt}
+
+% Every number from the saved outputs is a macro generated from those outputs by a script.
+\input{numbers}
+\makeatletter
+\newcommand{\nv}[1]{\ifcsname nv@#1\endcsname\csname nv@#1\endcsname\else\PackageError{numbers}{Unknown number key #1}{}\fi}
+\makeatother
+\newcommand{\ci}[2]{\,[#1,\,#2]}
+\newcommand{\G}[1]{\nv{c.g.#1}}
+\newcommand{\Q}[1]{\nv{c.q.#1}}
+\newcommand{\GI}[1]{\nv{c.g.#1}\ci{\nv{c.g.#1.lo}}{\nv{c.g.#1.hi}}}
+\newcommand{\QI}[1]{\nv{c.q.#1}\ci{\nv{c.q.#1.lo}}{\nv{c.q.#1.hi}}}
+\newcommand{\EG}[1]{\nv{e.g.#1}}
+\newcommand{\EQ}[1]{\nv{e.q.#1}}
+\newcommand{\gm}{Gemma-4-E2B}
+\newcommand{\qw}{Qwen3-1.7B-Base}
+\newcommand{\hd}[2]{L#1H#2}
+% round 2 (held out: \RQ, \RG; with interval: \RQI, \RGI; exploration: \XQ, \XG)
+\newcommand{\RQ}[1]{\nv{r2.q.#1}}
+\newcommand{\RG}[1]{\nv{r2.g.#1}}
+\newcommand{\RQI}[1]{\nv{r2.q.#1}\ci{\nv{r2.q.#1.lo}}{\nv{r2.q.#1.hi}}}
+\newcommand{\RGI}[1]{\nv{r2.g.#1}\ci{\nv{r2.g.#1.lo}}{\nv{r2.g.#1.hi}}}
+\newcommand{\XQ}[1]{\nv{r2e.q.#1}}
+\newcommand{\XG}[1]{\nv{r2e.g.#1}}
+\usetikzlibrary{positioning,arrows.meta}
+\newcommand{\Uc}{\ensuremath{U}}
+\newcommand{\Lc}{\ensuremath{L_c}}
+\newcommand{\Lr}{\ensuremath{L_r}}
+
+\title{\textbf{Lower case first, capitals last:\\ how two small language models write in capitals, and which parts do it}}
+\author{[Author line to be added]}
+\date{\vspace{-1.5em}November 2026 (second draft, with a second round of experiments)}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\begin{abstract}
+\noindent
+In a passage written in capitals, a language model must keep the capitals and still choose the right next word, although upper-case words are rarer and cut into different tokens. Of four small base models, two passed a frozen behavioural gate: \gm{}, which has many whole-word upper-case tokens, and \qw{}, which splits upper-case words into pieces. In two rounds, each an exploration followed by frozen predictions tested once on held-out paragraphs, all \nv{c.npass} predictions of the first round and all \nv{r2.npass} of the second held in both models. Round~1: from mid depth the logit lens ranks the coming word's lower-case first piece above its actual upper-case piece, and the capitals take over only in the last three layers; a single \emph{capitals direction}, the difference of mean residuals between upper- and lower-case passages, switches the next word between the two cases in either direction while random directions do almost nothing. Round~2 finds the parts that use this direction. A few late components write it (in \qw{} four MLPs and one head; in \gm{} three MLPs and one head): moving only their writes along it to their lower-case values leaves an upper-case next word at \RQ{W_named_upper} and \RG{W_named_upper} of positions, against at least \RQ{W_random_upper.min} and \RG{W_random_upper.min} for matched random sets. Four or five attention heads bring the case of the earlier words to the prediction position, one of them reading the last few words and the others the passage further back. Only MLPs after the direction layer read it: freezing them stops the direction from changing the case. The current token's own case enters separately; in \qw{} it comes through a layer-0 head that attends to the current token in every task, so case is one of the token's properties that it passes on. Where adding the direction changes the word, it does so mostly where real capitals change it too, more often for words whose capitals form needs more tokens. Acronyms and initial capitals do not use the direction; capitalised headings do, and the line break after a heading ends it.
+\end{abstract}
+
+%======================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Text in capitals is a small fraction of what a model reads, and its tokens differ: a byte-pair vocabulary may have one token for ``the'' but spell ``THE'' and longer upper-case words out of pieces. Writing in capitals therefore asks a model, at every word, to keep the case going and to choose the next word although the familiar lower-case tokens are not the ones it must write. Models are known to find all-capitals text harder: \citet{powalski2020unicase} found that a masked language model that represents case separately from the word does much better on fully upper-cased text than a standard cased one, and \citet{dillitzer2026casing} found that letter case shifts where attention goes. We know of no account of how a model writes in capitals.
+
+The question has a close relative. \citet{wendler2024llamas} used the logit lens~\citep{nostalgebraist2020logitlens}, which reads each layer's residual stream through the model's own output layer, to show that Llama-2 models answering in another language first favour the English form of the answer in their middle layers. Upper case could be handled in the same way, with the word chosen in lower case and turned into capitals late, or as something like a separate language with its own features. A third possibility is a direction in the residual stream that carries the case on top of the word. Directions found by contrasting activations, for example as averaged differences between paired inputs, can steer models~\citep{turner2023steering,panickssery2023caa}, and interventions along such directions can change what a model treats as true~\citep{marks2023geometry}; \citet{park2023linear} relate such directions to linear probing and steering. Removing a concept along a direction is a test of whether the model uses it~\citep{belrose2023leace}.
+
+We studied this in two rounds, each in two stages. In the first round, an exploration under a frozen charter compared upper- and lower-case versions of the same paragraphs with the logit lens, edits along a mean-difference direction, recasing of the last few words and activation patching~\citep{meng2022locating,heimersheim2024patching,zhang2024patching}. We then wrote down what the resulting account predicts, froze the predictions with their thresholds and code, and tested them once on paragraphs that no model had read. That account was stated in terms of one direction. The second round asked which components write the direction, which carry the passage's case to where it is needed, which read it, why the edit sometimes changes the word, and whether other kinds of capitals use it. It followed the same plan on a third part of the paragraphs, held back until then, and on headings from the same articles. Between the rounds, a cross-study test in the same series (X1, unpublished) showed that a head the first round described as reading case attends to the current token in every task it tested; we take that into account. This note reports both rounds and keeps exploratory, prospective and post hoc results apart.
+
+%======================================================================
+\section{Setting}
+\label{sec:setting}
+
+\paragraph{Material.} Paragraphs come from English Wikipedia articles created between January 2025 and September 2026. A paragraph is eligible if upper- and lower-casing keep every character's length, so that its versions align character by character, and if it has at least 60 words. Paragraphs were split by a hash of the article's identifier into an exploration part (\nv{mat.explore.paras} paragraphs from \nv{mat.explore.articles} articles), a confirmation part (\nv{mat.conf.paras} paragraphs from \nv{mat.conf.articles} articles) and a reserve part (\nv{mat.reserve.paras} paragraphs from \nv{mat.reserve.articles} articles). The split was fixed and digested before any model read the material. The confirmation part was read only after the first round's protocol was frozen, and in the second round it served as exploration material. The reserve part was read only after the second round's protocol was frozen. Each paragraph is used in its upper-case, lower-case and original versions, cut to 1{,}200 characters. For the second round we also took every section heading of the same articles whose neighbouring paragraphs were long enough (\nv{mat.head.reserve.items} items from reserve articles), each as the end of the previous paragraph, a blank line, the heading in capitals or in its original case, a blank line and the start of the next paragraph.
+
+\paragraph{Positions and token case.} Words are maximal runs of letters. A \emph{word start} is a position where the next token begins a word after a space; only word starts after the first five words of a paragraph count, so that the model has seen the passage's case. A token string with a cased letter is \emph{upper} if it has no lower-case letter and \emph{lower} if it has no upper-case letter. At a word start the model's top-1 next token is said to \emph{flip} when an edit changes its case to the other one. A flip keeps the \emph{same word} when both tokens are alphabetic and one is a prefix of the other, ignoring case.
+
+\paragraph{Models and gate.} The charter named four base models of under two billion parameters with different tokenisers: \gm{}~\citep{gemma2026gemma4}, whose vocabulary has many whole-word upper-case tokens, and \qw{}~\citep{qwen2025qwen3}, SmolLM2-1.7B~\citep{benallal2025smollm2} and Pythia-1B~\citep{biderman2023pythia}, which split upper-case words into several pieces. Before any internal analysis each model had to pass three conditions on \nv{gate.g.n} exploration paragraphs, with four word starts each for the second: in upper-case passages, at least 95\% of cased top-1 tokens at word starts are upper case (\emph{case kept}); greedy decoding of one word from the upper-case passage gives the same word, in capitals, as from the lower-case passage in at least 60\% of positions (\emph{same word}); and inside words, the top-1 token correctly continues the word at least 70\% of the time. All four models kept the case (\nv{gate.g.c1} to \nv{gate.p.c1}) and spelled inside words well enough (\nv{gate.p.c3} to \nv{gate.g.c3}). The cost of capitals lay in choosing the word. \gm{} (\nv{gate.g.c2}) and \qw{} (\nv{gate.q.c2}) passed the same-word condition; SmolLM2-1.7B (\nv{gate.s.c2}) and Pythia-1B (\nv{gate.p.c2}) failed it and were not studied further. The bar was not loosened, although SmolLM2 missed it narrowly. For comparison, the original-case passage gives the lower-case passage's word at \nv{gate.p.ceil} to \nv{gate.g.ceil} of positions in these models, so a change of case alone moves the choice of word somewhat.
+
+\paragraph{Lens.} At word starts in upper-case passages we read each layer's residual at the prediction position through the model's final norm and output layer. \Uc{} is the first token of the true next word in capitals, \Lc{} the first token of the same word in lower case, and \Lr{} the lower-case first token of another word of the same paragraph. We report the share of positions at which one has a higher log-probability than another. Comparisons with \Uc{} leave out positions where \Uc{} and \Lc{} have equal values at that layer, which are mostly short words whose two forms share a token.
+
+\paragraph{The capitals direction.} For each layer, $d$ is the mean residual after that layer at word-start prediction positions in upper-case passages minus the mean in lower-case passages, estimated on exploration paragraphs 150--300; $r$ is a random direction of the same norm. Edits act at the prediction position only. \emph{Adding} $d$ to a lower-case passage, or \emph{subtracting} it from an upper-case one, asks whether $d$ is enough to change the case; \emph{setting the component} along $d$ to the midpoint of the two passages' means asks whether the model needs it. We fixed one direction layer $\ell$ per model from exploration (24 of 35 layers in \gm{}, 22 of 28 in \qw{}), and an early layer, 16, for both.
+
+
+%======================================================================
+\section{Round 1: exploration (exploratory)}
+\label{sec:explore}
+
+The results in this section come from exploration paragraphs only. They chose what to test and are not evidence for it.
+
+The exploration values of every measure later tested are in the last column of \cref{tab:preds}.
+
+\paragraph{Lower case first.} In both models the lens ranked \Lc{} above \Uc{} through the middle layers of upper-case passages, while \Lr{}, another word's lower-case token, rarely beat \Uc{} there. \Uc{} overtook \Lc{} for good only from layer \nv{e.g.firstlow} of 35 in \gm{} and \nv{e.q.firstlow} of 28 in \qw{}. The coming word was as well separated from other words in upper-case passages as in lower-case ones, which goes against capitals being handled as a separate language from mid depth.
+
+\paragraph{One direction carries the case.} Adding $d$ at one layer flipped the next word into capitals, and subtracting it flipped it back, once the layer was deep enough (\cref{fig:sweep}). Random directions flipped almost nothing at any layer. Removing capitals worked earlier than adding them: at layer 16, subtracting $d$ already flipped \nv{sweep.g.sub.16} (\gm{}) and \nv{sweep.q.sub.16} (\qw{}) of upper-case positions, while adding it flipped \nv{sweep.g.add.16} and \nv{sweep.q.add.16}. In \qw{} adding $d$ switched on between layers 17 and 19 (\nv{sweep.q.add.17}, \nv{sweep.q.add.18}, \nv{sweep.q.add.19}). Adding $d$ also capitalised the next word in ordinary mixed-case prose. Subtracting it did little to the initial capital of names and sentence starts, so $d$ is a signal for writing in capitals, not for capital letters in general.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.49\textwidth,height=4.1cm,title={\small \gm{}},xlabel={\small layer},ylabel={\small share flipped},ymin=-0.02,ymax=1.02,xmin=0,xmax=34,tick label style={font=\scriptsize},legend style={font=\scriptsize,at={(0.02,0.98)},anchor=north west,draw=none,fill=none},legend cell align=left]
+\addplot[thick,mark=*,mark size=1.2pt,black] table[x=layer,y=add]{fig-sweep-g.dat};
+\addplot[thick,mark=square*,mark size=1.2pt,gray] table[x=layer,y=sub]{fig-sweep-g.dat};
+\addplot[dashed,black] table[x=layer,y=addrand]{fig-sweep-g.dat};
+\addplot[dotted,gray] table[x=layer,y=subrand]{fig-sweep-g.dat};
+\addlegendentry{add $d$ (lower to upper)}
+\addlegendentry{subtract $d$ (upper to lower)}
+\addlegendentry{add $r$}
+\addlegendentry{subtract $r$}
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}
+\begin{axis}[width=0.49\textwidth,height=4.1cm,title={\small \qw{}},xlabel={\small layer},ymin=-0.02,ymax=1.02,xmin=0,xmax=27,tick label style={font=\scriptsize}]
+\addplot[thick,mark=*,mark size=1.2pt,black] table[x=layer,y=add]{fig-sweep-q.dat};
+\addplot[thick,mark=square*,mark size=1.2pt,gray] table[x=layer,y=sub]{fig-sweep-q.dat};
+\addplot[dashed,black] table[x=layer,y=addrand]{fig-sweep-q.dat};
+\addplot[dotted,gray] table[x=layer,y=subrand]{fig-sweep-q.dat};
+\end{axis}
+\end{tikzpicture}
+\caption{Exploration: share of word starts whose top-1 token changes case when the capitals direction $d$ (or a random direction $r$ of the same norm) is added to a lower-case passage or subtracted from an upper-case one, after a single layer, at the prediction position only. Exploration paragraphs \nv{sweep.g.rows} (\gm{}) and \nv{sweep.q.rows} (\qw{}), up to four word starts each.}
+\label{fig:sweep}
+\end{figure}
+
+\paragraph{The case comes from the last few words.} Recasing only the end of a passage was enough: a lower-case passage whose last two words were in capitals mostly continued in capitals, and the reverse held for upper-case passages ending in lower-case words.
+
+\paragraph{The current token's case in \qw{}.} Patching scans over attention heads found that one layer-0 head of \qw{}, \hd{0}{3}, attends almost only to the current token and passes on its case: its output from another paragraph's lower-case passage moved the next word towards lower case, and its output from another upper-case passage did nothing. \gm{} had no such head; there, case entered in the middle layers, through attention at layer 14 and several MLP layers together. These scans used donors that differ in the word as well as the case, so we did not carry their numbers forward.
+
+\paragraph{Changed words.} Where the upper-case passage gave a different word from the lower-case one, the new word's lower-case first token was usually among the lower-case passage's own top five candidates at that position, while a word taken from elsewhere in the same paragraph almost never was. Capitals thus seem to perturb a choice made among lower-case candidates rather than to draw on a vocabulary of their own. Words that change between the original passage and the lower-case one behave in the same way, so this is how any change of case shifts the choice.
+
+\paragraph{Copying.} Words already seen in the passage were predicted better than new ones in upper- and lower-case passages alike, and the gap between upper- and lower-case passages was small for both kinds, so we did not pursue copying as the route.
+
+\begin{table}[t!]
+\centering\footnotesize
+\caption{The frozen predictions and their held-out outcome. Shares are of word starts unless stated; $\ell$ is layer 24 in \gm{} and 22 in \qw{}; edits use the exploration directions at the prediction position. Held-out values are point estimates with 95\% intervals from 2{,}000 bootstrap resamples of paragraphs (\G{lens_Lc_gt_U_at_l.np} paragraphs for the lens, \G{add_dir_L24_flip.np} for the edits and recasing). The last column gives the exploration values (\gm{} / \qw{}). Every prediction passed in both models.}
+\label{tab:preds}
+\begin{tabularx}{\textwidth}{@{}l Y l l l l@{}}
+\toprule
+ & Measure & Threshold & \gm{} & \qw{} & Exploration \\
+\midrule
+G1 & Gate repeated on held-out paragraphs: same word & $\ge 0.60$ & \G{gate.c2} & \Q{gate.c2} & \nv{gate.g.c2} / \nv{gate.q.c2} \\
+\addlinespace
+L1 & Lens at $\ell$: \Lc{} above \Uc{} & $\ge 0.60$ & \GI{lens_Lc_gt_U_at_l} & \QI{lens_Lc_gt_U_at_l} & \EG{lens_Lc_gt_U_at_l} / \EQ{lens_Lc_gt_U_at_l} \\
+ & Lens at $\ell$: \Lr{} above \Uc{} & $\le 0.30$ & \GI{lens_Lr_gt_U_at_l} & \QI{lens_Lr_gt_U_at_l} & \EG{lens_Lr_gt_U_at_l} / \EQ{lens_Lr_gt_U_at_l} \\
+ & Last layer: \Lc{} above \Uc{} & $\le 0.05$ & \GI{lens_Lc_gt_U_last} & \QI{lens_Lc_gt_U_last} & \EG{lens_Lc_gt_U_last} / \EQ{lens_Lc_gt_U_last} \\
+ & First layer from which \Lc{} $>$ \Uc{} stays below one half & last five & \G{firstlow} & \Q{firstlow} & \nv{e.g.firstlow} / \nv{e.q.firstlow} \\
+L2 & \Lc{} above \Lr{} at $\ell$, upper-case passages & $\ge 0.75$ & \GI{lens_Lc_gt_Lr_upper_at_l} & \QI{lens_Lc_gt_Lr_upper_at_l} & \EG{lens_Lc_gt_Lr_upper_at_l} / \EQ{lens_Lc_gt_Lr_upper_at_l} \\
+ & \dots\ lower-case passages (and within 0.05 of the above) & $\ge 0.75$ & \GI{lens_Lc_gt_Lr_lower_at_l} & \QI{lens_Lc_gt_Lr_lower_at_l} & \EG{lens_Lc_gt_Lr_lower_at_l} / \EQ{lens_Lc_gt_Lr_lower_at_l} \\
+\addlinespace
+D1 & Add $d$ at $\ell$ (lower case): flips to capitals & $\ge 0.80$ & \GI{add_dir_L24_flip} & \QI{add_dir_L22_flip} & \EG{add_dir_L24_flip} / \EQ{add_dir_L22_flip} \\
+ & \dots\ same word in capitals & $\ge 0.45$ & \GI{add_dir_L24_same_word} & \QI{add_dir_L22_same_word} & \EG{add_dir_L24_same_word} / \EQ{add_dir_L22_same_word} \\
+ & Subtract $d$ at $\ell$ (upper case): flips to lower case & $\ge 0.80$ & \GI{sub_dir_L24_flip} & \QI{sub_dir_L22_flip} & \EG{sub_dir_L24_flip} / \EQ{sub_dir_L22_flip} \\
+ & \dots\ same word in lower case & $\ge 0.45$ & \GI{sub_dir_L24_same_word} & \QI{sub_dir_L22_same_word} & \EG{sub_dir_L24_same_word} / \EQ{sub_dir_L22_same_word} \\
+ & Add $r$: flips & $\le 0.05$ & \GI{add_rand_L24_flip} & \QI{add_rand_L22_flip} & \EG{add_rand_L24_flip} / \EQ{add_rand_L22_flip} \\
+ & Subtract $r$: flips & $\le 0.05$ & \GI{sub_rand_L24_flip} & \QI{sub_rand_L22_flip} & \EG{sub_rand_L24_flip} / \EQ{sub_rand_L22_flip} \\
+D2 & Midpoint along $d$ (upper case): still upper case & $\le 0.70$ & \GI{rm_dir_upper_share} & \QI{rm_dir_upper_share} & \EG{rm_dir_upper_share} / \EQ{rm_dir_upper_share} \\
+ & \dots\ same word in either case & $\ge 0.60$ & \GI{rm_dir_same_word_any_case} & \QI{rm_dir_same_word_any_case} & \EG{rm_dir_same_word_any_case} / \EQ{rm_dir_same_word_any_case} \\
+ & Midpoint along $r$: still upper case & $\ge 0.95$ & \GI{rm_rand_upper_share} & \QI{rm_rand_upper_share} & \EG{rm_rand_upper_share} / \EQ{rm_rand_upper_share} \\
+D3 & Add $d$ in original prose: capitals & $\ge 0.75$ & \GI{orig_add_dir_to_upper} & \QI{orig_add_dir_to_upper} & \EG{orig_add_dir_to_upper} / \EQ{orig_add_dir_to_upper} \\
+ & \dots\ same word in capitals & $\ge 0.50$ & \GI{orig_add_dir_to_upper_same_word} & \QI{orig_add_dir_to_upper_same_word} & \EG{orig_add_dir_to_upper_same_word} / \EQ{orig_add_dir_to_upper_same_word} \\
+ & Add $r$ in original prose: capitals & $\le 0.05$ & \GI{orig_add_rand_to_upper} & \QI{orig_add_rand_to_upper} & \EG{orig_add_rand_to_upper} / \EQ{orig_add_rand_to_upper} \\
+D4 & Layer 16: add $d$, flips & $\le 0.15$ & \GI{add_dir_L16_flip} & \QI{add_dir_L16_flip} & \EG{add_dir_L16_flip} / \EQ{add_dir_L16_flip} \\
+ & Layer 16: subtract $d$, flips & $\ge 0.40$ & \GI{sub_dir_L16_flip} & \QI{sub_dir_L16_flip} & \EG{sub_dir_L16_flip} / \EQ{sub_dir_L16_flip} \\
+\addlinespace
+R1 & Lower case, last 2 words in capitals: upper-case top-1 & $\ge 0.50$ & \GI{upper_top1_L+u2} & \QI{upper_top1_L+u2} & \EG{upper_top1_L+u2} / \EQ{upper_top1_L+u2} \\
+ & \dots\ last 8 words in capitals & $\ge 0.85$ & \GI{upper_top1_L+u8} & \QI{upper_top1_L+u8} & \EG{upper_top1_L+u8} / \EQ{upper_top1_L+u8} \\
+ & Upper case, last 2 words in lower case: upper-case top-1 & $\le 0.25$ & \GI{upper_top1_U+l2} & \QI{upper_top1_U+l2} & \EG{upper_top1_U+l2} / \EQ{upper_top1_U+l2} \\
+ & \dots\ last 8 words in lower case & $\le 0.10$ & \GI{upper_top1_U+l8} & \QI{upper_top1_U+l8} & \EG{upper_top1_U+l8} / \EQ{upper_top1_U+l8} \\
+\addlinespace
+E1 & Changed word in the lower-case passage's top 5 & $\ge 0.50$ & \GI{changed_word_top5} & \QI{changed_word_top5} & \EG{changed_word_top5} / \EQ{changed_word_top5} \\
+ & Control word in the top 5 & $\le 0.10$ & \GI{ctrl_word_top5} & \QI{ctrl_word_top5} & \EG{ctrl_word_top5} / \EQ{ctrl_word_top5} \\
+\addlinespace
+H1 & \qw{} only, head \hd{0}{3}: see \cref{tab:head} & & & \Q{H1} & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+%======================================================================
+\section{Round 1: the prospective test}
+\label{sec:test}
+
+We froze the account above as \nv{c.g.ntests} predictions for \gm{} and \nv{c.q.ntests} for \qw{}, with thresholds set from the exploration values with a margin, together with the code that computes every measure from per-position records. The account counts as \emph{supported} in a model if five core predictions pass (L1, L2, D1, D2 and D3), as \emph{partly supported} if the direction works (D1 and D3) but the lens or removal predictions fail, and as not supported otherwise. The remaining predictions are secondary. Decisions use point estimates. Each confirmation run was made once, on held-out paragraphs, with the exploration directions; no run needed repeating. \Cref{tab:preds} lists every prediction and its outcome.
+
+
+
+\subsection{Lower case first, capitals last}
+
+On held-out upper-case passages the lens ranked the coming word's lower-case first token above its actual upper-case token at layer $\ell$ in \G{lens_Lc_gt_U_at_l} of \G{lens_Lc_gt_U_at_l.n} positions in \gm{} and \Q{lens_Lc_gt_U_at_l} of \Q{lens_Lc_gt_U_at_l.n} in \qw{}. Another word's lower-case token beat the upper-case one at only \G{lens_Lr_gt_U_at_l} and \Q{lens_Lr_gt_U_at_l}. The upper-case token took over for good from layer \G{firstlow} of 35 and \Q{firstlow} of 28, the last three layers of each model, and at the last layer the lower-case token was ahead at almost no positions (L1 \G{L1} in both models). The coming word stood out from other words as clearly in upper-case passages as in lower-case ones (L2 \G{L2} in both).
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.49\textwidth,height=4.1cm,title={\small \gm{}},xlabel={\small layer},ylabel={\small share of positions},ymin=-0.02,ymax=1.02,xmin=0,xmax=34,tick label style={font=\scriptsize},legend style={font=\scriptsize,at={(0.02,0.02)},anchor=south west,draw=none,fill=white,fill opacity=0.8,text opacity=1},legend cell align=left]
+\addplot[thick,black] table[x=layer,y=LcU]{fig-lens-g.dat};
+\addplot[thick,dashed,gray] table[x=layer,y=LrU]{fig-lens-g.dat};
+\addplot[thick,dotted,black] table[x=layer,y=LcLr]{fig-lens-g.dat};
+\draw[gray,thin] (axis cs:24,-0.02) -- (axis cs:24,1.02);
+\addlegendentry{$L_c$ above $U$}
+\addlegendentry{$L_r$ above $U$}
+\addlegendentry{$L_c$ above $L_r$}
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}
+\begin{axis}[width=0.49\textwidth,height=4.1cm,title={\small \qw{}},xlabel={\small layer},ymin=-0.02,ymax=1.02,xmin=0,xmax=27,tick label style={font=\scriptsize}]
+\addplot[thick,black] table[x=layer,y=LcU]{fig-lens-q.dat};
+\addplot[thick,dashed,gray] table[x=layer,y=LrU]{fig-lens-q.dat};
+\addplot[thick,dotted,black] table[x=layer,y=LcLr]{fig-lens-q.dat};
+\draw[gray,thin] (axis cs:22,-0.02) -- (axis cs:22,1.02);
+\end{axis}
+\end{tikzpicture}
+\caption{Held-out upper-case passages, logit lens by layer (descriptive, read after the predictions). Solid: the coming word's lower-case first token above its upper-case one. Dashed: another word's lower-case token above it. Dotted: the coming word's lower-case token above the other word's. The vertical line marks the direction layer $\ell$.}
+\label{fig:lens}
+\end{figure}
+
+\Cref{fig:lens} shows what these shares mean across depth. This reading is post hoc and descriptive. At the first layers any lower-case token beats the upper-case one: at layer 0, \Lc{} is above \Uc{} at \nv{fig2.g.LcU.0} (\gm{}) and \nv{fig2.q.LcU.0} (\qw{}) of positions, but \Lr{} is above it at \nv{fig2.g.LrU.0} and \nv{fig2.q.LrU.0}, and \Lc{} beats \Lr{} no more often than chance (\nv{fig2.g.LcLr.0} and \nv{fig2.q.LcLr.0}). Early on, the lens shows a general lean towards lower-case tokens, not the coming word. The word itself appears at mid depth: in \gm{}, \Lc{} rises above \Lr{} from about layer 20 (\nv{fig2.g.LcLr.16} at layer 16, \nv{fig2.g.LcLr.20} at 20, \nv{fig2.g.LcLr.24} at 24) as \Lr{} loses to \Uc{} (\nv{fig2.g.LrU.16}, \nv{fig2.g.LrU.20}, \nv{fig2.g.LrU.24}). In \qw{} the word's lead over other words grows more gradually, and the share of positions where \Lr{} beats \Uc{} falls sharply at layer 19 (\nv{fig2.q.LrU.16} at layer 16, \nv{fig2.q.LrU.19} at 19). So ``lower case first'' means that once the model's choice of word can be read through the lens, it reads in lower case; the lens says nothing about the form of the word before that depth.
+
+\subsection{One direction switches the case}
+
+Adding the exploration direction at layer $\ell$ of a lower-case passage made the next word upper case at \G{add_dir_L24_flip} of positions in \gm{} and \Q{add_dir_L22_flip} in \qw{}, and subtracting it from an upper-case passage made it lower case at \G{sub_dir_L24_flip} and \Q{sub_dir_L22_flip}. The new top-1 was the same word in the other case at \G{add_dir_L24_same_word} and \G{sub_dir_L24_same_word} of positions in \gm{} and at \Q{add_dir_L22_same_word} and \Q{sub_dir_L22_same_word} in \qw{}. Random directions of the same norm flipped at most \G{sub_rand_L24_flip} (D1 \G{D1} in both models). At layer 16 subtracting $d$ still flipped \G{sub_dir_L16_flip} and \Q{sub_dir_L16_flip}, while adding it flipped \G{add_dir_L16_flip} and \Q{add_dir_L16_flip} (D4 \G{D4} in both): the model can lose its capitals earlier in depth than it can gain them.
+
+The direction is also needed, though not alone. Setting the residual's component along $d$ to the midpoint of the two passages' means left the next word in capitals at \G{rm_dir_upper_share} of upper-case positions in \gm{} and \Q{rm_dir_upper_share} in \qw{}, against \G{rm_rand_upper_share} and \Q{rm_rand_upper_share} for the same operation along $r$, and kept the word in either case at \G{rm_dir_same_word_any_case} and \Q{rm_dir_same_word_any_case} (D2 \G{D2} in both). In the original mixed-case passages, adding $d$ at word starts whose next word was lower case turned it into capitals at \G{orig_add_dir_to_upper} and \Q{orig_add_dir_to_upper}, and into the same word in capitals at \G{orig_add_dir_to_upper_same_word} and \Q{orig_add_dir_to_upper_same_word}, while $r$ did nothing (D3 \G{D3} in both).
+
+\subsection{Where the case comes from}
+
+Recasing only the end of a passage moved the next word's case as predicted (R1 \G{R1} in both). With its last two words in capitals, a lower-case passage gave an upper-case next word at \G{upper_top1_L+u2} (\gm{}) and \Q{upper_top1_L+u2} (\qw{}) of positions, and with eight at \G{upper_top1_L+u8} and \Q{upper_top1_L+u8}; a single word was not enough (\G{upper_top1_L+u1} and \Q{upper_top1_L+u1}). Upper-case passages ending in two lower-case words kept capitals at only \G{upper_top1_U+l2} and \Q{upper_top1_U+l2}, and with eight at \G{upper_top1_U+l8} and \Q{upper_top1_U+l8}.
+
+In \qw{}, head \hd{0}{3} passed on the current token's case on held-out paragraphs (\cref{tab:head}; H1 \Q{H1}). It put \Q{L0H3_self_attention_upper} and \Q{L0H3_self_attention_lower} of its attention on the current token. Replacing its output with its output at a word start of another paragraph's lower-case passage moved \Q{L0H3_other_lower_moved} of the gap between the upper- and lower-case passages' log-probability differences, and flipped \Q{L0H3_other_lower_flip} of next words to lower case, whereas its output from another upper-case passage moved \Q{L0H3_other_upper_moved}. Two other layer-0 heads, patched from the same word's own lower-case passage, moved almost nothing. Since the donor passage differs in content, the part of the head's output that matters for capitals is the current token's case, not the word. The cross-study test X1 later showed that this head attends to the current token in every task it tested (\nv{x1.l0h3.self.min} to \nv{x1.l0h3.self.max} of its attention, in line-breaking, indentation, number suffixes and capitals) and that it matters more for choosing the next word than for keeping capitals: in \qw{}, ablating it at word starts kept \nv{x1.l0h3.dup} of the upper-case gap but only \nv{x1.l0h3.dlow} of the lower-case one, and changed the lower-case word's log-probability by \nv{x1.l0h3.wl}~nats on average. Its output carries the current token, and case is one of that token's properties that later layers use.
+
+\begin{table}[tb]
+\centering\small
+\caption{\qw{}, head \hd{0}{3} on held-out paragraphs (\Q{L0H3_other_lower_moved.np} paragraphs; \Q{L0H3_other_lower_moved.n} upper-case positions whose next word is upper case). $D$ is $\log p(U)-\log p(L_c)$; the share of $D$ moved is towards the lower-case passage's own $D$.}
+\label{tab:head}
+\begin{tabularx}{\textwidth}{@{}Y l l l@{}}
+\toprule
+Measure & Threshold & Held out & Exploration \\
+\midrule
+Attention on the current token, upper-case passages & $\ge 0.90$ & \QI{L0H3_self_attention_upper} & \EQ{L0H3_self_attention_upper} \\
+Attention on the current token, lower-case passages & $\ge 0.90$ & \QI{L0H3_self_attention_lower} & \EQ{L0H3_self_attention_lower} \\
+Output from another paragraph in lower case: share of $D$ moved & $\ge 0.20$ & \QI{L0H3_other_lower_moved} & \EQ{L0H3_other_lower_moved} \\
+\quad flips to lower case & $\ge 0.25$ & \QI{L0H3_other_lower_flip} & \EQ{L0H3_other_lower_flip} \\
+Output from another paragraph in upper case: share of $D$ moved & $\le 0.08$ & \QI{L0H3_other_upper_moved} & \EQ{L0H3_other_upper_moved} \\
+\quad flips & $\le 0.05$ & \QI{L0H3_other_upper_flip} & \EQ{L0H3_other_upper_flip} \\
+Head \hd{0}{2} from the same word's lower-case passage: share of $D$ moved & $\le 0.08$ & \QI{L0H3_ctrl_L0H2_same_lower_moved} & \EQ{L0H3_ctrl_L0H2_same_lower_moved} \\
+Head \hd{0}{0}, the same & $\le 0.08$ & \QI{L0H3_ctrl_L0H0_same_lower_moved} & \EQ{L0H3_ctrl_L0H0_same_lower_moved} \\
+\hd{0}{3} from the same word's lower-case passage (no threshold) & & \QI{L0H3_same_lower_moved} & \EQ{L0H3_same_lower_moved} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Changed words}
+
+Where the upper-case passage chose a different word from the lower-case one (\G{changed_word_top5.n} positions in \gm{}, \Q{changed_word_top5.n} in \qw{}), the new word's lower-case first token was in the lower-case passage's top five at \G{changed_word_top5} and \Q{changed_word_top5}, with a median rank of \G{e1.medrank} in both models. A control word from elsewhere in the paragraph was in the top five at \G{ctrl_word_top5} and \Q{ctrl_word_top5}, with median ranks of \G{e1.ctrlrank} and \Q{e1.ctrlrank} (E1 \G{E1} in both). The gate itself held on held-out paragraphs (G1 \G{G1} in both; same word \G{gate.c2} and \Q{gate.c2}).
+
+On copying, which we did not test prospectively, the held-out runs agree with exploration (descriptive): the true next word was the top-1 token in upper- against lower-case passages at \G{seen.upper} against \G{seen.lower} for words already seen and \G{new.upper} against \G{new.lower} for new words in \gm{}, and at \Q{seen.upper} against \Q{seen.lower} and \Q{new.upper} against \Q{new.lower} in \qw{}.
+
+\subsection{Exploration and held-out values}
+
+All \nv{c.npass} predictions passed and the account is \G{account} in both models. Over the \nv{gap.n} measures computed on both exploration and held-out material, \nv{gap.over05} differ by more than 0.05; the largest difference is \nv{gap.max}, in the share of words kept after removal in \qw{} (\EQ{rm_dir_same_word_any_case} in exploration, \Q{rm_dir_same_word_any_case} held out), and the next largest is \nv{gap.second}.
+
+%======================================================================
+\section{Round 2: from the direction to its parts}
+\label{sec:round2}
+
+\paragraph{Questions.} The second round asked four questions, under a new charter frozen before any round-2 measurement: which components write the capitals direction at the prediction position and which read it after the direction layer (Q1); with the current token's case held fixed, which heads carry the case of the earlier words (Q2); why adding the direction changes the word at some positions (Q3); and whether acronyms, initial capitals and capitalised headings use the same direction (Q4). An optional fifth question, when the pattern appears during training, needed a model with public training checkpoints that passes the round-1 gate. The direction $d$, its random control and the direction layer $\ell$ are round 1's, unchanged; $u$ is the unit vector of $d$.
+
+\paragraph{Method.} Each additive term of the residual stream at the prediction position (the token embedding, each attention head, each MLP, and in \gm{} each layer's per-layer-input block, with \gm{}'s post-norm scales and layer scalars applied) has a \emph{write} along $u$; the writes sum to the residual's projection on $u$ after layer $\ell$. Besides the upper-case (U) and lower-case (L) passages, a \emph{context-only} passage (A) is the upper-case passage with its last word in lower case: A and L end in the same token and differ only in the earlier words, so whatever separates them at the prediction position came through attention. Three interventions test sets of components. \emph{Directional ablation} moves only each member's write along $u$ to its value in the paired L passage and leaves the rest of its output unchanged. \emph{Patching} replaces a head's whole output with its value in the L passage. \emph{Freezing} holds a later component at its unedited output while $d$ is added after layer $\ell$. Every named set is compared with twenty random sets matched member by member: a head by another head of the same layer, a writer MLP by another MLP, and a reader MLP by a head of the same layer, since all MLPs after $\ell$ may be named and earlier ones cannot react to $d$.
+
+\subsection{Exploration (exploratory)}
+
+The results in this subsection come from the round-1 exploration and confirmation parts and from headings of those articles. They chose what to test and are not evidence for it; \cref{tab:preds2} gives their values beside the held-out ones.
+
+\paragraph{Writers.} The writes along $u$, upper-case minus lower-case passage, came almost entirely from a few components shortly before $\ell$: in \qw{} MLPs 19--22 and head \hd{19}{0}, and in \gm{} MLPs 23 and 24 with head \hd{24}{6} (and MLP 22 to a lesser extent). The token embedding wrote almost nothing along $u$, so the direction is not the current token's case itself. Patching single components showed that earlier parts act through these: in \gm{}, MLPs 14 and 15; in \qw{}, \hd{0}{3} and the first MLP. Moving only the writers' writes along $u$ to their lower-case values left an upper-case next word at \XQ{W_named_upper} (\qw{}) and \XG{W_named_upper} (\gm{}) of positions.
+
+\paragraph{Carriers.} Context alone, with the current word in lower case, carried about half of the full upper-minus-lower gap along $u$. Patching one head at a time from L into A pointed to four heads in layers 17--19 of \qw{} (\hd{19}{0}, \hd{17}{6}, \hd{18}{1}, \hd{18}{0}), and in \gm{} to heads of layers 14 and 15 (\hd{14}{6}, \hd{14}{7}, \hd{14}{1}, \hd{15}{2}) together with \hd{24}{6}. Their attention differed: \hd{17}{6} in \qw{} and \hd{14}{7} in \gm{} looked mostly at the last few words, while the others looked mostly further back in the passage. \hd{17}{6} is the head that X1 found moving format facts in line-breaking and indentation; in X1's capitals test it trimmed the capitals gap of \qw{} a little (\nv{x1.l17h6.dup} of it kept) without changing the word.
+
+\paragraph{Readers.} With $d$ added after $\ell$ in a lower-case passage, freezing any one late MLP took away part of the flip, while freezing any one late head took away almost none. Freezing all of them stopped the flip.
+
+\paragraph{Changed words.} Re-reading round 1's edit records showed that the edit changes the word mostly at positions where the real upper-case passage also chooses a different word, and that both change more often when the word's capitals form needs more tokens than its lower-case form.
+
+\paragraph{Other capitals.} Removing $d$ (round 1's midpoint operation) left almost every acronym and initial capital in place, but took capitals away inside headings written in capitals. At the first word after such a heading the projection on $u$ was close to its value after the same heading in its original case: the line break ends the capitals mode, although within running text a single lower-case word leaves much of it in place.
+
+\paragraph{Training dynamics.} The only checkpointed candidate tried, OLMo-2-0425-1B, failed the round-1 gate on the same-word condition (\nv{gate.o.c2} against 0.60; case kept \nv{gate.o.c1}, inside words \nv{gate.o.c3}), so the fifth question stopped there, as the charter required. The two passing models have no public training checkpoints.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[font=\scriptsize,box/.style={draw,rounded corners=2pt,align=center,inner sep=3pt,text width=2.95cm,minimum height=1.25cm},arr/.style={-{Stealth[length=4pt]},thick}]
+\node[box] (ctx) {Case of the earlier words};
+\node[box,right=0.55cm of ctx] (car) {\textbf{Carriers}\\ Qwen3: \hd{17}{6} (local), \hd{19}{0}, \hd{18}{1}, \hd{18}{0}\\ Gemma: \hd{14}{7} (local), \hd{14}{6}, \hd{14}{1}, \hd{15}{2}, \hd{24}{6}};
+\node[box,right=0.55cm of car] (wr) {\textbf{Writers of $d$}\\ Qwen3: MLPs 19--22, \hd{19}{0}\\ Gemma: MLPs 22--24, \hd{24}{6}\\ (direction layer $\ell$)};
+\node[box,right=0.55cm of wr] (rd) {\textbf{Readers}\\ Qwen3: MLPs 23--27\\ Gemma: MLPs 25--29, 32--34\\ $\to$ upper-case pieces};
+\node[box,below=0.35cm of car] (cur) {Current token\\ (Qwen3: \hd{0}{3}, a current-token head)};
+\draw[arr] (ctx) -- (car); \draw[arr] (car) -- (wr); \draw[arr] (wr) -- (rd); \draw[arr] (cur.east) -| (wr.south);
+\end{tikzpicture}
+\caption{The route found in round 2 and tested on held-out text (Qwen3: \qw{}; Gemma: \gm{}). The word itself is chosen in a lower-case-like form (round 1); the capitals direction $d$ is assembled from the case of the earlier words and of the current token, written by a few late components, and read only by the MLPs after the direction layer. In \gm{}, MLPs 14 and 15 also pass the carried case on to the writers (exploration only; not tested).}
+\label{fig:route}
+\end{figure}
+
+\subsection{The prospective test}
+
+We froze \nv{r2.q.v.n_tests} predictions for \qw{} and \nv{r2.g.v.n_tests} for \gm{} (one, C3, concerns \hd{17}{6} in \qw{} only), with thresholds set from the exploration values with a margin, random-set controls and the code that computes every measure from per-position records, and ran them once on the reserve paragraphs and the reserve headings. Each question has its own verdict: Q1 is supported if W1 and R1 pass, Q2 if C1 and C2 pass, Q3 if E1 and E2 pass; Q4 has one verdict for acronyms and initial capitals (A1, A2) and one for headings (A3, A4). The parts account counts as supported if Q1 and Q2 are supported in both models. Every run was made once; none needed repeating. All \nv{r2.npass} predictions passed (\cref{tab:preds2}), and every verdict is \RQ{v.Q1_parts} in both models.
+
+\begin{table}[t!]
+\centering\footnotesize
+\caption{Round 2: the frozen predictions and their held-out outcome. Held-out values are point estimates with 95\% intervals from 2{,}000 bootstrap resamples of articles. ``Random'' gives the extreme of the twenty matched random sets. The last column gives the exploration values (\qw{} / \gm{}). Every prediction passed in both models.}
+\label{tab:preds2}
+\begin{tabularx}{\textwidth}{@{}l Y l l l l@{}}
+\toprule
+ & Measure & Threshold & \qw{} & \gm{} & Exploration \\
+\midrule
+W1 & Writers' writes along $u$ moved: upper-case top-1 & $\le 0.30$ & \RQI{W_named_upper} & \RGI{W_named_upper} & \XQ{W_named_upper} / \XG{W_named_upper} \\
+ & \dots\ same word in either case & $\ge 0.55$ & \RQI{W_named_same_word} & \RGI{W_named_same_word} & \XQ{W_named_same_word} / \XG{W_named_same_word} \\
+ & \dots\ random sets, lowest upper-case top-1 & $\ge 0.85$ & \RQ{W_random_upper.min} & \RG{W_random_upper.min} & \XQ{W_random_upper.min} / \XG{W_random_upper.min} \\
+R1 & Add $d$ at $\ell$: flips to capitals & $\ge 0.80$ & \RQI{R_none_flip} & \RGI{R_none_flip} & \XQ{R_none_flip} / \XG{R_none_flip} \\
+ & \dots\ readers frozen & $\le 0.20$ & \RQI{R_named_flip} & \RGI{R_named_flip} & \XQ{R_named_flip} / \XG{R_named_flip} \\
+ & \dots\ random sets frozen, lowest & see note & \RQ{R_random_flip.min} & \RG{R_random_flip.min} & \XQ{R_random_flip.min} / \XG{R_random_flip.min} \\
+\addlinespace
+C1 & Carriers patched in A: excess along $u$ removed & $\ge 0.60$ & \RQI{CA_named_proj_removed} & \RGI{CA_named_proj_removed} & \XQ{CA_named_proj_removed} / \XG{CA_named_proj_removed} \\
+ & \dots\ excess $D$ removed & $\ge 0.30$ & \RQI{CA_named_D_removed} & \RGI{CA_named_D_removed} & \XQ{CA_named_D_removed} / \XG{CA_named_D_removed} \\
+ & \dots\ random sets, highest & see note & \RQ{CA_random_proj_removed.max} & \RG{CA_random_proj_removed.max} & \XQ{CA_random_proj_removed.max} / \XG{CA_random_proj_removed.max} \\
+C2 & Carriers patched in U: upper-case top-1 & $\le 0.60$ & \RQI{CU_named_upper} & \RGI{CU_named_upper} & \XQ{CU_named_upper} / \XG{CU_named_upper} \\
+ & \dots\ random sets, lowest & $\ge 0.90$ & \RQ{CU_random_upper.min} & \RG{CU_random_upper.min} & \XQ{CU_random_upper.min} / \XG{CU_random_upper.min} \\
+C3 & \hd{17}{6} alone in A: excess removed (above every random head) & $\ge 0.20$ & \RQI{L17H6_proj_removed} & & \XQ{L17H6_proj_removed} \\
+C4 & Local carrier: attention on the last eight words & $\ge 0.60$ & \RQI{attn_L17H6_recent8} & \RGI{attn_L14H7_recent8} & \XQ{attn_L17H6_recent8} / \XG{attn_L14H7_recent8} \\
+ & Broad carrier: the same & $\le 0.50$ & \RQI{attn_L19H0_recent8} & \RGI{attn_L24H6_recent8} & \XQ{attn_L19H0_recent8} / \XG{attn_L24H6_recent8} \\
+\addlinespace
+E1 & Edit changes the word where real capitals do & see note & \RQI{E_change_if_up_changes} & \RGI{E_change_if_up_changes} & \XQ{E_change_if_up_changes} / \XG{E_change_if_up_changes} \\
+ & \dots\ where they do not & see note & \RQI{E_change_if_up_keeps} & \RGI{E_change_if_up_keeps} & \XQ{E_change_if_up_keeps} / \XG{E_change_if_up_keeps} \\
+ & Changed word in the lower-case top 5 & $\ge 0.40$ & \RQI{E_changed_in_lower_top5} & \RGI{E_changed_in_lower_top5} & \XQ{E_changed_in_lower_top5} / \XG{E_changed_in_lower_top5} \\
+E2 & Word change, capitals need $\ge 1$ extra token & see note & \RQI{E_change_extra1p} & \RGI{E_change_extra1p} & \XQ{E_change_extra1p} / \XG{E_change_extra1p} \\
+ & \dots\ no extra token & see note & \RQI{E_change_extra0} & \RGI{E_change_extra0} & \XQ{E_change_extra0} / \XG{E_change_extra0} \\
+\addlinespace
+A1 & Acronyms: remove $d$, still all capitals & $\ge 0.85$ & \RQI{A_acr_rm_keeps} & \RGI{A_acr_rm_keeps} & \XQ{A_acr_rm_keeps} / \XG{A_acr_rm_keeps} \\
+ & \dots\ remove $r$ & $\ge 0.90$ & \RQI{A_acr_rm_rand_keeps} & \RGI{A_acr_rm_rand_keeps} & \XQ{A_acr_rm_rand_keeps} / \XG{A_acr_rm_rand_keeps} \\
+A2 & Initial capitals: remove $d$, still capitalised & $\ge 0.90$ & \RQI{A_init_rm_keeps} & \RGI{A_init_rm_keeps} & \XQ{A_init_rm_keeps} / \XG{A_init_rm_keeps} \\
+ & \dots\ remove $r$ & $\ge 0.95$ & \RQI{A_init_rm_rand_keeps} & \RGI{A_init_rm_rand_keeps} & \XQ{A_init_rm_rand_keeps} / \XG{A_init_rm_rand_keeps} \\
+A3 & Headings in capitals: remove $d$, still all capitals & $\le 0.85$ & \RQI{A_head_rm_keeps} & \RGI{A_head_rm_keeps} & \XQ{A_head_rm_keeps} / \XG{A_head_rm_keeps} \\
+ & \dots\ remove $r$ & $\ge 0.95$ & \RQI{A_head_rm_rand_keeps} & \RGI{A_head_rm_rand_keeps} & \XQ{A_head_rm_rand_keeps} / \XG{A_head_rm_rand_keeps} \\
+A4 & Excess along $u$ inside the heading (share of the gap) & $\ge 0.40$ & \RQI{A_head_inside_excess} & \RGI{A_head_inside_excess} & \XQ{A_head_inside_excess} / \XG{A_head_inside_excess} \\
+ & \dots\ at the first word after it & $\le 0.25$ & \RQI{A_head_after_excess} & \RGI{A_head_after_excess} & \XQ{A_head_after_excess} / \XG{A_head_after_excess} \\
+ & \dots\ top-1 all capitals there & $\le 0.10$ & \RQI{A_head_after_allcaps_top} & \RGI{A_head_after_allcaps_top} & \XQ{A_head_after_allcaps_top} / \XG{A_head_after_allcaps_top} \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\raggedright Note. R1: every random set at least the unfrozen flip rate minus 0.15. C1: every random set at most the named value minus 0.25. E1: the two change rates differ by at least 0.30. E2: they differ by at least 0.10.
+\end{table}
+
+\paragraph{Writers and readers (Q1).} Moving only the named writers' writes along $u$ to their lower-case values left an upper-case next word at \RQ{W_named_upper} of upper-case positions in \qw{} and \RG{W_named_upper} in \gm{}, and the next word was the same word in either case at \RQ{W_named_same_word} and \RG{W_named_same_word}. Twenty random sets left at least \RQ{W_random_upper.min} and \RG{W_random_upper.min} in capitals (W1 \RQ{W1} in both models). The edit removed more than the whole gap along $u$ (\RQ{W_named_proj_removed} and \RG{W_named_proj_removed} of it), so the components between the writers and $\ell$ do not rebuild it. Adding $d$ after $\ell$ flipped a lower-case next word to capitals at \RQ{R_none_flip} and \RG{R_none_flip} of positions; with the named late MLPs frozen at their unedited outputs it flipped \RQ{R_named_flip} and \RG{R_named_flip}, while freezing matched late heads left at least \RQ{R_random_flip.min} and \RG{R_random_flip.min} (R1 \RQ{R1} in both). Freezing also keeps whatever else these MLPs would have written, so R1 shows that the flip needs them, not that they do nothing else.
+
+\paragraph{Carriers (Q2).} Patching the named carriers from L into A removed \RQ{CA_named_proj_removed} (\qw{}) and \RG{CA_named_proj_removed} (\gm{}) of A's excess along $u$, and \RQ{CA_named_D_removed} and \RG{CA_named_D_removed} of its excess in $D=\log p(U)-\log p(L_c)$. Random sets removed at most \RQ{CA_random_proj_removed.max} and \RG{CA_random_proj_removed.max} of the projection; \gm{}'s random sets reach higher because they share layer 14 with several named heads, so attention at that layer carries case more widely than the named heads alone (C1 \RQ{C1} in both). In fully upper-case passages the same patch left an upper-case next word at only \RQ{CU_named_upper} and \RG{CU_named_upper}, against at least \RQ{CU_random_upper.min} and \RG{CU_random_upper.min} for random sets (C2 \RQ{C2} in both). The capitals that survive come from the current token's own case. In \qw{}, \hd{17}{6} alone removed \RQ{L17H6_proj_removed} of A's excess, more than any of twenty random layer-17 heads (at most \RQ{L17H6_random_proj_removed.max}; C3 \RQ{C3}).
+
+\Cref{fig:attn} shows where the carriers look. The local carriers, \hd{17}{6} and \hd{14}{7}, put \RQ{attn_L17H6_recent8} and \RG{attn_L14H7_recent8} of their attention (leaving out the first text token, which collects unused attention, and \gm{}'s beginning-of-sequence token) on the current word and the seven words before it. The broad carriers \hd{19}{0} and \hd{24}{6} put only \RQ{attn_L19H0_recent8} and \RG{attn_L24H6_recent8} there (C4 \RQ{C4} in both). Passage case therefore reaches the prediction position both from the last few words and from the passage as a whole. In running text the two agree. How the MLPs weigh them to give round 1's result, that the case follows the last two to eight words, we did not test.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[ybar=0pt,bar width=4pt,width=0.49\textwidth,height=4.2cm,title={\small \qw{}},ylabel={\small mean attention},ymin=0,ymax=0.75,xtick={0,...,5},xticklabels={cur,1,2--3,4--7,8+,first},tick label style={font=\scriptsize},enlarge x limits=0.12,legend style={font=\scriptsize,at={(0.02,0.98)},anchor=north west,draw=none,fill=none},legend cell align=left]
+\addplot[fill=black] table[x=bin,y=L17H6]{fig-attn-q.dat};
+\addplot[fill=gray] table[x=bin,y=L19H0]{fig-attn-q.dat};
+\addplot[fill=white] table[x=bin,y=L18H1]{fig-attn-q.dat};
+\addlegendentry{\hd{17}{6}}\addlegendentry{\hd{19}{0}}\addlegendentry{\hd{18}{1}}
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}
+\begin{axis}[ybar=0pt,bar width=4pt,width=0.49\textwidth,height=4.2cm,title={\small \gm{}},ymin=0,ymax=0.75,xtick={0,...,5},xticklabels={cur,1,2--3,4--7,8+,first},tick label style={font=\scriptsize},enlarge x limits=0.12,legend style={font=\scriptsize,at={(0.02,0.98)},anchor=north west,draw=none,fill=none},legend cell align=left]
+\addplot[fill=black] table[x=bin,y=L14H7]{fig-attn-g.dat};
+\addplot[fill=gray] table[x=bin,y=L24H6]{fig-attn-g.dat};
+\addplot[fill=white] table[x=bin,y=L14H6]{fig-attn-g.dat};
+\addlegendentry{\hd{14}{7}}\addlegendentry{\hd{24}{6}}\addlegendentry{\hd{14}{6}}
+\end{axis}
+\end{tikzpicture}
+\caption{Held-out upper-case passages: mean attention of three carrier heads per model from the prediction position, by words back from the current word (``cur''), with the first text token apart. \gm{}'s beginning-of-sequence token, which takes the rest, is not shown.}
+\label{fig:attn}
+\end{figure}
+
+\paragraph{Changed words (Q3).} Adding $d$ at $\ell$ flipped \RQ{E_flips} lower-case positions in \qw{} and \RG{E_flips} in \gm{}. It changed the word at \RQ{E_change_if_up_changes} and \RG{E_change_if_up_changes} of the flips where the real upper-case passage also chose a different word, but at only \RQ{E_change_if_up_keeps} and \RG{E_change_if_up_keeps} where the upper-case passage kept it. Changed words were among the lower-case passage's top five candidates at \RQ{E_changed_in_lower_top5} and \RG{E_changed_in_lower_top5} (E1 \RQ{E1} in both). Words whose capitals form needs at least one more token than their lower-case form changed at \RQ{E_change_extra1p} and \RG{E_change_extra1p}, against \RQ{E_change_extra0} and \RG{E_change_extra0} for the others (E2 \RQ{E2} in both). The changes the real upper-case passage does not make are \RQ{E_change_not_by_up} and \RG{E_change_not_by_up} of all flips. That is an upper bound on what any content carried by the direction could add. Adding $d$ thus reproduces how the model writes capitals, word changes included; it does not mainly add content of its own.
+
+\paragraph{Other capitals (Q4).} Removing $d$ left acronyms in capitals at \RQ{A_acr_rm_keeps} (\qw{}) and \RG{A_acr_rm_keeps} (\gm{}) of positions whose top-1 was an acronym-like all-capitals token, and kept initial capitals at \RQ{A_init_rm_keeps} and \RG{A_init_rm_keeps} (A1 and A2 \RQ{A1} in both models). These capitals come with the word itself, not from the direction. Inside headings written in capitals, removing $d$ kept all capitals at only \RQ{A_head_rm_keeps} and \RG{A_head_rm_keeps}, against \RQ{A_head_rm_rand_keeps} and \RG{A_head_rm_rand_keeps} for the random direction (A3 \RQ{A3} in both). Compared with the same heading in its original case, the projection along $u$ inside the heading was raised by \RQ{A_head_inside_excess} and \RG{A_head_inside_excess} of the gap between the upper- and lower-case means. At the first word after the heading the rise was only \RQ{A_head_after_excess} and \RG{A_head_after_excess} of the gap, and that word was almost never predicted in capitals (\RQ{A_head_after_allcaps_top} and \RG{A_head_after_allcaps_top}; A4 \RQ{A4} in both).
+
+\subsection{Exploration and held-out values}
+
+Over the \nv{r2gap.n} round-2 measures computed on both exploration and held-out material, \nv{r2gap.over05} differ by more than 0.05. The largest difference is \nv{r2gap.max}, in the share of changed words that are among the lower-case top five in \qw{} (\XQ{E_changed_in_lower_top5} in exploration, \RQ{E_changed_in_lower_top5} held out). The next largest is \nv{r2gap.second}, in the share of heading words that stay in capitals after removal in \qw{} (\XQ{A_head_rm_keeps} and \RQ{A_head_rm_keeps}). Both were estimated from few exploration positions, and both stayed within their thresholds.
+
+%======================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+In both models the evidence fits one picture. The next word is chosen in a form that the lens reads as lower case, and the capitals are applied late, under one direction. That direction has parts. A few heads gather the case of the earlier words, one from the last few words and others from the passage as a whole. The current token's own case enters separately; in \qw{} it comes through a layer-0 head that attends to the current token whatever the task, so case is simply one property of the token that it passes on. A few late components turn these signals into the capitals direction, and only the MLPs after it read the direction and turn the lower-case word into capitals. This is the latent-language pattern of \citet{wendler2024llamas} with case in place of language. It holds in a model with whole-word upper-case tokens and in one that spells them in pieces, with different components in the same roles. It also explains why capitals cost the small models some of their choices of word. The case signal shifts a choice made among lower-case candidates, and the change is larger for words whose capitals form costs more tokens, so a nearby candidate can win. The direction reproduces those changes rather than adding its own. Capitals that belong to a word, as in acronyms and names, do not use the direction at all, while capitalised headings do, and a line break ends them.
+
+The account has limits. The writers, carriers and readers were tested as sets. We did not trace each path between them, and their members are not all of the parts involved: removing $d$ in round 1 left about half of the words in capitals, so the case is also carried in ways a single mean difference does not capture, and a full linear erasure~\citep{belrose2023leace} would be a stronger test. Freezing the late MLPs shows that the flip needs them but also stops whatever else they write. The carriers' attention shows where they look, not what they read there. How the model weighs the local carrier against the broad ones to make the case follow the last few words is open. The logit lens is known to be brittle~\citep{belrose2023tunedlens}, and \cref{fig:lens} shows that here it says nothing about the word before mid depth. The round-2 exploration-to-held-out differences were larger than round 1's, though every measure kept to its threshold. We tested two base models on encyclopaedic English, at word starts and in headings only. When the pattern arises during training remains open, since the one checkpointed model we tried failed the gate.
+
+\paragraph{Use of language-model assistants.} Language-model assistants were used to write analysis code, run the experiments and draft this text under the author's direction. All numbers are generated from saved outputs and checked by script.
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,29 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{Exploratory. Checkpoints of a published training run of the OLMo-2 recipe, from which the released \olmo{} weights do not descend, and the released model (last row), on the same post-cut-off code. Left: top-1 accuracy of the indent at unmarked dedents, terminal dedents and same-level lines. Right, for three heads: attention to the innermost open header's \code{:\textbackslash n} at unmarked dedents, and how often the head's most-attended open header is the target level at multi-level dedents. Stage-1 rows are labelled by tokens seen; stage-2 rows by tokens seen in that run.}
+\label{tab:d3-ckpt}
+\begin{tabularx}{\linewidth}{@{}lYYYYYY@{}}
+\toprule
+& \multicolumn{3}{c}{top-1 accuracy} & \multicolumn{3}{c}{attention\,/\,pick} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Checkpoint & unmarked & terminal & same & \hd{11}{9} & \hd{13}{1} & \hd{15}{9} \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Stage~1 (tokens seen)}} \\
+1B & \nv{d3.ck.1B.ded} & \nv{d3.ck.1B.term} & \nv{d3.ck.1B.same} & \nv{d3.ck.1B.L11H9.att}\,/\,\nv{d3.ck.1B.L11H9.pick} & \nv{d3.ck.1B.L13H1.att}\,/\,\nv{d3.ck.1B.L13H1.pick} & \nv{d3.ck.1B.L15H9.att}\,/\,\nv{d3.ck.1B.L15H9.pick} \\
+21B & \nv{d3.ck.21B.ded} & \nv{d3.ck.21B.term} & \nv{d3.ck.21B.same} & \nv{d3.ck.21B.L11H9.att}\,/\,\nv{d3.ck.21B.L11H9.pick} & \nv{d3.ck.21B.L13H1.att}\,/\,\nv{d3.ck.21B.L13H1.pick} & \nv{d3.ck.21B.L15H9.att}\,/\,\nv{d3.ck.21B.L15H9.pick} \\
+84B & \nv{d3.ck.84B.ded} & \nv{d3.ck.84B.term} & \nv{d3.ck.84B.same} & \nv{d3.ck.84B.L11H9.att}\,/\,\nv{d3.ck.84B.L11H9.pick} & \nv{d3.ck.84B.L13H1.att}\,/\,\nv{d3.ck.84B.L13H1.pick} & \nv{d3.ck.84B.L15H9.att}\,/\,\nv{d3.ck.84B.L15H9.pick} \\
+420B & \nv{d3.ck.420B.ded} & \nv{d3.ck.420B.term} & \nv{d3.ck.420B.same} & \nv{d3.ck.420B.L11H9.att}\,/\,\nv{d3.ck.420B.L11H9.pick} & \nv{d3.ck.420B.L13H1.att}\,/\,\nv{d3.ck.420B.L13H1.pick} & \nv{d3.ck.420B.L15H9.att}\,/\,\nv{d3.ck.420B.L15H9.pick} \\
+1,007B & \nv{d3.ck.1007B.ded} & \nv{d3.ck.1007B.term} & \nv{d3.ck.1007B.same} & \nv{d3.ck.1007B.L11H9.att}\,/\,\nv{d3.ck.1007B.L11H9.pick} & \nv{d3.ck.1007B.L13H1.att}\,/\,\nv{d3.ck.1007B.L13H1.pick} & \nv{d3.ck.1007B.L15H9.att}\,/\,\nv{d3.ck.1007B.L15H9.pick} \\
+4,001B (end) & \nv{d3.ck.4001B.ded} & \nv{d3.ck.4001B.term} & \nv{d3.ck.4001B.same} & \nv{d3.ck.4001B.L11H9.att}\,/\,\nv{d3.ck.4001B.L11H9.pick} & \nv{d3.ck.4001B.L13H1.att}\,/\,\nv{d3.ck.4001B.L13H1.pick} & \nv{d3.ck.4001B.L15H9.att}\,/\,\nv{d3.ck.4001B.L15H9.pick} \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Stage~2 (three runs from the end of stage~1)}} \\
+\quad run~1, +3B & \nv{d3.ck.iax3B.ded} & \nv{d3.ck.iax3B.term} & \nv{d3.ck.iax3B.same} & \nv{d3.ck.iax3B.L11H9.att}\,/\,\nv{d3.ck.iax3B.L11H9.pick} & \nv{d3.ck.iax3B.L13H1.att}\,/\,\nv{d3.ck.iax3B.L13H1.pick} & \nv{d3.ck.iax3B.L15H9.att}\,/\,\nv{d3.ck.iax3B.L15H9.pick} \\
+\quad run~1, +51B & \nv{d3.ck.iax51B.ded} & \nv{d3.ck.iax51B.term} & \nv{d3.ck.iax51B.same} & \nv{d3.ck.iax51B.L11H9.att}\,/\,\nv{d3.ck.iax51B.L11H9.pick} & \nv{d3.ck.iax51B.L13H1.att}\,/\,\nv{d3.ck.iax51B.L13H1.pick} & \nv{d3.ck.iax51B.L15H9.att}\,/\,\nv{d3.ck.iax51B.L15H9.pick} \\
+\quad run~2, +51B & \nv{d3.ck.ibx51B.ded} & \nv{d3.ck.ibx51B.term} & \nv{d3.ck.ibx51B.same} & \nv{d3.ck.ibx51B.L11H9.att}\,/\,\nv{d3.ck.ibx51B.L11H9.pick} & \nv{d3.ck.ibx51B.L13H1.att}\,/\,\nv{d3.ck.ibx51B.L13H1.pick} & \nv{d3.ck.ibx51B.L15H9.att}\,/\,\nv{d3.ck.ibx51B.L15H9.pick} \\
+\quad run~3, +51B & \nv{d3.ck.icx51B.ded} & \nv{d3.ck.icx51B.term} & \nv{d3.ck.icx51B.same} & \nv{d3.ck.icx51B.L11H9.att}\,/\,\nv{d3.ck.icx51B.L11H9.pick} & \nv{d3.ck.icx51B.L13H1.att}\,/\,\nv{d3.ck.icx51B.L13H1.pick} & \nv{d3.ck.icx51B.L15H9.att}\,/\,\nv{d3.ck.icx51B.L15H9.pick} \\
+\midrule
+Released & \nv{d3.ck.final.ded} & \nv{d3.ck.final.term} & \nv{d3.ck.final.same} & \nv{d3.ck.final.L11H9.att}\,/\,\nv{d3.ck.final.L11H9.pick} & \nv{d3.ck.final.L13H1.att}\,/\,\nv{d3.ck.final.L13H1.pick} & \nv{d3.ck.final.L15H9.att}\,/\,\nv{d3.ck.final.L15H9.pick} \\
+\bottomrule
+\end{tabularx}
+\end{table}

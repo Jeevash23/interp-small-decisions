@@ -1,0 +1,19 @@
+{
+ "source_paragraphs": 1740,
+ "dropped": {
+  "length_change": 2,
+  "short": 0
+ },
+ "explore": {
+  "paragraphs": 613,
+  "articles": 315
+ },
+ "conf": {
+  "paragraphs": 597,
+  "articles": 332
+ },
+ "reserve": {
+  "paragraphs": 528,
+  "articles": 299
+ }
+}

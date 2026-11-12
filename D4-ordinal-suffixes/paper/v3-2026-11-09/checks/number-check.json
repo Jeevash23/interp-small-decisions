@@ -1,0 +1,4237 @@
+[
+ {
+  "name": "olmo 3 plain: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.3p.auroc",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 0.999900"
+ },
+ {
+  "name": "recount: c.olmo.3p.acct",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: c.olmo.3p.acce",
+  "ok": true,
+  "detail": "text 0.980 vs recomputed 0.980000"
+ },
+ {
+  "name": "recount: c.olmo.3p.nnum",
+  "ok": true,
+  "detail": "text 7 vs recomputed 7.000000"
+ },
+ {
+  "name": "claim: olmo 3 plain has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 3 plain tens digit in the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 4 plain: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.4p.auroc",
+  "ok": true,
+  "detail": "text 0.775 vs recomputed 0.775450"
+ },
+ {
+  "name": "recount: c.olmo.4p.acct",
+  "ok": true,
+  "detail": "text 0.220 vs recomputed 0.220000"
+ },
+ {
+  "name": "recount: c.olmo.4p.acce",
+  "ok": true,
+  "detail": "text 0.975 vs recomputed 0.975000"
+ },
+ {
+  "name": "recount: c.olmo.4p.nnum",
+  "ok": true,
+  "detail": "text 71 vs recomputed 71.000000"
+ },
+ {
+  "name": "claim: olmo 4 plain has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 4 plain tens digit before the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 4 comma: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.4c.auroc",
+  "ok": true,
+  "detail": "text 0.989 vs recomputed 0.988800"
+ },
+ {
+  "name": "recount: c.olmo.4c.acct",
+  "ok": true,
+  "detail": "text 0.965 vs recomputed 0.965000"
+ },
+ {
+  "name": "recount: c.olmo.4c.acce",
+  "ok": true,
+  "detail": "text 0.880 vs recomputed 0.880000"
+ },
+ {
+  "name": "recount: c.olmo.4c.nnum",
+  "ok": true,
+  "detail": "text 71 vs recomputed 71.000000"
+ },
+ {
+  "name": "claim: olmo 4 comma has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 4 comma tens digit in the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 5 plain: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.5p.auroc",
+  "ok": true,
+  "detail": "text 0.999 vs recomputed 0.998575"
+ },
+ {
+  "name": "recount: c.olmo.5p.acct",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: c.olmo.5p.acce",
+  "ok": true,
+  "detail": "text 0.840 vs recomputed 0.840000"
+ },
+ {
+  "name": "recount: c.olmo.5p.nnum",
+  "ok": true,
+  "detail": "text 169 vs recomputed 169.000000"
+ },
+ {
+  "name": "claim: olmo 5 plain has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 5 plain tens digit in the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 5 comma: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.5c.auroc",
+  "ok": true,
+  "detail": "text 0.974 vs recomputed 0.973775"
+ },
+ {
+  "name": "recount: c.olmo.5c.acct",
+  "ok": true,
+  "detail": "text 0.940 vs recomputed 0.940000"
+ },
+ {
+  "name": "recount: c.olmo.5c.acce",
+  "ok": true,
+  "detail": "text 0.900 vs recomputed 0.900000"
+ },
+ {
+  "name": "recount: c.olmo.5c.nnum",
+  "ok": true,
+  "detail": "text 169 vs recomputed 169.000000"
+ },
+ {
+  "name": "claim: olmo 5 comma has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 5 comma tens digit in the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 6 plain: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.6p.auroc",
+  "ok": true,
+  "detail": "text 0.974 vs recomputed 0.974450"
+ },
+ {
+  "name": "recount: c.olmo.6p.acct",
+  "ok": true,
+  "detail": "text 0.980 vs recomputed 0.980000"
+ },
+ {
+  "name": "recount: c.olmo.6p.acce",
+  "ok": true,
+  "detail": "text 0.760 vs recomputed 0.760000"
+ },
+ {
+  "name": "recount: c.olmo.6p.nnum",
+  "ok": true,
+  "detail": "text 193 vs recomputed 193.000000"
+ },
+ {
+  "name": "claim: olmo 6 plain has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 6 plain tens digit in the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 6 comma: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.6c.auroc",
+  "ok": true,
+  "detail": "text 0.918 vs recomputed 0.918488"
+ },
+ {
+  "name": "recount: c.olmo.6c.acct",
+  "ok": true,
+  "detail": "text 0.895 vs recomputed 0.895000"
+ },
+ {
+  "name": "recount: c.olmo.6c.acce",
+  "ok": true,
+  "detail": "text 0.745 vs recomputed 0.745000"
+ },
+ {
+  "name": "recount: c.olmo.6c.nnum",
+  "ok": true,
+  "detail": "text 193 vs recomputed 193.000000"
+ },
+ {
+  "name": "claim: olmo 6 comma has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 6 comma tens digit in the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 7 plain: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.7p.auroc",
+  "ok": true,
+  "detail": "text 0.729 vs recomputed 0.729200"
+ },
+ {
+  "name": "recount: c.olmo.7p.acct",
+  "ok": true,
+  "detail": "text 0.535 vs recomputed 0.535000"
+ },
+ {
+  "name": "recount: c.olmo.7p.acce",
+  "ok": true,
+  "detail": "text 0.780 vs recomputed 0.780000"
+ },
+ {
+  "name": "recount: c.olmo.7p.nnum",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "claim: olmo 7 plain has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 7 plain tens digit before the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "olmo 7 comma: classes match the stored labels",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.7c.auroc",
+  "ok": true,
+  "detail": "text 0.953 vs recomputed 0.953425"
+ },
+ {
+  "name": "recount: c.olmo.7c.acct",
+  "ok": true,
+  "detail": "text 0.895 vs recomputed 0.895000"
+ },
+ {
+  "name": "recount: c.olmo.7c.acce",
+  "ok": true,
+  "detail": "text 0.865 vs recomputed 0.865000"
+ },
+ {
+  "name": "recount: c.olmo.7c.nnum",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "claim: olmo 7 comma has 200 teen and 200 non-teen items",
+  "ok": true,
+  "detail": "200/200"
+ },
+ {
+  "name": "claim: olmo 7 comma tens digit in the last token for every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.olmo.B3.d4",
+  "ok": true,
+  "detail": "text 0.213 vs recomputed 0.213350"
+ },
+ {
+  "name": "recount: c.olmo.B3.d7",
+  "ok": true,
+  "detail": "text 0.224 vs recomputed 0.224225"
+ },
+ {
+  "name": "recount: c.olmo.B4.r54",
+  "ok": true,
+  "detail": "text 0.223 vs recomputed 0.223125"
+ },
+ {
+  "name": "recount: c.olmo.B4.r67",
+  "ok": true,
+  "detail": "text 0.245 vs recomputed 0.245250"
+ },
+ {
+  "name": "recount: c.olmo.B2.min",
+  "ok": true,
+  "detail": "text 0.918 vs recomputed 0.918488"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.3p.lo",
+  "ok": true,
+  "detail": "text 0.999 vs recomputed 0.999393"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.3p.hi",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.4p.lo",
+  "ok": true,
+  "detail": "text 0.722 vs recomputed 0.721815"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.4p.hi",
+  "ok": true,
+  "detail": "text 0.825 vs recomputed 0.825195"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.4c.lo",
+  "ok": true,
+  "detail": "text 0.979 vs recomputed 0.978943"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.4c.hi",
+  "ok": true,
+  "detail": "text 0.996 vs recomputed 0.995933"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.5p.lo",
+  "ok": true,
+  "detail": "text 0.997 vs recomputed 0.996759"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.5p.hi",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 0.999717"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.5c.lo",
+  "ok": true,
+  "detail": "text 0.959 vs recomputed 0.958669"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.5c.hi",
+  "ok": true,
+  "detail": "text 0.987 vs recomputed 0.986988"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.6p.lo",
+  "ok": true,
+  "detail": "text 0.960 vs recomputed 0.960445"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.6p.hi",
+  "ok": true,
+  "detail": "text 0.987 vs recomputed 0.986650"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.6c.lo",
+  "ok": true,
+  "detail": "text 0.890 vs recomputed 0.890043"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.6c.hi",
+  "ok": true,
+  "detail": "text 0.943 vs recomputed 0.943400"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.7p.lo",
+  "ok": true,
+  "detail": "text 0.679 vs recomputed 0.678994"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.7p.hi",
+  "ok": true,
+  "detail": "text 0.776 vs recomputed 0.775765"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.7c.lo",
+  "ok": true,
+  "detail": "text 0.934 vs recomputed 0.933616"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.olmo.7c.hi",
+  "ok": true,
+  "detail": "text 0.970 vs recomputed 0.970476"
+ },
+ {
+  "name": "recount: c.gpt2.boundary.auroc",
+  "ok": true,
+  "detail": "text 0.369 vs recomputed 0.368793"
+ },
+ {
+  "name": "recount: c.gpt2.boundary.acct",
+  "ok": true,
+  "detail": "text 0.113 vs recomputed 0.112500"
+ },
+ {
+  "name": "recount: c.gpt2.boundary.nteen",
+  "ok": true,
+  "detail": "text 80 vs recomputed 80.000000"
+ },
+ {
+  "name": "recount: c.gpt2.boundary.nend",
+  "ok": true,
+  "detail": "text 2,920 vs recomputed 2920.000000"
+ },
+ {
+  "name": "recount: c.gpt2.boundary.nnum",
+  "ok": true,
+  "detail": "text 10 vs recomputed 10.000000"
+ },
+ {
+  "name": "claim: gpt2 boundary numbers are 1,000-99,999 with the tens digit before the last token",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.gpt2.boundary.lo",
+  "ok": true,
+  "detail": "text 0.279 vs recomputed 0.279149"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.gpt2.boundary.hi",
+  "ok": true,
+  "detail": "text 0.465 vs recomputed 0.464980"
+ },
+ {
+  "name": "recount: c.gpt2.control.auroc",
+  "ok": true,
+  "detail": "text 0.943 vs recomputed 0.942825"
+ },
+ {
+  "name": "recount: c.gpt2.control.acct",
+  "ok": true,
+  "detail": "text 0.950 vs recomputed 0.950000"
+ },
+ {
+  "name": "recount: c.gpt2.control.nteen",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "recount: c.gpt2.control.nend",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "recount: c.gpt2.control.nnum",
+  "ok": true,
+  "detail": "text 138 vs recomputed 138.000000"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.gpt2.control.lo",
+  "ok": true,
+  "detail": "text 0.917 vs recomputed 0.916601"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.gpt2.control.hi",
+  "ok": true,
+  "detail": "text 0.965 vs recomputed 0.964875"
+ },
+ {
+  "name": "recount: c.gpt2.gap",
+  "ok": true,
+  "detail": "text 0.574 vs recomputed 0.574032"
+ },
+ {
+  "name": "recount: c.p1b.boundary.auroc",
+  "ok": true,
+  "detail": "text 0.831 vs recomputed 0.830654"
+ },
+ {
+  "name": "recount: c.p1b.boundary.acct",
+  "ok": true,
+  "detail": "text 0.175 vs recomputed 0.175000"
+ },
+ {
+  "name": "recount: c.p1b.boundary.nteen",
+  "ok": true,
+  "detail": "text 80 vs recomputed 80.000000"
+ },
+ {
+  "name": "recount: c.p1b.boundary.nend",
+  "ok": true,
+  "detail": "text 1,048 vs recomputed 1048.000000"
+ },
+ {
+  "name": "recount: c.p1b.boundary.nnum",
+  "ok": true,
+  "detail": "text 10 vs recomputed 10.000000"
+ },
+ {
+  "name": "claim: pythia-1b boundary numbers are 1,000-99,999 with the tens digit before the last token",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.p1b.boundary.lo",
+  "ok": true,
+  "detail": "text 0.763 vs recomputed 0.763472"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.p1b.boundary.hi",
+  "ok": true,
+  "detail": "text 0.888 vs recomputed 0.887791"
+ },
+ {
+  "name": "recount: c.p1b.control.auroc",
+  "ok": true,
+  "detail": "text 0.971 vs recomputed 0.970638"
+ },
+ {
+  "name": "recount: c.p1b.control.acct",
+  "ok": true,
+  "detail": "text 0.965 vs recomputed 0.965000"
+ },
+ {
+  "name": "recount: c.p1b.control.nteen",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "recount: c.p1b.control.nend",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "recount: c.p1b.control.nnum",
+  "ok": true,
+  "detail": "text 147 vs recomputed 147.000000"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.p1b.control.lo",
+  "ok": true,
+  "detail": "text 0.949 vs recomputed 0.949490"
+ },
+ {
+  "name": "interval as saved by the frozen evaluator: c.p1b.control.hi",
+  "ok": true,
+  "detail": "text 0.988 vs recomputed 0.987657"
+ },
+ {
+  "name": "recount: c.p1b.gap",
+  "ok": true,
+  "detail": "text 0.140 vs recomputed 0.139984"
+ },
+ {
+  "name": "claim: GPT-2 and Pythia-1B boundary sets each have 10 distinct teen numbers and the same teen item count",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q3.2.kept",
+  "ok": true,
+  "detail": "text 0.709 vs recomputed 0.708649"
+ },
+ {
+  "name": "recount: c.q3.2.rmin",
+  "ok": true,
+  "detail": "text 0.996 vs recomputed 0.996233"
+ },
+ {
+  "name": "recount: c.q3.2.rmax",
+  "ok": true,
+  "detail": "text 1.058 vs recomputed 1.058447"
+ },
+ {
+  "name": "recount: c.q3.2.tdrop",
+  "ok": true,
+  "detail": "text 0.021 vs recomputed 0.020833"
+ },
+ {
+  "name": "recount: c.q3.2.edrop",
+  "ok": true,
+  "detail": "text 0.083 vs recomputed 0.083333"
+ },
+ {
+  "name": "recount: c.q3.2.tacc",
+  "ok": true,
+  "detail": "text 0.979 vs recomputed 0.979167"
+ },
+ {
+  "name": "recount: c.q3.2.base",
+  "ok": true,
+  "detail": "text 11.69 vs recomputed 11.691396"
+ },
+ {
+  "name": "recount: c.q3.2.bauroc",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: c.q3.2.L0H2",
+  "ok": true,
+  "detail": "text 0.873 vs recomputed 0.873124"
+ },
+ {
+  "name": "recount: c.q3.2.L1H6",
+  "ok": true,
+  "detail": "text 0.984 vs recomputed 0.984334"
+ },
+ {
+  "name": "claim: Qwen3 ablation at 2 digits used 96 numbers per class and 20 random pairs",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q3.3.kept",
+  "ok": true,
+  "detail": "text 0.430 vs recomputed 0.429969"
+ },
+ {
+  "name": "recount: c.q3.3.rmin",
+  "ok": true,
+  "detail": "text 0.996 vs recomputed 0.995624"
+ },
+ {
+  "name": "recount: c.q3.3.rmax",
+  "ok": true,
+  "detail": "text 1.217 vs recomputed 1.217317"
+ },
+ {
+  "name": "recount: c.q3.3.tdrop",
+  "ok": true,
+  "detail": "text 0.458 vs recomputed 0.458333"
+ },
+ {
+  "name": "recount: c.q3.3.edrop",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: c.q3.3.tacc",
+  "ok": true,
+  "detail": "text 0.448 vs recomputed 0.447917"
+ },
+ {
+  "name": "recount: c.q3.3.base",
+  "ok": true,
+  "detail": "text 5.01 vs recomputed 5.011725"
+ },
+ {
+  "name": "recount: c.q3.3.bauroc",
+  "ok": true,
+  "detail": "text 0.979 vs recomputed 0.979167"
+ },
+ {
+  "name": "recount: c.q3.3.L0H2",
+  "ok": true,
+  "detail": "text 0.583 vs recomputed 0.583042"
+ },
+ {
+  "name": "recount: c.q3.3.L1H6",
+  "ok": true,
+  "detail": "text 0.942 vs recomputed 0.941950"
+ },
+ {
+  "name": "claim: Qwen3 ablation at 3 digits used 96 numbers per class and 20 random pairs",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q3.4.kept",
+  "ok": true,
+  "detail": "text 0.459 vs recomputed 0.458637"
+ },
+ {
+  "name": "recount: c.q3.4.rmin",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.993768"
+ },
+ {
+  "name": "recount: c.q3.4.rmax",
+  "ok": true,
+  "detail": "text 1.116 vs recomputed 1.115986"
+ },
+ {
+  "name": "recount: c.q3.4.tdrop",
+  "ok": true,
+  "detail": "text 0.385 vs recomputed 0.385417"
+ },
+ {
+  "name": "recount: c.q3.4.edrop",
+  "ok": true,
+  "detail": "text 0.021 vs recomputed 0.020833"
+ },
+ {
+  "name": "recount: c.q3.4.tacc",
+  "ok": true,
+  "detail": "text 0.490 vs recomputed 0.489583"
+ },
+ {
+  "name": "recount: c.q3.4.base",
+  "ok": true,
+  "detail": "text 4.25 vs recomputed 4.252396"
+ },
+ {
+  "name": "recount: c.q3.4.bauroc",
+  "ok": true,
+  "detail": "text 0.986 vs recomputed 0.985677"
+ },
+ {
+  "name": "recount: c.q3.4.L0H2",
+  "ok": true,
+  "detail": "text 0.586 vs recomputed 0.585572"
+ },
+ {
+  "name": "recount: c.q3.4.L1H6",
+  "ok": true,
+  "detail": "text 0.946 vs recomputed 0.946352"
+ },
+ {
+  "name": "claim: Qwen3 ablation at 4 digits used 96 numbers per class and 20 random pairs",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.ol.3.kept",
+  "ok": true,
+  "detail": "text 0.995 vs recomputed 0.994980"
+ },
+ {
+  "name": "recount: c.ol.3.rmin",
+  "ok": true,
+  "detail": "text 0.989 vs recomputed 0.989108"
+ },
+ {
+  "name": "recount: c.ol.3.rmax",
+  "ok": true,
+  "detail": "text 1.007 vs recomputed 1.007109"
+ },
+ {
+  "name": "recount: c.ol.3.base",
+  "ok": true,
+  "detail": "text 6.24 vs recomputed 6.242580"
+ },
+ {
+  "name": "recount: c.ol.3.bauroc",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.998481"
+ },
+ {
+  "name": "recount: c.ol.3.s05",
+  "ok": true,
+  "detail": "text 0.997 vs recomputed 0.997190"
+ },
+ {
+  "name": "recount: c.ol.3.s00",
+  "ok": true,
+  "detail": "text 0.999 vs recomputed 0.998982"
+ },
+ {
+  "name": "recount: c.ol.3.s09",
+  "ok": true,
+  "detail": "text 0.997 vs recomputed 0.997128"
+ },
+ {
+  "name": "claim: OLMo ablation at 3 digits used 96 numbers per class and 20 random triples",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.ol.4.kept",
+  "ok": true,
+  "detail": "text 0.110 vs recomputed 0.110365"
+ },
+ {
+  "name": "recount: c.ol.4.rmin",
+  "ok": true,
+  "detail": "text 0.921 vs recomputed 0.921315"
+ },
+ {
+  "name": "recount: c.ol.4.rmax",
+  "ok": true,
+  "detail": "text 1.047 vs recomputed 1.047293"
+ },
+ {
+  "name": "recount: c.ol.4.base",
+  "ok": true,
+  "detail": "text 1.21 vs recomputed 1.210196"
+ },
+ {
+  "name": "recount: c.ol.4.bauroc",
+  "ok": true,
+  "detail": "text 0.768 vs recomputed 0.768446"
+ },
+ {
+  "name": "recount: c.ol.4.s05",
+  "ok": true,
+  "detail": "text 0.608 vs recomputed 0.607580"
+ },
+ {
+  "name": "recount: c.ol.4.s00",
+  "ok": true,
+  "detail": "text 0.781 vs recomputed 0.781136"
+ },
+ {
+  "name": "recount: c.ol.4.s09",
+  "ok": true,
+  "detail": "text 0.724 vs recomputed 0.723639"
+ },
+ {
+  "name": "claim: OLMo ablation at 4 digits used 96 numbers per class and 20 random triples",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.ol.5.kept",
+  "ok": true,
+  "detail": "text 0.993 vs recomputed 0.992947"
+ },
+ {
+  "name": "recount: c.ol.5.rmin",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.994096"
+ },
+ {
+  "name": "recount: c.ol.5.rmax",
+  "ok": true,
+  "detail": "text 1.020 vs recomputed 1.019759"
+ },
+ {
+  "name": "recount: c.ol.5.base",
+  "ok": true,
+  "detail": "text 3.71 vs recomputed 3.710613"
+ },
+ {
+  "name": "recount: c.ol.5.bauroc",
+  "ok": true,
+  "detail": "text 0.995 vs recomputed 0.995226"
+ },
+ {
+  "name": "recount: c.ol.5.s05",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.993840"
+ },
+ {
+  "name": "recount: c.ol.5.s00",
+  "ok": true,
+  "detail": "text 1.004 vs recomputed 1.003999"
+ },
+ {
+  "name": "recount: c.ol.5.s09",
+  "ok": true,
+  "detail": "text 1.001 vs recomputed 1.000951"
+ },
+ {
+  "name": "claim: OLMo ablation at 5 digits used 96 numbers per class and 20 random triples",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.ol.7.kept",
+  "ok": true,
+  "detail": "text 0.076 vs recomputed 0.075767"
+ },
+ {
+  "name": "recount: c.ol.7.rmin",
+  "ok": true,
+  "detail": "text 0.856 vs recomputed 0.856134"
+ },
+ {
+  "name": "recount: c.ol.7.rmax",
+  "ok": true,
+  "detail": "text 1.031 vs recomputed 1.031459"
+ },
+ {
+  "name": "recount: c.ol.7.base",
+  "ok": true,
+  "detail": "text 0.62 vs recomputed 0.619717"
+ },
+ {
+  "name": "recount: c.ol.7.bauroc",
+  "ok": true,
+  "detail": "text 0.651 vs recomputed 0.651476"
+ },
+ {
+  "name": "recount: c.ol.7.s05",
+  "ok": true,
+  "detail": "text 0.629 vs recomputed 0.628873"
+ },
+ {
+  "name": "recount: c.ol.7.s00",
+  "ok": true,
+  "detail": "text 0.715 vs recomputed 0.714600"
+ },
+ {
+  "name": "recount: c.ol.7.s09",
+  "ok": true,
+  "detail": "text 0.745 vs recomputed 0.744836"
+ },
+ {
+  "name": "claim: OLMo ablation at 7 digits used 96 numbers per class and 20 random triples",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q3.p3d_intoteen.L0H2",
+  "ok": true,
+  "detail": "text 0.599 vs recomputed 0.599461"
+ },
+ {
+  "name": "recount: c.q3.p3d_intoteen.topv",
+  "ok": true,
+  "detail": "text 0.599 vs recomputed 0.599461"
+ },
+ {
+  "name": "recount: c.q3.p3d_intoteen.top",
+  "ok": true,
+  "detail": "L0H2 vs L0H2"
+ },
+ {
+  "name": "recount: c.q3.p3d_intoteen.nvalid",
+  "ok": true,
+  "detail": "text 84 vs recomputed 84.000000"
+ },
+ {
+  "name": "claim: patching scan 3 intoteen used 96 pairs",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q3.att3",
+  "ok": true,
+  "detail": "text 0.88 vs recomputed 0.875911"
+ },
+ {
+  "name": "recount: c.q3.p3d_last.L0H2",
+  "ok": true,
+  "detail": "text −0.000 vs recomputed -0.000063"
+ },
+ {
+  "name": "recount: c.q3.p3d_last.topv",
+  "ok": true,
+  "detail": "text 0.598 vs recomputed 0.597563"
+ },
+ {
+  "name": "recount: c.q3.p3d_last.top",
+  "ok": true,
+  "detail": "L0H3 vs L0H3"
+ },
+ {
+  "name": "recount: c.q3.p3d_last.nvalid",
+  "ok": true,
+  "detail": "text 95 vs recomputed 95.000000"
+ },
+ {
+  "name": "claim: patching scan 3 last used 96 pairs",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q3.p4d_intoteen.L0H2",
+  "ok": true,
+  "detail": "text 0.612 vs recomputed 0.611586"
+ },
+ {
+  "name": "recount: c.q3.p4d_intoteen.topv",
+  "ok": true,
+  "detail": "text 0.612 vs recomputed 0.611586"
+ },
+ {
+  "name": "recount: c.q3.p4d_intoteen.top",
+  "ok": true,
+  "detail": "L0H2 vs L0H2"
+ },
+ {
+  "name": "recount: c.q3.p4d_intoteen.nvalid",
+  "ok": true,
+  "detail": "text 75 vs recomputed 75.000000"
+ },
+ {
+  "name": "claim: patching scan 4 intoteen used 96 pairs",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q3.att4",
+  "ok": true,
+  "detail": "text 0.88 vs recomputed 0.883139"
+ },
+ {
+  "name": "recount: c.q3.p4d_last.L0H2",
+  "ok": true,
+  "detail": "text −0.000 vs recomputed -0.000187"
+ },
+ {
+  "name": "recount: c.q3.p4d_last.topv",
+  "ok": true,
+  "detail": "text 0.558 vs recomputed 0.558420"
+ },
+ {
+  "name": "recount: c.q3.p4d_last.top",
+  "ok": true,
+  "detail": "L0H3 vs L0H3"
+ },
+ {
+  "name": "recount: c.q3.p4d_last.nvalid",
+  "ok": true,
+  "detail": "text 94 vs recomputed 94.000000"
+ },
+ {
+  "name": "claim: patching scan 4 last used 96 pairs",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B1 appears in PROTOCOL.md under B1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B2 appears in PROTOCOL.md under B2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B3 appears in PROTOCOL.md under B3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B4.acc4 appears in PROTOCOL.md under B4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B4.acc3 appears in PROTOCOL.md under B4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B3 appears in PROTOCOL.md under B4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B5.bd appears in PROTOCOL.md under B5",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B5.ct appears in PROTOCOL.md under B5",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold B3 appears in PROTOCOL.md under B5",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q1.kept appears in PROTOCOL.md under Q1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q1.rand appears in PROTOCOL.md under Q1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q2.teen appears in PROTOCOL.md under Q2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q2.end appears in PROTOCOL.md under Q2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q3.kept appears in PROTOCOL.md under Q3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q3.acc appears in PROTOCOL.md under Q3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q4.L0H2 appears in PROTOCOL.md under Q4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q4.L1H6 appears in PROTOCOL.md under Q4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q5 appears in PROTOCOL.md under Q5",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q6.abs appears in PROTOCOL.md under Q6",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold Q6.top appears in PROTOCOL.md under Q6",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold O1.kept appears in PROTOCOL.md under O1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold O1.rand appears in PROTOCOL.md under O1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold O1.read appears in PROTOCOL.md under O1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold O2 appears in PROTOCOL.md under O2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict B1: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict B2: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict B3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict B4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict B5.gpt2: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict B5.pythia-1b: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict Q1: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict Q2: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict Q3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict Q4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict Q5: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict Q6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict O1: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "verdict O2: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "claim: all tests passed (count in the text)",
+  "ok": true,
+  "detail": "14/14"
+ },
+ {
+  "name": "claim: all three accounts supported",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploration recount: x3.q3.d2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "exploration recount: x3.q3.min37",
+  "ok": true,
+  "detail": "text 0.897 vs recomputed 0.896528"
+ },
+ {
+  "name": "exploration recount: x3.q3.max37",
+  "ok": true,
+  "detail": "text 0.968 vs recomputed 0.967847"
+ },
+ {
+  "name": "figure data q3 matches recount",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploration recount: x3.smol.d2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "exploration recount: x3.smol.min37",
+  "ok": true,
+  "detail": "text 0.868 vs recomputed 0.867917"
+ },
+ {
+  "name": "exploration recount: x3.smol.max37",
+  "ok": true,
+  "detail": "text 0.972 vs recomputed 0.972465"
+ },
+ {
+  "name": "figure data smol matches recount",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploration recount: x3.gemma.d2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "exploration recount: x3.gemma.min37",
+  "ok": true,
+  "detail": "text 0.937 vs recomputed 0.936910"
+ },
+ {
+  "name": "exploration recount: x3.gemma.max37",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.998472"
+ },
+ {
+  "name": "figure data gemma matches recount",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploration recount: x3.olmo.d2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "exploration recount: x3.olmo.min37",
+  "ok": true,
+  "detail": "text 0.694 vs recomputed 0.694132"
+ },
+ {
+  "name": "exploration recount: x3.olmo.max37",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.994375"
+ },
+ {
+  "name": "claim: OLMo-2's two lowest exploration cells are 4 and 7 digits",
+  "ok": true,
+  "detail": "[7, 4]"
+ },
+ {
+  "name": "figure data OLMo-2 held-out plain and separator match recount",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploration recount: x5.q3.kept2",
+  "ok": true,
+  "detail": "text 0.70 vs recomputed 0.700557"
+ },
+ {
+  "name": "exploration recount: x5.q3.rmin2",
+  "ok": true,
+  "detail": "text 1.00 vs recomputed 0.997971"
+ },
+ {
+  "name": "exploration recount: x5.q3.kept3",
+  "ok": true,
+  "detail": "text 0.37 vs recomputed 0.365067"
+ },
+ {
+  "name": "exploration recount: x5.q3.rmin3",
+  "ok": true,
+  "detail": "text 0.99 vs recomputed 0.993319"
+ },
+ {
+  "name": "exploration recount: x5.q3.kept4",
+  "ok": true,
+  "detail": "text 0.36 vs recomputed 0.358139"
+ },
+ {
+  "name": "exploration recount: x5.q3.rmin4",
+  "ok": true,
+  "detail": "text 0.99 vs recomputed 0.992492"
+ },
+ {
+  "name": "exploration recount: x5.olmo.kept3",
+  "ok": true,
+  "detail": "text 1.00 vs recomputed 0.999369"
+ },
+ {
+  "name": "exploration recount: x5.olmo.kept4",
+  "ok": true,
+  "detail": "text 0.41 vs recomputed 0.411496"
+ },
+ {
+  "name": "exploration recount: x5.olmo.kept5",
+  "ok": true,
+  "detail": "text 0.99 vs recomputed 0.992455"
+ },
+ {
+  "name": "exploration recount: x5.olmo.kept7",
+  "ok": true,
+  "detail": "text 0.26 vs recomputed 0.257702"
+ },
+ {
+  "name": "exploration recount: x5.olmo.rmin",
+  "ok": true,
+  "detail": "text 0.94 vs recomputed 0.935938"
+ },
+ {
+  "name": "exploration recount: x4.q3.4d.L0H2",
+  "ok": true,
+  "detail": "text 0.65 vs recomputed 0.654907"
+ },
+ {
+  "name": "exploration recount: x4.q3.4d.att",
+  "ok": true,
+  "detail": "text 0.88 vs recomputed 0.882022"
+ },
+ {
+  "name": "exploration recount: x4.q3.2d.L0H2",
+  "ok": true,
+  "detail": "text 0.35 vs recomputed 0.354320"
+ },
+ {
+  "name": "exploration recount: x4.olmo.3d.maxhead",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.018011"
+ },
+ {
+  "name": "exploration recount: x4.olmo.3d.mlp13",
+  "ok": true,
+  "detail": "text 0.65 vs recomputed 0.651802"
+ },
+ {
+  "name": "claim: MLP13 is the largest MLP in the OLMo-2 3-digit scans",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploration recount: x4.olmo.4d.L0H9.lo",
+  "ok": true,
+  "detail": "text 0.17 vs recomputed 0.169128"
+ },
+ {
+  "name": "exploration recount: x4.olmo.4d.L0H5.hi",
+  "ok": true,
+  "detail": "text 0.25 vs recomputed 0.253416"
+ },
+ {
+  "name": "claim: L0H5, L0H0, L0H9 are the three largest heads in both OLMo-2 4-digit scans",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploration recount: x4.olmo.4d.att.L0H5",
+  "ok": true,
+  "detail": "text 0.84 vs recomputed 0.841024"
+ },
+ {
+  "name": "exploration recount: x6.att.ok",
+  "ok": true,
+  "detail": "text 0.882 vs recomputed 0.881672"
+ },
+ {
+  "name": "exploration recount: x6.att.bad",
+  "ok": true,
+  "detail": "text 0.883 vs recomputed 0.883492"
+ },
+ {
+  "name": "exploration recount: x6.acc.rankings",
+  "ok": true,
+  "detail": "text 0.755 vs recomputed 0.754620"
+ },
+ {
+  "name": "exploration recount: x6.acc.anniversaries",
+  "ok": true,
+  "detail": "text 0.973 vs recomputed 0.972603"
+ },
+ {
+  "name": "exploration recount: x6.n",
+  "ok": true,
+  "detail": "text 2,000 vs recomputed 2000.000000"
+ },
+ {
+  "name": "gate recount: gate.q3.G1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "gate recount: gate.q3.G2",
+  "ok": true,
+  "detail": "text 0.977 vs recomputed 0.976974"
+ },
+ {
+  "name": "gate recount: gate.p410.G1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "gate recount: gate.p410.G2",
+  "ok": true,
+  "detail": "text 0.794 vs recomputed 0.794408"
+ },
+ {
+  "name": "gate recount: gate.p410.miss",
+  "ok": true,
+  "detail": "text 0.006 vs recomputed 0.005592"
+ },
+ {
+  "name": "gate recount: gate.p1b.G1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "gate recount: gate.p1b.G2",
+  "ok": true,
+  "detail": "text 0.938 vs recomputed 0.938322"
+ },
+ {
+  "name": "gate recount: gate.olmo.G1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "gate recount: gate.olmo.G2",
+  "ok": true,
+  "detail": "text 0.965 vs recomputed 0.964638"
+ },
+ {
+  "name": "gate recount: gate.smol.G1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "gate recount: gate.smol.G2",
+  "ok": true,
+  "detail": "text 0.986 vs recomputed 0.986020"
+ },
+ {
+  "name": "gate recount: gate.gemma.G1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "gate recount: gate.gemma.G2",
+  "ok": true,
+  "detail": "text 0.999 vs recomputed 0.999178"
+ },
+ {
+  "name": "gate recount: gate.gpt2.G1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "gate recount: gate.gpt2.G2",
+  "ok": true,
+  "detail": "text 0.842 vs recomputed 0.842105"
+ },
+ {
+  "name": "material recount: mat.explore.frames",
+  "ok": true,
+  "detail": "text 34 vs recomputed 34.000000"
+ },
+ {
+  "name": "material recount: mat.conf.frames",
+  "ok": true,
+  "detail": "text 21 vs recomputed 21.000000"
+ },
+ {
+  "name": "material recount: mat.reserve.frames",
+  "ok": true,
+  "detail": "text 13 vs recomputed 13.000000"
+ },
+ {
+  "name": "material recount: mat.frames",
+  "ok": true,
+  "detail": "text 68 vs recomputed 68.000000"
+ },
+ {
+  "name": "claim: five frame families",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "freeze time of the protocol",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the protocol froze eleven scripts",
+  "ok": true,
+  "detail": "11"
+ },
+ {
+  "name": "run window",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "every \\nv key is defined",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no hand-typed decimals in the text (numbers come from numbers.tex)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "model-name decimals only inside model names",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: claude",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: anthropic",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: codex",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: openai",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: chatgpt",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: gpt-4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: gemini",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "British spelling (no US forms outside cited titles)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no repo paths in captions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "AI-use statement says 'language-model assistants'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "author line is a placeholder",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "label used: exploratory",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "label used: prospective",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "label used: post hoc",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O1 narrow margin reported",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: 200 teen and 200 non-teen numbers per OLMo cell",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2: numbers.json and numbers.tex agree on every r2./thr2. key",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "claim: round-2 qwen summaries are on 96 teen and 96 non-teen items (AUROC and accuracy lattices; 296 summaries)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: round-2 qwen2 summaries are on 96 teen and 96 non-teen items (AUROC and accuracy lattices; 72 summaries)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: round-2 olmo summaries are on 96 teen and 96 non-teen items (AUROC and accuracy lattices; 254 summaries)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: round-2 other_qwen3-17b summaries are on 96 teen and 96 non-teen items (AUROC and accuracy lattices; 86 summaries)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: round-2 other_smollm2-17b summaries are on 96 teen and 96 non-teen items (AUROC and accuracy lattices; 44 summaries)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: round-2 other_gemma4-e2b summaries are on 96 teen and 96 non-teen items (AUROC and accuracy lattices; 44 summaries)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: round-2 Qwen3 path run reports n = 192 items per length",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: 96 teen and 96 non-teen numbers per length (PROTOCOL-2.md section 2 and the text)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.q.4.base",
+  "ok": true,
+  "detail": "text 2.482 vs recomputed 2.482198"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.bauroc",
+  "ok": true,
+  "detail": "text 0.877 vs recomputed 0.876736"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R1.via",
+  "ok": true,
+  "detail": "text 0.913 vs recomputed 0.913210"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R1.other",
+  "ok": true,
+  "detail": "text 0.049 vs recomputed 0.049107"
+ },
+ {
+  "name": "round 2 R1@4: receivers are attention layers 1-27 and MLPs 0-27 (no layer-0 attention, no unembedding)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R2.own",
+  "ok": true,
+  "detail": "text 1.138 vs recomputed 1.138492"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R2.ctl",
+  "ok": true,
+  "detail": "text 0.004 vs recomputed 0.004178"
+ },
+ {
+  "name": "claim: R2@4 controls are the other fifteen layer-0 heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 R3@4: l0h2 mediators are MLP12-MLP27",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R3.l0h2_mlp24",
+  "ok": true,
+  "detail": "text 0.588 vs recomputed 0.587909"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R3.l0h2_next",
+  "ok": true,
+  "detail": "text 0.504 vs recomputed 0.503717"
+ },
+ {
+  "name": "round 2 R3@4: l11h9 mediators are MLP12-MLP27",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R3.l11h9_mlp24",
+  "ok": true,
+  "detail": "text 0.611 vs recomputed 0.610776"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R3.l11h9_next",
+  "ok": true,
+  "detail": "text 0.553 vs recomputed 0.553426"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R3.l11h9_full_loss",
+  "ok": true,
+  "detail": "text 0.734 vs recomputed 0.733555"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R4.rise",
+  "ok": true,
+  "detail": "text 2.889 vs recomputed 2.888877"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R4.next",
+  "ok": true,
+  "detail": "text 0.817 vs recomputed 0.816973"
+ },
+ {
+  "name": "round 2 R4@4: the lens has 28 layers and its last layer equals the model's own teen effect",
+  "ok": true,
+  "detail": "2.4821975231170654 vs 2.4821975231170654"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R5.share",
+  "ok": true,
+  "detail": "text 0.781 vs recomputed 0.781397"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R5.other",
+  "ok": true,
+  "detail": "text 0.201 vs recomputed 0.201303"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.thlo",
+  "ok": true,
+  "detail": "text 1.908 vs recomputed 1.908230"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.thhi",
+  "ok": true,
+  "detail": "text 2.893 vs recomputed 2.893314"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.spec24",
+  "ok": true,
+  "detail": "text 0.250 vs recomputed 0.249855"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18lo",
+  "ok": true,
+  "detail": "text 0.907 vs recomputed 0.907271"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18hi",
+  "ok": true,
+  "detail": "text 1.619 vs recomputed 1.618586"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18.teen1",
+  "ok": true,
+  "detail": "text 0.923 vs recomputed 0.923318"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18.non1",
+  "ok": true,
+  "detail": "text 0.969 vs recomputed 0.969270"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18.teen2",
+  "ok": true,
+  "detail": "text 0.907 vs recomputed 0.907271"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18.non2",
+  "ok": true,
+  "detail": "text 1.045 vs recomputed 1.044638"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18.teen3",
+  "ok": true,
+  "detail": "text 1.619 vs recomputed 1.618586"
+ },
+ {
+  "name": "round-2 recount: r2.q.4.R6.s18.non3",
+  "ok": true,
+  "detail": "text 1.438 vs recomputed 1.438467"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.base",
+  "ok": true,
+  "detail": "text 1.950 vs recomputed 1.950406"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.bauroc",
+  "ok": true,
+  "detail": "text 0.874 vs recomputed 0.874349"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R1.via",
+  "ok": true,
+  "detail": "text 0.913 vs recomputed 0.912530"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R1.other",
+  "ok": true,
+  "detail": "text 0.069 vs recomputed 0.068835"
+ },
+ {
+  "name": "round 2 R1@6: receivers are attention layers 1-27 and MLPs 0-27 (no layer-0 attention, no unembedding)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R2.own",
+  "ok": true,
+  "detail": "text 0.759 vs recomputed 0.758622"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R2.ctl",
+  "ok": true,
+  "detail": "text 0.001 vs recomputed 0.001220"
+ },
+ {
+  "name": "claim: R2@6 controls are the other fifteen layer-0 heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 R3@6: l0h2 mediators are MLP12-MLP27",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R3.l0h2_mlp24",
+  "ok": true,
+  "detail": "text 0.560 vs recomputed 0.560414"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R3.l0h2_next",
+  "ok": true,
+  "detail": "text 0.489 vs recomputed 0.488784"
+ },
+ {
+  "name": "round 2 R3@6: l11h9 mediators are MLP12-MLP27",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R3.l11h9_mlp24",
+  "ok": true,
+  "detail": "text 0.641 vs recomputed 0.641140"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R3.l11h9_next",
+  "ok": true,
+  "detail": "text 0.459 vs recomputed 0.458597"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R3.l11h9_full_loss",
+  "ok": true,
+  "detail": "text 0.402 vs recomputed 0.401515"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R4.rise",
+  "ok": true,
+  "detail": "text 2.384 vs recomputed 2.384405"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R4.next",
+  "ok": true,
+  "detail": "text 1.337 vs recomputed 1.337196"
+ },
+ {
+  "name": "round 2 R4@6: the lens has 28 layers and its last layer equals the model's own teen effect",
+  "ok": true,
+  "detail": "1.9504059553146362 vs 1.9504059553146362"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R5.share",
+  "ok": true,
+  "detail": "text 0.916 vs recomputed 0.915565"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R5.other",
+  "ok": true,
+  "detail": "text 0.130 vs recomputed 0.129808"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.thlo",
+  "ok": true,
+  "detail": "text 1.873 vs recomputed 1.873232"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.thhi",
+  "ok": true,
+  "detail": "text 2.800 vs recomputed 2.800461"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.spec24",
+  "ok": true,
+  "detail": "text 0.278 vs recomputed 0.277525"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18lo",
+  "ok": true,
+  "detail": "text 0.793 vs recomputed 0.793045"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18hi",
+  "ok": true,
+  "detail": "text 1.579 vs recomputed 1.579393"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18.teen1",
+  "ok": true,
+  "detail": "text 0.800 vs recomputed 0.799769"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18.non1",
+  "ok": true,
+  "detail": "text 0.817 vs recomputed 0.817364"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18.teen2",
+  "ok": true,
+  "detail": "text 0.793 vs recomputed 0.793045"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18.non2",
+  "ok": true,
+  "detail": "text 1.026 vs recomputed 1.025860"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18.teen3",
+  "ok": true,
+  "detail": "text 1.579 vs recomputed 1.579393"
+ },
+ {
+  "name": "round-2 recount: r2.q.6.R6.s18.non3",
+  "ok": true,
+  "detail": "text 1.425 vs recomputed 1.424595"
+ },
+ {
+  "name": "figure data: fig-lens.dat matches the logit-lens teen effect at 4 and 6 digits",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.s.2.base",
+  "ok": true,
+  "detail": "text 9.874 vs recomputed 9.873686"
+ },
+ {
+  "name": "round-2 recount: r2.s.2.a",
+  "ok": true,
+  "detail": "text 0.701 vs recomputed 0.701010"
+ },
+ {
+  "name": "round-2 recount: r2.s.2.ab",
+  "ok": true,
+  "detail": "text 0.482 vs recomputed 0.482256"
+ },
+ {
+  "name": "round-2 recount: r2.s.2.b",
+  "ok": true,
+  "detail": "text 0.986 vs recomputed 0.986238"
+ },
+ {
+  "name": "round-2 recount: r2.s.2.random_min",
+  "ok": true,
+  "detail": "text 0.685 vs recomputed 0.685251"
+ },
+ {
+  "name": "round-2 recount: r2.s.2.random_max",
+  "ok": true,
+  "detail": "text 0.706 vs recomputed 0.705914"
+ },
+ {
+  "name": "round-2 recount: r2.s.2.drop",
+  "ok": true,
+  "detail": "text 0.219 vs recomputed 0.218754"
+ },
+ {
+  "name": "claim: S@2 controls are 20 random pairs from layers 2-6, never L2H4 or L5H2 (nor L0H2, L1H6)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.s.3.base",
+  "ok": true,
+  "detail": "text 3.293 vs recomputed 3.292672"
+ },
+ {
+  "name": "round-2 recount: r2.s.3.a",
+  "ok": true,
+  "detail": "text 0.415 vs recomputed 0.415391"
+ },
+ {
+  "name": "round-2 recount: r2.s.3.ab",
+  "ok": true,
+  "detail": "text 0.321 vs recomputed 0.320582"
+ },
+ {
+  "name": "round-2 recount: r2.s.3.b",
+  "ok": true,
+  "detail": "text 0.951 vs recomputed 0.950511"
+ },
+ {
+  "name": "round-2 recount: r2.s.3.random_min",
+  "ok": true,
+  "detail": "text 0.390 vs recomputed 0.389863"
+ },
+ {
+  "name": "round-2 recount: r2.s.3.random_max",
+  "ok": true,
+  "detail": "text 0.425 vs recomputed 0.425300"
+ },
+ {
+  "name": "round-2 recount: r2.s.3.drop",
+  "ok": true,
+  "detail": "text 0.095 vs recomputed 0.094810"
+ },
+ {
+  "name": "claim: S@3 controls are 20 random pairs from layers 2-6, never L2H4 or L5H2 (nor L0H2, L1H6)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.s.4.base",
+  "ok": true,
+  "detail": "text 2.624 vs recomputed 2.623607"
+ },
+ {
+  "name": "round-2 recount: r2.s.4.a",
+  "ok": true,
+  "detail": "text 0.341 vs recomputed 0.340829"
+ },
+ {
+  "name": "round-2 recount: r2.s.4.ab",
+  "ok": true,
+  "detail": "text 0.243 vs recomputed 0.242900"
+ },
+ {
+  "name": "round-2 recount: r2.s.4.b",
+  "ok": true,
+  "detail": "text 0.931 vs recomputed 0.930621"
+ },
+ {
+  "name": "round-2 recount: r2.s.4.random_min",
+  "ok": true,
+  "detail": "text 0.334 vs recomputed 0.333800"
+ },
+ {
+  "name": "round-2 recount: r2.s.4.random_max",
+  "ok": true,
+  "detail": "text 0.372 vs recomputed 0.372000"
+ },
+ {
+  "name": "round-2 recount: r2.s.4.drop",
+  "ok": true,
+  "detail": "text 0.098 vs recomputed 0.097930"
+ },
+ {
+  "name": "claim: S@4 controls are 20 random pairs from layers 2-6, never L2H4 or L5H2 (nor L0H2, L1H6)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: adding B lowers the teen effect kept most at two digits",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: B alone does little (keeps at least 0.90 at every length)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.3.base",
+  "ok": true,
+  "detail": "text 4.670 vs recomputed 4.669548"
+ },
+ {
+  "name": "round-2 recount: r2.o.3.auroc",
+  "ok": true,
+  "detail": "text 0.999 vs recomputed 0.999132"
+ },
+ {
+  "name": "round-2 recount: r2.o.3.acct",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "round-2 recount: r2.o.3.kept",
+  "ok": true,
+  "detail": "text 1.004 vs recomputed 1.004387"
+ },
+ {
+  "name": "round-2 recount: r2.o.3.rmin",
+  "ok": true,
+  "detail": "text 0.987 vs recomputed 0.986622"
+ },
+ {
+  "name": "round-2 recount: r2.o.3.p2",
+  "ok": true,
+  "detail": "text 0.989 vs recomputed 0.989474"
+ },
+ {
+  "name": "round-2 recount: r2.o.3.p15",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "round-2 recount: r2.o.3.pieces",
+  "ok": true,
+  "detail": "text 3 vs expected 3"
+ },
+ {
+  "name": "round 2 O@3: the pieces join back into a 3-digit number",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O@3 controls are 20 random triples from layers 0-2, excluding L0H5, L0H0, L0H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.4.base",
+  "ok": true,
+  "detail": "text 1.186 vs recomputed 1.186209"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.auroc",
+  "ok": true,
+  "detail": "text 0.730 vs recomputed 0.730306"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.acct",
+  "ok": true,
+  "detail": "text 0.552 vs recomputed 0.552083"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.kept",
+  "ok": true,
+  "detail": "text 0.234 vs recomputed 0.233638"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.rmin",
+  "ok": true,
+  "detail": "text 0.937 vs recomputed 0.937299"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.p2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.p15",
+  "ok": true,
+  "detail": "text 0.854 vs recomputed 0.854386"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.pieces",
+  "ok": true,
+  "detail": "text 3+1 vs expected 3+1"
+ },
+ {
+  "name": "round 2 O@4: the pieces join back into a 4-digit number",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O@4 controls are 20 random triples from layers 0-2, excluding L0H5, L0H0, L0H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.5.base",
+  "ok": true,
+  "detail": "text 3.156 vs recomputed 3.155890"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.auroc",
+  "ok": true,
+  "detail": "text 0.971 vs recomputed 0.970703"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.acct",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.kept",
+  "ok": true,
+  "detail": "text 0.996 vs recomputed 0.995598"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.rmin",
+  "ok": true,
+  "detail": "text 0.985 vs recomputed 0.984536"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.p2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.p15",
+  "ok": true,
+  "detail": "text 0.995 vs recomputed 0.994737"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.pieces",
+  "ok": true,
+  "detail": "text 3+2 vs expected 3+2"
+ },
+ {
+  "name": "round 2 O@5: the pieces join back into a 5-digit number",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O@5 controls are 20 random triples from layers 0-2, excluding L0H5, L0H0, L0H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.7.base",
+  "ok": true,
+  "detail": "text 0.625 vs recomputed 0.625271"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.auroc",
+  "ok": true,
+  "detail": "text 0.685 vs recomputed 0.685221"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.acct",
+  "ok": true,
+  "detail": "text 0.688 vs recomputed 0.687500"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.kept",
+  "ok": true,
+  "detail": "text 0.209 vs recomputed 0.208795"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.rmin",
+  "ok": true,
+  "detail": "text 0.930 vs recomputed 0.930316"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.p2",
+  "ok": true,
+  "detail": "text 0.979 vs recomputed 0.979352"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.p15",
+  "ok": true,
+  "detail": "text 0.844 vs recomputed 0.844265"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.pieces",
+  "ok": true,
+  "detail": "text 3+3+1 vs expected 3+3+1"
+ },
+ {
+  "name": "round 2 O@7: the pieces join back into a 7-digit number",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O@7 controls are 20 random triples from layers 0-2, excluding L0H5, L0H0, L0H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.8.base",
+  "ok": true,
+  "detail": "text 2.452 vs recomputed 2.451870"
+ },
+ {
+  "name": "round-2 recount: r2.o.8.auroc",
+  "ok": true,
+  "detail": "text 0.912 vs recomputed 0.912489"
+ },
+ {
+  "name": "round-2 recount: r2.o.8.acct",
+  "ok": true,
+  "detail": "text 0.990 vs recomputed 0.989583"
+ },
+ {
+  "name": "round-2 recount: r2.o.8.kept",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.997832"
+ },
+ {
+  "name": "round-2 recount: r2.o.8.rmin",
+  "ok": true,
+  "detail": "text 0.984 vs recomputed 0.983584"
+ },
+ {
+  "name": "round-2 recount: r2.o.8.p2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "round-2 recount: r2.o.8.p15",
+  "ok": true,
+  "detail": "text 0.995 vs recomputed 0.994872"
+ },
+ {
+  "name": "round-2 recount: r2.o.8.pieces",
+  "ok": true,
+  "detail": "text 3+3+2 vs expected 3+3+2"
+ },
+ {
+  "name": "round 2 O@8: the pieces join back into a 8-digit number",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O@8 controls are 20 random triples from layers 0-2, excluding L0H5, L0H0, L0H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.9.base",
+  "ok": true,
+  "detail": "text 1.539 vs recomputed 1.538808"
+ },
+ {
+  "name": "round-2 recount: r2.o.9.auroc",
+  "ok": true,
+  "detail": "text 0.887 vs recomputed 0.886990"
+ },
+ {
+  "name": "round-2 recount: r2.o.9.acct",
+  "ok": true,
+  "detail": "text 0.990 vs recomputed 0.989583"
+ },
+ {
+  "name": "round-2 recount: r2.o.9.kept",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.994500"
+ },
+ {
+  "name": "round-2 recount: r2.o.9.rmin",
+  "ok": true,
+  "detail": "text 0.982 vs recomputed 0.981589"
+ },
+ {
+  "name": "round-2 recount: r2.o.9.p2",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "round-2 recount: r2.o.9.p15",
+  "ok": true,
+  "detail": "text 0.984 vs recomputed 0.984211"
+ },
+ {
+  "name": "round-2 recount: r2.o.9.pieces",
+  "ok": true,
+  "detail": "text 3+3+3 vs expected 3+3+3"
+ },
+ {
+  "name": "round 2 O@9: the pieces join back into a 9-digit number",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O@9 controls are 20 random triples from layers 0-2, excluding L0H5, L0H0, L0H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.10.base",
+  "ok": true,
+  "detail": "text 0.561 vs recomputed 0.561470"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.auroc",
+  "ok": true,
+  "detail": "text 0.640 vs recomputed 0.639594"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.acct",
+  "ok": true,
+  "detail": "text 0.729 vs recomputed 0.729167"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.kept",
+  "ok": true,
+  "detail": "text 0.242 vs recomputed 0.241517"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.rmin",
+  "ok": true,
+  "detail": "text 0.924 vs recomputed 0.924440"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.p2",
+  "ok": true,
+  "detail": "text 0.989 vs recomputed 0.989474"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.p15",
+  "ok": true,
+  "detail": "text 0.734 vs recomputed 0.734413"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.pieces",
+  "ok": true,
+  "detail": "text 3+3+3+1 vs expected 3+3+3+1"
+ },
+ {
+  "name": "round 2 O@10: the pieces join back into a 10-digit number",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O@10 controls are 20 random triples from layers 0-2, excluding L0H5, L0H0, L0H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim (tokens): the tens digit is in the previous token exactly at 4, 7 and 10 digits",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.4.vmax",
+  "ok": true,
+  "detail": "text 0.503 vs recomputed 0.502919"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.vmax",
+  "ok": true,
+  "detail": "text 0.484 vs recomputed 0.484313"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.vmax",
+  "ok": true,
+  "detail": "text 0.440 vs recomputed 0.439923"
+ },
+ {
+  "name": "round-2 recount: r2.o.5.vmin",
+  "ok": true,
+  "detail": "text 0.674 vs recomputed 0.674270"
+ },
+ {
+  "name": "round 2 O6: a norm ratio at every one of the 16 layers at 4, 5, 7 and 10 digits",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: O7@4 uses 5 random directions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.4.steer",
+  "ok": true,
+  "detail": "text 2.962 vs recomputed 2.961955"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.rand",
+  "ok": true,
+  "detail": "text 0.290 vs recomputed 0.290457"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.via",
+  "ok": true,
+  "detail": "text 0.700 vs recomputed 0.700418"
+ },
+ {
+  "name": "round-2 recount: r2.o.4.next",
+  "ok": true,
+  "detail": "text 0.126 vs recomputed 0.125851"
+ },
+ {
+  "name": "claim: O7@7 uses 5 random directions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.7.steer",
+  "ok": true,
+  "detail": "text 2.359 vs recomputed 2.358823"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.rand",
+  "ok": true,
+  "detail": "text 0.401 vs recomputed 0.401405"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.via",
+  "ok": true,
+  "detail": "text 0.759 vs recomputed 0.759217"
+ },
+ {
+  "name": "round-2 recount: r2.o.7.next",
+  "ok": true,
+  "detail": "text 0.128 vs recomputed 0.127574"
+ },
+ {
+  "name": "claim: O7@10 uses 5 random directions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.o.10.steer",
+  "ok": true,
+  "detail": "text 1.986 vs recomputed 1.986399"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.rand",
+  "ok": true,
+  "detail": "text 0.242 vs recomputed 0.241600"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.via",
+  "ok": true,
+  "detail": "text 0.861 vs recomputed 0.861167"
+ },
+ {
+  "name": "round-2 recount: r2.o.10.next",
+  "ok": true,
+  "detail": "text 0.109 vs recomputed 0.109266"
+ },
+ {
+  "name": "round 2 X qwen3-17b: head sets in the run file are the frozen ones (code/r2conf_sets.json)",
+  "ok": true,
+  "detail": "{'PREV': ['L0H2', 'L1H6'], 'CUR': ['L0H3', 'L0H7']}"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.base",
+  "ok": true,
+  "detail": "text 5.033 vs recomputed 5.032552"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.bauroc",
+  "ok": true,
+  "detail": "text 0.990 vs recomputed 0.990180"
+ },
+ {
+  "name": "claim: X qwen3-17b PREV@3 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.PREV.teen",
+  "ok": true,
+  "detail": "text 0.484 vs recomputed 0.484088"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.PREV.pull",
+  "ok": true,
+  "detail": "text 0.548 vs recomputed 0.547985"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.PREV.rmin",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.993790"
+ },
+ {
+  "name": "claim: X qwen3-17b CUR@3 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.CUR.teen",
+  "ok": true,
+  "detail": "text 1.136 vs recomputed 1.135835"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.CUR.pull",
+  "ok": true,
+  "detail": "text −0.567 vs recomputed -0.567033"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.3.CUR.rmin",
+  "ok": true,
+  "detail": "text 0.985 vs recomputed 0.985348"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.base",
+  "ok": true,
+  "detail": "text 3.773 vs recomputed 3.773438"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.bauroc",
+  "ok": true,
+  "detail": "text 0.956 vs recomputed 0.955729"
+ },
+ {
+  "name": "claim: X qwen3-17b PREV@4 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.PREV.teen",
+  "ok": true,
+  "detail": "text 0.377 vs recomputed 0.376812"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.PREV.pull",
+  "ok": true,
+  "detail": "text 0.233 vs recomputed 0.233449"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.PREV.rmin",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.997930"
+ },
+ {
+  "name": "claim: X qwen3-17b CUR@4 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.CUR.teen",
+  "ok": true,
+  "detail": "text 1.024 vs recomputed 1.024500"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.CUR.pull",
+  "ok": true,
+  "detail": "text −2.754 vs recomputed -2.754355"
+ },
+ {
+  "name": "round-2 recount: r2.x.q17.4.CUR.rmin",
+  "ok": true,
+  "detail": "text 0.991 vs recomputed 0.991289"
+ },
+ {
+  "name": "round 2 X smollm2-17b: head sets in the run file are the frozen ones (code/r2conf_sets.json)",
+  "ok": true,
+  "detail": "{'PREV': ['L0H6', 'L0H8']}"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.3.base",
+  "ok": true,
+  "detail": "text 4.097 vs recomputed 4.097005"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.3.bauroc",
+  "ok": true,
+  "detail": "text 0.993 vs recomputed 0.992784"
+ },
+ {
+  "name": "claim: X smollm2-17b PREV@3 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.3.PREV.teen",
+  "ok": true,
+  "detail": "text 0.729 vs recomputed 0.729223"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.3.PREV.pull",
+  "ok": true,
+  "detail": "text 0.801 vs recomputed 0.800891"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.3.PREV.rmin",
+  "ok": true,
+  "detail": "text 0.995 vs recomputed 0.994836"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.4.base",
+  "ok": true,
+  "detail": "text 2.212 vs recomputed 2.212240"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.4.bauroc",
+  "ok": true,
+  "detail": "text 0.861 vs recomputed 0.861111"
+ },
+ {
+  "name": "claim: X smollm2-17b PREV@4 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.4.PREV.teen",
+  "ok": true,
+  "detail": "text 0.661 vs recomputed 0.660701"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.4.PREV.pull",
+  "ok": true,
+  "detail": "text 0.588 vs recomputed 0.588384"
+ },
+ {
+  "name": "round-2 recount: r2.x.smol.4.PREV.rmin",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 0.999595"
+ },
+ {
+  "name": "round 2 X gemma4-e2b: head sets in the run file are the frozen ones (code/r2conf_sets.json)",
+  "ok": true,
+  "detail": "{'PREV': ['L0H4']}"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.3.base",
+  "ok": true,
+  "detail": "text 4.815 vs recomputed 4.814572"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.3.bauroc",
+  "ok": true,
+  "detail": "text 0.999 vs recomputed 0.999457"
+ },
+ {
+  "name": "claim: X gemma4-e2b PREV@3 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.3.PREV.teen",
+  "ok": true,
+  "detail": "text 0.801 vs recomputed 0.801485"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.3.PREV.pull",
+  "ok": true,
+  "detail": "text 0.906 vs recomputed 0.906286"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.3.PREV.rmin",
+  "ok": true,
+  "detail": "text 0.991 vs recomputed 0.991281"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.4.base",
+  "ok": true,
+  "detail": "text 3.034 vs recomputed 3.034004"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.4.bauroc",
+  "ok": true,
+  "detail": "text 0.937 vs recomputed 0.936795"
+ },
+ {
+  "name": "claim: X gemma4-e2b PREV@4 controls are 20 random same-size sets from layers 0-1, excluding the named heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.4.PREV.teen",
+  "ok": true,
+  "detail": "text 0.653 vs recomputed 0.652578"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.4.PREV.pull",
+  "ok": true,
+  "detail": "text 0.821 vs recomputed 0.820726"
+ },
+ {
+  "name": "round-2 recount: r2.x.gemma.4.PREV.rmin",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.993723"
+ },
+ {
+  "name": "claim: only Qwen3-1.7B has CUR heads (SmolLM2 and Gemma-4 have none)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: removing Qwen3-1.7B's CUR heads reverses the sign of the pull and keeps the teen effect",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: in every model PREV ablation removes part of the teen effect while random sets remove almost none (all random >= 0.98 kept)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: one prediction failed in both of its cells (Qwen3-1.7B PREV at 3 and 4 digits), and only on the pull",
+  "ok": true,
+  "detail": "['X:qwen3-17b:PREV@3', 'X:qwen3-17b:PREV@4']"
+ },
+ {
+  "name": "claim: the failed pull values are written next to the X.pull threshold in the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2: the recomputed test list is the evaluator's test list",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "round-2 verdict O3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O4@10: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O4@3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O4@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O4@5: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O4@7: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O4@8: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O4@9: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O5: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O7: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O8@10: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O8@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict O8@7: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R1@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R1@6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R2@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R2@6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R3@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R3@6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R4@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R4@6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R5@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R5@6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R6@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict R6@6: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict S1@2: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict S1@3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict S1@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict S2@2: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict S2@3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict S2@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict S3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict X:gemma4-e2b:PREV@3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict X:gemma4-e2b:PREV@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict X:qwen3-17b:CUR@3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict X:qwen3-17b:CUR@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict X:qwen3-17b:PREV@3: recomputed pass=False agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved False"
+ },
+ {
+  "name": "round-2 verdict X:qwen3-17b:PREV@4: recomputed pass=False agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved False"
+ },
+ {
+  "name": "round-2 verdict X:smollm2-17b:PREV@3: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round-2 verdict X:smollm2-17b:PREV@4: recomputed pass=True agrees with the frozen evaluator",
+  "ok": true,
+  "detail": "saved True"
+ },
+ {
+  "name": "round 2: the evaluator ran on held-out material (dry = false)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 recount: r2.path.n",
+  "ok": true,
+  "detail": "text 12 vs recomputed 12.000000"
+ },
+ {
+  "name": "round-2 recount: r2.path.pass",
+  "ok": true,
+  "detail": "text 12 vs recomputed 12.000000"
+ },
+ {
+  "name": "round-2 recount: r2.path.verdict",
+  "ok": true,
+  "detail": "text supported vs expected supported"
+ },
+ {
+  "name": "round 2 verdict for account path agrees with the frozen evaluator (qwen_path)",
+  "ok": true,
+  "detail": "supported"
+ },
+ {
+  "name": "round-2 recount: r2.backup.n",
+  "ok": true,
+  "detail": "text 7 vs recomputed 7.000000"
+ },
+ {
+  "name": "round-2 recount: r2.backup.pass",
+  "ok": true,
+  "detail": "text 7 vs recomputed 7.000000"
+ },
+ {
+  "name": "round-2 recount: r2.backup.verdict",
+  "ok": true,
+  "detail": "text supported vs expected supported"
+ },
+ {
+  "name": "round 2 verdict for account backup agrees with the frozen evaluator (qwen_backup)",
+  "ok": true,
+  "detail": "supported"
+ },
+ {
+  "name": "round-2 recount: r2.olmo.n",
+  "ok": true,
+  "detail": "text 14 vs recomputed 14.000000"
+ },
+ {
+  "name": "round-2 recount: r2.olmo.pass",
+  "ok": true,
+  "detail": "text 14 vs recomputed 14.000000"
+ },
+ {
+  "name": "round-2 recount: r2.olmo.verdict",
+  "ok": true,
+  "detail": "text supported vs expected supported"
+ },
+ {
+  "name": "round 2 verdict for account olmo agrees with the frozen evaluator (olmo_weak_route)",
+  "ok": true,
+  "detail": "supported"
+ },
+ {
+  "name": "round-2 recount: r2.other.n",
+  "ok": true,
+  "detail": "text 8 vs recomputed 8.000000"
+ },
+ {
+  "name": "round-2 recount: r2.other.pass",
+  "ok": true,
+  "detail": "text 6 vs recomputed 6.000000"
+ },
+ {
+  "name": "round-2 recount: r2.other.verdict",
+  "ok": true,
+  "detail": "text partly supported vs expected partly supported"
+ },
+ {
+  "name": "round 2 verdict for account other agrees with the frozen evaluator (other_models)",
+  "ok": true,
+  "detail": "partly supported"
+ },
+ {
+  "name": "round-2 recount: r2.ntests",
+  "ok": true,
+  "detail": "text 41 vs recomputed 41.000000"
+ },
+ {
+  "name": "round-2 recount: r2.npass",
+  "ok": true,
+  "detail": "text 39 vs recomputed 39.000000"
+ },
+ {
+  "name": "round 2: test and pass counts agree with the frozen evaluator",
+  "ok": true,
+  "detail": "41/39 vs 41/39"
+ },
+ {
+  "name": "round 2: every test was read (no read rule failed)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "range claim: abstract, MLP24 writes this share of the teen effect (r2.q.4.R5.share–r2.q.6.R5.share) is the min–max of its set",
+  "ok": true,
+  "detail": "min 0.7814, max 0.9156"
+ },
+ {
+  "name": "bound claim: no other single receiver carries more than (R1, both lengths) (r2.q.6.R1.other) is the max of its set",
+  "ok": true,
+  "detail": "max 0.0688"
+ },
+ {
+  "name": "bound claim: the next-largest lens rise is at most (R4, both lengths) (r2.q.6.R4.next) is the max of its set",
+  "ok": true,
+  "detail": "max 1.3372"
+ },
+ {
+  "name": "bound claim: no other MLP accounts directly for more than (R5, both lengths) (r2.q.4.R5.other) is the max of its set",
+  "ok": true,
+  "detail": "max 0.2013"
+ },
+ {
+  "name": "range claim: MLP24 raises th above the mean of st/nd/rd (teens, both lengths, each last digit) (r2.q.6.R6.thlo–r2.q.4.R6.thhi) is the min–max of its set",
+  "ok": true,
+  "detail": "min 1.8732, max 2.8933"
+ },
+ {
+  "name": "bound claim: MLP24 favours the own suffix by at most (both lengths) (r2.q.6.R6.spec24) is the max of its set",
+  "ok": true,
+  "detail": "max 0.2775"
+ },
+ {
+  "name": "range claim: MLP18 own-suffix specificity (both classes, both lengths) (r2.q.6.R6.s18lo–r2.q.4.R6.s18hi) is the min–max of its set",
+  "ok": true,
+  "detail": "min 0.7930, max 1.6186"
+ },
+ {
+  "name": "bound claim: OLMo-2: no other receiver above (O8, 4/7/10 digits) (r2.o.7.next) is the max of its set",
+  "ok": true,
+  "detail": "max 0.1276"
+ },
+ {
+  "name": "range claim: OLMo-2: probe at layer 2, cross-token lengths (r2.o.7.p2–r2.o.4.p2) is the min–max of its set",
+  "ok": true,
+  "detail": "min 0.9794, max 1.0000"
+ },
+ {
+  "name": "range claim: OLMo-2: probe at layer 15, cross-token lengths (r2.o.10.p15–r2.o.4.p15) is the min–max of its set",
+  "ok": true,
+  "detail": "min 0.7344, max 0.8544"
+ },
+ {
+  "name": "bound claim: OLMo-2: in-token lengths stay at or above (probe at layer 15) (r2.o.9.p15) is the min of its set",
+  "ok": true,
+  "detail": "min 0.9842"
+ },
+ {
+  "name": "bound claim: abstract, OLMo-2: the tens digit arrives at no more than (norm ratio, cross-token lengths) (r2.o.4.vmax) is the max of its set",
+  "ok": true,
+  "detail": "max 0.5029"
+ },
+ {
+  "name": "claim: OLMo-2's three heads carry most of what arrives at 4, 7, 10 digits (kept <= 0.5) and nothing in-token (kept 0.99-1.01)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the probe reads less well by layer 15 at every cross-token length",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "range claim written as \\nv{r2.q.4.R5.share}--\\nv{r2.q.6.R5.share} in the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "range claim written as \\nv{r2.q.6.R6.thlo}--\\nv{r2.q.4.R6.thhi} in the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "range claim written as \\nv{r2.q.6.R6.s18lo}--\\nv{r2.q.4.R6.s18hi} in the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "range claim written as \\nv{r2.o.7.p2}--\\nv{r2.o.4.p2} in the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "range claim written as \\nv{r2.o.10.p15}--\\nv{r2.o.4.p15} in the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "every r2 macro range in the text is one of the ranges checked here",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "round 2 e06 21B: revision name matches the file name and is a stage-one checkpoint",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.21.auroc3",
+  "ok": true,
+  "detail": "text 0.789 vs recomputed 0.789062"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.21.auroc4",
+  "ok": true,
+  "detail": "text 0.516 vs recomputed 0.515869"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.21.auroc5",
+  "ok": true,
+  "detail": "text 0.992 vs recomputed 0.991943"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.21.auroc7",
+  "ok": true,
+  "detail": "text 0.459 vs recomputed 0.458862"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.21.base4",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.033005"
+ },
+ {
+  "name": "exploratory checkpoint recount (not shown: four-digit teen effect below the read rule): r2.e6.21.tri",
+  "ok": true,
+  "detail": "text -- vs expected --"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.21.p2",
+  "ok": true,
+  "detail": "text 0.94 vs recomputed 0.937231"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.21.p14",
+  "ok": true,
+  "detail": "text 0.64 vs recomputed 0.640000"
+ },
+ {
+  "name": "claim: e06 21B summaries are on 64 teen and 64 non-teen items (caption)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 e06 4001B: revision name matches the file name and is a stage-one checkpoint",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.auroc3",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.997803"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.auroc4",
+  "ok": true,
+  "detail": "text 0.817 vs recomputed 0.817017"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.auroc5",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.auroc7",
+  "ok": true,
+  "detail": "text 0.616 vs recomputed 0.616333"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.base4",
+  "ok": true,
+  "detail": "text 1.63 vs recomputed 1.628601"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.tri",
+  "ok": true,
+  "detail": "text 1.002 vs recomputed 1.002291"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.p2",
+  "ok": true,
+  "detail": "text 0.99 vs recomputed 0.992000"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.4001.p14",
+  "ok": true,
+  "detail": "text 0.87 vs recomputed 0.867077"
+ },
+ {
+  "name": "claim: e06 4001B summaries are on 64 teen and 64 non-teen items (caption)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 e06 420B: revision name matches the file name and is a stage-one checkpoint",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.auroc3",
+  "ok": true,
+  "detail": "text 0.996 vs recomputed 0.996216"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.auroc4",
+  "ok": true,
+  "detail": "text 0.569 vs recomputed 0.568848"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.auroc5",
+  "ok": true,
+  "detail": "text 0.978 vs recomputed 0.978149"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.auroc7",
+  "ok": true,
+  "detail": "text 0.467 vs recomputed 0.466553"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.base4",
+  "ok": true,
+  "detail": "text 0.49 vs recomputed 0.487459"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.tri",
+  "ok": true,
+  "detail": "text 0.997 vs recomputed 0.996811"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.p2",
+  "ok": true,
+  "detail": "text 0.98 vs recomputed 0.984615"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.420.p14",
+  "ok": true,
+  "detail": "text 0.62 vs recomputed 0.616308"
+ },
+ {
+  "name": "claim: e06 420B summaries are on 64 teen and 64 non-teen items (caption)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 e06 1B: revision name matches the file name and is a stage-one checkpoint",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1.auroc3",
+  "ok": true,
+  "detail": "text 0.451 vs recomputed 0.450806"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1.auroc4",
+  "ok": true,
+  "detail": "text 0.493 vs recomputed 0.492920"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1.auroc5",
+  "ok": true,
+  "detail": "text 0.585 vs recomputed 0.585327"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1.auroc7",
+  "ok": true,
+  "detail": "text 0.577 vs recomputed 0.577271"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1.base4",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed -0.001343"
+ },
+ {
+  "name": "exploratory checkpoint recount (not shown: four-digit teen effect below the read rule): r2.e6.1.tri",
+  "ok": true,
+  "detail": "text -- vs expected --"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1.p2",
+  "ok": true,
+  "detail": "text 0.39 vs recomputed 0.391385"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1.p14",
+  "ok": true,
+  "detail": "text 0.41 vs recomputed 0.414154"
+ },
+ {
+  "name": "claim: e06 1B summaries are on 64 teen and 64 non-teen items (caption)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 e06 84B: revision name matches the file name and is a stage-one checkpoint",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.84.auroc3",
+  "ok": true,
+  "detail": "text 0.982 vs recomputed 0.981567"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.84.auroc4",
+  "ok": true,
+  "detail": "text 0.540 vs recomputed 0.539551"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.84.auroc5",
+  "ok": true,
+  "detail": "text 0.959 vs recomputed 0.958984"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.84.auroc7",
+  "ok": true,
+  "detail": "text 0.519 vs recomputed 0.518921"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.84.base4",
+  "ok": true,
+  "detail": "text 0.20 vs recomputed 0.204098"
+ },
+ {
+  "name": "exploratory checkpoint recount (not shown: four-digit teen effect below the read rule): r2.e6.84.tri",
+  "ok": true,
+  "detail": "text -- vs expected --"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.84.p2",
+  "ok": true,
+  "detail": "text 0.97 vs recomputed 0.968615"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.84.p14",
+  "ok": true,
+  "detail": "text 0.62 vs recomputed 0.617231"
+ },
+ {
+  "name": "claim: e06 84B summaries are on 64 teen and 64 non-teen items (caption)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 e06 1007B: revision name matches the file name and is a stage-one checkpoint",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.auroc3",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.997559"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.auroc4",
+  "ok": true,
+  "detail": "text 0.710 vs recomputed 0.709595"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.auroc5",
+  "ok": true,
+  "detail": "text 0.982 vs recomputed 0.982056"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.auroc7",
+  "ok": true,
+  "detail": "text 0.584 vs recomputed 0.584473"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.base4",
+  "ok": true,
+  "detail": "text 0.98 vs recomputed 0.976318"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.tri",
+  "ok": true,
+  "detail": "text 1.003 vs recomputed 1.002876"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.p2",
+  "ok": true,
+  "detail": "text 1.00 vs recomputed 1.000000"
+ },
+ {
+  "name": "exploratory checkpoint recount: r2.e6.1007.p14",
+  "ok": true,
+  "detail": "text 0.74 vs recomputed 0.742462"
+ },
+ {
+  "name": "claim: e06 1007B summaries are on 64 teen and 64 non-teen items (caption)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: six checkpoints (six e06 files)",
+  "ok": true,
+  "detail": "[1, 21, 84, 420, 1007, 4001]"
+ },
+ {
+  "name": "claim: the checkpoint table lists every e06 checkpoint and no other",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the table caption's read rule is thr2.R1.read",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the in-token check forms early (AUROC >= 0.95 at 3 and 5 digits from 84B tokens)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the cross-token check stays near chance (0.40-0.60) until about a trillion tokens",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the cross-token check is still weak at the end of the stage (4 and 7 digits below the O3 in-token line)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the tens digit is readable by the layer-2 probe from early on (>= 0.90 from 21B tokens) and the reading fades with depth",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the three heads do nothing at any checkpoint where the effect is readable (kept within 0.05 of 1)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "post hoc lineage recount: post.lin.emb",
+  "ok": true,
+  "detail": "text 0.006 vs recomputed 0.005900"
+ },
+ {
+  "name": "post hoc lineage, D3's separate computation: post.lin.emb",
+  "ok": true,
+  "detail": "text 0.006 vs recomputed 0.005853"
+ },
+ {
+  "name": "post hoc lineage: four stage-2 checkpoints compared",
+  "ok": true,
+  "detail": "4"
+ },
+ {
+  "name": "post hoc lineage recount: post.lin.s2min",
+  "ok": true,
+  "detail": "text 0.9996 vs recomputed 0.999600"
+ },
+ {
+  "name": "post hoc lineage: D3's stage-2 (ingredient 1, 51B) embedding cosine agrees with D4's to 4 decimals",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "post hoc lineage: every released-vs-stage-1-end layer tensor has |cosine| < 0.01",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the text says the released weights do not descend from the checkpoint run, in the abstract, section, caption and limits",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the text no longer dates the released model's route from these checkpoints",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round-2 times: r2.freeze.charter",
+  "ok": true,
+  "detail": "text 16:54 vs expected 16:54"
+ },
+ {
+  "name": "round-2 times: r2.freeze.protocol",
+  "ok": true,
+  "detail": "text 09:34 vs expected 09:34"
+ },
+ {
+  "name": "round-2 times: r2.run.start",
+  "ok": true,
+  "detail": "text 09:34 vs expected 09:34"
+ },
+ {
+  "name": "round-2 times: r2.run.end",
+  "ok": true,
+  "detail": "text 10:46 vs expected 10:46"
+ },
+ {
+  "name": "round 2: the run started on 9 Nov no earlier than the protocol freeze and ended before the 18:00 stop rule",
+  "ok": true,
+  "detail": "['2026-11-09', '09:34:50', '+0530'] ['2026-11-09', '10:46:10', '+0530']"
+ },
+ {
+  "name": "claim: PROTOCOL-2.md states the same freeze time",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "NOTEBOOK.md records the S2 reset (0.90 -> thr2.S2) before the freeze",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "NOTEBOOK.md records the O6 reset (0.75 -> thr2.O6) before the freeze",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "NOTEBOOK.md records the PREV reset (0.80 -> thr2.X.teen) before the freeze",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: three thresholds were reset before the freeze (S2, O6 from the dry run; PREV from the last exploration run)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: all three resets came from the dry run (\"three thresholds were reset from that run\")",
+  "ok": true,
+  "detail": "NOTEBOOK.md ties the PREV reset to the Gemma-4-E2B exploration run (E04, 9 Nov 09:15 entry), not to the dry run; PROTOCOL-2.md section 4 names two resets from the dry run (S2, O6)"
+ },
+ {
+  "name": "every thr2 key is mapped to a protocol test",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "threshold thr2.R1.via = 0.60 appears in PROTOCOL-2.md under R1",
+  "ok": true,
+  "detail": "- **R1.** L0H2's teen loss through MLP0's input alone is ≥ 0.60 of its full teen"
+ },
+ {
+  "name": "threshold thr2.R1.via appears in the frozen evaluator's rule for R1@4",
+  "ok": true,
+  "detail": "L0H2 teen loss through MLP0 >= 0.60 of its full loss; every other receiver <= 0.15 (read if full loss >= 0.30)"
+ },
+ {
+  "name": "threshold thr2.R1.other = 0.15 appears in PROTOCOL-2.md under R1",
+  "ok": true,
+  "detail": "- **R1.** L0H2's teen loss through MLP0's input alone is ≥ 0.60 of its full teen"
+ },
+ {
+  "name": "threshold thr2.R1.other appears in the frozen evaluator's rule for R1@4",
+  "ok": true,
+  "detail": "L0H2 teen loss through MLP0 >= 0.60 of its full loss; every other receiver <= 0.15 (read if full loss >= 0.30)"
+ },
+ {
+  "name": "threshold thr2.R1.read = 0.30 appears in PROTOCOL-2.md under R1",
+  "ok": true,
+  "detail": "- **R1.** L0H2's teen loss through MLP0's input alone is ≥ 0.60 of its full teen"
+ },
+ {
+  "name": "threshold thr2.R1.read appears in the frozen evaluator's rule for R1@4",
+  "ok": true,
+  "detail": "L0H2 teen loss through MLP0 >= 0.60 of its full loss; every other receiver <= 0.15 (read if full loss >= 0.30)"
+ },
+ {
+  "name": "threshold thr2.R3 = 0.40 appears in PROTOCOL-2.md under R3",
+  "ok": true,
+  "detail": "- **R3.** Among MLP12–MLP27, MLP24 is the largest mediator of L0H2's teen loss a"
+ },
+ {
+  "name": "threshold thr2.R3 appears in the frozen evaluator's rule for R3@4",
+  "ok": true,
+  "detail": "MLP24 is the largest mediator (MLP12-27) of L0H2's and of L11H9's teen loss, each >= 0.40"
+ },
+ {
+  "name": "threshold thr2.R4 = 1.0 appears in PROTOCOL-2.md under R4",
+  "ok": true,
+  "detail": "- **R4.** The largest single-layer rise of the logit-lens teen effect is from la"
+ },
+ {
+  "name": "threshold thr2.R4 appears in the frozen evaluator's rule for R4@4",
+  "ok": true,
+  "detail": "the largest single-layer rise of the lens teen effect is at layer 24, and >= 1.0"
+ },
+ {
+  "name": "threshold thr2.R5.share = 0.50 appears in PROTOCOL-2.md under R5",
+  "ok": true,
+  "detail": "- **R5.** MLP24's DLA is ≥ 0.50 of the teen effect, and every other MLP's |DLA| "
+ },
+ {
+  "name": "threshold thr2.R5.share appears in the frozen evaluator's rule for R5@4",
+  "ok": true,
+  "detail": "MLP24's DLA >= 0.50 of the teen effect; every other MLP's |DLA| <= 0.35 of it"
+ },
+ {
+  "name": "threshold thr2.R5.other = 0.35 appears in PROTOCOL-2.md under R5",
+  "ok": true,
+  "detail": "- **R5.** MLP24's DLA is ≥ 0.50 of the teen effect, and every other MLP's |DLA| "
+ },
+ {
+  "name": "threshold thr2.R5.other appears in the frozen evaluator's rule for R5@4",
+  "ok": true,
+  "detail": "MLP24's DLA >= 0.50 of the teen effect; every other MLP's |DLA| <= 0.35 of it"
+ },
+ {
+  "name": "threshold thr2.R6.th = 1.5 appears in PROTOCOL-2.md under R6",
+  "ok": true,
+  "detail": "- **R6.** Suffix profiles:\n  - MLP24 for teens: \"th\" minus the mean of st/nd/rd "
+ },
+ {
+  "name": "threshold thr2.R6.th appears in the frozen evaluator's rule for R6@4",
+  "ok": true,
+  "detail": "MLP24 for teens: th - mean(st,nd,rd) >= 1.5 at each last digit, |own-suffix specificity| <= 0.6; MLP18: own-suffix specificity >= 0.4 for both classes and each digit, teen and non-teen means within 0.4"
+ },
+ {
+  "name": "threshold thr2.R6.spec = 0.6 appears in PROTOCOL-2.md under R6",
+  "ok": true,
+  "detail": "- **R6.** Suffix profiles:\n  - MLP24 for teens: \"th\" minus the mean of st/nd/rd "
+ },
+ {
+  "name": "threshold thr2.R6.spec appears in the frozen evaluator's rule for R6@4",
+  "ok": true,
+  "detail": "MLP24 for teens: th - mean(st,nd,rd) >= 1.5 at each last digit, |own-suffix specificity| <= 0.6; MLP18: own-suffix specificity >= 0.4 for both classes and each digit, teen and non-teen means within 0.4"
+ },
+ {
+  "name": "threshold thr2.R6.s18 = 0.4 appears in PROTOCOL-2.md under R6",
+  "ok": true,
+  "detail": "- **R6.** Suffix profiles:\n  - MLP24 for teens: \"th\" minus the mean of st/nd/rd "
+ },
+ {
+  "name": "threshold thr2.R6.s18 appears in the frozen evaluator's rule for R6@4",
+  "ok": true,
+  "detail": "MLP24 for teens: th - mean(st,nd,rd) >= 1.5 at each last digit, |own-suffix specificity| <= 0.6; MLP18: own-suffix specificity >= 0.4 for both classes and each digit, teen and non-teen means within 0.4"
+ },
+ {
+  "name": "threshold thr2.S2 = 0.85 appears in PROTOCOL-2.md under S2",
+  "ok": true,
+  "detail": "- **S2.** B alone keeps ≥ 0.85 at each length. "
+ },
+ {
+  "name": "threshold thr2.S2 appears in the frozen evaluator's rule for S2@4",
+  "ok": true,
+  "detail": "B alone keeps >= 0.85 of the teen effect"
+ },
+ {
+  "name": "threshold thr2.S3.drop = 0.15 appears in PROTOCOL-2.md under S3",
+  "ok": true,
+  "detail": "- **S3.** At 2 digits, B removes ≥ 0.15 beyond A, more than at 3 and 4 digits, a"
+ },
+ {
+  "name": "threshold thr2.S3.drop appears in the frozen evaluator's rule for S3",
+  "ok": true,
+  "detail": "at 2 digits B removes >= 0.15 beyond A, more than at 3 and 4 digits, and A+B still keeps >= 0.30"
+ },
+ {
+  "name": "threshold thr2.S3.ab = 0.30 appears in PROTOCOL-2.md under S3",
+  "ok": true,
+  "detail": "- **S3.** At 2 digits, B removes ≥ 0.15 beyond A, more than at 3 and 4 digits, a"
+ },
+ {
+  "name": "threshold thr2.S3.ab appears in the frozen evaluator's rule for S3",
+  "ok": true,
+  "detail": "at 2 digits B removes >= 0.15 beyond A, more than at 3 and 4 digits, and A+B still keeps >= 0.30"
+ },
+ {
+  "name": "threshold thr2.O3.in = 0.88 appears in PROTOCOL-2.md under O3",
+  "ok": true,
+  "detail": "- **O3.** AUROC is ≥ 0.88 at 3, 5, 8 and 9 digits. At 4, 7 and 10 digits it is ≤"
+ },
+ {
+  "name": "threshold thr2.O3.in appears in the frozen evaluator's rule for O3",
+  "ok": true,
+  "detail": "AUROC >= 0.88 at 3, 5, 8, 9 digits; <= 0.82 and at least 0.10 below every in-token length at 4, 7, 10"
+ },
+ {
+  "name": "threshold thr2.O3.cr = 0.82 appears in PROTOCOL-2.md under O3",
+  "ok": true,
+  "detail": "- **O3.** AUROC is ≥ 0.88 at 3, 5, 8 and 9 digits. At 4, 7 and 10 digits it is ≤"
+ },
+ {
+  "name": "threshold thr2.O3.cr appears in the frozen evaluator's rule for O3",
+  "ok": true,
+  "detail": "AUROC >= 0.88 at 3, 5, 8, 9 digits; <= 0.82 and at least 0.10 below every in-token length at 4, 7, 10"
+ },
+ {
+  "name": "threshold thr2.O3.gap = 0.10 appears in PROTOCOL-2.md under O3",
+  "ok": true,
+  "detail": "- **O3.** AUROC is ≥ 0.88 at 3, 5, 8 and 9 digits. At 4, 7 and 10 digits it is ≤"
+ },
+ {
+  "name": "threshold thr2.O3.gap appears in the frozen evaluator's rule for O3",
+  "ok": true,
+  "detail": "AUROC >= 0.88 at 3, 5, 8, 9 digits; <= 0.82 and at least 0.10 below every in-token length at 4, 7, 10"
+ },
+ {
+  "name": "threshold thr2.O4.kept = 0.60 appears in PROTOCOL-2.md under O4",
+  "ok": true,
+  "detail": "- **O4.**\n  - At 4, 7 and 10 digits, T keeps ≤ 0.60 of the teen effect and less "
+ },
+ {
+  "name": "threshold thr2.O4.kept appears in the frozen evaluator's rule for O4@4",
+  "ok": true,
+  "detail": "triple kept <= 0.60 and below every random triple (read if base effect >= 0.30)"
+ },
+ {
+  "name": "threshold thr2.O4.in = 0.90 appears in PROTOCOL-2.md under O4",
+  "ok": true,
+  "detail": "- **O4.**\n  - At 4, 7 and 10 digits, T keeps ≤ 0.60 of the teen effect and less "
+ },
+ {
+  "name": "threshold thr2.O4.in appears in the frozen evaluator's rule for O4@3",
+  "ok": true,
+  "detail": "triple kept >= 0.90"
+ },
+ {
+  "name": "threshold thr2.O5.p2 = 0.90 appears in PROTOCOL-2.md under O5",
+  "ok": true,
+  "detail": "- **O5.**\n  - At 4, 7 and 10 digits, the probe at layer 2 is ≥ 0.90 and the prob"
+ },
+ {
+  "name": "threshold thr2.O5.p2 appears in the frozen evaluator's rule for O5",
+  "ok": true,
+  "detail": "probe at layer 2 >= 0.90 and layer 15 <= layer 2 - 0.10 at 4, 7, 10 digits; layer 15 >= 0.93 at 3, 5, 8, 9"
+ },
+ {
+  "name": "threshold thr2.O5.in = 0.93 appears in PROTOCOL-2.md under O5",
+  "ok": true,
+  "detail": "- **O5.**\n  - At 4, 7 and 10 digits, the probe at layer 2 is ≥ 0.90 and the prob"
+ },
+ {
+  "name": "threshold thr2.O5.in appears in the frozen evaluator's rule for O5",
+  "ok": true,
+  "detail": "probe at layer 2 >= 0.90 and layer 15 <= layer 2 - 0.10 at 4, 7, 10 digits; layer 15 >= 0.93 at 3, 5, 8, 9"
+ },
+ {
+  "name": "threshold thr2.O6 = 0.65 appears in PROTOCOL-2.md under O6",
+  "ok": true,
+  "detail": "- **O6.** |v_d| / |v_3| is ≤ 0.65 at every layer for 4, 7 and 10 digits, and ≥ 0"
+ },
+ {
+  "name": "threshold thr2.O6 appears in the frozen evaluator's rule for O6",
+  "ok": true,
+  "detail": "|v_d|/|v_3| <= 0.65 at every layer for 4, 7, 10 digits; >= 0.65 at every layer for 5 digits"
+ },
+ {
+  "name": "threshold thr2.O7.steer = 1.5 appears in PROTOCOL-2.md under O7",
+  "ok": true,
+  "detail": "- **O7.** At 4, 7 and 10 digits, steering with v_3 lowers the non-teen mean m by"
+ },
+ {
+  "name": "threshold thr2.O7.steer appears in the frozen evaluator's rule for O7",
+  "ok": true,
+  "detail": "steering with v_3 at layer 8 lowers non-teen mean m by >= 1.5 at 4, 7, 10 digits, more than each of 5 random directions of the same norm, whose |change| <= 0.5"
+ },
+ {
+  "name": "threshold thr2.O7.rand = 0.5 appears in PROTOCOL-2.md under O7",
+  "ok": true,
+  "detail": "- **O7.** At 4, 7 and 10 digits, steering with v_3 lowers the non-teen mean m by"
+ },
+ {
+  "name": "threshold thr2.O7.rand appears in the frozen evaluator's rule for O7",
+  "ok": true,
+  "detail": "steering with v_3 at layer 8 lowers non-teen mean m by >= 1.5 at 4, 7, 10 digits, more than each of 5 random directions of the same norm, whose |change| <= 0.5"
+ },
+ {
+  "name": "threshold thr2.O8 = 0.50 appears in PROTOCOL-2.md under O8",
+  "ok": true,
+  "detail": "- **O8.** At 4, 7 and 10 digits, T's teen loss through MLP0's input is ≥ 0.50 an"
+ },
+ {
+  "name": "threshold thr2.O8 appears in the frozen evaluator's rule for O8@4",
+  "ok": true,
+  "detail": "triple's teen loss through MLP0 >= 0.50 and the largest receiver (read if the triple's loss >= 0.30)"
+ },
+ {
+  "name": "threshold thr2.X.teen = 0.85 appears in PROTOCOL-2.md under X-PREV",
+  "ok": true,
+  "detail": "- **X-PREV** (each model, each length). The PREV set keeps ≤ 0.85 of the teen ef"
+ },
+ {
+  "name": "threshold thr2.X.teen appears in the frozen evaluator's rule for X:qwen3-17b:PREV@3",
+  "ok": true,
+  "detail": "PREV: teen kept <= 0.85 and below every random same-size set from layers 0-1; pull kept >= 0.55"
+ },
+ {
+  "name": "threshold thr2.X.pull = 0.55 appears in PROTOCOL-2.md under X-PREV",
+  "ok": true,
+  "detail": "- **X-PREV** (each model, each length). The PREV set keeps ≤ 0.85 of the teen ef"
+ },
+ {
+  "name": "threshold thr2.X.pull appears in the frozen evaluator's rule for X:qwen3-17b:PREV@3",
+  "ok": true,
+  "detail": "PREV: teen kept <= 0.85 and below every random same-size set from layers 0-1; pull kept >= 0.55"
+ },
+ {
+  "name": "threshold thr2.X.cur = 0.30 appears in PROTOCOL-2.md under X-CUR",
+  "ok": true,
+  "detail": "- **X-CUR** (Qwen3-1.7B-Base only, each length). The CUR set keeps ≤ 0.30 of the"
+ },
+ {
+  "name": "threshold thr2.X.cur appears in the frozen evaluator's rule for X:qwen3-17b:CUR@3",
+  "ok": true,
+  "detail": "CUR: pull kept <= 0.30 and below every random same-size set from layers 0-1; teen kept >= 0.90"
+ },
+ {
+  "name": "threshold thr2.X.curteen = 0.90 appears in PROTOCOL-2.md under X-CUR",
+  "ok": true,
+  "detail": "- **X-CUR** (Qwen3-1.7B-Base only, each length). The CUR set keeps ≤ 0.30 of the"
+ },
+ {
+  "name": "threshold thr2.X.curteen appears in the frozen evaluator's rule for X:qwen3-17b:CUR@3",
+  "ok": true,
+  "detail": "CUR: pull kept <= 0.30 and below every random same-size set from layers 0-1; teen kept >= 0.90"
+ },
+ {
+  "name": "read rule 0.30 also appears in PROTOCOL-2.md under O4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "read rule 0.30 also appears in PROTOCOL-2.md under O8",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "O5's 'at least 0.10 lower' matches the gap used here",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: twenty random sets everywhere in round 2 (pairs, triples, sets)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "coverage: every r2./thr2. key (275) is checked",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "every cited key is in refs.bib",
+  "ok": true,
+  "detail": "set()"
+ },
+ {
+  "name": "every refs.bib entry is cited",
+  "ok": true,
+  "detail": "set()"
+ },
+ {
+  "name": "reference biderman2023pythia: arXiv 2304.01373 title and first author match the abstract page",
+  "ok": true,
+  "detail": "{Pythia}: A Suite for Analyzing Large Language Models Across Training and Scaling | Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling | Biderman"
+ },
+ {
+  "name": "reference biderman2023pythia: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/04/03"
+ },
+ {
+  "name": "reference radford2019language: non-arXiv entry checked in REFERENCE-CHECK.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference olmo2024olmo2: arXiv 2501.00656 title and first author match the abstract page",
+  "ok": true,
+  "detail": "2 {OLMo} 2 Furious | 2 OLMo 2 Furious | OLMo"
+ },
+ {
+  "name": "reference olmo2024olmo2: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2024/12/31"
+ },
+ {
+  "name": "reference qwen2025qwen3: arXiv 2505.09388 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Qwen3 Technical Report | Qwen3 Technical Report | Yang"
+ },
+ {
+  "name": "reference qwen2025qwen3: year 2025 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2025/05/14"
+ },
+ {
+  "name": "reference gemma2026gemma4: arXiv 2607.02770 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Gemma 4 Technical Report | Gemma 4 Technical Report | Team"
+ },
+ {
+  "name": "reference gemma2026gemma4: year 2026 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2026/07/02"
+ },
+ {
+  "name": "reference benallal2025smollm2: arXiv 2502.02737 title and first author match the abstract page",
+  "ok": true,
+  "detail": "{SmolLM2}: When Smol Goes Big -- Data-Centric Training of a Small Language Model | SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model | Allal"
+ },
+ {
+  "name": "reference benallal2025smollm2: year 2025 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2025/02/04"
+ },
+ {
+  "name": "reference meng2022locating: arXiv 2202.05262 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Locating and Editing Factual Associations in {GPT} | Locating and Editing Factual Associations in GPT | Meng"
+ },
+ {
+  "name": "reference meng2022locating: year 2022 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2022/02/10"
+ },
+ {
+  "name": "reference heimersheim2024patching: arXiv 2404.15255 title and first author match the abstract page",
+  "ok": true,
+  "detail": "How to use and interpret activation patching | How to use and interpret activation patching | Heimersheim"
+ },
+ {
+  "name": "reference heimersheim2024patching: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2024/04/23"
+ },
+ {
+  "name": "reference zhang2024patching: arXiv 2309.16042 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods | Towards Best Practices of Activation Patching in Language Models: Metrics and Methods | Zhang"
+ },
+ {
+  "name": "reference zhang2024patching: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/09/27"
+ },
+ {
+  "name": "reference hanna2023greaterthan: arXiv 2305.00586 title and first author match the abstract page",
+  "ok": true,
+  "detail": "How does {GPT-2} compute greater-than?: Interpreting mathematical abilities in a pre-trained language model | How does GPT-2 compute greater-than?: Interpreting mathematical abilities in a pre-trained language model | Hanna"
+ },
+ {
+  "name": "reference hanna2023greaterthan: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/04/30"
+ },
+ {
+  "name": "reference nikankin2025heuristics: arXiv 2410.21272 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics | Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics | Nikankin"
+ },
+ {
+  "name": "reference nikankin2025heuristics: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2024/10/28"
+ },
+ {
+  "name": "reference singh2024tokenization: arXiv 2402.14903 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Tokenization counts: the impact of tokenization on arithmetic in frontier {LLMs} | Tokenization counts: the impact of tokenization on arithmetic in frontier LLMs | Singh"
+ },
+ {
+  "name": "reference singh2024tokenization: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2024/02/22"
+ },
+ {
+  "name": "reference wang2023ioi: arXiv 2211.00593 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Interpretability in the Wild: a Circuit for Indirect Object Identification in {GPT-2} small | Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small | Wang"
+ },
+ {
+  "name": "reference wang2023ioi: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2022/11/01"
+ },
+ {
+  "name": "reference goldowskydill2023path: arXiv 2304.05969 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Localizing Model Behavior with Path Patching | Localizing Model Behavior with Path Patching | Goldowsky-Dill"
+ },
+ {
+  "name": "reference goldowskydill2023path: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/04/12"
+ },
+ {
+  "name": "reference belrose2023tuned: arXiv 2303.08112 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Eliciting Latent Predictions from Transformers with the Tuned Lens | Eliciting Latent Predictions from Transformers with the Tuned Lens | Belrose"
+ },
+ {
+  "name": "reference belrose2023tuned: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/03/14"
+ },
+ {
+  "name": "reference geva2021kv: arXiv 2012.14913 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Transformer Feed-Forward Layers Are Key-Value Memories | Transformer Feed-Forward Layers Are Key-Value Memories | Geva"
+ },
+ {
+  "name": "reference geva2021kv: year 2021 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2020/12/29"
+ },
+ {
+  "name": "reference alain2016probes: arXiv 1610.01644 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Understanding intermediate layers using linear classifier probes | Understanding intermediate layers using linear classifier probes | Alain"
+ },
+ {
+  "name": "reference alain2016probes: year 2016 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2016/10/05"
+ },
+ {
+  "name": "reference turner2023steering: arXiv 2308.10248 title and first author match the abstract page",
+  "ok": true,
+  "detail": "Steering Language Models With Activation Engineering | Steering Language Models With Activation Engineering | Turner"
+ },
+ {
+  "name": "reference turner2023steering: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/08/20"
+ },
+ {
+  "name": "reference olsson2022induction: arXiv 2209.11895 title and first author match the abstract page",
+  "ok": true,
+  "detail": "In-context Learning and Induction Heads | In-context Learning and Induction Heads | Olsson"
+ },
+ {
+  "name": "reference olsson2022induction: year 2022 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2022/09/24"
+ }
+]

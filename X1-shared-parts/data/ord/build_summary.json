@@ -1,0 +1,23 @@
+{
+ "frames": 8,
+ "counts": {
+  "explore|3|end123": 14,
+  "explore|3|other": 30,
+  "explore|3|teen": 3,
+  "explore|4|end123": 135,
+  "explore|4|other": 325,
+  "explore|4|teen": 13,
+  "explore|5|end123": 1193,
+  "explore|5|other": 3117,
+  "explore|5|teen": 130,
+  "held|3|end123": 15,
+  "held|3|other": 28,
+  "held|3|teen": 1,
+  "held|4|end123": 104,
+  "held|4|other": 318,
+  "held|4|teen": 20,
+  "held|5|end123": 1210,
+  "held|5|other": 3137,
+  "held|5|teen": 129
+ }
+}

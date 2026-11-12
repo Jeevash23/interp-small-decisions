@@ -1,0 +1,21 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\small
+\caption{\qbig{}, head \hd{0}{3} on held-out paragraphs (\DQ{L0H3_other_lower_moved.np} paragraphs; \DQ{L0H3_other_lower_moved.n} upper-case positions whose next word is upper case). $D$ is $\log p(U)-\log p(L_c)$; the share of $D$ moved is towards the lower-case passage's own $D$.}
+\label{tab:d5-head}
+\begin{tabularx}{\textwidth}{@{}Y l l l@{}}
+\toprule
+Measure & Threshold & Held out & Exploration \\
+\midrule
+Attention on the current token, upper-case passages & $\ge 0.90$ & \DQI{L0H3_self_attention_upper} & \DEQ{L0H3_self_attention_upper} \\
+Attention on the current token, lower-case passages & $\ge 0.90$ & \DQI{L0H3_self_attention_lower} & \DEQ{L0H3_self_attention_lower} \\
+Output from another paragraph in lower case: share of $D$ moved & $\ge 0.20$ & \DQI{L0H3_other_lower_moved} & \DEQ{L0H3_other_lower_moved} \\
+\quad flips to lower case & $\ge 0.25$ & \DQI{L0H3_other_lower_flip} & \DEQ{L0H3_other_lower_flip} \\
+Output from another paragraph in upper case: share of $D$ moved & $\le 0.08$ & \DQI{L0H3_other_upper_moved} & \DEQ{L0H3_other_upper_moved} \\
+\quad flips & $\le 0.05$ & \DQI{L0H3_other_upper_flip} & \DEQ{L0H3_other_upper_flip} \\
+Head \hd{0}{2} from the same word's lower-case passage: share of $D$ moved & $\le 0.08$ & \DQI{L0H3_ctrl_L0H2_same_lower_moved} & \DEQ{L0H3_ctrl_L0H2_same_lower_moved} \\
+Head \hd{0}{0}, the same & $\le 0.08$ & \DQI{L0H3_ctrl_L0H0_same_lower_moved} & \DEQ{L0H3_ctrl_L0H0_same_lower_moved} \\
+\hd{0}{3} from the same word's lower-case passage (no threshold) & & \DQI{L0H3_same_lower_moved} & \DEQ{L0H3_same_lower_moved} \\
+\bottomrule
+\end{tabularx}
+\end{table}

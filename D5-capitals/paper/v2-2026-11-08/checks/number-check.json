@@ -1,0 +1,7042 @@
+[
+ {
+  "name": "recount: c.g.firstlow",
+  "ok": true,
+  "detail": "text 32 vs recomputed 32.000000"
+ },
+ {
+  "name": "claim: g c capitals win only in the last three layers",
+  "ok": true,
+  "detail": "(32, 35)"
+ },
+ {
+  "name": "recount: c.g.seen.upper",
+  "ok": true,
+  "detail": "text 0.574 vs recomputed 0.573543"
+ },
+ {
+  "name": "recount: c.g.seen.lower",
+  "ok": true,
+  "detail": "text 0.585 vs recomputed 0.585020"
+ },
+ {
+  "name": "recount: c.g.seen.n",
+  "ok": true,
+  "detail": "text 6,622 vs recomputed 6622.000000"
+ },
+ {
+  "name": "recount: c.g.new.upper",
+  "ok": true,
+  "detail": "text 0.238 vs recomputed 0.237680"
+ },
+ {
+  "name": "recount: c.g.new.lower",
+  "ok": true,
+  "detail": "text 0.262 vs recomputed 0.262002"
+ },
+ {
+  "name": "recount: c.g.new.n",
+  "ok": true,
+  "detail": "text 11,019 vs recomputed 11019.000000"
+ },
+ {
+  "name": "recount: c.g.e1.medrank",
+  "ok": true,
+  "detail": "text 3 vs recomputed 3.000000"
+ },
+ {
+  "name": "recount: c.g.e1.ctrlrank",
+  "ok": true,
+  "detail": "text 781 vs recomputed 781.000000"
+ },
+ {
+  "name": "recount: c.q.firstlow",
+  "ok": true,
+  "detail": "text 25 vs recomputed 25.000000"
+ },
+ {
+  "name": "claim: q c capitals win only in the last three layers",
+  "ok": true,
+  "detail": "(25, 28)"
+ },
+ {
+  "name": "recount: c.q.seen.upper",
+  "ok": true,
+  "detail": "text 0.552 vs recomputed 0.551797"
+ },
+ {
+  "name": "recount: c.q.seen.lower",
+  "ok": true,
+  "detail": "text 0.565 vs recomputed 0.564935"
+ },
+ {
+  "name": "recount: c.q.seen.n",
+  "ok": true,
+  "detail": "text 6,622 vs recomputed 6622.000000"
+ },
+ {
+  "name": "recount: c.q.new.upper",
+  "ok": true,
+  "detail": "text 0.192 vs recomputed 0.192304"
+ },
+ {
+  "name": "recount: c.q.new.lower",
+  "ok": true,
+  "detail": "text 0.235 vs recomputed 0.234504"
+ },
+ {
+  "name": "recount: c.q.new.n",
+  "ok": true,
+  "detail": "text 11,019 vs recomputed 11019.000000"
+ },
+ {
+  "name": "recount: c.q.e1.medrank",
+  "ok": true,
+  "detail": "text 3 vs recomputed 3.000000"
+ },
+ {
+  "name": "recount: c.q.e1.ctrlrank",
+  "ok": true,
+  "detail": "text 689.5 vs recomputed 689.500000"
+ },
+ {
+  "name": "recount: e.g.firstlow",
+  "ok": true,
+  "detail": "text 32 vs recomputed 32.000000"
+ },
+ {
+  "name": "claim: g e capitals win only in the last three layers",
+  "ok": true,
+  "detail": "(32, 35)"
+ },
+ {
+  "name": "recount: sweep.g.add.0",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: sweep.g.sub.0",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: sweep.g.add.4",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: sweep.g.sub.4",
+  "ok": true,
+  "detail": "text 0.006 vs recomputed 0.005682"
+ },
+ {
+  "name": "recount: sweep.g.add.8",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: sweep.g.sub.8",
+  "ok": true,
+  "detail": "text 0.006 vs recomputed 0.005682"
+ },
+ {
+  "name": "recount: sweep.g.add.12",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: sweep.g.sub.12",
+  "ok": true,
+  "detail": "text 0.034 vs recomputed 0.034091"
+ },
+ {
+  "name": "recount: sweep.g.add.16",
+  "ok": true,
+  "detail": "text 0.022 vs recomputed 0.022472"
+ },
+ {
+  "name": "recount: sweep.g.sub.16",
+  "ok": true,
+  "detail": "text 0.756 vs recomputed 0.755682"
+ },
+ {
+  "name": "recount: sweep.g.add.18",
+  "ok": true,
+  "detail": "text 0.022 vs recomputed 0.022472"
+ },
+ {
+  "name": "recount: sweep.g.sub.18",
+  "ok": true,
+  "detail": "text 0.784 vs recomputed 0.784091"
+ },
+ {
+  "name": "recount: sweep.g.add.20",
+  "ok": true,
+  "detail": "text 0.157 vs recomputed 0.157303"
+ },
+ {
+  "name": "recount: sweep.g.sub.20",
+  "ok": true,
+  "detail": "text 0.830 vs recomputed 0.829545"
+ },
+ {
+  "name": "recount: sweep.g.add.22",
+  "ok": true,
+  "detail": "text 0.652 vs recomputed 0.651685"
+ },
+ {
+  "name": "recount: sweep.g.sub.22",
+  "ok": true,
+  "detail": "text 0.898 vs recomputed 0.897727"
+ },
+ {
+  "name": "recount: sweep.g.add.24",
+  "ok": true,
+  "detail": "text 0.961 vs recomputed 0.960674"
+ },
+ {
+  "name": "recount: sweep.g.sub.24",
+  "ok": true,
+  "detail": "text 0.955 vs recomputed 0.954545"
+ },
+ {
+  "name": "recount: sweep.g.add.26",
+  "ok": true,
+  "detail": "text 0.955 vs recomputed 0.955056"
+ },
+ {
+  "name": "recount: sweep.g.sub.26",
+  "ok": true,
+  "detail": "text 0.960 vs recomputed 0.960227"
+ },
+ {
+  "name": "recount: sweep.g.add.28",
+  "ok": true,
+  "detail": "text 0.933 vs recomputed 0.932584"
+ },
+ {
+  "name": "recount: sweep.g.sub.28",
+  "ok": true,
+  "detail": "text 0.960 vs recomputed 0.960227"
+ },
+ {
+  "name": "recount: sweep.g.add.30",
+  "ok": true,
+  "detail": "text 0.933 vs recomputed 0.932584"
+ },
+ {
+  "name": "recount: sweep.g.sub.30",
+  "ok": true,
+  "detail": "text 0.966 vs recomputed 0.965909"
+ },
+ {
+  "name": "recount: sweep.g.add.32",
+  "ok": true,
+  "detail": "text 0.933 vs recomputed 0.932584"
+ },
+ {
+  "name": "recount: sweep.g.sub.32",
+  "ok": true,
+  "detail": "text 0.966 vs recomputed 0.965909"
+ },
+ {
+  "name": "recount: sweep.g.add.34",
+  "ok": true,
+  "detail": "text 0.674 vs recomputed 0.674157"
+ },
+ {
+  "name": "recount: sweep.g.sub.34",
+  "ok": true,
+  "detail": "text 0.892 vs recomputed 0.892045"
+ },
+ {
+  "name": "figure 1 data g: every layer recomputed from records",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: sweep.g.npara",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "recount: e.q.firstlow",
+  "ok": true,
+  "detail": "text 25 vs recomputed 25.000000"
+ },
+ {
+  "name": "claim: q e capitals win only in the last three layers",
+  "ok": true,
+  "detail": "(25, 28)"
+ },
+ {
+  "name": "recount: sweep.q.add.0",
+  "ok": true,
+  "detail": "text 0.064 vs recomputed 0.064286"
+ },
+ {
+  "name": "recount: sweep.q.sub.0",
+  "ok": true,
+  "detail": "text 0.293 vs recomputed 0.292857"
+ },
+ {
+  "name": "recount: sweep.q.add.4",
+  "ok": true,
+  "detail": "text 0.014 vs recomputed 0.014286"
+ },
+ {
+  "name": "recount: sweep.q.sub.4",
+  "ok": true,
+  "detail": "text 0.179 vs recomputed 0.178571"
+ },
+ {
+  "name": "recount: sweep.q.add.8",
+  "ok": true,
+  "detail": "text 0.007 vs recomputed 0.007143"
+ },
+ {
+  "name": "recount: sweep.q.sub.8",
+  "ok": true,
+  "detail": "text 0.207 vs recomputed 0.207143"
+ },
+ {
+  "name": "recount: sweep.q.add.12",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: sweep.q.sub.12",
+  "ok": true,
+  "detail": "text 0.221 vs recomputed 0.221429"
+ },
+ {
+  "name": "recount: sweep.q.add.16",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: sweep.q.sub.16",
+  "ok": true,
+  "detail": "text 0.500 vs recomputed 0.500000"
+ },
+ {
+  "name": "recount: sweep.q.add.17",
+  "ok": true,
+  "detail": "text 0.036 vs recomputed 0.035714"
+ },
+ {
+  "name": "recount: sweep.q.sub.17",
+  "ok": true,
+  "detail": "text 0.721 vs recomputed 0.721429"
+ },
+ {
+  "name": "recount: sweep.q.add.18",
+  "ok": true,
+  "detail": "text 0.193 vs recomputed 0.192857"
+ },
+ {
+  "name": "recount: sweep.q.sub.18",
+  "ok": true,
+  "detail": "text 0.900 vs recomputed 0.900000"
+ },
+ {
+  "name": "recount: sweep.q.add.19",
+  "ok": true,
+  "detail": "text 0.929 vs recomputed 0.928571"
+ },
+ {
+  "name": "recount: sweep.q.sub.19",
+  "ok": true,
+  "detail": "text 0.957 vs recomputed 0.957143"
+ },
+ {
+  "name": "recount: sweep.q.add.20",
+  "ok": true,
+  "detail": "text 0.936 vs recomputed 0.935714"
+ },
+ {
+  "name": "recount: sweep.q.sub.20",
+  "ok": true,
+  "detail": "text 0.957 vs recomputed 0.957143"
+ },
+ {
+  "name": "recount: sweep.q.add.22",
+  "ok": true,
+  "detail": "text 0.957 vs recomputed 0.957143"
+ },
+ {
+  "name": "recount: sweep.q.sub.22",
+  "ok": true,
+  "detail": "text 0.971 vs recomputed 0.971429"
+ },
+ {
+  "name": "recount: sweep.q.add.24",
+  "ok": true,
+  "detail": "text 0.957 vs recomputed 0.957143"
+ },
+ {
+  "name": "recount: sweep.q.sub.24",
+  "ok": true,
+  "detail": "text 0.986 vs recomputed 0.985714"
+ },
+ {
+  "name": "recount: sweep.q.add.25",
+  "ok": true,
+  "detail": "text 0.921 vs recomputed 0.921429"
+ },
+ {
+  "name": "recount: sweep.q.sub.25",
+  "ok": true,
+  "detail": "text 0.971 vs recomputed 0.971429"
+ },
+ {
+  "name": "recount: sweep.q.add.26",
+  "ok": true,
+  "detail": "text 0.914 vs recomputed 0.914286"
+ },
+ {
+  "name": "recount: sweep.q.sub.26",
+  "ok": true,
+  "detail": "text 0.979 vs recomputed 0.978571"
+ },
+ {
+  "name": "recount: sweep.q.add.27",
+  "ok": true,
+  "detail": "text 0.886 vs recomputed 0.885714"
+ },
+ {
+  "name": "recount: sweep.q.sub.27",
+  "ok": true,
+  "detail": "text 0.950 vs recomputed 0.950000"
+ },
+ {
+  "name": "figure 1 data q: every layer recomputed from records",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: sweep.q.npara",
+  "ok": true,
+  "detail": "text 40 vs recomputed 40.000000"
+ },
+ {
+  "name": "recount: c.g.lens_Lc_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.707 vs recomputed 0.706964"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_U_at_l.n",
+  "ok": true,
+  "detail": "text 17,247 vs recomputed 17247.000000"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_U_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_U_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.696, 0.717] vs [0.695, 0.718]"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_U_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.lens_Lr_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.162 vs recomputed 0.161593"
+ },
+ {
+  "name": "count: c.g.lens_Lr_gt_U_at_l.n",
+  "ok": true,
+  "detail": "text 17,247 vs recomputed 17247.000000"
+ },
+ {
+  "name": "count: c.g.lens_Lr_gt_U_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.g.lens_Lr_gt_U_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.154, 0.170] vs [0.154, 0.170]"
+ },
+ {
+  "name": "interval: c.g.lens_Lr_gt_U_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.lens_Lc_gt_U_last",
+  "ok": true,
+  "detail": "text 0.001 vs recomputed 0.001304"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_U_last.n",
+  "ok": true,
+  "detail": "text 17,638 vs recomputed 17638.000000"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_U_last.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_U_last agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.001, 0.002] vs [0.001, 0.002]"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_U_last contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.lens_Lc_gt_Lr_upper_at_l",
+  "ok": true,
+  "detail": "text 0.852 vs recomputed 0.851936"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_Lr_upper_at_l.n",
+  "ok": true,
+  "detail": "text 17,641 vs recomputed 17641.000000"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_Lr_upper_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_Lr_upper_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.844, 0.860] vs [0.844, 0.860]"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_Lr_upper_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.lens_Lc_gt_Lr_lower_at_l",
+  "ok": true,
+  "detail": "text 0.852 vs recomputed 0.851936"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_Lr_lower_at_l.n",
+  "ok": true,
+  "detail": "text 17,641 vs recomputed 17641.000000"
+ },
+ {
+  "name": "count: c.g.lens_Lc_gt_Lr_lower_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_Lr_lower_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.845, 0.859] vs [0.845, 0.859]"
+ },
+ {
+  "name": "interval: c.g.lens_Lc_gt_Lr_lower_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_dir_L24_flip",
+  "ok": true,
+  "detail": "text 0.981 vs recomputed 0.980716"
+ },
+ {
+  "name": "count: c.g.add_dir_L24_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_dir_L24_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_dir_L24_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.964, 0.995] vs [0.962, 0.994]"
+ },
+ {
+  "name": "interval: c.g.add_dir_L24_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_dir_L24_same_word",
+  "ok": true,
+  "detail": "text 0.799 vs recomputed 0.798898"
+ },
+ {
+  "name": "count: c.g.add_dir_L24_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_dir_L24_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_dir_L24_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.753, 0.841] vs [0.753, 0.841]"
+ },
+ {
+  "name": "interval: c.g.add_dir_L24_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_rand_L24_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L24_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L24_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_rand_L24_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.add_rand_L24_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_rand_L24_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L24_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L24_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_rand_L24_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.add_rand_L24_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_dir_L24_flip",
+  "ok": true,
+  "detail": "text 0.961 vs recomputed 0.961433"
+ },
+ {
+  "name": "count: c.g.sub_dir_L24_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_dir_L24_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L24_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.940, 0.981] vs [0.939, 0.980]"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L24_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_dir_L24_same_word",
+  "ok": true,
+  "detail": "text 0.785 vs recomputed 0.785124"
+ },
+ {
+  "name": "count: c.g.sub_dir_L24_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_dir_L24_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L24_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.742, 0.824] vs [0.742, 0.827]"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L24_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_rand_L24_flip",
+  "ok": true,
+  "detail": "text 0.003 vs recomputed 0.002755"
+ },
+ {
+  "name": "count: c.g.sub_rand_L24_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_rand_L24_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L24_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.008] vs [0.000, 0.008]"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L24_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_rand_L24_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.sub_rand_L24_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_rand_L24_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L24_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L24_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.011 vs recomputed 0.011019"
+ },
+ {
+  "name": "count: c.g.add_dir_L16_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_dir_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_dir_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.003, 0.022] vs [0.003, 0.022]"
+ },
+ {
+  "name": "interval: c.g.add_dir_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.006 vs recomputed 0.005510"
+ },
+ {
+  "name": "count: c.g.add_dir_L16_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_dir_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_dir_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.014] vs [0.000, 0.014]"
+ },
+ {
+  "name": "interval: c.g.add_dir_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L16_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_rand_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.add_rand_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.add_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L16_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.add_rand_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.add_rand_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.add_rand_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.736 vs recomputed 0.735537"
+ },
+ {
+  "name": "count: c.g.sub_dir_L16_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_dir_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.682, 0.784] vs [0.682, 0.785]"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.625 vs recomputed 0.625344"
+ },
+ {
+  "name": "count: c.g.sub_dir_L16_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_dir_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.574, 0.676] vs [0.575, 0.678]"
+ },
+ {
+  "name": "interval: c.g.sub_dir_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.sub_rand_L16_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_rand_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.sub_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.sub_rand_L16_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.sub_rand_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.sub_rand_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.rm_dir_upper_share",
+  "ok": true,
+  "detail": "text 0.540 vs recomputed 0.539548"
+ },
+ {
+  "name": "count: c.g.rm_dir_upper_share.n",
+  "ok": true,
+  "detail": "text 354 vs recomputed 354.000000"
+ },
+ {
+  "name": "count: c.g.rm_dir_upper_share.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.rm_dir_upper_share agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.483, 0.595] vs [0.484, 0.601]"
+ },
+ {
+  "name": "interval: c.g.rm_dir_upper_share contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.rm_dir_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.822 vs recomputed 0.822034"
+ },
+ {
+  "name": "count: c.g.rm_dir_same_word_any_case.n",
+  "ok": true,
+  "detail": "text 354 vs recomputed 354.000000"
+ },
+ {
+  "name": "count: c.g.rm_dir_same_word_any_case.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.rm_dir_same_word_any_case agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.781, 0.860] vs [0.779, 0.860]"
+ },
+ {
+  "name": "interval: c.g.rm_dir_same_word_any_case contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.rm_rand_upper_share",
+  "ok": true,
+  "detail": "text 0.997 vs recomputed 0.997175"
+ },
+ {
+  "name": "count: c.g.rm_rand_upper_share.n",
+  "ok": true,
+  "detail": "text 354 vs recomputed 354.000000"
+ },
+ {
+  "name": "count: c.g.rm_rand_upper_share.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.rm_rand_upper_share agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.991, 1.000] vs [0.991, 1.000]"
+ },
+ {
+  "name": "interval: c.g.rm_rand_upper_share contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.rm_rand_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.969 vs recomputed 0.968927"
+ },
+ {
+  "name": "count: c.g.rm_rand_same_word_any_case.n",
+  "ok": true,
+  "detail": "text 354 vs recomputed 354.000000"
+ },
+ {
+  "name": "count: c.g.rm_rand_same_word_any_case.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.rm_rand_same_word_any_case agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.948, 0.986] vs [0.949, 0.986]"
+ },
+ {
+  "name": "interval: c.g.rm_rand_same_word_any_case contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.orig_add_dir_to_upper",
+  "ok": true,
+  "detail": "text 0.957 vs recomputed 0.956954"
+ },
+ {
+  "name": "count: c.g.orig_add_dir_to_upper.n",
+  "ok": true,
+  "detail": "text 302 vs recomputed 302.000000"
+ },
+ {
+  "name": "count: c.g.orig_add_dir_to_upper.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.orig_add_dir_to_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.934, 0.977] vs [0.933, 0.977]"
+ },
+ {
+  "name": "interval: c.g.orig_add_dir_to_upper contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.orig_add_dir_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.821 vs recomputed 0.821192"
+ },
+ {
+  "name": "count: c.g.orig_add_dir_to_upper_same_word.n",
+  "ok": true,
+  "detail": "text 302 vs recomputed 302.000000"
+ },
+ {
+  "name": "count: c.g.orig_add_dir_to_upper_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.orig_add_dir_to_upper_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.776, 0.861] vs [0.774, 0.867]"
+ },
+ {
+  "name": "interval: c.g.orig_add_dir_to_upper_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.orig_add_rand_to_upper",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.orig_add_rand_to_upper.n",
+  "ok": true,
+  "detail": "text 302 vs recomputed 302.000000"
+ },
+ {
+  "name": "count: c.g.orig_add_rand_to_upper.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.orig_add_rand_to_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.orig_add_rand_to_upper contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.orig_add_rand_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.g.orig_add_rand_to_upper_same_word.n",
+  "ok": true,
+  "detail": "text 302 vs recomputed 302.000000"
+ },
+ {
+  "name": "count: c.g.orig_add_rand_to_upper_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.orig_add_rand_to_upper_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.g.orig_add_rand_to_upper_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.upper_top1_L+u1",
+  "ok": true,
+  "detail": "text 0.297 vs recomputed 0.296610"
+ },
+ {
+  "name": "count: c.g.upper_top1_L+u1.n",
+  "ok": true,
+  "detail": "text 354 vs recomputed 354.000000"
+ },
+ {
+  "name": "count: c.g.upper_top1_L+u1.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.upper_top1_L+u1 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.250, 0.346] vs [0.251, 0.348]"
+ },
+ {
+  "name": "interval: c.g.upper_top1_L+u1 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.upper_top1_L+u2",
+  "ok": true,
+  "detail": "text 0.708 vs recomputed 0.708333"
+ },
+ {
+  "name": "count: c.g.upper_top1_L+u2.n",
+  "ok": true,
+  "detail": "text 360 vs recomputed 360.000000"
+ },
+ {
+  "name": "count: c.g.upper_top1_L+u2.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.upper_top1_L+u2 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.664, 0.753] vs [0.661, 0.751]"
+ },
+ {
+  "name": "interval: c.g.upper_top1_L+u2 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.upper_top1_L+u8",
+  "ok": true,
+  "detail": "text 0.932 vs recomputed 0.931694"
+ },
+ {
+  "name": "count: c.g.upper_top1_L+u8.n",
+  "ok": true,
+  "detail": "text 366 vs recomputed 366.000000"
+ },
+ {
+  "name": "count: c.g.upper_top1_L+u8.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.upper_top1_L+u8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.904, 0.957] vs [0.907, 0.956]"
+ },
+ {
+  "name": "interval: c.g.upper_top1_L+u8 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.upper_top1_U+l1",
+  "ok": true,
+  "detail": "text 0.223 vs recomputed 0.222841"
+ },
+ {
+  "name": "count: c.g.upper_top1_U+l1.n",
+  "ok": true,
+  "detail": "text 359 vs recomputed 359.000000"
+ },
+ {
+  "name": "count: c.g.upper_top1_U+l1.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.upper_top1_U+l1 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.176, 0.272] vs [0.177, 0.271]"
+ },
+ {
+  "name": "interval: c.g.upper_top1_U+l1 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.upper_top1_U+l2",
+  "ok": true,
+  "detail": "text 0.086 vs recomputed 0.086111"
+ },
+ {
+  "name": "count: c.g.upper_top1_U+l2.n",
+  "ok": true,
+  "detail": "text 360 vs recomputed 360.000000"
+ },
+ {
+  "name": "count: c.g.upper_top1_U+l2.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.upper_top1_U+l2 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.057, 0.116] vs [0.055, 0.121]"
+ },
+ {
+  "name": "interval: c.g.upper_top1_U+l2 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.upper_top1_U+l8",
+  "ok": true,
+  "detail": "text 0.017 vs recomputed 0.016529"
+ },
+ {
+  "name": "count: c.g.upper_top1_U+l8.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.g.upper_top1_U+l8.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.g.upper_top1_U+l8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.005, 0.030] vs [0.006, 0.031]"
+ },
+ {
+  "name": "interval: c.g.upper_top1_U+l8 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.changed_word_top5",
+  "ok": true,
+  "detail": "text 0.713 vs recomputed 0.713287"
+ },
+ {
+  "name": "count: c.g.changed_word_top5.n",
+  "ok": true,
+  "detail": "text 143 vs recomputed 143.000000"
+ },
+ {
+  "name": "count: c.g.changed_word_top5.np",
+  "ok": true,
+  "detail": "text 91 vs recomputed 91.000000"
+ },
+ {
+  "name": "interval: c.g.changed_word_top5 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.637, 0.785] vs [0.639, 0.789]"
+ },
+ {
+  "name": "interval: c.g.changed_word_top5 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.changed_word_top5_diff_first",
+  "ok": true,
+  "detail": "text 0.713 vs recomputed 0.713287"
+ },
+ {
+  "name": "count: c.g.changed_word_top5_diff_first.n",
+  "ok": true,
+  "detail": "text 143 vs recomputed 143.000000"
+ },
+ {
+  "name": "count: c.g.changed_word_top5_diff_first.np",
+  "ok": true,
+  "detail": "text 91 vs recomputed 91.000000"
+ },
+ {
+  "name": "interval: c.g.changed_word_top5_diff_first agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.636, 0.781] vs [0.631, 0.785]"
+ },
+ {
+  "name": "interval: c.g.changed_word_top5_diff_first contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.ctrl_word_top5",
+  "ok": true,
+  "detail": "text 0.021 vs recomputed 0.020979"
+ },
+ {
+  "name": "count: c.g.ctrl_word_top5.n",
+  "ok": true,
+  "detail": "text 143 vs recomputed 143.000000"
+ },
+ {
+  "name": "count: c.g.ctrl_word_top5.np",
+  "ok": true,
+  "detail": "text 91 vs recomputed 91.000000"
+ },
+ {
+  "name": "interval: c.g.ctrl_word_top5 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.046] vs [0.000, 0.050]"
+ },
+ {
+  "name": "interval: c.g.ctrl_word_top5 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.lens_Lc_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.753 vs recomputed 0.753321"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_U_at_l.n",
+  "ok": true,
+  "detail": "text 17,614 vs recomputed 17614.000000"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_U_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_U_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.742, 0.764] vs [0.742, 0.764]"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_U_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.lens_Lr_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.127 vs recomputed 0.126717"
+ },
+ {
+  "name": "count: c.q.lens_Lr_gt_U_at_l.n",
+  "ok": true,
+  "detail": "text 17,614 vs recomputed 17614.000000"
+ },
+ {
+  "name": "count: c.q.lens_Lr_gt_U_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.q.lens_Lr_gt_U_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.121, 0.133] vs [0.121, 0.133]"
+ },
+ {
+  "name": "interval: c.q.lens_Lr_gt_U_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.lens_Lc_gt_U_last",
+  "ok": true,
+  "detail": "text 0.002 vs recomputed 0.001928"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_U_last.n",
+  "ok": true,
+  "detail": "text 17,636 vs recomputed 17636.000000"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_U_last.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_U_last agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.001, 0.003] vs [0.001, 0.003]"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_U_last contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.lens_Lc_gt_Lr_upper_at_l",
+  "ok": true,
+  "detail": "text 0.878 vs recomputed 0.878125"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_Lr_upper_at_l.n",
+  "ok": true,
+  "detail": "text 17,641 vs recomputed 17641.000000"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_Lr_upper_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_Lr_upper_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.872, 0.884] vs [0.871, 0.885]"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_Lr_upper_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.lens_Lc_gt_Lr_lower_at_l",
+  "ok": true,
+  "detail": "text 0.890 vs recomputed 0.889802"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_Lr_lower_at_l.n",
+  "ok": true,
+  "detail": "text 17,641 vs recomputed 17641.000000"
+ },
+ {
+  "name": "count: c.q.lens_Lc_gt_Lr_lower_at_l.np",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_Lr_lower_at_l agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.884, 0.896] vs [0.884, 0.895]"
+ },
+ {
+  "name": "interval: c.q.lens_Lc_gt_Lr_lower_at_l contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_dir_L22_flip",
+  "ok": true,
+  "detail": "text 0.956 vs recomputed 0.955923"
+ },
+ {
+  "name": "count: c.q.add_dir_L22_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_dir_L22_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_dir_L22_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.929, 0.978] vs [0.931, 0.978]"
+ },
+ {
+  "name": "interval: c.q.add_dir_L22_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_dir_L22_same_word",
+  "ok": true,
+  "detail": "text 0.658 vs recomputed 0.658402"
+ },
+ {
+  "name": "count: c.q.add_dir_L22_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_dir_L22_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_dir_L22_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.601, 0.716] vs [0.599, 0.712]"
+ },
+ {
+  "name": "interval: c.q.add_dir_L22_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_rand_L22_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L22_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L22_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_rand_L22_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.add_rand_L22_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_rand_L22_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L22_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L22_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_rand_L22_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.add_rand_L22_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_dir_L22_flip",
+  "ok": true,
+  "detail": "text 0.967 vs recomputed 0.967033"
+ },
+ {
+  "name": "count: c.q.sub_dir_L22_flip.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_dir_L22_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L22_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.948, 0.984] vs [0.950, 0.983]"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L22_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_dir_L22_same_word",
+  "ok": true,
+  "detail": "text 0.668 vs recomputed 0.667582"
+ },
+ {
+  "name": "count: c.q.sub_dir_L22_same_word.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_dir_L22_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L22_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.616, 0.720] vs [0.620, 0.717]"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L22_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_rand_L22_flip",
+  "ok": true,
+  "detail": "text 0.003 vs recomputed 0.002747"
+ },
+ {
+  "name": "count: c.q.sub_rand_L22_flip.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_rand_L22_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L22_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.008] vs [0.000, 0.008]"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L22_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_rand_L22_same_word",
+  "ok": true,
+  "detail": "text 0.003 vs recomputed 0.002747"
+ },
+ {
+  "name": "count: c.q.sub_rand_L22_same_word.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_rand_L22_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L22_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.008] vs [0.000, 0.008]"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L22_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.008 vs recomputed 0.008264"
+ },
+ {
+  "name": "count: c.q.add_dir_L16_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_dir_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_dir_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.017] vs [0.000, 0.017]"
+ },
+ {
+  "name": "interval: c.q.add_dir_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.006 vs recomputed 0.005510"
+ },
+ {
+  "name": "count: c.q.add_dir_L16_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_dir_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_dir_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.014] vs [0.000, 0.014]"
+ },
+ {
+  "name": "interval: c.q.add_dir_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L16_flip.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_rand_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.add_rand_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.add_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L16_same_word.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.add_rand_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.add_rand_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.add_rand_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.481 vs recomputed 0.480769"
+ },
+ {
+  "name": "count: c.q.sub_dir_L16_flip.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_dir_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.433, 0.530] vs [0.434, 0.528]"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.335 vs recomputed 0.335165"
+ },
+ {
+  "name": "count: c.q.sub_dir_L16_same_word.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_dir_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.290, 0.378] vs [0.291, 0.381]"
+ },
+ {
+  "name": "interval: c.q.sub_dir_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.sub_rand_L16_flip.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_rand_L16_flip.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L16_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L16_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.sub_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.sub_rand_L16_same_word.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.sub_rand_L16_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L16_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.sub_rand_L16_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.rm_dir_upper_share",
+  "ok": true,
+  "detail": "text 0.527 vs recomputed 0.527221"
+ },
+ {
+  "name": "count: c.q.rm_dir_upper_share.n",
+  "ok": true,
+  "detail": "text 349 vs recomputed 349.000000"
+ },
+ {
+  "name": "count: c.q.rm_dir_upper_share.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.rm_dir_upper_share agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.477, 0.584] vs [0.474, 0.582]"
+ },
+ {
+  "name": "interval: c.q.rm_dir_upper_share contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.rm_dir_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.805 vs recomputed 0.805158"
+ },
+ {
+  "name": "count: c.q.rm_dir_same_word_any_case.n",
+  "ok": true,
+  "detail": "text 349 vs recomputed 349.000000"
+ },
+ {
+  "name": "count: c.q.rm_dir_same_word_any_case.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.rm_dir_same_word_any_case agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.758, 0.849] vs [0.761, 0.847]"
+ },
+ {
+  "name": "interval: c.q.rm_dir_same_word_any_case contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.rm_rand_upper_share",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "count: c.q.rm_rand_upper_share.n",
+  "ok": true,
+  "detail": "text 349 vs recomputed 349.000000"
+ },
+ {
+  "name": "count: c.q.rm_rand_upper_share.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.rm_rand_upper_share agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.000, 1.000] vs [1.000, 1.000]"
+ },
+ {
+  "name": "interval: c.q.rm_rand_upper_share contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.rm_rand_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.974 vs recomputed 0.974212"
+ },
+ {
+  "name": "count: c.q.rm_rand_same_word_any_case.n",
+  "ok": true,
+  "detail": "text 349 vs recomputed 349.000000"
+ },
+ {
+  "name": "count: c.q.rm_rand_same_word_any_case.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.rm_rand_same_word_any_case agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.957, 0.989] vs [0.957, 0.989]"
+ },
+ {
+  "name": "interval: c.q.rm_rand_same_word_any_case contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.orig_add_dir_to_upper",
+  "ok": true,
+  "detail": "text 0.941 vs recomputed 0.941368"
+ },
+ {
+  "name": "count: c.q.orig_add_dir_to_upper.n",
+  "ok": true,
+  "detail": "text 307 vs recomputed 307.000000"
+ },
+ {
+  "name": "count: c.q.orig_add_dir_to_upper.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.orig_add_dir_to_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.913, 0.968] vs [0.914, 0.967]"
+ },
+ {
+  "name": "interval: c.q.orig_add_dir_to_upper contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.orig_add_dir_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.678 vs recomputed 0.677524"
+ },
+ {
+  "name": "count: c.q.orig_add_dir_to_upper_same_word.n",
+  "ok": true,
+  "detail": "text 307 vs recomputed 307.000000"
+ },
+ {
+  "name": "count: c.q.orig_add_dir_to_upper_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.orig_add_dir_to_upper_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.621, 0.732] vs [0.620, 0.733]"
+ },
+ {
+  "name": "interval: c.q.orig_add_dir_to_upper_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.orig_add_rand_to_upper",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.orig_add_rand_to_upper.n",
+  "ok": true,
+  "detail": "text 307 vs recomputed 307.000000"
+ },
+ {
+  "name": "count: c.q.orig_add_rand_to_upper.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.orig_add_rand_to_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.orig_add_rand_to_upper contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.orig_add_rand_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.orig_add_rand_to_upper_same_word.n",
+  "ok": true,
+  "detail": "text 307 vs recomputed 307.000000"
+ },
+ {
+  "name": "count: c.q.orig_add_rand_to_upper_same_word.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.orig_add_rand_to_upper_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.orig_add_rand_to_upper_same_word contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.upper_top1_L+u1",
+  "ok": true,
+  "detail": "text 0.311 vs recomputed 0.310924"
+ },
+ {
+  "name": "count: c.q.upper_top1_L+u1.n",
+  "ok": true,
+  "detail": "text 357 vs recomputed 357.000000"
+ },
+ {
+  "name": "count: c.q.upper_top1_L+u1.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.upper_top1_L+u1 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.262, 0.360] vs [0.263, 0.361]"
+ },
+ {
+  "name": "interval: c.q.upper_top1_L+u1 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.upper_top1_L+u2",
+  "ok": true,
+  "detail": "text 0.683 vs recomputed 0.683196"
+ },
+ {
+  "name": "count: c.q.upper_top1_L+u2.n",
+  "ok": true,
+  "detail": "text 363 vs recomputed 363.000000"
+ },
+ {
+  "name": "count: c.q.upper_top1_L+u2.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.upper_top1_L+u2 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.631, 0.732] vs [0.634, 0.736]"
+ },
+ {
+  "name": "interval: c.q.upper_top1_L+u2 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.upper_top1_L+u8",
+  "ok": true,
+  "detail": "text 0.925 vs recomputed 0.924731"
+ },
+ {
+  "name": "count: c.q.upper_top1_L+u8.n",
+  "ok": true,
+  "detail": "text 372 vs recomputed 372.000000"
+ },
+ {
+  "name": "count: c.q.upper_top1_L+u8.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.upper_top1_L+u8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.897, 0.950] vs [0.895, 0.952]"
+ },
+ {
+  "name": "interval: c.q.upper_top1_L+u8 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.upper_top1_U+l1",
+  "ok": true,
+  "detail": "text 0.390 vs recomputed 0.390110"
+ },
+ {
+  "name": "count: c.q.upper_top1_U+l1.n",
+  "ok": true,
+  "detail": "text 364 vs recomputed 364.000000"
+ },
+ {
+  "name": "count: c.q.upper_top1_U+l1.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.upper_top1_U+l1 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.342, 0.440] vs [0.343, 0.440]"
+ },
+ {
+  "name": "interval: c.q.upper_top1_U+l1 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.upper_top1_U+l2",
+  "ok": true,
+  "detail": "text 0.131 vs recomputed 0.131148"
+ },
+ {
+  "name": "count: c.q.upper_top1_U+l2.n",
+  "ok": true,
+  "detail": "text 366 vs recomputed 366.000000"
+ },
+ {
+  "name": "count: c.q.upper_top1_U+l2.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.upper_top1_U+l2 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.097, 0.171] vs [0.097, 0.169]"
+ },
+ {
+  "name": "interval: c.q.upper_top1_U+l2 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.upper_top1_U+l8",
+  "ok": true,
+  "detail": "text 0.029 vs recomputed 0.029491"
+ },
+ {
+  "name": "count: c.q.upper_top1_U+l8.n",
+  "ok": true,
+  "detail": "text 373 vs recomputed 373.000000"
+ },
+ {
+  "name": "count: c.q.upper_top1_U+l8.np",
+  "ok": true,
+  "detail": "text 100 vs recomputed 100.000000"
+ },
+ {
+  "name": "interval: c.q.upper_top1_U+l8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.013, 0.049] vs [0.013, 0.049]"
+ },
+ {
+  "name": "interval: c.q.upper_top1_U+l8 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.changed_word_top5",
+  "ok": true,
+  "detail": "text 0.676 vs recomputed 0.676471"
+ },
+ {
+  "name": "count: c.q.changed_word_top5.n",
+  "ok": true,
+  "detail": "text 170 vs recomputed 170.000000"
+ },
+ {
+  "name": "count: c.q.changed_word_top5.np",
+  "ok": true,
+  "detail": "text 109 vs recomputed 109.000000"
+ },
+ {
+  "name": "interval: c.q.changed_word_top5 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.615, 0.742] vs [0.610, 0.741]"
+ },
+ {
+  "name": "interval: c.q.changed_word_top5 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.changed_word_top5_diff_first",
+  "ok": true,
+  "detail": "text 0.676 vs recomputed 0.676471"
+ },
+ {
+  "name": "count: c.q.changed_word_top5_diff_first.n",
+  "ok": true,
+  "detail": "text 170 vs recomputed 170.000000"
+ },
+ {
+  "name": "count: c.q.changed_word_top5_diff_first.np",
+  "ok": true,
+  "detail": "text 109 vs recomputed 109.000000"
+ },
+ {
+  "name": "interval: c.q.changed_word_top5_diff_first agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.610, 0.742] vs [0.613, 0.743]"
+ },
+ {
+  "name": "interval: c.q.changed_word_top5_diff_first contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.ctrl_word_top5",
+  "ok": true,
+  "detail": "text 0.029 vs recomputed 0.029412"
+ },
+ {
+  "name": "count: c.q.ctrl_word_top5.n",
+  "ok": true,
+  "detail": "text 170 vs recomputed 170.000000"
+ },
+ {
+  "name": "count: c.q.ctrl_word_top5.np",
+  "ok": true,
+  "detail": "text 109 vs recomputed 109.000000"
+ },
+ {
+  "name": "interval: c.q.ctrl_word_top5 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.006, 0.063] vs [0.006, 0.064]"
+ },
+ {
+  "name": "interval: c.q.ctrl_word_top5 contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_self_attention_upper",
+  "ok": true,
+  "detail": "text 0.978 vs recomputed 0.978047"
+ },
+ {
+  "name": "count: c.q.L0H3_self_attention_upper.n",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_self_attention_upper.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_self_attention_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.975, 0.981] vs [0.975, 0.981]"
+ },
+ {
+  "name": "interval: c.q.L0H3_self_attention_upper contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_self_attention_lower",
+  "ok": true,
+  "detail": "text 0.968 vs recomputed 0.968437"
+ },
+ {
+  "name": "count: c.q.L0H3_self_attention_lower.n",
+  "ok": true,
+  "detail": "text 200 vs recomputed 200.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_self_attention_lower.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_self_attention_lower agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.965, 0.972] vs [0.965, 0.972]"
+ },
+ {
+  "name": "interval: c.q.L0H3_self_attention_lower contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_same_lower_moved",
+  "ok": true,
+  "detail": "text 0.325 vs recomputed 0.325321"
+ },
+ {
+  "name": "count: c.q.L0H3_same_lower_moved.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_same_lower_moved.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_same_lower_moved agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.300, 0.352] vs [0.298, 0.352]"
+ },
+ {
+  "name": "interval: c.q.L0H3_same_lower_moved contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_same_lower_flip",
+  "ok": true,
+  "detail": "text 0.403 vs recomputed 0.403226"
+ },
+ {
+  "name": "count: c.q.L0H3_same_lower_flip.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_same_lower_flip.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_same_lower_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.340, 0.473] vs [0.335, 0.470]"
+ },
+ {
+  "name": "interval: c.q.L0H3_same_lower_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_other_lower_moved",
+  "ok": true,
+  "detail": "text 0.352 vs recomputed 0.352155"
+ },
+ {
+  "name": "count: c.q.L0H3_other_lower_moved.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_other_lower_moved.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_lower_moved agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.323, 0.381] vs [0.323, 0.380]"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_lower_moved contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_other_lower_flip",
+  "ok": true,
+  "detail": "text 0.495 vs recomputed 0.494624"
+ },
+ {
+  "name": "count: c.q.L0H3_other_lower_flip.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_other_lower_flip.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_lower_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.425, 0.565] vs [0.429, 0.569]"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_lower_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_other_upper_moved",
+  "ok": true,
+  "detail": "text 0.029 vs recomputed 0.029488"
+ },
+ {
+  "name": "count: c.q.L0H3_other_upper_moved.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_other_upper_moved.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_upper_moved agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.011, 0.049] vs [0.010, 0.049]"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_upper_moved contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_other_upper_flip",
+  "ok": true,
+  "detail": "text 0.011 vs recomputed 0.010753"
+ },
+ {
+  "name": "count: c.q.L0H3_other_upper_flip.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_other_upper_flip.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_upper_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.027] vs [0.000, 0.027]"
+ },
+ {
+  "name": "interval: c.q.L0H3_other_upper_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_ctrl_L0H2_same_lower_moved",
+  "ok": true,
+  "detail": "text 0.011 vs recomputed 0.010638"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H2_same_lower_moved.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H2_same_lower_moved.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H2_same_lower_moved agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.005, 0.016] vs [0.005, 0.017]"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H2_same_lower_moved contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_ctrl_L0H2_same_lower_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H2_same_lower_flip.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H2_same_lower_flip.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H2_same_lower_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H2_same_lower_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_ctrl_L0H0_same_lower_moved",
+  "ok": true,
+  "detail": "text 0.001 vs recomputed 0.000546"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H0_same_lower_moved.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H0_same_lower_moved.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H0_same_lower_moved agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.002] vs [-0.000, 0.002]"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H0_same_lower_moved contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.L0H3_ctrl_L0H0_same_lower_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H0_same_lower_flip.n",
+  "ok": true,
+  "detail": "text 186 vs recomputed 186.000000"
+ },
+ {
+  "name": "count: c.q.L0H3_ctrl_L0H0_same_lower_flip.np",
+  "ok": true,
+  "detail": "text 50 vs recomputed 50.000000"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H0_same_lower_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "interval: c.q.L0H3_ctrl_L0H0_same_lower_flip contains its point",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: e.g.lens_Lc_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.705 vs recomputed 0.704509"
+ },
+ {
+  "name": "recount: e.g.lens_Lr_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.164 vs recomputed 0.164156"
+ },
+ {
+  "name": "recount: e.g.lens_Lc_gt_U_last",
+  "ok": true,
+  "detail": "text 0.001 vs recomputed 0.001096"
+ },
+ {
+  "name": "recount: e.g.lens_Lc_gt_Lr_upper_at_l",
+  "ok": true,
+  "detail": "text 0.852 vs recomputed 0.852471"
+ },
+ {
+  "name": "recount: e.g.lens_Lc_gt_Lr_lower_at_l",
+  "ok": true,
+  "detail": "text 0.853 vs recomputed 0.852745"
+ },
+ {
+  "name": "recount: e.g.add_dir_L24_flip",
+  "ok": true,
+  "detail": "text 0.961 vs recomputed 0.960674"
+ },
+ {
+  "name": "recount: e.g.add_dir_L24_same_word",
+  "ok": true,
+  "detail": "text 0.775 vs recomputed 0.775281"
+ },
+ {
+  "name": "recount: e.g.add_rand_L24_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.add_rand_L24_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.sub_dir_L24_flip",
+  "ok": true,
+  "detail": "text 0.955 vs recomputed 0.954545"
+ },
+ {
+  "name": "recount: e.g.sub_dir_L24_same_word",
+  "ok": true,
+  "detail": "text 0.756 vs recomputed 0.755682"
+ },
+ {
+  "name": "recount: e.g.sub_rand_L24_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.sub_rand_L24_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.add_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.022 vs recomputed 0.022472"
+ },
+ {
+  "name": "recount: e.g.add_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.017 vs recomputed 0.016854"
+ },
+ {
+  "name": "recount: e.g.add_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.add_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.sub_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.756 vs recomputed 0.755682"
+ },
+ {
+  "name": "recount: e.g.sub_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.602 vs recomputed 0.602273"
+ },
+ {
+  "name": "recount: e.g.sub_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.sub_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.rm_dir_upper_share",
+  "ok": true,
+  "detail": "text 0.524 vs recomputed 0.524476"
+ },
+ {
+  "name": "recount: e.g.rm_dir_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.846 vs recomputed 0.846154"
+ },
+ {
+  "name": "recount: e.g.rm_rand_upper_share",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: e.g.rm_rand_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.993 vs recomputed 0.993007"
+ },
+ {
+  "name": "recount: e.g.orig_add_dir_to_upper",
+  "ok": true,
+  "detail": "text 0.952 vs recomputed 0.951613"
+ },
+ {
+  "name": "recount: e.g.orig_add_dir_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.823 vs recomputed 0.822581"
+ },
+ {
+  "name": "recount: e.g.orig_add_rand_to_upper",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.orig_add_rand_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.g.upper_top1_L+u1",
+  "ok": true,
+  "detail": "text 0.322 vs recomputed 0.321739"
+ },
+ {
+  "name": "recount: e.g.upper_top1_L+u2",
+  "ok": true,
+  "detail": "text 0.689 vs recomputed 0.689266"
+ },
+ {
+  "name": "recount: e.g.upper_top1_L+u8",
+  "ok": true,
+  "detail": "text 0.933 vs recomputed 0.932773"
+ },
+ {
+  "name": "recount: e.g.upper_top1_U+l1",
+  "ok": true,
+  "detail": "text 0.198 vs recomputed 0.197740"
+ },
+ {
+  "name": "recount: e.g.upper_top1_U+l2",
+  "ok": true,
+  "detail": "text 0.078 vs recomputed 0.078212"
+ },
+ {
+  "name": "recount: e.g.upper_top1_U+l8",
+  "ok": true,
+  "detail": "text 0.014 vs recomputed 0.013774"
+ },
+ {
+  "name": "recount: e.g.changed_word_top5",
+  "ok": true,
+  "detail": "text 0.762 vs recomputed 0.762238"
+ },
+ {
+  "name": "recount: e.g.changed_word_top5_diff_first",
+  "ok": true,
+  "detail": "text 0.761 vs recomputed 0.760563"
+ },
+ {
+  "name": "recount: e.g.ctrl_word_top5",
+  "ok": true,
+  "detail": "text 0.014 vs recomputed 0.013986"
+ },
+ {
+  "name": "recount: e.q.lens_Lc_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.748 vs recomputed 0.748380"
+ },
+ {
+  "name": "recount: e.q.lens_Lr_gt_U_at_l",
+  "ok": true,
+  "detail": "text 0.130 vs recomputed 0.130010"
+ },
+ {
+  "name": "recount: e.q.lens_Lc_gt_U_last",
+  "ok": true,
+  "detail": "text 0.002 vs recomputed 0.001973"
+ },
+ {
+  "name": "recount: e.q.lens_Lc_gt_Lr_upper_at_l",
+  "ok": true,
+  "detail": "text 0.871 vs recomputed 0.870768"
+ },
+ {
+  "name": "recount: e.q.lens_Lc_gt_Lr_lower_at_l",
+  "ok": true,
+  "detail": "text 0.885 vs recomputed 0.885066"
+ },
+ {
+  "name": "recount: e.q.add_dir_L22_flip",
+  "ok": true,
+  "detail": "text 0.957 vs recomputed 0.957143"
+ },
+ {
+  "name": "recount: e.q.add_dir_L22_same_word",
+  "ok": true,
+  "detail": "text 0.600 vs recomputed 0.600000"
+ },
+ {
+  "name": "recount: e.q.add_rand_L22_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.add_rand_L22_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.sub_dir_L22_flip",
+  "ok": true,
+  "detail": "text 0.971 vs recomputed 0.971429"
+ },
+ {
+  "name": "recount: e.q.sub_dir_L22_same_word",
+  "ok": true,
+  "detail": "text 0.657 vs recomputed 0.657143"
+ },
+ {
+  "name": "recount: e.q.sub_rand_L22_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.sub_rand_L22_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.add_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.add_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.add_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.add_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.sub_dir_L16_flip",
+  "ok": true,
+  "detail": "text 0.500 vs recomputed 0.500000"
+ },
+ {
+  "name": "recount: e.q.sub_dir_L16_same_word",
+  "ok": true,
+  "detail": "text 0.329 vs recomputed 0.328571"
+ },
+ {
+  "name": "recount: e.q.sub_rand_L16_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.sub_rand_L16_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.rm_dir_upper_share",
+  "ok": true,
+  "detail": "text 0.465 vs recomputed 0.464789"
+ },
+ {
+  "name": "recount: e.q.rm_dir_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.725 vs recomputed 0.725352"
+ },
+ {
+  "name": "recount: e.q.rm_rand_upper_share",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: e.q.rm_rand_same_word_any_case",
+  "ok": true,
+  "detail": "text 0.965 vs recomputed 0.964789"
+ },
+ {
+  "name": "recount: e.q.orig_add_dir_to_upper",
+  "ok": true,
+  "detail": "text 0.959 vs recomputed 0.959016"
+ },
+ {
+  "name": "recount: e.q.orig_add_dir_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.639 vs recomputed 0.639344"
+ },
+ {
+  "name": "recount: e.q.orig_add_rand_to_upper",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.orig_add_rand_to_upper_same_word",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.upper_top1_L+u1",
+  "ok": true,
+  "detail": "text 0.351 vs recomputed 0.350575"
+ },
+ {
+  "name": "recount: e.q.upper_top1_L+u2",
+  "ok": true,
+  "detail": "text 0.687 vs recomputed 0.686610"
+ },
+ {
+  "name": "recount: e.q.upper_top1_L+u8",
+  "ok": true,
+  "detail": "text 0.933 vs recomputed 0.933333"
+ },
+ {
+  "name": "recount: e.q.upper_top1_U+l1",
+  "ok": true,
+  "detail": "text 0.363 vs recomputed 0.362606"
+ },
+ {
+  "name": "recount: e.q.upper_top1_U+l2",
+  "ok": true,
+  "detail": "text 0.115 vs recomputed 0.114846"
+ },
+ {
+  "name": "recount: e.q.upper_top1_U+l8",
+  "ok": true,
+  "detail": "text 0.036 vs recomputed 0.036212"
+ },
+ {
+  "name": "recount: e.q.changed_word_top5",
+  "ok": true,
+  "detail": "text 0.694 vs recomputed 0.694444"
+ },
+ {
+  "name": "recount: e.q.changed_word_top5_diff_first",
+  "ok": true,
+  "detail": "text 0.694 vs recomputed 0.694444"
+ },
+ {
+  "name": "recount: e.q.ctrl_word_top5",
+  "ok": true,
+  "detail": "text 0.022 vs recomputed 0.022222"
+ },
+ {
+  "name": "recount: e.q.L0H3_self_attention_upper",
+  "ok": true,
+  "detail": "text 0.977 vs recomputed 0.976816"
+ },
+ {
+  "name": "recount: e.q.L0H3_self_attention_lower",
+  "ok": true,
+  "detail": "text 0.972 vs recomputed 0.971953"
+ },
+ {
+  "name": "recount: e.q.L0H3_same_lower_moved",
+  "ok": true,
+  "detail": "text 0.302 vs recomputed 0.301813"
+ },
+ {
+  "name": "recount: e.q.L0H3_same_lower_flip",
+  "ok": true,
+  "detail": "text 0.399 vs recomputed 0.398844"
+ },
+ {
+  "name": "recount: e.q.L0H3_other_lower_moved",
+  "ok": true,
+  "detail": "text 0.344 vs recomputed 0.343557"
+ },
+ {
+  "name": "recount: e.q.L0H3_other_lower_flip",
+  "ok": true,
+  "detail": "text 0.543 vs recomputed 0.543353"
+ },
+ {
+  "name": "recount: e.q.L0H3_other_upper_moved",
+  "ok": true,
+  "detail": "text 0.030 vs recomputed 0.030429"
+ },
+ {
+  "name": "recount: e.q.L0H3_other_upper_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.L0H3_ctrl_L0H2_same_lower_moved",
+  "ok": true,
+  "detail": "text 0.021 vs recomputed 0.020733"
+ },
+ {
+  "name": "recount: e.q.L0H3_ctrl_L0H2_same_lower_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: e.q.L0H3_ctrl_L0H0_same_lower_moved",
+  "ok": true,
+  "detail": "text −0.001 vs recomputed -0.000680"
+ },
+ {
+  "name": "recount: e.q.L0H3_ctrl_L0H0_same_lower_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "figure 2 data g: every layer recomputed from records",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: fig2.g.LcLr.0",
+  "ok": true,
+  "detail": "text 0.31 vs recomputed 0.309903"
+ },
+ {
+  "name": "recount: fig2.g.LcLr.16",
+  "ok": true,
+  "detail": "text 0.47 vs recomputed 0.469078"
+ },
+ {
+  "name": "recount: fig2.g.LcLr.19",
+  "ok": true,
+  "detail": "text 0.53 vs recomputed 0.525027"
+ },
+ {
+  "name": "recount: fig2.g.LcLr.20",
+  "ok": true,
+  "detail": "text 0.67 vs recomputed 0.671107"
+ },
+ {
+  "name": "recount: fig2.g.LcLr.24",
+  "ok": true,
+  "detail": "text 0.85 vs recomputed 0.851936"
+ },
+ {
+  "name": "recount: fig2.g.LcU.0",
+  "ok": true,
+  "detail": "text 0.42 vs recomputed 0.417045"
+ },
+ {
+  "name": "recount: fig2.g.LcU.16",
+  "ok": true,
+  "detail": "text 0.67 vs recomputed 0.674591"
+ },
+ {
+  "name": "recount: fig2.g.LcU.19",
+  "ok": true,
+  "detail": "text 0.61 vs recomputed 0.614498"
+ },
+ {
+  "name": "recount: fig2.g.LcU.20",
+  "ok": true,
+  "detail": "text 0.65 vs recomputed 0.647971"
+ },
+ {
+  "name": "recount: fig2.g.LcU.24",
+  "ok": true,
+  "detail": "text 0.71 vs recomputed 0.706964"
+ },
+ {
+  "name": "recount: fig2.g.LrU.0",
+  "ok": true,
+  "detail": "text 0.64 vs recomputed 0.635646"
+ },
+ {
+  "name": "recount: fig2.g.LrU.16",
+  "ok": true,
+  "detail": "text 0.64 vs recomputed 0.644916"
+ },
+ {
+  "name": "recount: fig2.g.LrU.19",
+  "ok": true,
+  "detail": "text 0.55 vs recomputed 0.547634"
+ },
+ {
+  "name": "recount: fig2.g.LrU.20",
+  "ok": true,
+  "detail": "text 0.43 vs recomputed 0.427833"
+ },
+ {
+  "name": "recount: fig2.g.LrU.24",
+  "ok": true,
+  "detail": "text 0.16 vs recomputed 0.161593"
+ },
+ {
+  "name": "figure 2 data q: every layer recomputed from records",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: fig2.q.LcLr.0",
+  "ok": true,
+  "detail": "text 0.48 vs recomputed 0.478147"
+ },
+ {
+  "name": "recount: fig2.q.LcLr.16",
+  "ok": true,
+  "detail": "text 0.69 vs recomputed 0.691798"
+ },
+ {
+  "name": "recount: fig2.q.LcLr.19",
+  "ok": true,
+  "detail": "text 0.83 vs recomputed 0.828638"
+ },
+ {
+  "name": "recount: fig2.q.LcLr.20",
+  "ok": true,
+  "detail": "text 0.85 vs recomputed 0.850462"
+ },
+ {
+  "name": "recount: fig2.q.LcLr.22",
+  "ok": true,
+  "detail": "text 0.88 vs recomputed 0.878125"
+ },
+ {
+  "name": "recount: fig2.q.LcU.0",
+  "ok": true,
+  "detail": "text 0.79 vs recomputed 0.790979"
+ },
+ {
+  "name": "recount: fig2.q.LcU.16",
+  "ok": true,
+  "detail": "text 0.83 vs recomputed 0.827123"
+ },
+ {
+  "name": "recount: fig2.q.LcU.19",
+  "ok": true,
+  "detail": "text 0.65 vs recomputed 0.646731"
+ },
+ {
+  "name": "recount: fig2.q.LcU.20",
+  "ok": true,
+  "detail": "text 0.73 vs recomputed 0.728652"
+ },
+ {
+  "name": "recount: fig2.q.LcU.22",
+  "ok": true,
+  "detail": "text 0.75 vs recomputed 0.753321"
+ },
+ {
+  "name": "recount: fig2.q.LrU.0",
+  "ok": true,
+  "detail": "text 0.75 vs recomputed 0.749617"
+ },
+ {
+  "name": "recount: fig2.q.LrU.16",
+  "ok": true,
+  "detail": "text 0.61 vs recomputed 0.610799"
+ },
+ {
+  "name": "recount: fig2.q.LrU.19",
+  "ok": true,
+  "detail": "text 0.15 vs recomputed 0.151904"
+ },
+ {
+  "name": "recount: fig2.q.LrU.20",
+  "ok": true,
+  "detail": "text 0.17 vs recomputed 0.165104"
+ },
+ {
+  "name": "recount: fig2.q.LrU.22",
+  "ok": true,
+  "detail": "text 0.13 vs recomputed 0.126717"
+ },
+ {
+  "name": "recount: gate.g.c1",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.994113"
+ },
+ {
+  "name": "recount: gate.g.c2",
+  "ok": true,
+  "detail": "text 0.697 vs recomputed 0.696527"
+ },
+ {
+  "name": "recount: gate.g.c3",
+  "ok": true,
+  "detail": "text 0.833 vs recomputed 0.833259"
+ },
+ {
+  "name": "recount: gate.g.ceil",
+  "ok": true,
+  "detail": "text 0.835 vs recomputed 0.835466"
+ },
+ {
+  "name": "recount: gate.g.n",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "gate g: passes as the text says",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.gate.c1",
+  "ok": true,
+  "detail": "text 0.995 vs recomputed 0.994843"
+ },
+ {
+  "name": "recount: c.g.gate.c2",
+  "ok": true,
+  "detail": "text 0.707 vs recomputed 0.707273"
+ },
+ {
+  "name": "recount: c.g.gate.c3",
+  "ok": true,
+  "detail": "text 0.837 vs recomputed 0.837456"
+ },
+ {
+  "name": "recount: gate.q.c1",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.997637"
+ },
+ {
+  "name": "recount: gate.q.c2",
+  "ok": true,
+  "detail": "text 0.620 vs recomputed 0.619744"
+ },
+ {
+  "name": "recount: gate.q.c3",
+  "ok": true,
+  "detail": "text 0.796 vs recomputed 0.795641"
+ },
+ {
+  "name": "recount: gate.q.ceil",
+  "ok": true,
+  "detail": "text 0.797 vs recomputed 0.797075"
+ },
+ {
+  "name": "recount: gate.q.n",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "gate q: passes as the text says",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.gate.c1",
+  "ok": true,
+  "detail": "text 0.998 vs recomputed 0.997896"
+ },
+ {
+  "name": "recount: c.q.gate.c2",
+  "ok": true,
+  "detail": "text 0.649 vs recomputed 0.648551"
+ },
+ {
+  "name": "recount: c.q.gate.c3",
+  "ok": true,
+  "detail": "text 0.788 vs recomputed 0.787676"
+ },
+ {
+  "name": "recount: gate.s.c1",
+  "ok": true,
+  "detail": "text 0.999 vs recomputed 0.998834"
+ },
+ {
+  "name": "recount: gate.s.c2",
+  "ok": true,
+  "detail": "text 0.595 vs recomputed 0.594646"
+ },
+ {
+  "name": "recount: gate.s.c3",
+  "ok": true,
+  "detail": "text 0.792 vs recomputed 0.792373"
+ },
+ {
+  "name": "recount: gate.s.ceil",
+  "ok": true,
+  "detail": "text 0.824 vs recomputed 0.824092"
+ },
+ {
+  "name": "recount: gate.s.n",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "gate s: fails as the text says",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "gate s: fails on the same-word condition only",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: gate.p.c1",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 0.999668"
+ },
+ {
+  "name": "recount: gate.p.c2",
+  "ok": true,
+  "detail": "text 0.480 vs recomputed 0.479846"
+ },
+ {
+  "name": "recount: gate.p.c3",
+  "ok": true,
+  "detail": "text 0.713 vs recomputed 0.712992"
+ },
+ {
+  "name": "recount: gate.p.ceil",
+  "ok": true,
+  "detail": "text 0.747 vs recomputed 0.746641"
+ },
+ {
+  "name": "recount: gate.p.n",
+  "ok": true,
+  "detail": "text 150 vs recomputed 150.000000"
+ },
+ {
+  "name": "gate p: fails as the text says",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "gate p: fails on the same-word condition only",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: gate c1 range is g to p",
+  "ok": true,
+  "detail": "{'g': 0.994, 'q': 0.998, 's': 0.999, 'p': 1.0}"
+ },
+ {
+  "name": "claim: gate c3 range is p to g",
+  "ok": true,
+  "detail": "{'g': 0.833, 'q': 0.796, 's': 0.792, 'p': 0.713}"
+ },
+ {
+  "name": "claim: gate ceil range is p to g",
+  "ok": true,
+  "detail": "{'g': 0.835, 'q': 0.797, 's': 0.824, 'p': 0.747}"
+ },
+ {
+  "name": "recount: mat.explore.paras",
+  "ok": true,
+  "detail": "text 613 vs recomputed 613.000000"
+ },
+ {
+  "name": "recount: mat.explore.articles",
+  "ok": true,
+  "detail": "text 315 vs recomputed 315.000000"
+ },
+ {
+  "name": "recount: mat.conf.paras",
+  "ok": true,
+  "detail": "text 597 vs recomputed 597.000000"
+ },
+ {
+  "name": "recount: mat.conf.articles",
+  "ok": true,
+  "detail": "text 332 vs recomputed 332.000000"
+ },
+ {
+  "name": "threshold L1 **≥ 0.60** is in PROTOCOL.md under L1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold L1 **≤ 0.30** is in PROTOCOL.md under L1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold L1 **≤ 0.05** is in PROTOCOL.md under L1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold L1 Gemma ≥ 30, Qwen3 ≥ 23 is in PROTOCOL.md under L1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold L2 **≥ 0.75** is in PROTOCOL.md under L2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold L2 **≤ 0.05** is in PROTOCOL.md under L2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D1 **≥ 0.80** is in PROTOCOL.md under D1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D1 **≥ 0.45** is in PROTOCOL.md under D1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D1 **≤ 0.05** is in PROTOCOL.md under D1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D2 **≤ 0.70** is in PROTOCOL.md under D2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D2 **≥ 0.60** is in PROTOCOL.md under D2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D2 **≥ 0.95** is in PROTOCOL.md under D2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D3 **≥ 0.75** is in PROTOCOL.md under D3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D3 **≥ 0.50** is in PROTOCOL.md under D3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D3 **≤ 0.05** is in PROTOCOL.md under D3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D4 **≤ 0.15** is in PROTOCOL.md under D4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold D4 **≥ 0.40** is in PROTOCOL.md under D4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold R1 **≥ 0.50** is in PROTOCOL.md under R1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold R1 **≥ 0.85** is in PROTOCOL.md under R1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold R1 **≤ 0.25** is in PROTOCOL.md under R1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold R1 **≤ 0.10** is in PROTOCOL.md under R1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold H1 **≥ 0.90** is in PROTOCOL.md under H1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold H1 **≥ 0.20** is in PROTOCOL.md under H1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold H1 **≥ 0.25** is in PROTOCOL.md under H1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold H1 **≤ 0.08** is in PROTOCOL.md under H1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold H1 **≤ 0.05** is in PROTOCOL.md under H1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold E1 **≥ 0.50** is in PROTOCOL.md under E1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold E1 **≤ 0.10** is in PROTOCOL.md under E1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "gate thresholds 95% / 60% / 70% are in the frozen charter",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g G1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g L1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g L2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g D1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g D2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g D3: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g D4: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g R1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g E1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict g: account 'supported' matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.g.npass",
+  "ok": true,
+  "detail": "text 9 vs recomputed 9.000000"
+ },
+ {
+  "name": "recount: c.g.ntests",
+  "ok": true,
+  "detail": "text 9 vs recomputed 9.000000"
+ },
+ {
+  "name": "verdict q G1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q L1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q L2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q D1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q D2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q D3: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q D4: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q R1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q E1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q H1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "verdict q: account 'supported' matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: c.q.npass",
+  "ok": true,
+  "detail": "text 10 vs recomputed 10.000000"
+ },
+ {
+  "name": "recount: c.q.ntests",
+  "ok": true,
+  "detail": "text 10 vs recomputed 10.000000"
+ },
+ {
+  "name": "recount: c.npass",
+  "ok": true,
+  "detail": "text 19 vs recomputed 19.000000"
+ },
+ {
+  "name": "recount: c.ntests",
+  "ok": true,
+  "detail": "text 19 vs recomputed 19.000000"
+ },
+ {
+  "name": "claim: every prediction passed in both models",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: gap.n",
+  "ok": true,
+  "detail": "text 88 vs recomputed 88.000000"
+ },
+ {
+  "name": "recount: gap.max",
+  "ok": true,
+  "detail": "text 0.080 vs recomputed 0.079805"
+ },
+ {
+  "name": "recount: gap.second",
+  "ok": true,
+  "detail": "text 0.062 vs recomputed 0.062432"
+ },
+ {
+  "name": "recount: gap.over05",
+  "ok": true,
+  "detail": "text 3 vs recomputed 3.000000"
+ },
+ {
+  "name": "claim: the largest difference is Qwen3's share of words kept after removal",
+  "ok": true,
+  "detail": "(0.07980548044715274, 'q', 'rm_dir_same_word_any_case')"
+ },
+ {
+  "name": "claim: abstract ranges ordered (Gemma subtract-add, Qwen3 add-subtract)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the edit flips the case at more than 0.95 of positions",
+  "ok": true,
+  "detail": "{('g', 'add'): 0.9807162534435262, ('g', 'sub'): 0.9614325068870524, ('q', 'add'): 0.9559228650137741, ('q', 'sub'): 0.967032967032967}"
+ },
+ {
+  "name": "claim: the edit changes the word at a fifth to a third of flipped positions",
+  "ok": true,
+  "detail": "[0.185, 0.183, 0.311, 0.31]"
+ },
+ {
+  "name": "claim: same-word ranges ordered as typeset",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: random flips at most the quoted value",
+  "ok": true,
+  "detail": "[0.0, 0.0027548209366391185, 0.0, 0.0027472527472527475]"
+ },
+ {
+  "name": "claim: removal leaves about half in capitals",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: L+u1 single word not enough (below one half)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: same median rank in both models",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: removing capitals works earlier (layer 16 subtract above add)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: Qwen3 adding switches on between layers 17 and 19",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: layer 0, another word's token beats U at most positions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: layer 0, Lc beats Lr no more often than chance",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: Gemma's word stands out from about layer 20",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: Qwen3's Lr-above-U share falls most sharply at layer 19",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: two other layer-0 heads move almost nothing (below 0.02)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: copying, the upper-lower gap is small for seen and new words (below 0.05)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 q: held-out sets read the reserve part",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 g: held-out sets read the reserve part",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: r2.q.W_none_upper",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "count: r2.q.W_none_upper.n",
+  "ok": true,
+  "detail": "text 551 vs recomputed 551.000000"
+ },
+ {
+  "name": "interval: r2.q.W_none_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.000, 1.000] vs [1.000, 1.000]"
+ },
+ {
+  "name": "recount: r2.q.CA_named_upper",
+  "ok": true,
+  "detail": "text 0.003 vs recomputed 0.003333"
+ },
+ {
+  "name": "count: r2.q.CA_named_upper.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.CA_named_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.009] vs [0.000, 0.008]"
+ },
+ {
+  "name": "recount: r2.q.W_named_upper",
+  "ok": true,
+  "detail": "text 0.029 vs recomputed 0.029038"
+ },
+ {
+  "name": "count: r2.q.W_named_upper.n",
+  "ok": true,
+  "detail": "text 551 vs recomputed 551.000000"
+ },
+ {
+  "name": "interval: r2.q.W_named_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.016, 0.044] vs [0.016, 0.043]"
+ },
+ {
+  "name": "recount: r2.q.W_named_same_word",
+  "ok": true,
+  "detail": "text 0.688 vs recomputed 0.687840"
+ },
+ {
+  "name": "count: r2.q.W_named_same_word.n",
+  "ok": true,
+  "detail": "text 551 vs recomputed 551.000000"
+ },
+ {
+  "name": "interval: r2.q.W_named_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.651, 0.724] vs [0.651, 0.725]"
+ },
+ {
+  "name": "recount: r2.q.W_named_proj_removed",
+  "ok": true,
+  "detail": "text 1.214 vs recomputed 1.213747"
+ },
+ {
+  "name": "count: r2.q.W_named_proj_removed.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.W_named_proj_removed agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.204, 1.223] vs [1.204, 1.223]"
+ },
+ {
+  "name": "recount: r2.q.CA_named_proj_removed",
+  "ok": true,
+  "detail": "text 0.872 vs recomputed 0.872492"
+ },
+ {
+  "name": "count: r2.q.CA_named_proj_removed.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.CA_named_proj_removed agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.860, 0.884] vs [0.860, 0.885]"
+ },
+ {
+  "name": "recount: r2.q.CA_named_D_removed",
+  "ok": true,
+  "detail": "text 0.424 vs recomputed 0.424021"
+ },
+ {
+  "name": "count: r2.q.CA_named_D_removed.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.CA_named_D_removed agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.414, 0.434] vs [0.414, 0.434]"
+ },
+ {
+  "name": "recount: r2.q.CU_named_upper",
+  "ok": true,
+  "detail": "text 0.309 vs recomputed 0.308530"
+ },
+ {
+  "name": "count: r2.q.CU_named_upper.n",
+  "ok": true,
+  "detail": "text 551 vs recomputed 551.000000"
+ },
+ {
+  "name": "interval: r2.q.CU_named_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.273, 0.345] vs [0.272, 0.345]"
+ },
+ {
+  "name": "recount: r2.q.R_none_flip",
+  "ok": true,
+  "detail": "text 0.968 vs recomputed 0.967684"
+ },
+ {
+  "name": "count: r2.q.R_none_flip.n",
+  "ok": true,
+  "detail": "text 557 vs recomputed 557.000000"
+ },
+ {
+  "name": "interval: r2.q.R_none_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.952, 0.981] vs [0.951, 0.981]"
+ },
+ {
+  "name": "recount: r2.q.R_named_flip",
+  "ok": true,
+  "detail": "text 0.002 vs recomputed 0.001795"
+ },
+ {
+  "name": "count: r2.q.R_named_flip.n",
+  "ok": true,
+  "detail": "text 557 vs recomputed 557.000000"
+ },
+ {
+  "name": "interval: r2.q.R_named_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.006] vs [0.000, 0.007]"
+ },
+ {
+  "name": "recount: r2.q.L17H6_proj_removed",
+  "ok": true,
+  "detail": "text 0.363 vs recomputed 0.362611"
+ },
+ {
+  "name": "count: r2.q.L17H6_proj_removed.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.L17H6_proj_removed agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.346, 0.380] vs [0.346, 0.380]"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0_recent8",
+  "ok": true,
+  "detail": "text 0.284 vs recomputed 0.284144"
+ },
+ {
+  "name": "count: r2.q.attn_L19H0_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.attn_L19H0_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.269, 0.299] vs [0.269, 0.300]"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6_recent8",
+  "ok": true,
+  "detail": "text 0.929 vs recomputed 0.929240"
+ },
+ {
+  "name": "count: r2.q.attn_L17H6_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.attn_L17H6_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.925, 0.933] vs [0.925, 0.933]"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1_recent8",
+  "ok": true,
+  "detail": "text 0.185 vs recomputed 0.185185"
+ },
+ {
+  "name": "count: r2.q.attn_L18H1_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.attn_L18H1_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.173, 0.198] vs [0.174, 0.199]"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0_recent8",
+  "ok": true,
+  "detail": "text 0.168 vs recomputed 0.168034"
+ },
+ {
+  "name": "count: r2.q.attn_L18H0_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.attn_L18H0_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.155, 0.181] vs [0.156, 0.181]"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3_recent8",
+  "ok": true,
+  "detail": "text 0.997 vs recomputed 0.997091"
+ },
+ {
+  "name": "count: r2.q.attn_L0H3_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.q.attn_L0H3_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.997, 0.997] vs [0.997, 0.997]"
+ },
+ {
+  "name": "recount: r2.q.E_change",
+  "ok": true,
+  "detail": "text 0.299 vs recomputed 0.298677"
+ },
+ {
+  "name": "count: r2.q.E_change.n",
+  "ok": true,
+  "detail": "text 1,058 vs recomputed 1058.000000"
+ },
+ {
+  "name": "interval: r2.q.E_change agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.269, 0.326] vs [0.272, 0.327]"
+ },
+ {
+  "name": "recount: r2.q.E_change_if_up_changes",
+  "ok": true,
+  "detail": "text 0.694 vs recomputed 0.693939"
+ },
+ {
+  "name": "count: r2.q.E_change_if_up_changes.n",
+  "ok": true,
+  "detail": "text 330 vs recomputed 330.000000"
+ },
+ {
+  "name": "interval: r2.q.E_change_if_up_changes agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.646, 0.744] vs [0.650, 0.739]"
+ },
+ {
+  "name": "recount: r2.q.E_change_if_up_keeps",
+  "ok": true,
+  "detail": "text 0.120 vs recomputed 0.119505"
+ },
+ {
+  "name": "count: r2.q.E_change_if_up_keeps.n",
+  "ok": true,
+  "detail": "text 728 vs recomputed 728.000000"
+ },
+ {
+  "name": "interval: r2.q.E_change_if_up_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.096, 0.145] vs [0.094, 0.146]"
+ },
+ {
+  "name": "recount: r2.q.E_change_not_by_up",
+  "ok": true,
+  "detail": "text 0.082 vs recomputed 0.082231"
+ },
+ {
+  "name": "count: r2.q.E_change_not_by_up.n",
+  "ok": true,
+  "detail": "text 1,058 vs recomputed 1058.000000"
+ },
+ {
+  "name": "interval: r2.q.E_change_not_by_up agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.066, 0.100] vs [0.064, 0.098]"
+ },
+ {
+  "name": "recount: r2.q.E_changed_in_lower_top5",
+  "ok": true,
+  "detail": "text 0.538 vs recomputed 0.537975"
+ },
+ {
+  "name": "count: r2.q.E_changed_in_lower_top5.n",
+  "ok": true,
+  "detail": "text 316 vs recomputed 316.000000"
+ },
+ {
+  "name": "interval: r2.q.E_changed_in_lower_top5 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.483, 0.593] vs [0.482, 0.590]"
+ },
+ {
+  "name": "recount: r2.q.E_change_extra0",
+  "ok": true,
+  "detail": "text 0.205 vs recomputed 0.204724"
+ },
+ {
+  "name": "count: r2.q.E_change_extra0.n",
+  "ok": true,
+  "detail": "text 762 vs recomputed 762.000000"
+ },
+ {
+  "name": "interval: r2.q.E_change_extra0 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.173, 0.236] vs [0.175, 0.236]"
+ },
+ {
+  "name": "recount: r2.q.E_change_extra1p",
+  "ok": true,
+  "detail": "text 0.541 vs recomputed 0.540541"
+ },
+ {
+  "name": "count: r2.q.E_change_extra1p.n",
+  "ok": true,
+  "detail": "text 296 vs recomputed 296.000000"
+ },
+ {
+  "name": "interval: r2.q.E_change_extra1p agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.482, 0.595] vs [0.484, 0.596]"
+ },
+ {
+  "name": "recount: r2.q.A_acr_rm_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "count: r2.q.A_acr_rm_keeps.n",
+  "ok": true,
+  "detail": "text 115 vs recomputed 115.000000"
+ },
+ {
+  "name": "interval: r2.q.A_acr_rm_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.000, 1.000] vs [1.000, 1.000]"
+ },
+ {
+  "name": "recount: r2.q.A_acr_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 0.991 vs recomputed 0.991304"
+ },
+ {
+  "name": "count: r2.q.A_acr_rm_rand_keeps.n",
+  "ok": true,
+  "detail": "text 115 vs recomputed 115.000000"
+ },
+ {
+  "name": "interval: r2.q.A_acr_rm_rand_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.971, 1.000] vs [0.971, 1.000]"
+ },
+ {
+  "name": "recount: r2.q.A_init_rm_keeps",
+  "ok": true,
+  "detail": "text 0.968 vs recomputed 0.968012"
+ },
+ {
+  "name": "count: r2.q.A_init_rm_keeps.n",
+  "ok": true,
+  "detail": "text 1,313 vs recomputed 1313.000000"
+ },
+ {
+  "name": "interval: r2.q.A_init_rm_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.958, 0.977] vs [0.958, 0.977]"
+ },
+ {
+  "name": "recount: r2.q.A_init_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 0.993 vs recomputed 0.993145"
+ },
+ {
+  "name": "count: r2.q.A_init_rm_rand_keeps.n",
+  "ok": true,
+  "detail": "text 1,313 vs recomputed 1313.000000"
+ },
+ {
+  "name": "interval: r2.q.A_init_rm_rand_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.988, 0.997] vs [0.988, 0.997]"
+ },
+ {
+  "name": "recount: r2.q.A_head_rm_keeps",
+  "ok": true,
+  "detail": "text 0.669 vs recomputed 0.668605"
+ },
+ {
+  "name": "count: r2.q.A_head_rm_keeps.n",
+  "ok": true,
+  "detail": "text 344 vs recomputed 344.000000"
+ },
+ {
+  "name": "interval: r2.q.A_head_rm_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.609, 0.722] vs [0.610, 0.723]"
+ },
+ {
+  "name": "recount: r2.q.A_head_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 0.994 vs recomputed 0.994186"
+ },
+ {
+  "name": "count: r2.q.A_head_rm_rand_keeps.n",
+  "ok": true,
+  "detail": "text 344 vs recomputed 344.000000"
+ },
+ {
+  "name": "interval: r2.q.A_head_rm_rand_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.985, 1.000] vs [0.985, 1.000]"
+ },
+ {
+  "name": "recount: r2.q.A_head_inside_excess",
+  "ok": true,
+  "detail": "text 0.728 vs recomputed 0.728091"
+ },
+ {
+  "name": "count: r2.q.A_head_inside_excess.n",
+  "ok": true,
+  "detail": "text 535 vs recomputed 535.000000"
+ },
+ {
+  "name": "interval: r2.q.A_head_inside_excess agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.697, 0.757] vs [0.699, 0.755]"
+ },
+ {
+  "name": "recount: r2.q.A_head_after_excess",
+  "ok": true,
+  "detail": "text 0.034 vs recomputed 0.033901"
+ },
+ {
+  "name": "count: r2.q.A_head_after_excess.n",
+  "ok": true,
+  "detail": "text 492 vs recomputed 492.000000"
+ },
+ {
+  "name": "interval: r2.q.A_head_after_excess agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.027, 0.041] vs [0.027, 0.041]"
+ },
+ {
+  "name": "recount: r2.q.A_head_after_allcaps_top",
+  "ok": true,
+  "detail": "text 0.018 vs recomputed 0.018293"
+ },
+ {
+  "name": "count: r2.q.A_head_after_allcaps_top.n",
+  "ok": true,
+  "detail": "text 492 vs recomputed 492.000000"
+ },
+ {
+  "name": "interval: r2.q.A_head_after_allcaps_top agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.004, 0.039] vs [0.004, 0.038]"
+ },
+ {
+  "name": "recount: r2.q.W_random_upper.min",
+  "ok": true,
+  "detail": "text 0.985 vs recomputed 0.985481"
+ },
+ {
+  "name": "recount: r2.q.CA_random_proj_removed.max",
+  "ok": true,
+  "detail": "text 0.166 vs recomputed 0.165722"
+ },
+ {
+  "name": "recount: r2.q.CU_random_upper.min",
+  "ok": true,
+  "detail": "text 0.996 vs recomputed 0.996370"
+ },
+ {
+  "name": "recount: r2.q.R_random_flip.min",
+  "ok": true,
+  "detail": "text 0.966 vs recomputed 0.965889"
+ },
+ {
+  "name": "recount: r2.q.L17H6_random_proj_removed.max",
+  "ok": true,
+  "detail": "text 0.002 vs recomputed 0.002283"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0.0",
+  "ok": true,
+  "detail": "text 0.05 vs recomputed 0.046404"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0.1",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.037331"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0.2",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.063461"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0.3",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.096969"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0.4",
+  "ok": true,
+  "detail": "text 0.62 vs recomputed 0.615137"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0.5",
+  "ok": true,
+  "detail": "text 0.14 vs recomputed 0.140701"
+ },
+ {
+  "name": "recount: r2.q.attn_L19H0.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed -0.000004"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6.0",
+  "ok": true,
+  "detail": "text 0.20 vs recomputed 0.204349"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6.1",
+  "ok": true,
+  "detail": "text 0.28 vs recomputed 0.280649"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6.2",
+  "ok": true,
+  "detail": "text 0.21 vs recomputed 0.211518"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6.3",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.104740"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6.4",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.061014"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6.5",
+  "ok": true,
+  "detail": "text 0.14 vs recomputed 0.137699"
+ },
+ {
+  "name": "recount: r2.q.attn_L17H6.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000031"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1.0",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.026365"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1.1",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.016191"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1.2",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.033712"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1.3",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.063892"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1.4",
+  "ok": true,
+  "detail": "text 0.62 vs recomputed 0.616699"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1.5",
+  "ok": true,
+  "detail": "text 0.24 vs recomputed 0.243158"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H1.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed -0.000016"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0.0",
+  "ok": true,
+  "detail": "text 0.01 vs recomputed 0.013677"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0.1",
+  "ok": true,
+  "detail": "text 0.01 vs recomputed 0.011926"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0.2",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.024096"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0.3",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.044610"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0.4",
+  "ok": true,
+  "detail": "text 0.47 vs recomputed 0.466943"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0.5",
+  "ok": true,
+  "detail": "text 0.44 vs recomputed 0.438725"
+ },
+ {
+  "name": "recount: r2.q.attn_L18H0.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000023"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3.0",
+  "ok": true,
+  "detail": "text 0.99 vs recomputed 0.990400"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3.1",
+  "ok": true,
+  "detail": "text 0.01 vs recomputed 0.006273"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3.2",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000116"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3.3",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000242"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3.4",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.002909"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3.5",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000017"
+ },
+ {
+  "name": "recount: r2.q.attn_L0H3.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000043"
+ },
+ {
+  "name": "count: r2.q.E_flips",
+  "ok": true,
+  "detail": "text 1,058 vs recomputed 1058.000000"
+ },
+ {
+  "name": "recount: r2.g.W_none_upper",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "count: r2.g.W_none_upper.n",
+  "ok": true,
+  "detail": "text 451 vs recomputed 451.000000"
+ },
+ {
+  "name": "interval: r2.g.W_none_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.000, 1.000] vs [1.000, 1.000]"
+ },
+ {
+  "name": "recount: r2.g.CA_named_upper",
+  "ok": true,
+  "detail": "text 0.012 vs recomputed 0.012000"
+ },
+ {
+  "name": "count: r2.g.CA_named_upper.n",
+  "ok": true,
+  "detail": "text 500 vs recomputed 500.000000"
+ },
+ {
+  "name": "interval: r2.g.CA_named_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.004, 0.022] vs [0.004, 0.021]"
+ },
+ {
+  "name": "recount: r2.g.W_named_upper",
+  "ok": true,
+  "detail": "text 0.009 vs recomputed 0.008869"
+ },
+ {
+  "name": "count: r2.g.W_named_upper.n",
+  "ok": true,
+  "detail": "text 451 vs recomputed 451.000000"
+ },
+ {
+  "name": "interval: r2.g.W_named_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.002, 0.019] vs [0.002, 0.018]"
+ },
+ {
+  "name": "recount: r2.g.W_named_same_word",
+  "ok": true,
+  "detail": "text 0.809 vs recomputed 0.809313"
+ },
+ {
+  "name": "count: r2.g.W_named_same_word.n",
+  "ok": true,
+  "detail": "text 451 vs recomputed 451.000000"
+ },
+ {
+  "name": "interval: r2.g.W_named_same_word agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.773, 0.845] vs [0.772, 0.845]"
+ },
+ {
+  "name": "recount: r2.g.W_named_proj_removed",
+  "ok": true,
+  "detail": "text 1.279 vs recomputed 1.278705"
+ },
+ {
+  "name": "count: r2.g.W_named_proj_removed.n",
+  "ok": true,
+  "detail": "text 500 vs recomputed 500.000000"
+ },
+ {
+  "name": "interval: r2.g.W_named_proj_removed agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.271, 1.286] vs [1.271, 1.286]"
+ },
+ {
+  "name": "recount: r2.g.CA_named_proj_removed",
+  "ok": true,
+  "detail": "text 0.859 vs recomputed 0.859475"
+ },
+ {
+  "name": "count: r2.g.CA_named_proj_removed.n",
+  "ok": true,
+  "detail": "text 500 vs recomputed 500.000000"
+ },
+ {
+  "name": "interval: r2.g.CA_named_proj_removed agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.845, 0.874] vs [0.845, 0.873]"
+ },
+ {
+  "name": "recount: r2.g.CA_named_D_removed",
+  "ok": true,
+  "detail": "text 0.576 vs recomputed 0.575626"
+ },
+ {
+  "name": "count: r2.g.CA_named_D_removed.n",
+  "ok": true,
+  "detail": "text 500 vs recomputed 500.000000"
+ },
+ {
+  "name": "interval: r2.g.CA_named_D_removed agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.562, 0.588] vs [0.563, 0.589]"
+ },
+ {
+  "name": "recount: r2.g.CU_named_upper",
+  "ok": true,
+  "detail": "text 0.255 vs recomputed 0.254989"
+ },
+ {
+  "name": "count: r2.g.CU_named_upper.n",
+  "ok": true,
+  "detail": "text 451 vs recomputed 451.000000"
+ },
+ {
+  "name": "interval: r2.g.CU_named_upper agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.213, 0.298] vs [0.216, 0.295]"
+ },
+ {
+  "name": "recount: r2.g.R_none_flip",
+  "ok": true,
+  "detail": "text 0.989 vs recomputed 0.988987"
+ },
+ {
+  "name": "count: r2.g.R_none_flip.n",
+  "ok": true,
+  "detail": "text 454 vs recomputed 454.000000"
+ },
+ {
+  "name": "interval: r2.g.R_none_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.979, 0.998] vs [0.979, 0.998]"
+ },
+ {
+  "name": "recount: r2.g.R_named_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "count: r2.g.R_named_flip.n",
+  "ok": true,
+  "detail": "text 454 vs recomputed 454.000000"
+ },
+ {
+  "name": "interval: r2.g.R_named_flip agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.000, 0.000] vs [0.000, 0.000]"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6_recent8",
+  "ok": true,
+  "detail": "text 0.206 vs recomputed 0.205957"
+ },
+ {
+  "name": "count: r2.g.attn_L24H6_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.g.attn_L24H6_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.195, 0.218] vs [0.196, 0.217]"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6_recent8",
+  "ok": true,
+  "detail": "text 0.259 vs recomputed 0.259225"
+ },
+ {
+  "name": "count: r2.g.attn_L14H6_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.g.attn_L14H6_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.245, 0.274] vs [0.245, 0.274]"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7_recent8",
+  "ok": true,
+  "detail": "text 0.918 vs recomputed 0.917720"
+ },
+ {
+  "name": "count: r2.g.attn_L14H7_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.g.attn_L14H7_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.913, 0.923] vs [0.913, 0.923]"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1_recent8",
+  "ok": true,
+  "detail": "text 0.775 vs recomputed 0.774592"
+ },
+ {
+  "name": "count: r2.g.attn_L14H1_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.g.attn_L14H1_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.762, 0.788] vs [0.762, 0.786]"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2_recent8",
+  "ok": true,
+  "detail": "text 0.367 vs recomputed 0.366601"
+ },
+ {
+  "name": "count: r2.g.attn_L15H2_recent8.n",
+  "ok": true,
+  "detail": "text 600 vs recomputed 600.000000"
+ },
+ {
+  "name": "interval: r2.g.attn_L15H2_recent8 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.349, 0.385] vs [0.349, 0.383]"
+ },
+ {
+  "name": "recount: r2.g.E_change",
+  "ok": true,
+  "detail": "text 0.194 vs recomputed 0.194406"
+ },
+ {
+  "name": "count: r2.g.E_change.n",
+  "ok": true,
+  "detail": "text 715 vs recomputed 715.000000"
+ },
+ {
+  "name": "interval: r2.g.E_change agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.166, 0.221] vs [0.169, 0.223]"
+ },
+ {
+  "name": "recount: r2.g.E_change_if_up_changes",
+  "ok": true,
+  "detail": "text 0.549 vs recomputed 0.548571"
+ },
+ {
+  "name": "count: r2.g.E_change_if_up_changes.n",
+  "ok": true,
+  "detail": "text 175 vs recomputed 175.000000"
+ },
+ {
+  "name": "interval: r2.g.E_change_if_up_changes agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.480, 0.619] vs [0.478, 0.620]"
+ },
+ {
+  "name": "recount: r2.g.E_change_if_up_keeps",
+  "ok": true,
+  "detail": "text 0.080 vs recomputed 0.079630"
+ },
+ {
+  "name": "count: r2.g.E_change_if_up_keeps.n",
+  "ok": true,
+  "detail": "text 540 vs recomputed 540.000000"
+ },
+ {
+  "name": "interval: r2.g.E_change_if_up_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.059, 0.101] vs [0.058, 0.100]"
+ },
+ {
+  "name": "recount: r2.g.E_change_not_by_up",
+  "ok": true,
+  "detail": "text 0.060 vs recomputed 0.060140"
+ },
+ {
+  "name": "count: r2.g.E_change_not_by_up.n",
+  "ok": true,
+  "detail": "text 715 vs recomputed 715.000000"
+ },
+ {
+  "name": "interval: r2.g.E_change_not_by_up agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.044, 0.076] vs [0.044, 0.078]"
+ },
+ {
+  "name": "recount: r2.g.E_changed_in_lower_top5",
+  "ok": true,
+  "detail": "text 0.619 vs recomputed 0.618705"
+ },
+ {
+  "name": "count: r2.g.E_changed_in_lower_top5.n",
+  "ok": true,
+  "detail": "text 139 vs recomputed 139.000000"
+ },
+ {
+  "name": "interval: r2.g.E_changed_in_lower_top5 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.543, 0.695] vs [0.540, 0.697]"
+ },
+ {
+  "name": "recount: r2.g.E_change_extra0",
+  "ok": true,
+  "detail": "text 0.122 vs recomputed 0.121547"
+ },
+ {
+  "name": "count: r2.g.E_change_extra0.n",
+  "ok": true,
+  "detail": "text 543 vs recomputed 543.000000"
+ },
+ {
+  "name": "interval: r2.g.E_change_extra0 agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.097, 0.147] vs [0.097, 0.148]"
+ },
+ {
+  "name": "recount: r2.g.E_change_extra1p",
+  "ok": true,
+  "detail": "text 0.424 vs recomputed 0.424419"
+ },
+ {
+  "name": "count: r2.g.E_change_extra1p.n",
+  "ok": true,
+  "detail": "text 172 vs recomputed 172.000000"
+ },
+ {
+  "name": "interval: r2.g.E_change_extra1p agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.360, 0.486] vs [0.365, 0.494]"
+ },
+ {
+  "name": "recount: r2.g.A_acr_rm_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "count: r2.g.A_acr_rm_keeps.n",
+  "ok": true,
+  "detail": "text 155 vs recomputed 155.000000"
+ },
+ {
+  "name": "interval: r2.g.A_acr_rm_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.000, 1.000] vs [1.000, 1.000]"
+ },
+ {
+  "name": "recount: r2.g.A_acr_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 0.974 vs recomputed 0.974194"
+ },
+ {
+  "name": "count: r2.g.A_acr_rm_rand_keeps.n",
+  "ok": true,
+  "detail": "text 155 vs recomputed 155.000000"
+ },
+ {
+  "name": "interval: r2.g.A_acr_rm_rand_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.948, 0.994] vs [0.948, 0.994]"
+ },
+ {
+  "name": "recount: r2.g.A_init_rm_keeps",
+  "ok": true,
+  "detail": "text 0.982 vs recomputed 0.982379"
+ },
+ {
+  "name": "count: r2.g.A_init_rm_keeps.n",
+  "ok": true,
+  "detail": "text 1,135 vs recomputed 1135.000000"
+ },
+ {
+  "name": "interval: r2.g.A_init_rm_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.974, 0.990] vs [0.974, 0.990]"
+ },
+ {
+  "name": "recount: r2.g.A_init_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 0.992 vs recomputed 0.992070"
+ },
+ {
+  "name": "count: r2.g.A_init_rm_rand_keeps.n",
+  "ok": true,
+  "detail": "text 1,135 vs recomputed 1135.000000"
+ },
+ {
+  "name": "interval: r2.g.A_init_rm_rand_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.987, 0.997] vs [0.986, 0.997]"
+ },
+ {
+  "name": "recount: r2.g.A_head_rm_keeps",
+  "ok": true,
+  "detail": "text 0.768 vs recomputed 0.768000"
+ },
+ {
+  "name": "count: r2.g.A_head_rm_keeps.n",
+  "ok": true,
+  "detail": "text 375 vs recomputed 375.000000"
+ },
+ {
+  "name": "interval: r2.g.A_head_rm_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.717, 0.816] vs [0.714, 0.819]"
+ },
+ {
+  "name": "recount: r2.g.A_head_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "count: r2.g.A_head_rm_rand_keeps.n",
+  "ok": true,
+  "detail": "text 375 vs recomputed 375.000000"
+ },
+ {
+  "name": "interval: r2.g.A_head_rm_rand_keeps agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [1.000, 1.000] vs [1.000, 1.000]"
+ },
+ {
+  "name": "recount: r2.g.A_head_inside_excess",
+  "ok": true,
+  "detail": "text 0.753 vs recomputed 0.752752"
+ },
+ {
+  "name": "count: r2.g.A_head_inside_excess.n",
+  "ok": true,
+  "detail": "text 535 vs recomputed 535.000000"
+ },
+ {
+  "name": "interval: r2.g.A_head_inside_excess agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.728, 0.776] vs [0.729, 0.777]"
+ },
+ {
+  "name": "recount: r2.g.A_head_after_excess",
+  "ok": true,
+  "detail": "text 0.116 vs recomputed 0.115777"
+ },
+ {
+  "name": "count: r2.g.A_head_after_excess.n",
+  "ok": true,
+  "detail": "text 492 vs recomputed 492.000000"
+ },
+ {
+  "name": "interval: r2.g.A_head_after_excess agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.108, 0.124] vs [0.108, 0.123]"
+ },
+ {
+  "name": "recount: r2.g.A_head_after_allcaps_top",
+  "ok": true,
+  "detail": "text 0.022 vs recomputed 0.022358"
+ },
+ {
+  "name": "count: r2.g.A_head_after_allcaps_top.n",
+  "ok": true,
+  "detail": "text 492 vs recomputed 492.000000"
+ },
+ {
+  "name": "interval: r2.g.A_head_after_allcaps_top agrees with an independent bootstrap (0.03)",
+  "ok": true,
+  "detail": "text [0.006, 0.044] vs [0.006, 0.043]"
+ },
+ {
+  "name": "recount: r2.g.W_random_upper.min",
+  "ok": true,
+  "detail": "text 0.949 vs recomputed 0.949002"
+ },
+ {
+  "name": "recount: r2.g.CA_random_proj_removed.max",
+  "ok": true,
+  "detail": "text 0.322 vs recomputed 0.322337"
+ },
+ {
+  "name": "recount: r2.g.CU_random_upper.min",
+  "ok": true,
+  "detail": "text 0.982 vs recomputed 0.982262"
+ },
+ {
+  "name": "recount: r2.g.R_random_flip.min",
+  "ok": true,
+  "detail": "text 0.985 vs recomputed 0.984581"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6.0",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.018168"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6.1",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.016695"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6.2",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.034624"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6.3",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.064388"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6.4",
+  "ok": true,
+  "detail": "text 0.52 vs recomputed 0.516139"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6.5",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.102424"
+ },
+ {
+  "name": "recount: r2.g.attn_L24H6.6",
+  "ok": true,
+  "detail": "text 0.25 vs recomputed 0.247561"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6.0",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.021282"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6.1",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.025792"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6.2",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.057642"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6.3",
+  "ok": true,
+  "detail": "text 0.14 vs recomputed 0.137901"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6.4",
+  "ok": true,
+  "detail": "text 0.69 vs recomputed 0.693312"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6.5",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.027997"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H6.6",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.036074"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7.0",
+  "ok": true,
+  "detail": "text 0.28 vs recomputed 0.277950"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7.1",
+  "ok": true,
+  "detail": "text 0.16 vs recomputed 0.159831"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7.2",
+  "ok": true,
+  "detail": "text 0.13 vs recomputed 0.131429"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7.3",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.060293"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7.4",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.056439"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7.5",
+  "ok": true,
+  "detail": "text 0.11 vs recomputed 0.113168"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H7.6",
+  "ok": true,
+  "detail": "text 0.20 vs recomputed 0.200890"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1.0",
+  "ok": true,
+  "detail": "text 0.09 vs recomputed 0.092568"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1.1",
+  "ok": true,
+  "detail": "text 0.12 vs recomputed 0.116613"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1.2",
+  "ok": true,
+  "detail": "text 0.19 vs recomputed 0.194707"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1.3",
+  "ok": true,
+  "detail": "text 0.21 vs recomputed 0.210076"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1.4",
+  "ok": true,
+  "detail": "text 0.18 vs recomputed 0.178665"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1.5",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.099976"
+ },
+ {
+  "name": "recount: r2.g.attn_L14H1.6",
+  "ok": true,
+  "detail": "text 0.11 vs recomputed 0.107396"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2.0",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.035520"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2.1",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.038880"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2.2",
+  "ok": true,
+  "detail": "text 0.08 vs recomputed 0.080356"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2.3",
+  "ok": true,
+  "detail": "text 0.14 vs recomputed 0.141471"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2.4",
+  "ok": true,
+  "detail": "text 0.51 vs recomputed 0.511810"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2.5",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.001416"
+ },
+ {
+  "name": "recount: r2.g.attn_L15H2.6",
+  "ok": true,
+  "detail": "text 0.19 vs recomputed 0.190547"
+ },
+ {
+  "name": "count: r2.g.E_flips",
+  "ok": true,
+  "detail": "text 715 vs recomputed 715.000000"
+ },
+ {
+  "name": "recount: r2.q.proj_upper_mean",
+  "ok": true,
+  "detail": "text 47.8 vs recomputed 47.764709"
+ },
+ {
+  "name": "recount: r2.q.proj_lower_mean",
+  "ok": true,
+  "detail": "text −541.0 vs recomputed -541.016296"
+ },
+ {
+  "name": "recount: r2.g.proj_upper_mean",
+  "ok": true,
+  "detail": "text 12.1 vs recomputed 12.086083"
+ },
+ {
+  "name": "recount: r2.g.proj_lower_mean",
+  "ok": true,
+  "detail": "text −16.3 vs recomputed -16.290268"
+ },
+ {
+  "name": "recount: r2e.q.W_none_upper",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.q.CA_named_upper",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: r2e.q.W_named_upper",
+  "ok": true,
+  "detail": "text 0.021 vs recomputed 0.021277"
+ },
+ {
+  "name": "recount: r2e.q.W_named_same_word",
+  "ok": true,
+  "detail": "text 0.691 vs recomputed 0.691489"
+ },
+ {
+  "name": "recount: r2e.q.W_named_proj_removed",
+  "ok": true,
+  "detail": "text 1.218 vs recomputed 1.217506"
+ },
+ {
+  "name": "recount: r2e.q.CA_named_proj_removed",
+  "ok": true,
+  "detail": "text 0.880 vs recomputed 0.880470"
+ },
+ {
+  "name": "recount: r2e.q.CA_named_D_removed",
+  "ok": true,
+  "detail": "text 0.459 vs recomputed 0.458612"
+ },
+ {
+  "name": "recount: r2e.q.CU_named_upper",
+  "ok": true,
+  "detail": "text 0.351 vs recomputed 0.351064"
+ },
+ {
+  "name": "recount: r2e.q.R_none_flip",
+  "ok": true,
+  "detail": "text 0.958 vs recomputed 0.957895"
+ },
+ {
+  "name": "recount: r2e.q.R_named_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: r2e.q.L17H6_proj_removed",
+  "ok": true,
+  "detail": "text 0.359 vs recomputed 0.359353"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0_recent8",
+  "ok": true,
+  "detail": "text 0.282 vs recomputed 0.282234"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6_recent8",
+  "ok": true,
+  "detail": "text 0.929 vs recomputed 0.928680"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1_recent8",
+  "ok": true,
+  "detail": "text 0.179 vs recomputed 0.179438"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0_recent8",
+  "ok": true,
+  "detail": "text 0.158 vs recomputed 0.157512"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3_recent8",
+  "ok": true,
+  "detail": "text 0.997 vs recomputed 0.996662"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1_recent8",
+  "ok": true,
+  "detail": "text 0.571 vs recomputed 0.571175"
+ },
+ {
+  "name": "recount: r2e.q.E_change",
+  "ok": true,
+  "detail": "text 0.299 vs recomputed 0.299270"
+ },
+ {
+  "name": "recount: r2e.q.E_change_if_up_changes",
+  "ok": true,
+  "detail": "text 0.627 vs recomputed 0.627451"
+ },
+ {
+  "name": "recount: r2e.q.E_change_if_up_keeps",
+  "ok": true,
+  "detail": "text 0.105 vs recomputed 0.104651"
+ },
+ {
+  "name": "recount: r2e.q.E_change_not_by_up",
+  "ok": true,
+  "detail": "text 0.066 vs recomputed 0.065693"
+ },
+ {
+  "name": "recount: r2e.q.E_changed_in_lower_top5",
+  "ok": true,
+  "detail": "text 0.683 vs recomputed 0.682927"
+ },
+ {
+  "name": "recount: r2e.q.E_change_extra0",
+  "ok": true,
+  "detail": "text 0.250 vs recomputed 0.250000"
+ },
+ {
+  "name": "recount: r2e.q.E_change_extra1p",
+  "ok": true,
+  "detail": "text 0.432 vs recomputed 0.432432"
+ },
+ {
+  "name": "recount: r2e.q.A_acr_rm_keeps",
+  "ok": true,
+  "detail": "text 0.957 vs recomputed 0.956522"
+ },
+ {
+  "name": "recount: r2e.q.A_acr_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.q.A_init_rm_keeps",
+  "ok": true,
+  "detail": "text 0.979 vs recomputed 0.979417"
+ },
+ {
+  "name": "recount: r2e.q.A_init_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 0.995 vs recomputed 0.994854"
+ },
+ {
+  "name": "recount: r2e.q.A_head_rm_keeps",
+  "ok": true,
+  "detail": "text 0.554 vs recomputed 0.553846"
+ },
+ {
+  "name": "recount: r2e.q.A_head_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.q.A_head_inside_excess",
+  "ok": true,
+  "detail": "text 0.713 vs recomputed 0.713221"
+ },
+ {
+  "name": "recount: r2e.q.A_head_after_excess",
+  "ok": true,
+  "detail": "text 0.038 vs recomputed 0.037591"
+ },
+ {
+  "name": "recount: r2e.q.A_head_after_allcaps_top",
+  "ok": true,
+  "detail": "text 0.013 vs recomputed 0.012658"
+ },
+ {
+  "name": "recount: r2e.q.W_random_upper.min",
+  "ok": true,
+  "detail": "text 0.968 vs recomputed 0.968085"
+ },
+ {
+  "name": "recount: r2e.q.CA_random_proj_removed.max",
+  "ok": true,
+  "detail": "text 0.144 vs recomputed 0.143910"
+ },
+ {
+  "name": "recount: r2e.q.CU_random_upper.min",
+  "ok": true,
+  "detail": "text 0.989 vs recomputed 0.989362"
+ },
+ {
+  "name": "recount: r2e.q.R_random_flip.min",
+  "ok": true,
+  "detail": "text 0.937 vs recomputed 0.936842"
+ },
+ {
+  "name": "recount: r2e.q.L17H6_random_proj_removed.max",
+  "ok": true,
+  "detail": "text 0.003 vs recomputed 0.003330"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0.0",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.041613"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0.1",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.035066"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0.2",
+  "ok": true,
+  "detail": "text 0.07 vs recomputed 0.065217"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0.3",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.102500"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0.4",
+  "ok": true,
+  "detail": "text 0.62 vs recomputed 0.621535"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0.5",
+  "ok": true,
+  "detail": "text 0.13 vs recomputed 0.134083"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H0.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed -0.000013"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6.0",
+  "ok": true,
+  "detail": "text 0.20 vs recomputed 0.199396"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6.1",
+  "ok": true,
+  "detail": "text 0.28 vs recomputed 0.278952"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6.2",
+  "ok": true,
+  "detail": "text 0.21 vs recomputed 0.213248"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6.3",
+  "ok": true,
+  "detail": "text 0.11 vs recomputed 0.113005"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6.4",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.061791"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6.5",
+  "ok": true,
+  "detail": "text 0.13 vs recomputed 0.133579"
+ },
+ {
+  "name": "recount: r2e.q.attn_L17H6.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000029"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1.0",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.024300"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1.1",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.015552"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1.2",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.030203"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1.3",
+  "ok": true,
+  "detail": "text 0.07 vs recomputed 0.065063"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1.4",
+  "ok": true,
+  "detail": "text 0.62 vs recomputed 0.617884"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1.5",
+  "ok": true,
+  "detail": "text 0.25 vs recomputed 0.246981"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H1.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000018"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0.0",
+  "ok": true,
+  "detail": "text 0.01 vs recomputed 0.013624"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0.1",
+  "ok": true,
+  "detail": "text 0.01 vs recomputed 0.010307"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0.2",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.021462"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0.3",
+  "ok": true,
+  "detail": "text 0.05 vs recomputed 0.046522"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0.4",
+  "ok": true,
+  "detail": "text 0.49 vs recomputed 0.491631"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0.5",
+  "ok": true,
+  "detail": "text 0.42 vs recomputed 0.416421"
+ },
+ {
+  "name": "recount: r2e.q.attn_L18H0.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000032"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3.0",
+  "ok": true,
+  "detail": "text 0.99 vs recomputed 0.991189"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3.1",
+  "ok": true,
+  "detail": "text 0.01 vs recomputed 0.005214"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3.2",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000029"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3.3",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000281"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3.4",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.003339"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3.5",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.000022"
+ },
+ {
+  "name": "recount: r2e.q.attn_L0H3.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed -0.000073"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1.0",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.041965"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1.1",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.057947"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1.2",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.102655"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1.3",
+  "ok": true,
+  "detail": "text 0.12 vs recomputed 0.115898"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1.4",
+  "ok": true,
+  "detail": "text 0.24 vs recomputed 0.239096"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1.5",
+  "ok": true,
+  "detail": "text 0.44 vs recomputed 0.442483"
+ },
+ {
+  "name": "recount: r2e.q.attn_L19H1.6",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed -0.000044"
+ },
+ {
+  "name": "recount: r2e.g.W_none_upper",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.g.CA_named_upper",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: r2e.g.W_named_upper",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: r2e.g.W_named_same_word",
+  "ok": true,
+  "detail": "text 0.836 vs recomputed 0.836364"
+ },
+ {
+  "name": "recount: r2e.g.W_named_proj_removed",
+  "ok": true,
+  "detail": "text 1.272 vs recomputed 1.272025"
+ },
+ {
+  "name": "recount: r2e.g.CA_named_proj_removed",
+  "ok": true,
+  "detail": "text 0.839 vs recomputed 0.839234"
+ },
+ {
+  "name": "recount: r2e.g.CA_named_D_removed",
+  "ok": true,
+  "detail": "text 0.584 vs recomputed 0.584302"
+ },
+ {
+  "name": "recount: r2e.g.CU_named_upper",
+  "ok": true,
+  "detail": "text 0.291 vs recomputed 0.290909"
+ },
+ {
+  "name": "recount: r2e.g.R_none_flip",
+  "ok": true,
+  "detail": "text 0.966 vs recomputed 0.965517"
+ },
+ {
+  "name": "recount: r2e.g.R_named_flip",
+  "ok": true,
+  "detail": "text 0.000 vs recomputed 0.000000"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6_recent8",
+  "ok": true,
+  "detail": "text 0.193 vs recomputed 0.192519"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6_recent8",
+  "ok": true,
+  "detail": "text 0.242 vs recomputed 0.242375"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7_recent8",
+  "ok": true,
+  "detail": "text 0.914 vs recomputed 0.914292"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1_recent8",
+  "ok": true,
+  "detail": "text 0.773 vs recomputed 0.773222"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2_recent8",
+  "ok": true,
+  "detail": "text 0.362 vs recomputed 0.362085"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0_recent8",
+  "ok": true,
+  "detail": "text 0.517 vs recomputed 0.517435"
+ },
+ {
+  "name": "recount: r2e.g.E_change",
+  "ok": true,
+  "detail": "text 0.177 vs recomputed 0.177305"
+ },
+ {
+  "name": "recount: r2e.g.E_change_if_up_changes",
+  "ok": true,
+  "detail": "text 0.514 vs recomputed 0.513514"
+ },
+ {
+  "name": "recount: r2e.g.E_change_if_up_keeps",
+  "ok": true,
+  "detail": "text 0.058 vs recomputed 0.057692"
+ },
+ {
+  "name": "recount: r2e.g.E_change_not_by_up",
+  "ok": true,
+  "detail": "text 0.043 vs recomputed 0.042553"
+ },
+ {
+  "name": "recount: r2e.g.E_changed_in_lower_top5",
+  "ok": true,
+  "detail": "text 0.520 vs recomputed 0.520000"
+ },
+ {
+  "name": "recount: r2e.g.E_change_extra0",
+  "ok": true,
+  "detail": "text 0.110 vs recomputed 0.110092"
+ },
+ {
+  "name": "recount: r2e.g.E_change_extra1p",
+  "ok": true,
+  "detail": "text 0.406 vs recomputed 0.406250"
+ },
+ {
+  "name": "recount: r2e.g.A_acr_rm_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.g.A_acr_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.g.A_init_rm_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.g.A_init_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.g.A_head_rm_keeps",
+  "ok": true,
+  "detail": "text 0.694 vs recomputed 0.694444"
+ },
+ {
+  "name": "recount: r2e.g.A_head_rm_rand_keeps",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.g.A_head_inside_excess",
+  "ok": true,
+  "detail": "text 0.749 vs recomputed 0.748589"
+ },
+ {
+  "name": "recount: r2e.g.A_head_after_excess",
+  "ok": true,
+  "detail": "text 0.123 vs recomputed 0.122929"
+ },
+ {
+  "name": "recount: r2e.g.A_head_after_allcaps_top",
+  "ok": true,
+  "detail": "text 0.025 vs recomputed 0.025316"
+ },
+ {
+  "name": "recount: r2e.g.W_random_upper.min",
+  "ok": true,
+  "detail": "text 0.964 vs recomputed 0.963636"
+ },
+ {
+  "name": "recount: r2e.g.CA_random_proj_removed.max",
+  "ok": true,
+  "detail": "text 0.344 vs recomputed 0.343724"
+ },
+ {
+  "name": "recount: r2e.g.CU_random_upper.min",
+  "ok": true,
+  "detail": "text 1.000 vs recomputed 1.000000"
+ },
+ {
+  "name": "recount: r2e.g.R_random_flip.min",
+  "ok": true,
+  "detail": "text 0.948 vs recomputed 0.948276"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6.0",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.017285"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6.1",
+  "ok": true,
+  "detail": "text 0.01 vs recomputed 0.014166"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6.2",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.032162"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6.3",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.061036"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6.4",
+  "ok": true,
+  "detail": "text 0.52 vs recomputed 0.522817"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6.5",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.102516"
+ },
+ {
+  "name": "recount: r2e.g.attn_L24H6.6",
+  "ok": true,
+  "detail": "text 0.25 vs recomputed 0.250017"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6.0",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.023647"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6.1",
+  "ok": true,
+  "detail": "text 0.02 vs recomputed 0.018226"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6.2",
+  "ok": true,
+  "detail": "text 0.05 vs recomputed 0.051920"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6.3",
+  "ok": true,
+  "detail": "text 0.13 vs recomputed 0.132690"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6.4",
+  "ok": true,
+  "detail": "text 0.71 vs recomputed 0.707952"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6.5",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.029661"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H6.6",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.035903"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7.0",
+  "ok": true,
+  "detail": "text 0.26 vs recomputed 0.258935"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7.1",
+  "ok": true,
+  "detail": "text 0.16 vs recomputed 0.158684"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7.2",
+  "ok": true,
+  "detail": "text 0.14 vs recomputed 0.140840"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7.3",
+  "ok": true,
+  "detail": "text 0.07 vs recomputed 0.067330"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7.4",
+  "ok": true,
+  "detail": "text 0.06 vs recomputed 0.058663"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7.5",
+  "ok": true,
+  "detail": "text 0.11 vs recomputed 0.113394"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H7.6",
+  "ok": true,
+  "detail": "text 0.20 vs recomputed 0.202153"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1.0",
+  "ok": true,
+  "detail": "text 0.09 vs recomputed 0.094003"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1.1",
+  "ok": true,
+  "detail": "text 0.09 vs recomputed 0.092618"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1.2",
+  "ok": true,
+  "detail": "text 0.21 vs recomputed 0.205386"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1.3",
+  "ok": true,
+  "detail": "text 0.22 vs recomputed 0.222632"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1.4",
+  "ok": true,
+  "detail": "text 0.18 vs recomputed 0.180267"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1.5",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.100454"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H1.6",
+  "ok": true,
+  "detail": "text 0.10 vs recomputed 0.104639"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2.0",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.044824"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2.1",
+  "ok": true,
+  "detail": "text 0.03 vs recomputed 0.031577"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2.2",
+  "ok": true,
+  "detail": "text 0.07 vs recomputed 0.071111"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2.3",
+  "ok": true,
+  "detail": "text 0.15 vs recomputed 0.148987"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2.4",
+  "ok": true,
+  "detail": "text 0.52 vs recomputed 0.522366"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2.5",
+  "ok": true,
+  "detail": "text 0.00 vs recomputed 0.003670"
+ },
+ {
+  "name": "recount: r2e.g.attn_L15H2.6",
+  "ok": true,
+  "detail": "text 0.18 vs recomputed 0.177465"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0.0",
+  "ok": true,
+  "detail": "text 0.04 vs recomputed 0.040031"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0.1",
+  "ok": true,
+  "detail": "text 0.05 vs recomputed 0.048919"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0.2",
+  "ok": true,
+  "detail": "text 0.11 vs recomputed 0.107138"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0.3",
+  "ok": true,
+  "detail": "text 0.16 vs recomputed 0.163939"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0.4",
+  "ok": true,
+  "detail": "text 0.34 vs recomputed 0.335764"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0.5",
+  "ok": true,
+  "detail": "text 0.14 vs recomputed 0.140270"
+ },
+ {
+  "name": "recount: r2e.g.attn_L14H0.6",
+  "ok": true,
+  "detail": "text 0.16 vs recomputed 0.163939"
+ },
+ {
+  "name": "figure 4 data q: every bar recomputed from records",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "figure 4 data g: every bar recomputed from records",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold W1 **≤ 0.30** is in PROTOCOL-2.md under W1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold W1 **≥ 0.55** is in PROTOCOL-2.md under W1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold W1 **≥ 0.85** is in PROTOCOL-2.md under W1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold R1 **≥ 0.80** is in PROTOCOL-2.md under R1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold R1 **≤ 0.20** is in PROTOCOL-2.md under R1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold R1 **0.15** is in PROTOCOL-2.md under R1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C1 **≥ 0.60** is in PROTOCOL-2.md under C1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C1 **≥ 0.30** is in PROTOCOL-2.md under C1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C1 **0.25** is in PROTOCOL-2.md under C1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C2 **≤ 0.60** is in PROTOCOL-2.md under C2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C2 **≥ 0.90** is in PROTOCOL-2.md under C2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C3 **≥ 0.20** is in PROTOCOL-2.md under C3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C4 **≥ 0.60** is in PROTOCOL-2.md under C4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold C4 **≤ 0.50** is in PROTOCOL-2.md under C4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold E1 **≥ 0.30** is in PROTOCOL-2.md under E1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold E1 **≥ 0.40** is in PROTOCOL-2.md under E1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold E2 **0.10** is in PROTOCOL-2.md under E2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A1 **≥ 0.85** is in PROTOCOL-2.md under A1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A1 **≥ 0.90** is in PROTOCOL-2.md under A1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A2 **≥ 0.90** is in PROTOCOL-2.md under A2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A2 **≥ 0.95** is in PROTOCOL-2.md under A2",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A3 **≤ 0.85** is in PROTOCOL-2.md under A3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A3 **≥ 0.95** is in PROTOCOL-2.md under A3",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A4 **≥ 0.40** is in PROTOCOL-2.md under A4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A4 **≤ 0.25** is in PROTOCOL-2.md under A4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "threshold A4 **≤ 0.10** is in PROTOCOL-2.md under A4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q W1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q R1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q C1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q C2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q C3: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q C4: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q E1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q E2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q A1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q A2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q A3: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q A4: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q Q1_parts matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q Q2_carriers matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q Q3_word_changes matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q Q4_acronyms_initials_separate matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict q Q4_headings_same_direction_reset matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: r2.q.v.n_pass",
+  "ok": true,
+  "detail": "text 12 vs recomputed 12.000000"
+ },
+ {
+  "name": "recount: r2.q.v.n_tests",
+  "ok": true,
+  "detail": "text 12 vs recomputed 12.000000"
+ },
+ {
+  "name": "round 2 verdict g W1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g R1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g C1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g C2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g C4: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g E1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g E2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g A1: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g A2: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g A3: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g A4: recomputed passed matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g Q1_parts matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g Q2_carriers matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g Q3_word_changes matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g Q4_acronyms_initials_separate matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "round 2 verdict g Q4_headings_same_direction_reset matches the text",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: r2.g.v.n_pass",
+  "ok": true,
+  "detail": "text 11 vs recomputed 11.000000"
+ },
+ {
+  "name": "recount: r2.g.v.n_tests",
+  "ok": true,
+  "detail": "text 11 vs recomputed 11.000000"
+ },
+ {
+  "name": "recount: r2.npass",
+  "ok": true,
+  "detail": "text 23 vs recomputed 23.000000"
+ },
+ {
+  "name": "recount: r2.ntests",
+  "ok": true,
+  "detail": "text 23 vs recomputed 23.000000"
+ },
+ {
+  "name": "claim: every round-2 prediction passed and every verdict is supported",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: r2gap.n",
+  "ok": true,
+  "detail": "text 63 vs recomputed 63.000000"
+ },
+ {
+  "name": "recount: r2gap.max",
+  "ok": true,
+  "detail": "text 0.145 vs recomputed 0.144952"
+ },
+ {
+  "name": "recount: r2gap.second",
+  "ok": true,
+  "detail": "text 0.115 vs recomputed 0.114758"
+ },
+ {
+  "name": "recount: r2gap.over05",
+  "ok": true,
+  "detail": "text 6 vs recomputed 6.000000"
+ },
+ {
+  "name": "claim: largest round-2 difference is Qwen3's top-5 share of changed words; next, Qwen3's heading removal",
+  "ok": true,
+  "detail": "[(0.14495214572398896, 'q', 'E_changed_in_lower_top5'), (0.11475849731663679, 'q', 'A_head_rm_keeps')]"
+ },
+ {
+  "name": "claim: both were estimated from few exploration positions (70 or fewer)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: round-2 differences larger than round 1's (largest)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: writers are four MLPs and one head (Qwen3), three MLPs and one head (Gemma)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: four or five carrier heads",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: readers are MLPs only, all after the direction layer",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: Gemma's random carrier sets reach higher than Qwen3's",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim (exploration): context alone carried about half of the full gap",
+  "ok": true,
+  "detail": "[0.492, 0.427]"
+ },
+ {
+  "name": "claim: the first word after a capitalised heading is almost never all capitals (below 0.05)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: the writers' edit removes more than the whole gap",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: random directions flipped none of the edit positions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim (exploration): the token embedding wrote almost nothing along u (under 1% of the gap, Qwen3)",
+  "ok": true,
+  "detail": "0.00016298648798877832"
+ },
+ {
+  "name": "recount: gate.o.c1",
+  "ok": true,
+  "detail": "text 0.992 vs recomputed 0.991946"
+ },
+ {
+  "name": "recount: gate.o.c2",
+  "ok": true,
+  "detail": "text 0.510 vs recomputed 0.510018"
+ },
+ {
+  "name": "recount: gate.o.c3",
+  "ok": true,
+  "detail": "text 0.744 vs recomputed 0.743656"
+ },
+ {
+  "name": "gate o: OLMo-2-1B fails on the same-word condition only",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "recount: mat.reserve.paras",
+  "ok": true,
+  "detail": "text 528 vs recomputed 528.000000"
+ },
+ {
+  "name": "recount: mat.reserve.articles",
+  "ok": true,
+  "detail": "text 299 vs recomputed 299.000000"
+ },
+ {
+  "name": "recount: mat.head.reserve.items",
+  "ok": true,
+  "detail": "text 1,335 vs recomputed 1335.000000"
+ },
+ {
+  "name": "recount: x1.l0h3.dlow",
+  "ok": true,
+  "detail": "text 0.331 vs recomputed 0.331083"
+ },
+ {
+  "name": "recount: x1.l0h3.dup",
+  "ok": true,
+  "detail": "text 0.923 vs recomputed 0.922994"
+ },
+ {
+  "name": "recount: x1.l0h3.wl",
+  "ok": true,
+  "detail": "text −1.82 vs recomputed -1.815705"
+ },
+ {
+  "name": "recount: x1.l0h3.self.min",
+  "ok": true,
+  "detail": "text 0.97 vs recomputed 0.973100"
+ },
+ {
+  "name": "recount: x1.l0h3.self.max",
+  "ok": true,
+  "detail": "text 0.99 vs recomputed 0.986800"
+ },
+ {
+  "name": "recount: x1.l17h6.dup",
+  "ok": true,
+  "detail": "text 0.927 vs recomputed 0.927496"
+ },
+ {
+  "name": "claim: X1 tests C7, C8 and A6 passed",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "every number macro used in the text is defined",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "every number used in the text was recomputed by this script",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no hand-typed decimals except frozen thresholds and model names",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "model-name decimal only in model names",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: claude",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: anthropic",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: codex",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: openai",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: chatgpt",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: gpt-4",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "no product or company name: gemini",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "British spelling (no US forms)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no repo paths in captions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "AI-use statement says 'language-model assistants'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "author line is a placeholder",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "label used: exploratory",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "label used: prospective",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "label used: post hoc",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "label used: descriptive",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "states that SmolLM2 and Pythia-1B failed the gate",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "states the reserve part was read only after the second protocol was frozen",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reports the exploration-to-held-out differences (both rounds)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row lens_Lc_gt_U_at_l carries threshold \\ge 0.60",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row lens_Lr_gt_U_at_l carries threshold \\le 0.30",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row lens_Lc_gt_U_last carries threshold \\le 0.05",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row lens_Lc_gt_Lr_upper_at_l carries threshold \\ge 0.75",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row lens_Lc_gt_Lr_lower_at_l carries threshold \\ge 0.75",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row add_dir_L24_flip carries threshold \\ge 0.80",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row add_dir_L24_same_word carries threshold \\ge 0.45",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row sub_dir_L24_flip carries threshold \\ge 0.80",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row sub_dir_L24_same_word carries threshold \\ge 0.45",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row add_rand_L24_flip carries threshold \\le 0.05",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row sub_rand_L24_flip carries threshold \\le 0.05",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row rm_dir_upper_share carries threshold \\le 0.70",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row rm_dir_same_word_any_case carries threshold \\ge 0.60",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row rm_rand_upper_share carries threshold \\ge 0.95",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row orig_add_dir_to_upper carries threshold \\ge 0.75",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row orig_add_dir_to_upper_same_word carries threshold \\ge 0.50",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row orig_add_rand_to_upper carries threshold \\le 0.05",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row add_dir_L16_flip carries threshold \\le 0.15",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row sub_dir_L16_flip carries threshold \\ge 0.40",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row upper_top1_L+u2 carries threshold \\ge 0.50",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row upper_top1_L+u8 carries threshold \\ge 0.85",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row upper_top1_U+l2 carries threshold \\le 0.25",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row upper_top1_U+l8 carries threshold \\le 0.10",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row changed_word_top5 carries threshold \\ge 0.50",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row ctrl_word_top5 carries threshold \\le 0.10",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: row gate.c2 carries threshold \\ge 0.60",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 1: E1 row uses the frozen filtered measure (identical to the unfiltered one)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_self_attention_upper carries threshold \\ge 0.90",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_self_attention_lower carries threshold \\ge 0.90",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_other_lower_moved carries threshold \\ge 0.20",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_other_lower_flip carries threshold \\ge 0.25",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_other_upper_moved carries threshold \\le 0.08",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_other_upper_flip carries threshold \\le 0.05",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_ctrl_L0H2_same_lower_moved carries threshold \\le 0.08",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 2: row L0H3_ctrl_L0H0_same_lower_moved carries threshold \\le 0.08",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "table 3: row W_named_upper carries threshold \\le 0.30",
+  "ok": true,
+  "detail": "[\"\\n\\\\midrule\\nW1 & Writers' writes along $u$ moved: upper-case top-1 & $\\\\le 0.30$ & \\\\RQI{W_named_upper} & \\\\RGI{W_named_upper} & \\\\XQ{W_named_upper} / \\\\XG{W_named_upper} \"]"
+ },
+ {
+  "name": "table 3: row W_named_same_word carries threshold \\ge 0.55",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ same word in either case & $\\\\ge 0.55$ & \\\\RQI{W_named_same_word} & \\\\RGI{W_named_same_word} & \\\\XQ{W_named_same_word} / \\\\XG{W_named_same_word} ']"
+ },
+ {
+  "name": "table 3: row W_random_upper.min carries threshold \\ge 0.85",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ random sets, lowest upper-case top-1 & $\\\\ge 0.85$ & \\\\RQ{W_random_upper.min} & \\\\RG{W_random_upper.min} & \\\\XQ{W_random_upper.min} / \\\\XG{W_random_upper.min} ']"
+ },
+ {
+  "name": "table 3: row R_none_flip carries threshold \\ge 0.80",
+  "ok": true,
+  "detail": "['\\nR1 & Add $d$ at $\\\\ell$: flips to capitals & $\\\\ge 0.80$ & \\\\RQI{R_none_flip} & \\\\RGI{R_none_flip} & \\\\XQ{R_none_flip} / \\\\XG{R_none_flip} ']"
+ },
+ {
+  "name": "table 3: row R_named_flip carries threshold \\le 0.20",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ readers frozen & $\\\\le 0.20$ & \\\\RQI{R_named_flip} & \\\\RGI{R_named_flip} & \\\\XQ{R_named_flip} / \\\\XG{R_named_flip} ']"
+ },
+ {
+  "name": "table 3: row CA_named_proj_removed carries threshold \\ge 0.60",
+  "ok": true,
+  "detail": "['\\n\\\\addlinespace\\nC1 & Carriers patched in A: excess along $u$ removed & $\\\\ge 0.60$ & \\\\RQI{CA_named_proj_removed} & \\\\RGI{CA_named_proj_removed} & \\\\XQ{CA_named_proj_removed} / \\\\XG{CA_named_proj_removed} ']"
+ },
+ {
+  "name": "table 3: row CA_named_D_removed carries threshold \\ge 0.30",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ excess $D$ removed & $\\\\ge 0.30$ & \\\\RQI{CA_named_D_removed} & \\\\RGI{CA_named_D_removed} & \\\\XQ{CA_named_D_removed} / \\\\XG{CA_named_D_removed} ']"
+ },
+ {
+  "name": "table 3: row CU_named_upper carries threshold \\le 0.60",
+  "ok": true,
+  "detail": "['\\nC2 & Carriers patched in U: upper-case top-1 & $\\\\le 0.60$ & \\\\RQI{CU_named_upper} & \\\\RGI{CU_named_upper} & \\\\XQ{CU_named_upper} / \\\\XG{CU_named_upper} ']"
+ },
+ {
+  "name": "table 3: row CU_random_upper.min carries threshold \\ge 0.90",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ random sets, lowest & $\\\\ge 0.90$ & \\\\RQ{CU_random_upper.min} & \\\\RG{CU_random_upper.min} & \\\\XQ{CU_random_upper.min} / \\\\XG{CU_random_upper.min} ']"
+ },
+ {
+  "name": "table 3: row L17H6_proj_removed carries threshold \\ge 0.20",
+  "ok": true,
+  "detail": "['\\nC3 & \\\\hd{17}{6} alone in A: excess removed (above every random head) & $\\\\ge 0.20$ & \\\\RQI{L17H6_proj_removed} & & \\\\XQ{L17H6_proj_removed} ']"
+ },
+ {
+  "name": "table 3: row attn_L17H6_recent8 carries threshold \\ge 0.60",
+  "ok": true,
+  "detail": "['\\nC4 & Local carrier: attention on the last eight words & $\\\\ge 0.60$ & \\\\RQI{attn_L17H6_recent8} & \\\\RGI{attn_L14H7_recent8} & \\\\XQ{attn_L17H6_recent8} / \\\\XG{attn_L14H7_recent8} ']"
+ },
+ {
+  "name": "table 3: row attn_L19H0_recent8 carries threshold \\le 0.50",
+  "ok": true,
+  "detail": "['\\n & Broad carrier: the same & $\\\\le 0.50$ & \\\\RQI{attn_L19H0_recent8} & \\\\RGI{attn_L24H6_recent8} & \\\\XQ{attn_L19H0_recent8} / \\\\XG{attn_L24H6_recent8} ']"
+ },
+ {
+  "name": "table 3: row E_changed_in_lower_top5 carries threshold \\ge 0.40",
+  "ok": true,
+  "detail": "['\\n & Changed word in the lower-case top 5 & $\\\\ge 0.40$ & \\\\RQI{E_changed_in_lower_top5} & \\\\RGI{E_changed_in_lower_top5} & \\\\XQ{E_changed_in_lower_top5} / \\\\XG{E_changed_in_lower_top5} ']"
+ },
+ {
+  "name": "table 3: row A_acr_rm_keeps carries threshold \\ge 0.85",
+  "ok": true,
+  "detail": "['\\n\\\\addlinespace\\nA1 & Acronyms: remove $d$, still all capitals & $\\\\ge 0.85$ & \\\\RQI{A_acr_rm_keeps} & \\\\RGI{A_acr_rm_keeps} & \\\\XQ{A_acr_rm_keeps} / \\\\XG{A_acr_rm_keeps} ']"
+ },
+ {
+  "name": "table 3: row A_acr_rm_rand_keeps carries threshold \\ge 0.90",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ remove $r$ & $\\\\ge 0.90$ & \\\\RQI{A_acr_rm_rand_keeps} & \\\\RGI{A_acr_rm_rand_keeps} & \\\\XQ{A_acr_rm_rand_keeps} / \\\\XG{A_acr_rm_rand_keeps} ']"
+ },
+ {
+  "name": "table 3: row A_init_rm_keeps carries threshold \\ge 0.90",
+  "ok": true,
+  "detail": "['\\nA2 & Initial capitals: remove $d$, still capitalised & $\\\\ge 0.90$ & \\\\RQI{A_init_rm_keeps} & \\\\RGI{A_init_rm_keeps} & \\\\XQ{A_init_rm_keeps} / \\\\XG{A_init_rm_keeps} ']"
+ },
+ {
+  "name": "table 3: row A_init_rm_rand_keeps carries threshold \\ge 0.95",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ remove $r$ & $\\\\ge 0.95$ & \\\\RQI{A_init_rm_rand_keeps} & \\\\RGI{A_init_rm_rand_keeps} & \\\\XQ{A_init_rm_rand_keeps} / \\\\XG{A_init_rm_rand_keeps} ']"
+ },
+ {
+  "name": "table 3: row A_head_rm_keeps carries threshold \\le 0.85",
+  "ok": true,
+  "detail": "['\\nA3 & Headings in capitals: remove $d$, still all capitals & $\\\\le 0.85$ & \\\\RQI{A_head_rm_keeps} & \\\\RGI{A_head_rm_keeps} & \\\\XQ{A_head_rm_keeps} / \\\\XG{A_head_rm_keeps} ']"
+ },
+ {
+  "name": "table 3: row A_head_rm_rand_keeps carries threshold \\ge 0.95",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ remove $r$ & $\\\\ge 0.95$ & \\\\RQI{A_head_rm_rand_keeps} & \\\\RGI{A_head_rm_rand_keeps} & \\\\XQ{A_head_rm_rand_keeps} / \\\\XG{A_head_rm_rand_keeps} ']"
+ },
+ {
+  "name": "table 3: row A_head_inside_excess carries threshold \\ge 0.40",
+  "ok": true,
+  "detail": "['\\nA4 & Excess along $u$ inside the heading (share of the gap) & $\\\\ge 0.40$ & \\\\RQI{A_head_inside_excess} & \\\\RGI{A_head_inside_excess} & \\\\XQ{A_head_inside_excess} / \\\\XG{A_head_inside_excess} ']"
+ },
+ {
+  "name": "table 3: row A_head_after_excess carries threshold \\le 0.25",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ at the first word after it & $\\\\le 0.25$ & \\\\RQI{A_head_after_excess} & \\\\RGI{A_head_after_excess} & \\\\XQ{A_head_after_excess} / \\\\XG{A_head_after_excess} ']"
+ },
+ {
+  "name": "table 3: row A_head_after_allcaps_top carries threshold \\le 0.10",
+  "ok": true,
+  "detail": "['\\n & \\\\dots\\\\ top-1 all capitals there & $\\\\le 0.10$ & \\\\RQI{A_head_after_allcaps_top} & \\\\RGI{A_head_after_allcaps_top} & \\\\XQ{A_head_after_allcaps_top} / \\\\XG{A_head_after_allcaps_top} ']"
+ },
+ {
+  "name": "table 3 note: R1, C1, E1 and E2 margins",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "every cited key is in refs.bib",
+  "ok": true,
+  "detail": "set()"
+ },
+ {
+  "name": "every refs.bib entry is cited",
+  "ok": true,
+  "detail": "set()"
+ },
+ {
+  "name": "reference biderman2023pythia: arXiv 2304.01373 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "{Pythia}: A Suite for Analyzing Large Language Models Across Training and Scaling | Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling | Biderman"
+ },
+ {
+  "name": "reference biderman2023pythia: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/04/03"
+ },
+ {
+  "name": "reference qwen2025qwen3: arXiv 2505.09388 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Qwen3 Technical Report | Qwen3 Technical Report | Yang"
+ },
+ {
+  "name": "reference qwen2025qwen3: year 2025 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2025/05/14"
+ },
+ {
+  "name": "reference gemma2026gemma4: arXiv 2607.02770 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Gemma 4 Technical Report | Gemma 4 Technical Report | Team"
+ },
+ {
+  "name": "reference gemma2026gemma4: year 2026 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2026/07/02"
+ },
+ {
+  "name": "reference benallal2025smollm2: arXiv 2502.02737 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "{SmolLM2}: When Smol Goes Big -- Data-Centric Training of a Small Language Model | SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model | Allal"
+ },
+ {
+  "name": "reference benallal2025smollm2: year 2025 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2025/02/04"
+ },
+ {
+  "name": "reference meng2022locating: arXiv 2202.05262 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Locating and Editing Factual Associations in {GPT} | Locating and Editing Factual Associations in GPT | Meng"
+ },
+ {
+  "name": "reference meng2022locating: year 2022 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2022/02/10"
+ },
+ {
+  "name": "reference heimersheim2024patching: arXiv 2404.15255 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "How to use and interpret activation patching | How to use and interpret activation patching | Heimersheim"
+ },
+ {
+  "name": "reference heimersheim2024patching: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2024/04/23"
+ },
+ {
+  "name": "reference zhang2024patching: arXiv 2309.16042 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods | Towards Best Practices of Activation Patching in Language Models: Metrics and Methods | Zhang"
+ },
+ {
+  "name": "reference zhang2024patching: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/09/27"
+ },
+ {
+  "name": "reference nostalgebraist2020logitlens: non-arXiv entry matches its saved page record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference belrose2023tunedlens: arXiv 2303.08112 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Eliciting Latent Predictions from Transformers with the Tuned Lens | Eliciting Latent Predictions from Transformers with the Tuned Lens | Belrose"
+ },
+ {
+  "name": "reference belrose2023tunedlens: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/03/14"
+ },
+ {
+  "name": "reference wendler2024llamas: arXiv 2402.10588 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Do {Llamas} Work in {English}? {On} the Latent Language of Multilingual Transformers | Do Llamas Work in English? On the Latent Language of Multilingual Transformers | Wendler"
+ },
+ {
+  "name": "reference wendler2024llamas: year 2024 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2024/02/16"
+ },
+ {
+  "name": "reference turner2023steering: arXiv 2308.10248 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Steering Language Models With Activation Engineering | Steering Language Models With Activation Engineering | Turner"
+ },
+ {
+  "name": "reference turner2023steering: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/08/20"
+ },
+ {
+  "name": "reference panickssery2023caa: arXiv 2312.06681 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Steering {Llama} 2 via Contrastive Activation Addition | Steering Llama 2 via Contrastive Activation Addition | Panickssery"
+ },
+ {
+  "name": "reference panickssery2023caa: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/12/09"
+ },
+ {
+  "name": "reference marks2023geometry: arXiv 2310.06824 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "The Geometry of Truth: Emergent Linear Structure in Large Language Model Representations of True/False Datasets | The Geometry of Truth: Emergent Linear Structure in Large Language Model Representations of True/False Datasets | Marks"
+ },
+ {
+  "name": "reference marks2023geometry: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/10/10"
+ },
+ {
+  "name": "reference park2023linear: arXiv 2311.03658 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "The Linear Representation Hypothesis and the Geometry of Large Language Models | The Linear Representation Hypothesis and the Geometry of Large Language Models | Park"
+ },
+ {
+  "name": "reference park2023linear: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/11/07"
+ },
+ {
+  "name": "reference belrose2023leace: arXiv 2306.03819 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "{LEACE}: Perfect linear concept erasure in closed form | LEACE: Perfect linear concept erasure in closed form | Belrose"
+ },
+ {
+  "name": "reference belrose2023leace: year 2023 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2023/06/06"
+ },
+ {
+  "name": "reference dillitzer2026casing: arXiv 2608.03711 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "Attention is Case-Sensitive | Attention is Case-Sensitive | Dillitzer"
+ },
+ {
+  "name": "reference dillitzer2026casing: year 2026 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2026/08/04"
+ },
+ {
+  "name": "reference powalski2020unicase: arXiv 2010.11936 title and first author match the arXiv record",
+  "ok": true,
+  "detail": "{UniCase} -- Rethinking Casing in Language Models | UniCase -- Rethinking Casing in Language Models | Powalski"
+ },
+ {
+  "name": "reference powalski2020unicase: year 2020 matches the first arXiv version or the venue",
+  "ok": true,
+  "detail": "arXiv 2020/10/22"
+ }
+]

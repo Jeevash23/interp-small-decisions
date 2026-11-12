@@ -1,0 +1,6387 @@
+[
+ {
+  "name": "numbers file parsed",
+  "ok": true,
+  "detail": "3298"
+ },
+ {
+  "name": "d3: key set equals the source paper's",
+  "ok": true,
+  "detail": "missing [], extra []"
+ },
+ {
+  "name": "d3: figure data fig-resid.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d3: source checker located its two path lines",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d3: source paper's independent checker on this paper's values (907 checks)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d4: key set equals the source paper's",
+  "ok": true,
+  "detail": "missing [], extra []"
+ },
+ {
+  "name": "d4: figure data fig-auroc.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d4: figure data fig-lens.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d4: source checker located its two path lines",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d4: source paper's independent checker on this paper's values (847 checks)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: key set equals the source paper's",
+  "ok": true,
+  "detail": "missing [], extra []"
+ },
+ {
+  "name": "d5: figure data fig-lens-g.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: figure data fig-lens-q.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: figure data fig-sweep-g.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: figure data fig-sweep-q.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: figure data fig-attn-q.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: figure data fig-attn-g.dat present in this paper",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: source checker located its two path lines",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5: source paper's independent checker on this paper's values (1408 checks)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.Dl",
+  "ok": true,
+  "detail": "0.880 vs 0.880"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.Dl.rhi",
+  "ok": true,
+  "detail": "1.015 vs 1.015"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.Dl.rlo",
+  "ok": true,
+  "detail": "0.984 vs 0.984"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.Du",
+  "ok": true,
+  "detail": "0.860 vs 0.860"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.Du.rhi",
+  "ok": true,
+  "detail": "1.018 vs 1.018"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.Du.rlo",
+  "ok": true,
+  "detail": "0.993 vs 0.993"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.LBs",
+  "ok": true,
+  "detail": "0.864 vs 0.864"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.LBs.rhi",
+  "ok": true,
+  "detail": "1.037 vs 1.037"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.LBs.rlo",
+  "ok": true,
+  "detail": "0.966 vs 0.966"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.LBw",
+  "ok": true,
+  "detail": "0.715 vs 0.715"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.LBw.rhi",
+  "ok": true,
+  "detail": "1.068 vs 1.068"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.LBw.rlo",
+  "ok": true,
+  "detail": "0.937 vs 0.937"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.p4",
+  "ok": true,
+  "detail": "0.742 vs 0.742"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.p4.rhi",
+  "ok": true,
+  "detail": "1.163 vs 1.163"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.p4.rlo",
+  "ok": true,
+  "detail": "0.814 vs 0.814"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.p5",
+  "ok": true,
+  "detail": "0.675 vs 0.675"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.p5.rhi",
+  "ok": true,
+  "detail": "1.126 vs 1.126"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.p5.rlo",
+  "ok": true,
+  "detail": "0.832 vs 0.832"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.t4",
+  "ok": true,
+  "detail": "0.714 vs 0.714"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.t4.rhi",
+  "ok": true,
+  "detail": "1.069 vs 1.069"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.t4.rlo",
+  "ok": true,
+  "detail": "0.912 vs 0.912"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.t5",
+  "ok": true,
+  "detail": "0.757 vs 0.757"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.t5.rhi",
+  "ok": true,
+  "detail": "1.086 vs 1.086"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.t5.rlo",
+  "ok": true,
+  "detail": "0.879 vs 0.879"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.wl",
+  "ok": true,
+  "detail": "−0.062 vs −0.062"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.wl.rhi",
+  "ok": true,
+  "detail": "−0.010 vs −0.010"
+ },
+ {
+  "name": "x1m: x1m.m.CARRY.wl.rlo",
+  "ok": true,
+  "detail": "−0.073 vs −0.073"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.LBs",
+  "ok": true,
+  "detail": "1.033 vs 1.033"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.LBs.rhi",
+  "ok": true,
+  "detail": "1.014 vs 1.014"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.LBs.rlo",
+  "ok": true,
+  "detail": "0.960 vs 0.960"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.LBw",
+  "ok": true,
+  "detail": "1.015 vs 1.015"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.LBw.rhi",
+  "ok": true,
+  "detail": "1.065 vs 1.065"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.LBw.rlo",
+  "ok": true,
+  "detail": "0.924 vs 0.924"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.p4",
+  "ok": true,
+  "detail": "0.736 vs 0.736"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.p4.rhi",
+  "ok": true,
+  "detail": "1.144 vs 1.144"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.p4.rlo",
+  "ok": true,
+  "detail": "0.945 vs 0.945"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.p5",
+  "ok": true,
+  "detail": "0.653 vs 0.653"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.p5.rhi",
+  "ok": true,
+  "detail": "1.118 vs 1.118"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.p5.rlo",
+  "ok": true,
+  "detail": "0.945 vs 0.945"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.t4",
+  "ok": true,
+  "detail": "0.723 vs 0.723"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.t4.rhi",
+  "ok": true,
+  "detail": "1.076 vs 1.076"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.t4.rlo",
+  "ok": true,
+  "detail": "0.953 vs 0.953"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.t5",
+  "ok": true,
+  "detail": "0.742 vs 0.742"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.t5.rhi",
+  "ok": true,
+  "detail": "1.077 vs 1.077"
+ },
+ {
+  "name": "x1m: x1m.m.CARRYnoL17H6.t5.rlo",
+  "ok": true,
+  "detail": "0.962 vs 0.962"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.Dl",
+  "ok": true,
+  "detail": "1.009 vs 1.009"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.Dl.rhi",
+  "ok": true,
+  "detail": "1.016 vs 1.016"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.Dl.rlo",
+  "ok": true,
+  "detail": "0.989 vs 0.989"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.Du",
+  "ok": true,
+  "detail": "1.009 vs 1.009"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.Du.rhi",
+  "ok": true,
+  "detail": "1.014 vs 1.014"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.Du.rlo",
+  "ok": true,
+  "detail": "0.989 vs 0.989"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.LBs",
+  "ok": true,
+  "detail": "0.040 vs 0.040"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.LBs.rhi",
+  "ok": true,
+  "detail": "1.028 vs 1.028"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.LBs.rlo",
+  "ok": true,
+  "detail": "0.888 vs 0.888"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.LBw",
+  "ok": true,
+  "detail": "0.150 vs 0.150"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.LBw.rhi",
+  "ok": true,
+  "detail": "1.071 vs 1.071"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.LBw.rlo",
+  "ok": true,
+  "detail": "0.892 vs 0.892"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.cT",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.cT.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.cT.rlo",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.cU",
+  "ok": true,
+  "detail": "0.007 vs 0.007"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.cU.rhi",
+  "ok": true,
+  "detail": "0.011 vs 0.011"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.cU.rlo",
+  "ok": true,
+  "detail": "−0.007 vs −0.007"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.gT",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.gT.rhi",
+  "ok": true,
+  "detail": "0.012 vs 0.012"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.gT.rlo",
+  "ok": true,
+  "detail": "−0.009 vs −0.009"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.gU",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.gU.rhi",
+  "ok": true,
+  "detail": "0.063 vs 0.063"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.gU.rlo",
+  "ok": true,
+  "detail": "−0.021 vs −0.021"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.p4",
+  "ok": true,
+  "detail": "1.008 vs 1.008"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.p4.rhi",
+  "ok": true,
+  "detail": "1.133 vs 1.133"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.p4.rlo",
+  "ok": true,
+  "detail": "0.902 vs 0.902"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.p5",
+  "ok": true,
+  "detail": "1.000 vs 1.000"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.p5.rhi",
+  "ok": true,
+  "detail": "1.028 vs 1.028"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.p5.rlo",
+  "ok": true,
+  "detail": "0.932 vs 0.932"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.t4",
+  "ok": true,
+  "detail": "1.013 vs 1.013"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.t4.rhi",
+  "ok": true,
+  "detail": "1.045 vs 1.045"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.t4.rlo",
+  "ok": true,
+  "detail": "0.929 vs 0.929"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.t5",
+  "ok": true,
+  "detail": "1.009 vs 1.009"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.t5.rhi",
+  "ok": true,
+  "detail": "1.030 vs 1.030"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.t5.rlo",
+  "ok": true,
+  "detail": "0.916 vs 0.916"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.wl",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.wl.rhi",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.COUNT.wl.rlo",
+  "ok": true,
+  "detail": "−0.019 vs −0.019"
+ },
+ {
+  "name": "x1m: x1m.m.DED.Dl",
+  "ok": true,
+  "detail": "0.999 vs 0.999"
+ },
+ {
+  "name": "x1m: x1m.m.DED.Dl.rhi",
+  "ok": true,
+  "detail": "1.020 vs 1.020"
+ },
+ {
+  "name": "x1m: x1m.m.DED.Dl.rlo",
+  "ok": true,
+  "detail": "0.977 vs 0.977"
+ },
+ {
+  "name": "x1m: x1m.m.DED.Du",
+  "ok": true,
+  "detail": "0.996 vs 0.996"
+ },
+ {
+  "name": "x1m: x1m.m.DED.Du.rhi",
+  "ok": true,
+  "detail": "1.025 vs 1.025"
+ },
+ {
+  "name": "x1m: x1m.m.DED.Du.rlo",
+  "ok": true,
+  "detail": "0.966 vs 0.966"
+ },
+ {
+  "name": "x1m: x1m.m.DED.LBs",
+  "ok": true,
+  "detail": "0.999 vs 0.999"
+ },
+ {
+  "name": "x1m: x1m.m.DED.LBs.rhi",
+  "ok": true,
+  "detail": "1.013 vs 1.013"
+ },
+ {
+  "name": "x1m: x1m.m.DED.LBs.rlo",
+  "ok": true,
+  "detail": "0.909 vs 0.909"
+ },
+ {
+  "name": "x1m: x1m.m.DED.LBw",
+  "ok": true,
+  "detail": "0.990 vs 0.990"
+ },
+ {
+  "name": "x1m: x1m.m.DED.LBw.rhi",
+  "ok": true,
+  "detail": "1.028 vs 1.028"
+ },
+ {
+  "name": "x1m: x1m.m.DED.LBw.rlo",
+  "ok": true,
+  "detail": "0.898 vs 0.898"
+ },
+ {
+  "name": "x1m: x1m.m.DED.cT",
+  "ok": true,
+  "detail": "−0.058 vs −0.058"
+ },
+ {
+  "name": "x1m: x1m.m.DED.cT.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.DED.cT.rlo",
+  "ok": true,
+  "detail": "−0.004 vs −0.004"
+ },
+ {
+  "name": "x1m: x1m.m.DED.cU",
+  "ok": true,
+  "detail": "−1.112 vs −1.112"
+ },
+ {
+  "name": "x1m: x1m.m.DED.cU.rhi",
+  "ok": true,
+  "detail": "0.014 vs 0.014"
+ },
+ {
+  "name": "x1m: x1m.m.DED.cU.rlo",
+  "ok": true,
+  "detail": "−0.027 vs −0.027"
+ },
+ {
+  "name": "x1m: x1m.m.DED.gT",
+  "ok": true,
+  "detail": "−0.266 vs −0.266"
+ },
+ {
+  "name": "x1m: x1m.m.DED.gT.rhi",
+  "ok": true,
+  "detail": "0.007 vs 0.007"
+ },
+ {
+  "name": "x1m: x1m.m.DED.gT.rlo",
+  "ok": true,
+  "detail": "−0.021 vs −0.021"
+ },
+ {
+  "name": "x1m: x1m.m.DED.gU",
+  "ok": true,
+  "detail": "−0.584 vs −0.584"
+ },
+ {
+  "name": "x1m: x1m.m.DED.gU.rhi",
+  "ok": true,
+  "detail": "0.053 vs 0.053"
+ },
+ {
+  "name": "x1m: x1m.m.DED.gU.rlo",
+  "ok": true,
+  "detail": "−0.117 vs −0.117"
+ },
+ {
+  "name": "x1m: x1m.m.DED.p4",
+  "ok": true,
+  "detail": "0.932 vs 0.932"
+ },
+ {
+  "name": "x1m: x1m.m.DED.p4.rhi",
+  "ok": true,
+  "detail": "1.140 vs 1.140"
+ },
+ {
+  "name": "x1m: x1m.m.DED.p4.rlo",
+  "ok": true,
+  "detail": "0.879 vs 0.879"
+ },
+ {
+  "name": "x1m: x1m.m.DED.p5",
+  "ok": true,
+  "detail": "0.977 vs 0.977"
+ },
+ {
+  "name": "x1m: x1m.m.DED.p5.rhi",
+  "ok": true,
+  "detail": "1.111 vs 1.111"
+ },
+ {
+  "name": "x1m: x1m.m.DED.p5.rlo",
+  "ok": true,
+  "detail": "0.884 vs 0.884"
+ },
+ {
+  "name": "x1m: x1m.m.DED.t4",
+  "ok": true,
+  "detail": "0.976 vs 0.976"
+ },
+ {
+  "name": "x1m: x1m.m.DED.t4.rhi",
+  "ok": true,
+  "detail": "1.066 vs 1.066"
+ },
+ {
+  "name": "x1m: x1m.m.DED.t4.rlo",
+  "ok": true,
+  "detail": "0.957 vs 0.957"
+ },
+ {
+  "name": "x1m: x1m.m.DED.t5",
+  "ok": true,
+  "detail": "1.005 vs 1.005"
+ },
+ {
+  "name": "x1m: x1m.m.DED.t5.rhi",
+  "ok": true,
+  "detail": "1.081 vs 1.081"
+ },
+ {
+  "name": "x1m: x1m.m.DED.t5.rlo",
+  "ok": true,
+  "detail": "0.948 vs 0.948"
+ },
+ {
+  "name": "x1m: x1m.m.DED.wl",
+  "ok": true,
+  "detail": "−0.026 vs −0.026"
+ },
+ {
+  "name": "x1m: x1m.m.DED.wl.rhi",
+  "ok": true,
+  "detail": "−0.009 vs −0.009"
+ },
+ {
+  "name": "x1m: x1m.m.DED.wl.rlo",
+  "ok": true,
+  "detail": "−0.083 vs −0.083"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.Dl",
+  "ok": true,
+  "detail": "0.970 vs 0.970"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.Dl.rhi",
+  "ok": true,
+  "detail": "0.999 vs 0.999"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.Dl.rlo",
+  "ok": true,
+  "detail": "0.992 vs 0.992"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.Du",
+  "ok": true,
+  "detail": "1.004 vs 1.004"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.Du.rhi",
+  "ok": true,
+  "detail": "1.007 vs 1.007"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.Du.rlo",
+  "ok": true,
+  "detail": "0.996 vs 0.996"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.LBs",
+  "ok": true,
+  "detail": "0.871 vs 0.871"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.LBs.rhi",
+  "ok": true,
+  "detail": "1.018 vs 1.018"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.LBs.rlo",
+  "ok": true,
+  "detail": "0.959 vs 0.959"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.LBw",
+  "ok": true,
+  "detail": "0.973 vs 0.973"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.LBw.rhi",
+  "ok": true,
+  "detail": "1.066 vs 1.066"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.LBw.rlo",
+  "ok": true,
+  "detail": "0.909 vs 0.909"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.cT",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.cT.rhi",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.cT.rlo",
+  "ok": true,
+  "detail": "−0.014 vs −0.014"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.cU",
+  "ok": true,
+  "detail": "−0.008 vs −0.008"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.cU.rhi",
+  "ok": true,
+  "detail": "0.002 vs 0.002"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.cU.rlo",
+  "ok": true,
+  "detail": "−0.059 vs −0.059"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.gT",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.gT.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.gT.rlo",
+  "ok": true,
+  "detail": "−0.043 vs −0.043"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.gU",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.gU.rhi",
+  "ok": true,
+  "detail": "0.111 vs 0.111"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.gU.rlo",
+  "ok": true,
+  "detail": "−0.055 vs −0.055"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.p4",
+  "ok": true,
+  "detail": "0.823 vs 0.823"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.p4.rhi",
+  "ok": true,
+  "detail": "0.994 vs 0.994"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.p4.rlo",
+  "ok": true,
+  "detail": "0.895 vs 0.895"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.p5",
+  "ok": true,
+  "detail": "0.901 vs 0.901"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.p5.rhi",
+  "ok": true,
+  "detail": "1.000 vs 1.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.p5.rlo",
+  "ok": true,
+  "detail": "0.784 vs 0.784"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.t4",
+  "ok": true,
+  "detail": "0.507 vs 0.507"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.t4.rhi",
+  "ok": true,
+  "detail": "1.033 vs 1.033"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.t4.rlo",
+  "ok": true,
+  "detail": "0.988 vs 0.988"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.t5",
+  "ok": true,
+  "detail": "0.546 vs 0.546"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.t5.rhi",
+  "ok": true,
+  "detail": "1.002 vs 1.002"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.t5.rlo",
+  "ok": true,
+  "detail": "0.973 vs 0.973"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.wl",
+  "ok": true,
+  "detail": "−0.038 vs −0.038"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.wl.rhi",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H2.wl.rlo",
+  "ok": true,
+  "detail": "−0.027 vs −0.027"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.Dl",
+  "ok": true,
+  "detail": "0.331 vs 0.331"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.Dl.rhi",
+  "ok": true,
+  "detail": "1.000 vs 1.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.Dl.rlo",
+  "ok": true,
+  "detail": "0.994 vs 0.994"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.Du",
+  "ok": true,
+  "detail": "0.923 vs 0.923"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.Du.rhi",
+  "ok": true,
+  "detail": "1.003 vs 1.003"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.Du.rlo",
+  "ok": true,
+  "detail": "0.997 vs 0.997"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.LBs",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.LBs.rhi",
+  "ok": true,
+  "detail": "1.015 vs 1.015"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.LBs.rlo",
+  "ok": true,
+  "detail": "0.966 vs 0.966"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.LBw",
+  "ok": true,
+  "detail": "0.391 vs 0.391"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.LBw.rhi",
+  "ok": true,
+  "detail": "1.044 vs 1.044"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.LBw.rlo",
+  "ok": true,
+  "detail": "0.969 vs 0.969"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.cT",
+  "ok": true,
+  "detail": "−0.004 vs −0.004"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.cT.rhi",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.cT.rlo",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.cU",
+  "ok": true,
+  "detail": "−0.009 vs −0.009"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.cU.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.cU.rlo",
+  "ok": true,
+  "detail": "−0.059 vs −0.059"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.gT",
+  "ok": true,
+  "detail": "−0.007 vs −0.007"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.gT.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.gT.rlo",
+  "ok": true,
+  "detail": "−0.024 vs −0.024"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.gU",
+  "ok": true,
+  "detail": "0.010 vs 0.010"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.gU.rhi",
+  "ok": true,
+  "detail": "0.002 vs 0.002"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.gU.rlo",
+  "ok": true,
+  "detail": "−0.055 vs −0.055"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.p4",
+  "ok": true,
+  "detail": "0.155 vs 0.155"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.p4.rhi",
+  "ok": true,
+  "detail": "1.000 vs 1.000"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.p4.rlo",
+  "ok": true,
+  "detail": "0.980 vs 0.980"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.p5",
+  "ok": true,
+  "detail": "0.314 vs 0.314"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.p5.rhi",
+  "ok": true,
+  "detail": "1.001 vs 1.001"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.p5.rlo",
+  "ok": true,
+  "detail": "0.988 vs 0.988"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.t4",
+  "ok": true,
+  "detail": "1.077 vs 1.077"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.t4.rhi",
+  "ok": true,
+  "detail": "1.003 vs 1.003"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.t4.rlo",
+  "ok": true,
+  "detail": "0.988 vs 0.988"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.t5",
+  "ok": true,
+  "detail": "1.132 vs 1.132"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.t5.rhi",
+  "ok": true,
+  "detail": "1.005 vs 1.005"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.t5.rlo",
+  "ok": true,
+  "detail": "0.992 vs 0.992"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.wl",
+  "ok": true,
+  "detail": "−1.816 vs −1.816"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.wl.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.L0H3.wl.rlo",
+  "ok": true,
+  "detail": "−0.027 vs −0.027"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.Dl",
+  "ok": true,
+  "detail": "0.936 vs 0.936"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.Dl.rhi",
+  "ok": true,
+  "detail": "1.007 vs 1.007"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.Dl.rlo",
+  "ok": true,
+  "detail": "0.996 vs 0.996"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.Du",
+  "ok": true,
+  "detail": "0.947 vs 0.947"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.Du.rhi",
+  "ok": true,
+  "detail": "1.008 vs 1.008"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.Du.rlo",
+  "ok": true,
+  "detail": "0.998 vs 0.998"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.LBs",
+  "ok": true,
+  "detail": "1.027 vs 1.027"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.LBs.rhi",
+  "ok": true,
+  "detail": "1.001 vs 1.001"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.LBs.rlo",
+  "ok": true,
+  "detail": "0.993 vs 0.993"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.LBw",
+  "ok": true,
+  "detail": "1.023 vs 1.023"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.LBw.rhi",
+  "ok": true,
+  "detail": "1.006 vs 1.006"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.LBw.rlo",
+  "ok": true,
+  "detail": "0.985 vs 0.985"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.cT",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.cT.rhi",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.cT.rlo",
+  "ok": true,
+  "detail": "−0.002 vs −0.002"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.cU",
+  "ok": true,
+  "detail": "−0.009 vs −0.009"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.cU.rhi",
+  "ok": true,
+  "detail": "0.003 vs 0.003"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.cU.rlo",
+  "ok": true,
+  "detail": "−0.010 vs −0.010"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.gT",
+  "ok": true,
+  "detail": "−0.030 vs −0.030"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.gT.rhi",
+  "ok": true,
+  "detail": "0.002 vs 0.002"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.gT.rlo",
+  "ok": true,
+  "detail": "−0.007 vs −0.007"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.gU",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.gU.rhi",
+  "ok": true,
+  "detail": "0.019 vs 0.019"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.gU.rlo",
+  "ok": true,
+  "detail": "−0.014 vs −0.014"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.p4",
+  "ok": true,
+  "detail": "0.733 vs 0.733"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.p4.rhi",
+  "ok": true,
+  "detail": "1.046 vs 1.046"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.p4.rlo",
+  "ok": true,
+  "detail": "0.981 vs 0.981"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.p5",
+  "ok": true,
+  "detail": "0.643 vs 0.643"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.p5.rhi",
+  "ok": true,
+  "detail": "1.013 vs 1.013"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.p5.rlo",
+  "ok": true,
+  "detail": "0.973 vs 0.973"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.t4",
+  "ok": true,
+  "detail": "0.726 vs 0.726"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.t4.rhi",
+  "ok": true,
+  "detail": "1.029 vs 1.029"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.t4.rlo",
+  "ok": true,
+  "detail": "0.988 vs 0.988"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.t5",
+  "ok": true,
+  "detail": "0.738 vs 0.738"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.t5.rhi",
+  "ok": true,
+  "detail": "1.021 vs 1.021"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.t5.rlo",
+  "ok": true,
+  "detail": "0.973 vs 0.973"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.wl",
+  "ok": true,
+  "detail": "−0.033 vs −0.033"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.wl.rhi",
+  "ok": true,
+  "detail": "0.002 vs 0.002"
+ },
+ {
+  "name": "x1m: x1m.m.L11H9.wl.rlo",
+  "ok": true,
+  "detail": "−0.007 vs −0.007"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.Dl",
+  "ok": true,
+  "detail": "0.957 vs 0.957"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.Dl.rhi",
+  "ok": true,
+  "detail": "1.019 vs 1.019"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.Dl.rlo",
+  "ok": true,
+  "detail": "0.996 vs 0.996"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.Du",
+  "ok": true,
+  "detail": "0.927 vs 0.927"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.Du.rhi",
+  "ok": true,
+  "detail": "1.017 vs 1.017"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.Du.rlo",
+  "ok": true,
+  "detail": "0.995 vs 0.995"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.LBs",
+  "ok": true,
+  "detail": "0.836 vs 0.836"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.LBs.rhi",
+  "ok": true,
+  "detail": "1.010 vs 1.010"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.LBs.rlo",
+  "ok": true,
+  "detail": "0.994 vs 0.994"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.LBw",
+  "ok": true,
+  "detail": "0.706 vs 0.706"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.LBw.rhi",
+  "ok": true,
+  "detail": "1.036 vs 1.036"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.LBw.rlo",
+  "ok": true,
+  "detail": "0.988 vs 0.988"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.cT",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.cT.rhi",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.cT.rlo",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.cU",
+  "ok": true,
+  "detail": "−0.010 vs −0.010"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.cU.rhi",
+  "ok": true,
+  "detail": "0.008 vs 0.008"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.cU.rlo",
+  "ok": true,
+  "detail": "−0.011 vs −0.011"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.gT",
+  "ok": true,
+  "detail": "−0.022 vs −0.022"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.gT.rhi",
+  "ok": true,
+  "detail": "0.002 vs 0.002"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.gT.rlo",
+  "ok": true,
+  "detail": "−0.011 vs −0.011"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.gU",
+  "ok": true,
+  "detail": "0.021 vs 0.021"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.gU.rhi",
+  "ok": true,
+  "detail": "0.015 vs 0.015"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.gU.rlo",
+  "ok": true,
+  "detail": "−0.028 vs −0.028"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.p4",
+  "ok": true,
+  "detail": "1.002 vs 1.002"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.p4.rhi",
+  "ok": true,
+  "detail": "1.032 vs 1.032"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.p4.rlo",
+  "ok": true,
+  "detail": "0.904 vs 0.904"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.p5",
+  "ok": true,
+  "detail": "1.010 vs 1.010"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.p5.rhi",
+  "ok": true,
+  "detail": "1.025 vs 1.025"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.p5.rlo",
+  "ok": true,
+  "detail": "0.899 vs 0.899"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.t4",
+  "ok": true,
+  "detail": "0.990 vs 0.990"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.t4.rhi",
+  "ok": true,
+  "detail": "1.014 vs 1.014"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.t4.rlo",
+  "ok": true,
+  "detail": "0.973 vs 0.973"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.t5",
+  "ok": true,
+  "detail": "1.012 vs 1.012"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.t5.rhi",
+  "ok": true,
+  "detail": "1.019 vs 1.019"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.t5.rlo",
+  "ok": true,
+  "detail": "0.954 vs 0.954"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.wl",
+  "ok": true,
+  "detail": "−0.002 vs −0.002"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.wl.rhi",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.L17H6.wl.rlo",
+  "ok": true,
+  "detail": "−0.014 vs −0.014"
+ },
+ {
+  "name": "x1m: x1m.m.READ.Dl",
+  "ok": true,
+  "detail": "0.923 vs 0.923"
+ },
+ {
+  "name": "x1m: x1m.m.READ.Dl.rhi",
+  "ok": true,
+  "detail": "1.021 vs 1.021"
+ },
+ {
+  "name": "x1m: x1m.m.READ.Dl.rlo",
+  "ok": true,
+  "detail": "0.950 vs 0.950"
+ },
+ {
+  "name": "x1m: x1m.m.READ.Du",
+  "ok": true,
+  "detail": "0.931 vs 0.931"
+ },
+ {
+  "name": "x1m: x1m.m.READ.Du.rhi",
+  "ok": true,
+  "detail": "1.017 vs 1.017"
+ },
+ {
+  "name": "x1m: x1m.m.READ.Du.rlo",
+  "ok": true,
+  "detail": "0.993 vs 0.993"
+ },
+ {
+  "name": "x1m: x1m.m.READ.p4",
+  "ok": true,
+  "detail": "1.113 vs 1.113"
+ },
+ {
+  "name": "x1m: x1m.m.READ.p4.rhi",
+  "ok": true,
+  "detail": "1.096 vs 1.096"
+ },
+ {
+  "name": "x1m: x1m.m.READ.p4.rlo",
+  "ok": true,
+  "detail": "0.901 vs 0.901"
+ },
+ {
+  "name": "x1m: x1m.m.READ.p5",
+  "ok": true,
+  "detail": "1.055 vs 1.055"
+ },
+ {
+  "name": "x1m: x1m.m.READ.p5.rhi",
+  "ok": true,
+  "detail": "1.108 vs 1.108"
+ },
+ {
+  "name": "x1m: x1m.m.READ.p5.rlo",
+  "ok": true,
+  "detail": "0.880 vs 0.880"
+ },
+ {
+  "name": "x1m: x1m.m.READ.t4",
+  "ok": true,
+  "detail": "1.047 vs 1.047"
+ },
+ {
+  "name": "x1m: x1m.m.READ.t4.rhi",
+  "ok": true,
+  "detail": "1.038 vs 1.038"
+ },
+ {
+  "name": "x1m: x1m.m.READ.t4.rlo",
+  "ok": true,
+  "detail": "0.966 vs 0.966"
+ },
+ {
+  "name": "x1m: x1m.m.READ.t5",
+  "ok": true,
+  "detail": "1.021 vs 1.021"
+ },
+ {
+  "name": "x1m: x1m.m.READ.t5.rhi",
+  "ok": true,
+  "detail": "1.064 vs 1.064"
+ },
+ {
+  "name": "x1m: x1m.m.READ.t5.rlo",
+  "ok": true,
+  "detail": "0.954 vs 0.954"
+ },
+ {
+  "name": "x1m: x1m.m.READ.wl",
+  "ok": true,
+  "detail": "−0.013 vs −0.013"
+ },
+ {
+  "name": "x1m: x1m.m.READ.wl.rhi",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "x1m: x1m.m.READ.wl.rlo",
+  "ok": true,
+  "detail": "−0.039 vs −0.039"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.LBs",
+  "ok": true,
+  "detail": "0.512 vs 0.512"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.LBs.rhi",
+  "ok": true,
+  "detail": "1.008 vs 1.008"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.LBs.rlo",
+  "ok": true,
+  "detail": "0.990 vs 0.990"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.LBw",
+  "ok": true,
+  "detail": "0.568 vs 0.568"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.LBw.rhi",
+  "ok": true,
+  "detail": "1.008 vs 1.008"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.LBw.rlo",
+  "ok": true,
+  "detail": "0.966 vs 0.966"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.cT",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.cT.rhi",
+  "ok": true,
+  "detail": "0.002 vs 0.002"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.cT.rlo",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.cU",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.cU.rhi",
+  "ok": true,
+  "detail": "0.012 vs 0.012"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.cU.rlo",
+  "ok": true,
+  "detail": "−0.029 vs −0.029"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.gT",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.gT.rhi",
+  "ok": true,
+  "detail": "0.015 vs 0.015"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.gT.rlo",
+  "ok": true,
+  "detail": "−0.046 vs −0.046"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.gU",
+  "ok": true,
+  "detail": "−0.007 vs −0.007"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.gU.rhi",
+  "ok": true,
+  "detail": "0.073 vs 0.073"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.gU.rlo",
+  "ok": true,
+  "detail": "−0.117 vs −0.117"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.p4",
+  "ok": true,
+  "detail": "1.111 vs 1.111"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.p4.rhi",
+  "ok": true,
+  "detail": "1.066 vs 1.066"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.p4.rlo",
+  "ok": true,
+  "detail": "0.948 vs 0.948"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.p5",
+  "ok": true,
+  "detail": "1.040 vs 1.040"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.p5.rhi",
+  "ok": true,
+  "detail": "1.064 vs 1.064"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.p5.rlo",
+  "ok": true,
+  "detail": "0.968 vs 0.968"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.t4",
+  "ok": true,
+  "detail": "1.065 vs 1.065"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.t4.rhi",
+  "ok": true,
+  "detail": "1.040 vs 1.040"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.t4.rlo",
+  "ok": true,
+  "detail": "0.984 vs 0.984"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.t5",
+  "ok": true,
+  "detail": "1.015 vs 1.015"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.t5.rhi",
+  "ok": true,
+  "detail": "1.106 vs 1.106"
+ },
+ {
+  "name": "x1m: x1m.m.READnoL17H6.t5.rlo",
+  "ok": true,
+  "detail": "0.979 vs 0.979"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.LBs",
+  "ok": true,
+  "detail": "0.831 vs 0.831"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.LBs.rhi",
+  "ok": true,
+  "detail": "1.021 vs 1.021"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.LBs.rlo",
+  "ok": true,
+  "detail": "0.968 vs 0.968"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.LBw",
+  "ok": true,
+  "detail": "0.675 vs 0.675"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.LBw.rhi",
+  "ok": true,
+  "detail": "1.061 vs 1.061"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.LBw.rlo",
+  "ok": true,
+  "detail": "0.958 vs 0.958"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.p4",
+  "ok": true,
+  "detail": "0.708 vs 0.708"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.p4.rhi",
+  "ok": true,
+  "detail": "1.127 vs 1.127"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.p4.rlo",
+  "ok": true,
+  "detail": "0.754 vs 0.754"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.p5",
+  "ok": true,
+  "detail": "0.662 vs 0.662"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.p5.rhi",
+  "ok": true,
+  "detail": "1.136 vs 1.136"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.p5.rlo",
+  "ok": true,
+  "detail": "0.847 vs 0.847"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.t4",
+  "ok": true,
+  "detail": "0.704 vs 0.704"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.t4.rhi",
+  "ok": true,
+  "detail": "1.091 vs 1.091"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.t4.rlo",
+  "ok": true,
+  "detail": "0.842 vs 0.842"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.t5",
+  "ok": true,
+  "detail": "0.785 vs 0.785"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.t5.rhi",
+  "ok": true,
+  "detail": "1.075 vs 1.075"
+ },
+ {
+  "name": "x1m: x1m.m.TERM.t5.rlo",
+  "ok": true,
+  "detail": "0.803 vs 0.803"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.LBs",
+  "ok": true,
+  "detail": "0.990 vs 0.990"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.LBs.rhi",
+  "ok": true,
+  "detail": "1.025 vs 1.025"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.LBs.rlo",
+  "ok": true,
+  "detail": "0.978 vs 0.978"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.LBw",
+  "ok": true,
+  "detail": "0.966 vs 0.966"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.LBw.rhi",
+  "ok": true,
+  "detail": "1.028 vs 1.028"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.LBw.rlo",
+  "ok": true,
+  "detail": "0.975 vs 0.975"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.p4",
+  "ok": true,
+  "detail": "0.697 vs 0.697"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.p4.rhi",
+  "ok": true,
+  "detail": "1.120 vs 1.120"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.p4.rlo",
+  "ok": true,
+  "detail": "0.865 vs 0.865"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.p5",
+  "ok": true,
+  "detail": "0.631 vs 0.631"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.p5.rhi",
+  "ok": true,
+  "detail": "1.140 vs 1.140"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.p5.rlo",
+  "ok": true,
+  "detail": "0.894 vs 0.894"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.t4",
+  "ok": true,
+  "detail": "0.714 vs 0.714"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.t4.rhi",
+  "ok": true,
+  "detail": "1.046 vs 1.046"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.t4.rlo",
+  "ok": true,
+  "detail": "0.930 vs 0.930"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.t5",
+  "ok": true,
+  "detail": "0.771 vs 0.771"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.t5.rhi",
+  "ok": true,
+  "detail": "1.146 vs 1.146"
+ },
+ {
+  "name": "x1m: x1m.m.TERMnoL17H6.t5.rlo",
+  "ok": true,
+  "detail": "0.887 vs 0.887"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.LBs",
+  "ok": true,
+  "detail": "0.254 vs 0.254"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.LBs.rhi",
+  "ok": true,
+  "detail": "1.037 vs 1.037"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.LBs.rlo",
+  "ok": true,
+  "detail": "0.973 vs 0.973"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.LBw",
+  "ok": true,
+  "detail": "0.466 vs 0.466"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.LBw.rhi",
+  "ok": true,
+  "detail": "1.058 vs 1.058"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.LBw.rlo",
+  "ok": true,
+  "detail": "0.914 vs 0.914"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.cT",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.cT.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.cT.rlo",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.cU",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.cU.rhi",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.cU.rlo",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.gT",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.gT.rhi",
+  "ok": true,
+  "detail": "0.005 vs 0.005"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.gT.rlo",
+  "ok": true,
+  "detail": "−0.012 vs −0.012"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.gU",
+  "ok": true,
+  "detail": "0.001 vs 0.001"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.gU.rhi",
+  "ok": true,
+  "detail": "0.025 vs 0.025"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.gU.rlo",
+  "ok": true,
+  "detail": "−0.005 vs −0.005"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.p4",
+  "ok": true,
+  "detail": "0.997 vs 0.997"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.p4.rhi",
+  "ok": true,
+  "detail": "1.021 vs 1.021"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.p4.rlo",
+  "ok": true,
+  "detail": "0.951 vs 0.951"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.p5",
+  "ok": true,
+  "detail": "0.994 vs 0.994"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.p5.rhi",
+  "ok": true,
+  "detail": "1.039 vs 1.039"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.p5.rlo",
+  "ok": true,
+  "detail": "0.992 vs 0.992"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.t4",
+  "ok": true,
+  "detail": "0.999 vs 0.999"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.t4.rhi",
+  "ok": true,
+  "detail": "1.034 vs 1.034"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.t4.rlo",
+  "ok": true,
+  "detail": "0.915 vs 0.915"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.t5",
+  "ok": true,
+  "detail": "0.999 vs 0.999"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.t5.rhi",
+  "ok": true,
+  "detail": "1.032 vs 1.032"
+ },
+ {
+  "name": "x1m: x1m.m.WRITE.t5.rlo",
+  "ok": true,
+  "detail": "0.957 vs 0.957"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRYnoL17H6.LBw",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.CARRYnoL17H6.LBs",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.TERM.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERM.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERMnoL17H6.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERMnoL17H6.LBs",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.DED.LBw",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.LBs",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.LBw",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.LBw",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.LBs",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.LBw",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.LBs",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.cU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.cT",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.gU",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.gT",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.cU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.cT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.gU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.gT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.cU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.cT",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.gU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.gT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.cU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.cT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.gU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.gT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.cU",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.DED.cT",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.DED.gU",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.DED.gT",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.cU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.cT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.gU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.gT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.cU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.cT",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.gU",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.gT",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.cU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.cT",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.gU",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.gT",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.t4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.t5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.p4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.p5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.t4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.t5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.p4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.p5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRYnoL17H6.t4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRYnoL17H6.t5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRYnoL17H6.p4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRYnoL17H6.p5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERM.t4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERM.t5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERM.p4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERM.p5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERMnoL17H6.t4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERMnoL17H6.t5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERMnoL17H6.p4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.TERMnoL17H6.p5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.READ.t4",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.READ.t5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READ.p4",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.READ.p5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.t4",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.t5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.p4",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.READnoL17H6.p5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.t4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.t5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.p4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.WRITE.p5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.t4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.t5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.p4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.p5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.t4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.t5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.p4",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.p5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.t4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.t5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.p4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.p5",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.t4",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.t5",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.p4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.p5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.t4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.t5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.p4",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.p5",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.Du",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.Dl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H3.wl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.Du",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.Dl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L0H2.wl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.Du",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.Dl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L11H9.wl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.Du",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.Dl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.L17H6.wl",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.READ.Du",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.READ.Dl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.READ.wl",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.Du",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.Dl",
+  "ok": true,
+  "detail": "below vs below"
+ },
+ {
+  "name": "x1m: x1m.o.CARRY.wl",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.Du",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.Dl",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.COUNT.wl",
+  "ok": true,
+  "detail": "above vs above"
+ },
+ {
+  "name": "x1m: x1m.o.DED.Du",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.Dl",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.o.DED.wl",
+  "ok": true,
+  "detail": "in vs in"
+ },
+ {
+  "name": "x1m: x1m.ph.A3rule.L17H6",
+  "ok": true,
+  "detail": "met vs met"
+ },
+ {
+  "name": "x1m: x1m.ph.A3rule.L11H9",
+  "ok": true,
+  "detail": "met vs met"
+ },
+ {
+  "name": "x1m: x1m.ph.A3rule.L0H2",
+  "ok": true,
+  "detail": "not met vs not met"
+ },
+ {
+  "name": "x1m: x1m.ph.A3rule.L0H3",
+  "ok": true,
+  "detail": "not met vs not met"
+ },
+ {
+  "name": "x1m: matrix cell L17H6|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY-L17H6|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY-L17H6|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM-L17H6|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM-L17H6|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|LBw present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|LBs present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|cU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|cT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|gU present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|gT present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY-L17H6|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY-L17H6|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY-L17H6|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY-L17H6|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM-L17H6|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM-L17H6|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM-L17H6|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell TERM-L17H6|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ-L17H6|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell WRITE|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|t4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|t5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|p4 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|p5 present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H3|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L0H2|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L11H9|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell L17H6|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell READ|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell CARRY|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell COUNT|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|Du present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|Dl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: matrix cell DED|wl present",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: x1m.base.LBw",
+  "ok": true,
+  "detail": "1.383 vs 1.383"
+ },
+ {
+  "name": "x1m: x1m.base.LBs",
+  "ok": true,
+  "detail": "3.284 vs 3.284"
+ },
+ {
+  "name": "x1m: x1m.n.LB.width",
+  "ok": true,
+  "detail": "150 vs 150"
+ },
+ {
+  "name": "x1m: x1m.n.LB.par",
+  "ok": true,
+  "detail": "60 vs 60"
+ },
+ {
+  "name": "x1m: x1m.n.IND.cU",
+  "ok": true,
+  "detail": "504 vs 504"
+ },
+ {
+  "name": "x1m: x1m.n.IND.cT",
+  "ok": true,
+  "detail": "532 vs 532"
+ },
+ {
+  "name": "x1m: x1m.n.IND.gU",
+  "ok": true,
+  "detail": "1,587 vs 1,587"
+ },
+ {
+  "name": "x1m: x1m.n.IND.gT",
+  "ok": true,
+  "detail": "1,371 vs 1,371"
+ },
+ {
+  "name": "x1m: x1m.n.ORD.teen4",
+  "ok": true,
+  "detail": "96 vs 96"
+ },
+ {
+  "name": "x1m: x1m.n.ORD.non4",
+  "ok": true,
+  "detail": "96 vs 96"
+ },
+ {
+  "name": "x1m: x1m.n.CAPS.pos",
+  "ok": true,
+  "detail": "11,489 vs 11,489"
+ },
+ {
+  "name": "x1m: x1m.n.CAPS.par",
+  "ok": true,
+  "detail": "100 vs 100"
+ },
+ {
+  "name": "x1m: x1m.C7.lossDl",
+  "ok": true,
+  "detail": "0.669 vs 0.669"
+ },
+ {
+  "name": "x1m: x1m.C7.threeLossDu",
+  "ok": true,
+  "detail": "0.231 vs 0.231"
+ },
+ {
+  "name": "x1m: x1m.gate06b.c2 (and below the 0.60 bar)",
+  "ok": true,
+  "detail": "0.547 vs 0.547"
+ },
+ {
+  "name": "x1m: x1m.att.L0H3.self.LB",
+  "ok": true,
+  "detail": "0.97 vs 0.97"
+ },
+ {
+  "name": "x1m: x1m.att.L0H2.prev.LB",
+  "ok": true,
+  "detail": "0.60 vs 0.60"
+ },
+ {
+  "name": "x1m: x1m.att.L11H9.self.LB",
+  "ok": true,
+  "detail": "0.90 vs 0.90"
+ },
+ {
+  "name": "x1m: x1m.att.L0H3.self.IND",
+  "ok": true,
+  "detail": "0.99 vs 0.99"
+ },
+ {
+  "name": "x1m: x1m.att.L0H2.prev.IND",
+  "ok": true,
+  "detail": "0.32 vs 0.32"
+ },
+ {
+  "name": "x1m: x1m.att.L11H9.self.IND",
+  "ok": true,
+  "detail": "0.96 vs 0.96"
+ },
+ {
+  "name": "x1m: x1m.att.L0H3.self.ORD",
+  "ok": true,
+  "detail": "0.98 vs 0.98"
+ },
+ {
+  "name": "x1m: x1m.att.L0H2.prev.ORD",
+  "ok": true,
+  "detail": "0.90 vs 0.90"
+ },
+ {
+  "name": "x1m: x1m.att.L11H9.self.ORD",
+  "ok": true,
+  "detail": "0.91 vs 0.91"
+ },
+ {
+  "name": "x1m: x1m.att.L0H3.self.CAPS",
+  "ok": true,
+  "detail": "0.98 vs 0.98"
+ },
+ {
+  "name": "x1m: x1m.att.L0H2.prev.CAPS",
+  "ok": true,
+  "detail": "0.70 vs 0.70"
+ },
+ {
+  "name": "x1m: x1m.att.L11H9.self.CAPS",
+  "ok": true,
+  "detail": "0.94 vs 0.94"
+ },
+ {
+  "name": "x1m: x1m.att.L0H3.self.min",
+  "ok": true,
+  "detail": "0.97 vs 0.97"
+ },
+ {
+  "name": "x1m: x1m.att.L0H3.self.max",
+  "ok": true,
+  "detail": "0.99 vs 0.99"
+ },
+ {
+  "name": "x1m: x1m.att.L11H9.self.min",
+  "ok": true,
+  "detail": "0.90 vs 0.90"
+ },
+ {
+  "name": "x1m: x1m.att.L11H9.self.max",
+  "ok": true,
+  "detail": "0.96 vs 0.96"
+ },
+ {
+  "name": "x1m: X1's independent report check passes (recomputes all 22 pass/fail from raw files)",
+  "ok": true,
+  "detail": "tests recomputed: 22/22 pass; verdicts agree: True\nintervals checked: 17\nnumbers in REPORT.md checked: 688; unmatched: 0\nmatrix cells checked: 132\nkey values checked in context: 46; missing: 0\nall checks passed\n"
+ },
+ {
+  "name": "x1m: test A1 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test A1 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test A2 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test A2 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test A3 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test A3 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test A4 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test A4 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test A5 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test A5 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test A6 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test A6 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test B1 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test B1 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test B2 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test B2 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test B3 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test B3 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test B4 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test B4 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C1 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C1 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C2 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C2 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C4 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C4 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C5 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C5 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C7 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C7 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C8 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C8 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test D4 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test D4 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test D1 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test D1 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test D2 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test D2 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C3 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C3 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test C6 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test C6 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: test D3 recomputed from raw files with the protocol threshold",
+  "ok": true,
+  "detail": "True vs pass"
+ },
+ {
+  "name": "x1m: test D3 named in PROTOCOL.md",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: 22 tests recounted",
+  "ok": true,
+  "detail": "22"
+ },
+ {
+  "name": "x1m: passes recounted",
+  "ok": true,
+  "detail": "22 vs 22"
+ },
+ {
+  "name": "x1m: account verdict",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "x1m: every x1m value checked",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "dx.ntests",
+  "ok": true,
+  "detail": "153"
+ },
+ {
+  "name": "dx.npass",
+  "ok": true,
+  "detail": "151"
+ },
+ {
+  "name": "dx.nfail",
+  "ok": true,
+  "detail": "2"
+ },
+ {
+  "name": "no other prefixes",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "dx.ord.nfurther recounted from the ordinal study's records",
+  "ok": true,
+  "detail": "5 vs ['gemma4-e2b', 'gpt2', 'pythia-1b', 'qwen3-17b', 'smollm2-17b']"
+ },
+ {
+  "name": "dx.ord.nfurther.word",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "dx.d4r2.nfail",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "dx.d4r1.npred: numbered round-1 predictions in the ordinal study's record",
+  "ok": true,
+  "detail": "13"
+ },
+ {
+  "name": "d4.c.ntests equals the predictions with the per-model one read in each model",
+  "ok": true,
+  "detail": "14"
+ },
+ {
+  "name": "dx.d4r1.B5.nmodels.word",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "the round-1 ordinal table lists exactly the numbered predictions",
+  "ok": true,
+  "detail": "['B1', 'B2', 'B3', 'B4', 'B5', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'O1', 'O2']"
+ },
+ {
+  "name": "every round-1 ordinal prediction is named in its frozen protocol",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "dx.d4r2.nfail.word",
+  "ok": true,
+  "detail": "['X:qwen3-17b:PREV@3', 'X:qwen3-17b:PREV@4']"
+ },
+ {
+  "name": "dx.d4r2.nfailpred.word: distinct failed predictions",
+  "ok": true,
+  "detail": "['X:qwen3-17b:PREV@3', 'X:qwen3-17b:PREV@4']"
+ },
+ {
+  "name": "dx.d4r2.nfaillen.word: number lengths of the failed tests",
+  "ok": true,
+  "detail": "['X:qwen3-17b:PREV@3', 'X:qwen3-17b:PREV@4']"
+ },
+ {
+  "name": "the failed round-2 tests are the previous-token set in Qwen3-1.7B-Base",
+  "ok": true,
+  "detail": "['X:qwen3-17b:PREV@3', 'X:qwen3-17b:PREV@4']"
+ },
+ {
+  "name": "d4.gate.n.*: round-1 ordinal gate recounted",
+  "ok": true,
+  "detail": "(7, 6)"
+ },
+ {
+  "name": "dx.ordgate.q17",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "dx.ordgate.ngated / npass",
+  "ok": true,
+  "detail": "(8, 7)"
+ },
+ {
+  "name": "the ordinal study's second charter requires the gate of Qwen3-1.7B-Base",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "dx.capsgate.ngated.word / npass.word",
+  "ok": true,
+  "detail": "{'gate_gemma': True, 'gate_olmo1b': False, 'gate_pythia-1b': False, 'gate_qwen3-17b': True, 'gate_smollm2': False, 'x1:qwen3-06b': False}"
+ },
+ {
+  "name": "dx.capsgate.ncharter.word: the capitals charter's candidate models",
+  "ok": true,
+  "detail": "Gemma-4-E2B (base), Qwen3-1.7B-Base, SmolLM2-1.7B, Pythia-1B"
+ },
+ {
+  "name": "dx.gemma.effB / totB against the saved model-card excerpt",
+  "ok": true,
+  "detail": " 2.3B effective <br> (5.1B with embeddings) "
+ },
+ {
+  "name": "dx.gemma.effB is the low end of the range in the cited report's arXiv record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "dx.gemma.totB against the weights on disk",
+  "ok": true,
+  "detail": "5123178979"
+ },
+ {
+  "name": "every dx value checked",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "r3.mat.nfiles (recomputed from raw records)",
+  "ok": true,
+  "detail": "1,000 vs 1,000"
+ },
+ {
+  "name": "r3.mat.nrepos (recomputed from raw records)",
+  "ok": true,
+  "detail": "274 vs 274"
+ },
+ {
+  "name": "r3.mat.nchunks (recomputed from raw records)",
+  "ok": true,
+  "detail": "2,764 vs 2,764"
+ },
+ {
+  "name": "r3.mat.nchunkrepos (recomputed from raw records)",
+  "ok": true,
+  "detail": "225 vs 225"
+ },
+ {
+  "name": "r3.mat.ngen (recomputed from raw records)",
+  "ok": true,
+  "detail": "2,000 vs 2,000"
+ },
+ {
+  "name": "r3.mat.ngen2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "1,500 vs 1,500"
+ },
+ {
+  "name": "r3: every fetched file has a permissive licence and its repository's licence text ships beside it",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "r3.r1.H1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.994 vs −0.994"
+ },
+ {
+  "name": "r3.r1.v.H1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.283 vs +0.283"
+ },
+ {
+  "name": "r3.r1.v.H2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.994 vs 0.994"
+ },
+ {
+  "name": "r3.r1.v.H3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.024 vs +0.024"
+ },
+ {
+  "name": "r3.r1.v.H4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.032 vs −0.032"
+ },
+ {
+  "name": "r3.r1.v.H5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.017 vs −0.017"
+ },
+ {
+  "name": "r3.r1.v.H6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.134 vs −0.134"
+ },
+ {
+  "name": "r3.r1.v.H7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.652 vs −0.652"
+ },
+ {
+  "name": "r3.r1.v.H8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.H9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.652 vs 0.652"
+ },
+ {
+  "name": "r3.r1.v.H9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r1.npass (recomputed from raw records)",
+  "ok": true,
+  "detail": "9 vs 9"
+ },
+ {
+  "name": "r3.r1.ntests (recomputed from raw records)",
+  "ok": true,
+  "detail": "9 vs 9"
+ },
+ {
+  "name": "r3.r1.H1.r (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.028 vs −0.028"
+ },
+ {
+  "name": "r3.r1.H5.r (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.009 vs −0.009"
+ },
+ {
+  "name": "r3.r1.H8.r (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.100 vs −0.100"
+ },
+ {
+  "name": "r3.r1.H9.suf (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.363 vs 0.363"
+ },
+ {
+  "name": "r3.r1.H9.rnec (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.070 vs 0.070"
+ },
+ {
+  "name": "r3: round 1's frozen verdict recomputed",
+  "ok": true,
+  "detail": "confirmed"
+ },
+ {
+  "name": "r3.o1.H1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−1.091 vs −1.091"
+ },
+ {
+  "name": "r3.o1.H2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.306 vs +0.306"
+ },
+ {
+  "name": "r3.o1.H3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.991 vs 0.991"
+ },
+ {
+  "name": "r3.o1.H4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.025 vs +0.025"
+ },
+ {
+  "name": "r3.o1.H5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.044 vs −0.044"
+ },
+ {
+  "name": "r3.o1.H6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.027 vs −0.027"
+ },
+ {
+  "name": "r3.o1.H7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.188 vs −0.188"
+ },
+ {
+  "name": "r3.o1.H8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.631 vs −0.631"
+ },
+ {
+  "name": "r3.o1.H9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.650 vs 0.650"
+ },
+ {
+  "name": "r3.r2.Q1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.457 vs 0.457"
+ },
+ {
+  "name": "r3.r2.Q2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.117 vs −0.117"
+ },
+ {
+  "name": "r3.r2.Q3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.012 vs +0.012"
+ },
+ {
+  "name": "r3.r2.Q4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.000 vs 0.000"
+ },
+ {
+  "name": "r3.r2.Q5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.896 vs 0.896"
+ },
+ {
+  "name": "r3.r2.Q6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+2.74 vs +2.74"
+ },
+ {
+  "name": "r3.r2.Q7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.195 vs −0.195"
+ },
+ {
+  "name": "r3.r2.Q8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+1.39 vs +1.39"
+ },
+ {
+  "name": "r3.r2.Q9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.710 vs 0.710"
+ },
+ {
+  "name": "r3.r2.Q10 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.102 vs 0.102"
+ },
+ {
+  "name": "r3.r2.O1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.283 vs 0.283"
+ },
+ {
+  "name": "r3.r2.O2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.115 vs −0.115"
+ },
+ {
+  "name": "r3.r2.O3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.014 vs +0.014"
+ },
+ {
+  "name": "r3.r2.O4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "r3.r2.O5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.715 vs 0.715"
+ },
+ {
+  "name": "r3.r2.O6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+1.61 vs +1.61"
+ },
+ {
+  "name": "r3.r2.O7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.154 vs −0.154"
+ },
+ {
+  "name": "r3.r2.O8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+1.41 vs +1.41"
+ },
+ {
+  "name": "r3.r2.O9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.859 vs 0.859"
+ },
+ {
+  "name": "r3.r2.O10 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.136 vs 0.136"
+ },
+ {
+  "name": "r3.r2.Q11 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.030 vs +0.030"
+ },
+ {
+  "name": "r3.r2.G1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.776 vs −0.776"
+ },
+ {
+  "name": "r3.r2.G2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.044 vs −0.044"
+ },
+ {
+  "name": "r3.r2.G3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.030 vs +0.030"
+ },
+ {
+  "name": "r3.r2.G4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.199 vs +0.199"
+ },
+ {
+  "name": "r3.r2.G1.rlo (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.109 vs −0.109"
+ },
+ {
+  "name": "r3.r2.G1.rhi (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.098 vs +0.098"
+ },
+ {
+  "name": "r3.r2.q.others_maxabs (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.035 vs 0.035"
+ },
+ {
+  "name": "r3.r2.v.Q1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q10 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.Q11 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.O10 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.G1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.G2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.G3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.v.G4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.r2.npass (recomputed from raw records)",
+  "ok": true,
+  "detail": "25 vs 25"
+ },
+ {
+  "name": "r3.r2.ntests (recomputed from raw records)",
+  "ok": true,
+  "detail": "25 vs 25"
+ },
+ {
+  "name": "r3.r2.nqconf (recomputed from raw records)",
+  "ok": true,
+  "detail": "5 vs 5"
+ },
+ {
+  "name": "r3.r2.nq (recomputed from raw records)",
+  "ok": true,
+  "detail": "5 vs 5"
+ },
+ {
+  "name": "r3.r2.nreturn (recomputed from raw records)",
+  "ok": true,
+  "detail": "149 vs 149"
+ },
+ {
+  "name": "r3.o2.Q1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.458 vs 0.458"
+ },
+ {
+  "name": "r3.o2.Q2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.148 vs −0.148"
+ },
+ {
+  "name": "r3.o2.Q3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.013 vs +0.013"
+ },
+ {
+  "name": "r3.o2.Q4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "r3.o2.Q5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.893 vs 0.893"
+ },
+ {
+  "name": "r3.o2.Q6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+2.72 vs +2.72"
+ },
+ {
+  "name": "r3.o2.Q7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.210 vs −0.210"
+ },
+ {
+  "name": "r3.o2.Q8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+1.41 vs +1.41"
+ },
+ {
+  "name": "r3.o2.Q9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.716 vs 0.716"
+ },
+ {
+  "name": "r3.o2.Q10 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.098 vs 0.098"
+ },
+ {
+  "name": "r3.o2.O1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.290 vs 0.290"
+ },
+ {
+  "name": "r3.o2.O2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.132 vs −0.132"
+ },
+ {
+  "name": "r3.o2.O3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.016 vs +0.016"
+ },
+ {
+  "name": "r3.o2.O4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.004 vs −0.004"
+ },
+ {
+  "name": "r3.o2.O5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.694 vs 0.694"
+ },
+ {
+  "name": "r3.o2.O6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+1.58 vs +1.58"
+ },
+ {
+  "name": "r3.o2.O7 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.166 vs −0.166"
+ },
+ {
+  "name": "r3.o2.O8 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+1.45 vs +1.45"
+ },
+ {
+  "name": "r3.o2.O9 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.895 vs 0.895"
+ },
+ {
+  "name": "r3.o2.O10 (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.158 vs 0.158"
+ },
+ {
+  "name": "r3.o2.Q11 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.029 vs +0.029"
+ },
+ {
+  "name": "r3.o2.G1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.775 vs −0.775"
+ },
+ {
+  "name": "r3.o2.G2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.045 vs −0.045"
+ },
+ {
+  "name": "r3.o2.G3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.033 vs +0.033"
+ },
+ {
+  "name": "r3.o2.G4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.194 vs +0.194"
+ },
+ {
+  "name": "r3.v.XA3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XA5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XB1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XB2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XB3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XC3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XC6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XD3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.XB4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.E1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.E2 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.E3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.E4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.E5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.v.E6 (recomputed from raw records)",
+  "ok": true,
+  "detail": "pass vs pass"
+ },
+ {
+  "name": "r3.x.npass (recomputed from raw records)",
+  "ok": true,
+  "detail": "9 vs 9"
+ },
+ {
+  "name": "r3.x.ntests (recomputed from raw records)",
+  "ok": true,
+  "detail": "9 vs 9"
+ },
+ {
+  "name": "r3.e.npass (recomputed from raw records)",
+  "ok": true,
+  "detail": "6 vs 6"
+ },
+ {
+  "name": "r3.e.ntests (recomputed from raw records)",
+  "ok": true,
+  "detail": "6 vs 6"
+ },
+ {
+  "name": "r3.e.verdict (recomputed from raw records)",
+  "ok": true,
+  "detail": "confirmed vs confirmed"
+ },
+ {
+  "name": "r3.x.XA3 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.025 vs −0.025"
+ },
+ {
+  "name": "r3.x.XA3.rlo (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.010 vs −0.010"
+ },
+ {
+  "name": "r3.x.XA3.rhi (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.004 vs +0.004"
+ },
+ {
+  "name": "r3.x.XB4 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.801 vs −0.801"
+ },
+ {
+  "name": "r3.x.XB4.rlo (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.015 vs −0.015"
+ },
+ {
+  "name": "r3.x.XB4.rhi (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.012 vs +0.012"
+ },
+ {
+  "name": "r3.x.XD3.max (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.027 vs 0.027"
+ },
+ {
+  "name": "r3.e.E1 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.027 vs −0.027"
+ },
+ {
+  "name": "r3.e.E1.rlo (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.004 vs −0.004"
+ },
+ {
+  "name": "r3.e.E1.rhi (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.003 vs +0.003"
+ },
+ {
+  "name": "r3.e.E2.CARRY (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.303 vs −0.303"
+ },
+ {
+  "name": "r3.e.E2.CARRY.rlo (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.015 vs −0.015"
+ },
+ {
+  "name": "r3.e.E2.CARRY.rhi (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.003 vs +0.003"
+ },
+ {
+  "name": "r3.e.E3.CARRY.without (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.264 vs −0.264"
+ },
+ {
+  "name": "r3.e.E3.CARRY.diff (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.039 vs +0.039"
+ },
+ {
+  "name": "r3.e.E2.TERM (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.224 vs −0.224"
+ },
+ {
+  "name": "r3.e.E2.TERM.rlo (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.060 vs −0.060"
+ },
+ {
+  "name": "r3.e.E2.TERM.rhi (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.030 vs +0.030"
+ },
+ {
+  "name": "r3.e.E3.TERM.without (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.172 vs −0.172"
+ },
+ {
+  "name": "r3.e.E3.TERM.diff (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.052 vs +0.052"
+ },
+ {
+  "name": "r3.e.E4.cU (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.010 vs −0.010"
+ },
+ {
+  "name": "r3.e.E4.gU (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.012 vs −0.012"
+ },
+ {
+  "name": "r3.e.E5 (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.003 vs −0.003"
+ },
+ {
+  "name": "r3.e.E5.rlo (recomputed from raw records)",
+  "ok": true,
+  "detail": "−0.001 vs −0.001"
+ },
+ {
+  "name": "r3.e.E5.rhi (recomputed from raw records)",
+  "ok": true,
+  "detail": "+0.001 vs +0.001"
+ },
+ {
+  "name": "r3.e.E6.nec (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.122 vs 0.122"
+ },
+ {
+  "name": "r3.e.E6.rnec (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.033 vs 0.033"
+ },
+ {
+  "name": "r3.e.E6.L17H6.nec (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.069 vs 0.069"
+ },
+ {
+  "name": "r3.e.E6.L17H6.rnec (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.261 vs 0.261"
+ },
+ {
+  "name": "r3 claim: L17H6's pair necessity is above 19 of its 20 random layer-17 heads, and the one above it is L17H4",
+  "ok": true,
+  "detail": "{'L17H6.above': 19, 'L17H6.ndraws': 20, 'L17H6.topdraw.heads': ['L17H4'], 'L17H6.topdraw.nec': 0.26067091456374325, 'E6.L11H9.heads.layer11': True, 'E6.L17H6.heads.layer17': True, 'E1.rand.n': 20}"
+ },
+ {
+  "name": "r3 claim: L11H9's change at generated terminal dedents is larger than L17H6's (round 3)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "r3.gate.p410.head (recomputed from raw records)",
+  "ok": true,
+  "detail": "0.874 vs 0.874"
+ },
+ {
+  "name": "r3.gate.npassall (recomputed from raw records)",
+  "ok": true,
+  "detail": "3 vs 3"
+ },
+ {
+  "name": "r3.gate.nmodels (recomputed from raw records)",
+  "ok": true,
+  "detail": "5 vs 5"
+ },
+ {
+  "name": "r3 claim: Pythia-410M misses only the header item and GPT-2 fails every item",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "r3.ntests (recomputed from raw records)",
+  "ok": true,
+  "detail": "49 vs 49"
+ },
+ {
+  "name": "r3.npass (recomputed from raw records)",
+  "ok": true,
+  "detail": "49 vs 49"
+ },
+ {
+  "name": "r3.ind.ntests (recomputed from raw records)",
+  "ok": true,
+  "detail": "34 vs 34"
+ },
+ {
+  "name": "r3.ind.npass (recomputed from raw records)",
+  "ok": true,
+  "detail": "34 vs 34"
+ },
+ {
+  "name": "r3.xe.ntests (recomputed from raw records)",
+  "ok": true,
+  "detail": "15 vs 15"
+ },
+ {
+  "name": "r3.xe.npass (recomputed from raw records)",
+  "ok": true,
+  "detail": "15 vs 15"
+ },
+ {
+  "name": "r3: PROTOCOL-3.md states E1 as X1's criterion and the E verdict rule",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "r3: every round-3 run file read was written after PROTOCOL-3.md was frozen",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: every \\nv key used is defined (340 keys)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "text: no hand-typed decimals except thresholds found in a source paper or X1's protocol",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "text: no product or company names in the body",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "text: British spelling",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "text: no repository paths in captions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: author line",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: companion title fixed here equals the newest D1 version's (v6-2026-11-10)",
+  "ok": true,
+  "detail": "Counting by dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M"
+ },
+ {
+  "name": "text: companion preprint cited by the newest D1 version's title",
+  "ok": true,
+  "detail": "Counting by dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M | Counting by dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M"
+ },
+ {
+  "name": "text: withdrawn wording absent: 'only one late head'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'indentation alone'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'It is the only way the indentation sets touch line-breaking'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'nothing else beyond the general early movers'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'under two billion parameters'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'read only by the MLPs after it'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'Unmarked dedents rest on one late head'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'A prospective cross-study test in \\\\qsix{} finds'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'an earlier draft'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'smoke test'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'pre-fix'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'overnight stall'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'to free the GPU'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: withdrawn wording absent: 'during training'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): abstract names both heads and says the second was confirmed by a frozen test on new material",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'read post hoc by the same criterion, a second'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'on a post hoc reading'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'has not been tested on new material'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'were not run on the held-out indentation material'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'We know of no'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'densely dotted'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: \"after every model's release\"",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'after every model studied was released'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'one found post hoc'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): replaced wording absent: 'meets the same criterion, post hoc'",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): training-date wording with possible overlap",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): novelty claims scoped",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): few-items caveat next to the boundary test's pass",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): code and data availability paragraph directly before the AI-use statement",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): repository address and the marked DOI placeholder",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): companion preprint carries paper A's archive DOI",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text (v5): round 3 cited in Table 1, Section 3, Section 6, the limitations and Figure 1",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: L17H6 and L11H9, and no other single head, meet the criterion frozen for a shared part (A3)",
+  "ok": true,
+  "detail": "{'L17H6': 'met', 'L11H9': 'met', 'L0H2': 'not met', 'L0H3': 'not met'}"
+ },
+ {
+  "name": "claim: PROTOCOL.md states that criterion and the bounds for L11H9",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: L11H9 on gT is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: L17H6 on gT is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: L11H9 on t4 is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: L11H9 on p4 is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: L11H9 on LBw is above its random range",
+  "ok": true,
+  "detail": "above"
+ },
+ {
+  "name": "claim: L11H9 on LBs is above its random range",
+  "ok": true,
+  "detail": "above"
+ },
+ {
+  "name": "claim: L11H9 on Du is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: L11H9 on Dl is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: TERMnoL17H6 on LBw is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: CARRYnoL17H6 on LBs is above its random range",
+  "ok": true,
+  "detail": "above"
+ },
+ {
+  "name": "claim: CARRYnoL17H6 on t4 is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: TERMnoL17H6 on t4 is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: READnoL17H6 on t4 is above its random range",
+  "ok": true,
+  "detail": "above"
+ },
+ {
+  "name": "claim: L17H6 on Dl is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: CARRY on Du is below its random range",
+  "ok": true,
+  "detail": "below"
+ },
+ {
+  "name": "claim: DED on LBw is in its random range",
+  "ok": true,
+  "detail": "in"
+ },
+ {
+  "name": "claim: DED on LBs is in its random range",
+  "ok": true,
+  "detail": "in"
+ },
+ {
+  "name": "claim: L11H9's change at generated terminal dedents is larger than L17H6's",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: CARRY and TERM without L17H6 pass the frozen bound (at least 0.92 of the width effect kept)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "claim: COUNT, WRITE, READ without L17H6 and DED are never below their random range on another task's measure",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "claim: the other marked cross-task values are small (within 0.12 of no effect)",
+  "ok": true,
+  "detail": "{'COUNT|wl': 0.0002, 'READnoL17H6|p4': 0.1108, 'READnoL17H6|t4': 0.0653, 'WRITE|cT': 0.001}"
+ },
+ {
+  "name": "text: members of COUNT as in the run files",
+  "ok": true,
+  "detail": "COUNT = \\{\\hd{4}{0}, \\hd{4}{1}, \\hd{5}{13}, \\hd{6}{2}, \\hd{7}{15}\\}"
+ },
+ {
+  "name": "text: members of WRITE as in the run files",
+  "ok": true,
+  "detail": "WRITE = \\{\\hd{5}{12}, \\hd{5}{13}, \\hd{6}{2}\\}"
+ },
+ {
+  "name": "text: members of READ as in the run files",
+  "ok": true,
+  "detail": "READ = \\{\\hd{7}{14}, \\hd{15}{3}, \\hd{17}{6}, \\hd{22}{3}\\}"
+ },
+ {
+  "name": "text: counts are of tests, not predictions",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: no pass count in the abstract",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "text: AI-use statement names no product",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "d5.c.ntests recounted from the per-model counts",
+  "ok": true,
+  "detail": "19 vs 19"
+ },
+ {
+  "name": "d5.r2.ntests recounted from the per-model counts",
+  "ok": true,
+  "detail": "23 vs 23"
+ },
+ {
+  "name": "d3: every value used here is one the source paper typesets (so its checker recomputes it)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "d4: every value used here is one the source paper typesets (so its checker recomputes it)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "d5: every value used here is one the source paper typesets (so its checker recomputes it)",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "references: every cited key defined",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "references: every entry cited",
+  "ok": true,
+  "detail": "[]"
+ },
+ {
+  "name": "reference alain2016probes: arXiv 1610.01644 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference alain2016probes: title matches",
+  "ok": true,
+  "detail": "Understanding intermediate layers using linear classifier probes | Understanding intermediate layers using linear classifier probes"
+ },
+ {
+  "name": "reference alain2016probes: first author matches",
+  "ok": true,
+  "detail": "Alain | ['Guillaume Alain', 'Yoshua Bengio']"
+ },
+ {
+  "name": "reference alain2016probes: year 2016 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2016-10-05"
+ },
+ {
+  "name": "reference baeumel2025modular: arXiv 2508.02513 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference baeumel2025modular: title matches",
+  "ok": true,
+  "detail": "Modular Arithmetic: Language Models Solve Math Digit by Digit | Modular Arithmetic: Language Models Solve Math Digit by Digit"
+ },
+ {
+  "name": "reference baeumel2025modular: first author matches",
+  "ok": true,
+  "detail": "Baeumel | ['Tanja Baeumel', 'Daniil Gurgurov']"
+ },
+ {
+  "name": "reference baeumel2025modular: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2025-08-04"
+ },
+ {
+  "name": "reference bassi2026geometry: arXiv 2607.04167 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference bassi2026geometry: title matches",
+  "ok": true,
+  "detail": "Geometry of Ordinal Representations in Language Models | Geometry of Ordinal Representations in Language Models"
+ },
+ {
+  "name": "reference bassi2026geometry: first author matches",
+  "ok": true,
+  "detail": "Bassi | ['Saksham Bassi', 'Sharvi Tomar']"
+ },
+ {
+  "name": "reference bassi2026geometry: year 2026 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2026-07-05"
+ },
+ {
+  "name": "reference belrose2023leace: arXiv 2306.03819 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference belrose2023leace: title matches",
+  "ok": true,
+  "detail": "{LEACE}: Perfect linear concept erasure in closed form | LEACE: Perfect linear concept erasure in closed form"
+ },
+ {
+  "name": "reference belrose2023leace: first author matches",
+  "ok": true,
+  "detail": "Belrose | ['Nora Belrose', 'David Schneider-Joseph']"
+ },
+ {
+  "name": "reference belrose2023leace: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-06-06"
+ },
+ {
+  "name": "reference belrose2023tuned: arXiv 2303.08112 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference belrose2023tuned: title matches",
+  "ok": true,
+  "detail": "Eliciting Latent Predictions from Transformers with the Tuned Lens | Eliciting Latent Predictions from Transformers with the Tuned Lens"
+ },
+ {
+  "name": "reference belrose2023tuned: first author matches",
+  "ok": true,
+  "detail": "Belrose | ['Nora Belrose', 'Igor Ostrovsky']"
+ },
+ {
+  "name": "reference belrose2023tuned: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-03-14"
+ },
+ {
+  "name": "reference benallal2025smollm2: arXiv 2502.02737 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference benallal2025smollm2: title matches",
+  "ok": true,
+  "detail": "{SmolLM2}: When Smol Goes Big -- Data-Centric Training of a Small Language Model | SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language Model"
+ },
+ {
+  "name": "reference benallal2025smollm2: first author matches",
+  "ok": true,
+  "detail": "Allal | ['Loubna Ben Allal', 'Anton Lozhkov']"
+ },
+ {
+  "name": "reference benallal2025smollm2: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2025-02-04"
+ },
+ {
+  "name": "reference biderman2023pythia: arXiv 2304.01373 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference biderman2023pythia: title matches",
+  "ok": true,
+  "detail": "{Pythia}: A Suite for Analyzing Large Language Models Across Training and Scaling | Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling"
+ },
+ {
+  "name": "reference biderman2023pythia: first author matches",
+  "ok": true,
+  "detail": "Biderman | ['Stella Biderman', 'Hailey Schoelkopf']"
+ },
+ {
+  "name": "reference biderman2023pythia: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-04-03"
+ },
+ {
+  "name": "reference bloom2024saelogitlens: non-arXiv entry has a saved web record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference bloom2024saelogitlens: title and year match the web record",
+  "ok": true,
+  "detail": "Understanding {SAE} Features with the Logit Lens | Understanding SAE Features with the Logit Lens"
+ },
+ {
+  "name": "reference dillitzer2026casing: arXiv 2608.03711 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference dillitzer2026casing: title matches",
+  "ok": true,
+  "detail": "Attention is Case-Sensitive | Attention is Case-Sensitive"
+ },
+ {
+  "name": "reference dillitzer2026casing: first author matches",
+  "ok": true,
+  "detail": "Dillitzer | ['Maximilian Dillitzer', 'Tin Stribor Sohn']"
+ },
+ {
+  "name": "reference dillitzer2026casing: year 2026 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2026-08-04"
+ },
+ {
+  "name": "reference dunefsky2026countdown: arXiv 2607.12279 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference dunefsky2026countdown: title matches",
+  "ok": true,
+  "detail": "A Shared Subcircuit Lets {LLMs} Count Down Across Tasks | A Shared Subcircuit Lets LLMs Count Down Across Tasks"
+ },
+ {
+  "name": "reference dunefsky2026countdown: first author matches",
+  "ok": true,
+  "detail": "Dunefsky | ['Jacob Dunefsky', 'Wes Gurnee']"
+ },
+ {
+  "name": "reference dunefsky2026countdown: year 2026 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2026-07-14"
+ },
+ {
+  "name": "reference ebrahimi2020dyck: arXiv 2010.04303 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference ebrahimi2020dyck: title matches",
+  "ok": true,
+  "detail": "How Can Self-Attention Networks Recognize {Dyck-n} Languages? | How Can Self-Attention Networks Recognize Dyck-n Languages?"
+ },
+ {
+  "name": "reference ebrahimi2020dyck: first author matches",
+  "ok": true,
+  "detail": "Ebrahimi | ['Javid Ebrahimi', 'Dhruv Gelda']"
+ },
+ {
+  "name": "reference ebrahimi2020dyck: year 2020 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2020-10-09"
+ },
+ {
+  "name": "reference ferrando2024agreement: arXiv 2410.06496 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference ferrando2024agreement: title matches",
+  "ok": true,
+  "detail": "On the Similarity of Circuits across Languages: a Case Study on the Subject-verb Agreement Task | On the Similarity of Circuits across Languages: a Case Study on the Subject-verb Agreement Task"
+ },
+ {
+  "name": "reference ferrando2024agreement: first author matches",
+  "ok": true,
+  "detail": "Ferrando | ['Javier Ferrando', 'Marta R. Costa-jussà']"
+ },
+ {
+  "name": "reference ferrando2024agreement: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-10-09"
+ },
+ {
+  "name": "reference feucht2024erasure: arXiv 2406.20086 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference feucht2024erasure: title matches",
+  "ok": true,
+  "detail": "Token Erasure as a Footprint of Implicit Vocabulary Items in {LLMs} | Token Erasure as a Footprint of Implicit Vocabulary Items in LLMs"
+ },
+ {
+  "name": "reference feucht2024erasure: first author matches",
+  "ok": true,
+  "detail": "Feucht | ['Sheridan Feucht', 'David Atkinson']"
+ },
+ {
+  "name": "reference feucht2024erasure: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-06-28"
+ },
+ {
+  "name": "reference finlayson2021agreement: arXiv 2106.06087 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference finlayson2021agreement: title matches",
+  "ok": true,
+  "detail": "Causal Analysis of Syntactic Agreement Mechanisms in Neural Language Models | Causal Analysis of Syntactic Agreement Mechanisms in Neural Language Models"
+ },
+ {
+  "name": "reference finlayson2021agreement: first author matches",
+  "ok": true,
+  "detail": "Finlayson | ['Matthew Finlayson', 'Aaron Mueller']"
+ },
+ {
+  "name": "reference finlayson2021agreement: year 2021 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2021-06-10"
+ },
+ {
+  "name": "reference friedman2024illusions: arXiv 2312.03656 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference friedman2024illusions: title matches",
+  "ok": true,
+  "detail": "Interpretability Illusions in the Generalization of Simplified Models | Interpretability Illusions in the Generalization of Simplified Models"
+ },
+ {
+  "name": "reference friedman2024illusions: first author matches",
+  "ok": true,
+  "detail": "Friedman | ['Dan Friedman', 'Andrew Lampinen']"
+ },
+ {
+  "name": "reference friedman2024illusions: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-12-06"
+ },
+ {
+  "name": "reference gao2025weightsparse: arXiv 2511.13653 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference gao2025weightsparse: title matches",
+  "ok": true,
+  "detail": "Weight-sparse transformers have interpretable circuits | Weight-sparse transformers have interpretable circuits"
+ },
+ {
+  "name": "reference gao2025weightsparse: first author matches",
+  "ok": true,
+  "detail": "Gao | ['Leo Gao', 'Achyuta Rajaram']"
+ },
+ {
+  "name": "reference gao2025weightsparse: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2025-11-17"
+ },
+ {
+  "name": "reference gemma2026gemma4: arXiv 2607.02770 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference gemma2026gemma4: title matches",
+  "ok": true,
+  "detail": "Gemma 4 Technical Report | Gemma 4 Technical Report"
+ },
+ {
+  "name": "reference gemma2026gemma4: first author matches",
+  "ok": true,
+  "detail": "Team | [' Gemma Team', 'Sherif El Abd']"
+ },
+ {
+  "name": "reference gemma2026gemma4: year 2026 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2026-07-02"
+ },
+ {
+  "name": "reference geva2021kv: arXiv 2012.14913 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference geva2021kv: title matches",
+  "ok": true,
+  "detail": "Transformer Feed-Forward Layers Are Key-Value Memories | Transformer Feed-Forward Layers Are Key-Value Memories"
+ },
+ {
+  "name": "reference geva2021kv: first author matches",
+  "ok": true,
+  "detail": "Geva | ['Mor Geva', 'Roei Schuster']"
+ },
+ {
+  "name": "reference geva2021kv: year 2021 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2020-12-29"
+ },
+ {
+  "name": "reference goldowskydill2023path: arXiv 2304.05969 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference goldowskydill2023path: title matches",
+  "ok": true,
+  "detail": "Localizing Model Behavior with Path Patching | Localizing Model Behavior with Path Patching"
+ },
+ {
+  "name": "reference goldowskydill2023path: first author matches",
+  "ok": true,
+  "detail": "Goldowsky-Dill | ['Nicholas Goldowsky-Dill', 'Chris MacLeod']"
+ },
+ {
+  "name": "reference goldowskydill2023path: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-04-12"
+ },
+ {
+  "name": "reference gould2024successor: arXiv 2312.09230 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference gould2024successor: title matches",
+  "ok": true,
+  "detail": "Successor Heads: Recurring, Interpretable Attention Heads In The Wild | Successor Heads: Recurring, Interpretable Attention Heads In The Wild"
+ },
+ {
+  "name": "reference gould2024successor: first author matches",
+  "ok": true,
+  "detail": "Gould | ['Rhys Gould', 'Euan Ong']"
+ },
+ {
+  "name": "reference gould2024successor: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-12-14"
+ },
+ {
+  "name": "reference gurnee2024universal: arXiv 2401.12181 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference gurnee2024universal: title matches",
+  "ok": true,
+  "detail": "Universal Neurons in {GPT2} Language Models | Universal Neurons in GPT2 Language Models"
+ },
+ {
+  "name": "reference gurnee2024universal: first author matches",
+  "ok": true,
+  "detail": "Gurnee | ['Wes Gurnee', 'Theo Horsley']"
+ },
+ {
+  "name": "reference gurnee2024universal: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-01-22"
+ },
+ {
+  "name": "reference gurnee2026manifolds: non-arXiv entry has a saved web record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference gurnee2026manifolds: title and year match the web record",
+  "ok": true,
+  "detail": "When Models Manipulate Manifolds: The Geometry of a Counting Task | When Models Manipulate Manifolds: The Geometry of a Counting Task"
+ },
+ {
+  "name": "reference hanna2023greaterthan: arXiv 2305.00586 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference hanna2023greaterthan: title matches",
+  "ok": true,
+  "detail": "How does {GPT-2} compute greater-than?: Interpreting mathematical abilities in a pre-trained language model | How does GPT-2 compute greater-than?: Interpreting mathematical abilities in a pre-trained language model"
+ },
+ {
+  "name": "reference hanna2023greaterthan: first author matches",
+  "ok": true,
+  "detail": "Hanna | ['Michael Hanna', 'Ollie Liu']"
+ },
+ {
+  "name": "reference hanna2023greaterthan: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-04-30"
+ },
+ {
+  "name": "reference heimersheim2024patching: arXiv 2404.15255 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference heimersheim2024patching: title matches",
+  "ok": true,
+  "detail": "How to use and interpret activation patching | How to use and interpret activation patching"
+ },
+ {
+  "name": "reference heimersheim2024patching: first author matches",
+  "ok": true,
+  "detail": "Heimersheim | ['Stefan Heimersheim', 'Neel Nanda']"
+ },
+ {
+  "name": "reference heimersheim2024patching: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-04-23"
+ },
+ {
+  "name": "reference hendel2023taskvectors: arXiv 2310.15916 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference hendel2023taskvectors: title matches",
+  "ok": true,
+  "detail": "In-Context Learning Creates Task Vectors | In-Context Learning Creates Task Vectors"
+ },
+ {
+  "name": "reference hendel2023taskvectors: first author matches",
+  "ok": true,
+  "detail": "Hendel | ['Roee Hendel', 'Mor Geva']"
+ },
+ {
+  "name": "reference hendel2023taskvectors: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-10-24"
+ },
+ {
+  "name": "reference janiak2023polysemantic: non-arXiv entry has a saved web record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference janiak2023polysemantic: title and year match the web record",
+  "ok": true,
+  "detail": "Polysemantic Attention Head in a 4-Layer Transformer | Polysemantic Attention Head in a 4-Layer Transformer"
+ },
+ {
+  "name": "reference jeevash2026linebreaking: non-arXiv entry has a saved web record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference jeevash2026linebreaking: title and year match the web record",
+  "ok": true,
+  "detail": "Counting by dilution and a width stored at the newline: a partial account of line-breaking in {Pythia-410M} | Counting by dilution and a width stored at the newline: a partial account of line-breaking in {Pythia-410M}"
+ },
+ {
+  "name": "reference karpathy2015visualizing: arXiv 1506.02078 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference karpathy2015visualizing: title matches",
+  "ok": true,
+  "detail": "Visualizing and Understanding Recurrent Networks | Visualizing and Understanding Recurrent Networks"
+ },
+ {
+  "name": "reference karpathy2015visualizing: first author matches",
+  "ok": true,
+  "detail": "Karpathy | ['Andrej Karpathy', 'Justin Johnson']"
+ },
+ {
+  "name": "reference karpathy2015visualizing: year 2015 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2015-06-05"
+ },
+ {
+  "name": "reference lad2024stages: arXiv 2406.19384 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference lad2024stages: title matches",
+  "ok": true,
+  "detail": "The Remarkable Robustness of {LLMs}: Stages of Inference? | The Remarkable Robustness of LLMs: Stages of Inference?"
+ },
+ {
+  "name": "reference lad2024stages: first author matches",
+  "ok": true,
+  "detail": "Lad | ['Vedang Lad', 'Jin Hwa Lee']"
+ },
+ {
+  "name": "reference lad2024stages: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-06-27"
+ },
+ {
+  "name": "reference lan2024sequence: arXiv 2311.04131 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference lan2024sequence: title matches",
+  "ok": true,
+  "detail": "Towards Interpretable Sequence Continuation: Analyzing Shared Circuits in Large Language Models | Towards Interpretable Sequence Continuation: Analyzing Shared Circuits in Large Language Models"
+ },
+ {
+  "name": "reference lan2024sequence: first author matches",
+  "ok": true,
+  "detail": "Lan | ['Michael Lan', 'Philip Torr']"
+ },
+ {
+  "name": "reference lan2024sequence: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-11-07"
+ },
+ {
+  "name": "reference levy2025digits: arXiv 2410.11781 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference levy2025digits: title matches",
+  "ok": true,
+  "detail": "Language Models Encode Numbers Using Digit Representations in Base 10 | Language Models Encode Numbers Using Digit Representations in Base 10"
+ },
+ {
+  "name": "reference levy2025digits: first author matches",
+  "ok": true,
+  "detail": "Levy | ['Amit Arnold Levy', 'Mor Geva']"
+ },
+ {
+  "name": "reference levy2025digits: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-10-15"
+ },
+ {
+  "name": "reference li2026circuits: arXiv 2605.08348 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference li2026circuits: title matches",
+  "ok": true,
+  "detail": "How Much Do Circuits Tell Us? {M}easuring the Consistency and Specificity of Language Model Circuits | How Much Do Circuits Tell Us? Measuring the Consistency and Specificity of Language Model Circuits"
+ },
+ {
+  "name": "reference li2026circuits: first author matches",
+  "ok": true,
+  "detail": "Li | ['Michael Li', 'Nishant Subramani']"
+ },
+ {
+  "name": "reference li2026circuits: year 2026 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2026-05-08"
+ },
+ {
+  "name": "reference marks2023geometry: arXiv 2310.06824 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference marks2023geometry: title matches",
+  "ok": true,
+  "detail": "The Geometry of Truth: Emergent Linear Structure in Large Language Model Representations of True/False Datasets | The Geometry of Truth: Emergent Linear Structure in Large Language Model Representations of True/False Datasets"
+ },
+ {
+  "name": "reference marks2023geometry: first author matches",
+  "ok": true,
+  "detail": "Marks | ['Samuel Marks', 'Max Tegmark']"
+ },
+ {
+  "name": "reference marks2023geometry: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-10-10"
+ },
+ {
+  "name": "reference meng2022locating: arXiv 2202.05262 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference meng2022locating: title matches",
+  "ok": true,
+  "detail": "Locating and Editing Factual Associations in {GPT} | Locating and Editing Factual Associations in GPT"
+ },
+ {
+  "name": "reference meng2022locating: first author matches",
+  "ok": true,
+  "detail": "Meng | ['Kevin Meng', 'David Bau']"
+ },
+ {
+  "name": "reference meng2022locating: year 2022 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2022-02-10"
+ },
+ {
+  "name": "reference merullo2024reuse: arXiv 2310.08744 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference merullo2024reuse: title matches",
+  "ok": true,
+  "detail": "Circuit Component Reuse Across Tasks in Transformer Language Models | Circuit Component Reuse Across Tasks in Transformer Language Models"
+ },
+ {
+  "name": "reference merullo2024reuse: first author matches",
+  "ok": true,
+  "detail": "Merullo | ['Jack Merullo', 'Carsten Eickhoff']"
+ },
+ {
+  "name": "reference merullo2024reuse: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-10-12"
+ },
+ {
+  "name": "reference merullo2024word2vec: arXiv 2305.16130 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference merullo2024word2vec: title matches",
+  "ok": true,
+  "detail": "Language Models Implement Simple {Word2Vec}-style Vector Arithmetic | Language Models Implement Simple Word2Vec-style Vector Arithmetic"
+ },
+ {
+  "name": "reference merullo2024word2vec: first author matches",
+  "ok": true,
+  "detail": "Merullo | ['Jack Merullo', 'Carsten Eickhoff']"
+ },
+ {
+  "name": "reference merullo2024word2vec: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-05-25"
+ },
+ {
+  "name": "reference miller2025codecompletion: arXiv 2502.18499 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference miller2025codecompletion: title matches",
+  "ok": true,
+  "detail": "Mechanistic Understanding of Language Models in Syntactic Code Completion | Mechanistic Understanding of Language Models in Syntactic Code Completion"
+ },
+ {
+  "name": "reference miller2025codecompletion: first author matches",
+  "ok": true,
+  "detail": "Miller | ['Samuel Miller', 'Daking Rai']"
+ },
+ {
+  "name": "reference miller2025codecompletion: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2025-02-20"
+ },
+ {
+  "name": "reference mondorf2025compositions: arXiv 2410.01434 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference mondorf2025compositions: title matches",
+  "ok": true,
+  "detail": "Circuit Compositions: Exploring Modular Structures in Transformer-Based Language Models | Circuit Compositions: Exploring Modular Structures in Transformer-Based Language Models"
+ },
+ {
+  "name": "reference mondorf2025compositions: first author matches",
+  "ok": true,
+  "detail": "Mondorf | ['Philipp Mondorf', 'Sondre Wold']"
+ },
+ {
+  "name": "reference mondorf2025compositions: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-10-02"
+ },
+ {
+  "name": "reference nikankin2025heuristics: arXiv 2410.21272 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference nikankin2025heuristics: title matches",
+  "ok": true,
+  "detail": "Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics | Arithmetic Without Algorithms: Language Models Solve Math With a Bag of Heuristics"
+ },
+ {
+  "name": "reference nikankin2025heuristics: first author matches",
+  "ok": true,
+  "detail": "Nikankin | ['Yaniv Nikankin', 'Anja Reusch']"
+ },
+ {
+  "name": "reference nikankin2025heuristics: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-10-28"
+ },
+ {
+  "name": "reference nostalgebraist2020logitlens: non-arXiv entry has a saved web record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference nostalgebraist2020logitlens: title and year match the web record",
+  "ok": true,
+  "detail": "interpreting {GPT}: the logit lens | interpreting GPT: the logit lens"
+ },
+ {
+  "name": "reference olmo2024olmo2: arXiv 2501.00656 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference olmo2024olmo2: title matches",
+  "ok": true,
+  "detail": "2 {OLMo} 2 Furious | 2 OLMo 2 Furious"
+ },
+ {
+  "name": "reference olmo2024olmo2: first author matches",
+  "ok": true,
+  "detail": "OLMo | ['Team OLMo', 'Pete Walsh']"
+ },
+ {
+  "name": "reference olmo2024olmo2: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-12-31"
+ },
+ {
+  "name": "reference olsson2022induction: arXiv 2209.11895 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference olsson2022induction: title matches",
+  "ok": true,
+  "detail": "In-context Learning and Induction Heads | In-context Learning and Induction Heads"
+ },
+ {
+  "name": "reference olsson2022induction: first author matches",
+  "ok": true,
+  "detail": "Olsson | ['Catherine Olsson', 'Nelson Elhage']"
+ },
+ {
+  "name": "reference olsson2022induction: year 2022 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2022-09-24"
+ },
+ {
+  "name": "reference panickssery2023caa: arXiv 2312.06681 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference panickssery2023caa: title matches",
+  "ok": true,
+  "detail": "Steering {Llama} 2 via Contrastive Activation Addition | Steering Llama 2 via Contrastive Activation Addition"
+ },
+ {
+  "name": "reference panickssery2023caa: first author matches",
+  "ok": true,
+  "detail": "Panickssery | ['Nina Panickssery', 'Nick Gabrieli']"
+ },
+ {
+  "name": "reference panickssery2023caa: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-12-09"
+ },
+ {
+  "name": "reference park2023linear: arXiv 2311.03658 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference park2023linear: title matches",
+  "ok": true,
+  "detail": "The Linear Representation Hypothesis and the Geometry of Large Language Models | The Linear Representation Hypothesis and the Geometry of Large Language Models"
+ },
+ {
+  "name": "reference park2023linear: first author matches",
+  "ok": true,
+  "detail": "Park | ['Kiho Park', 'Yo Joong Choe']"
+ },
+ {
+  "name": "reference park2023linear: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-11-07"
+ },
+ {
+  "name": "reference powalski2020unicase: arXiv 2010.11936 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference powalski2020unicase: title matches",
+  "ok": true,
+  "detail": "{UniCase} -- Rethinking Casing in Language Models | UniCase -- Rethinking Casing in Language Models"
+ },
+ {
+  "name": "reference powalski2020unicase: first author matches",
+  "ok": true,
+  "detail": "Powalski | ['Rafal Powalski', 'Tomasz Stanislawek']"
+ },
+ {
+  "name": "reference powalski2020unicase: year 2020 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2020-10-22"
+ },
+ {
+  "name": "reference qwen2025qwen3: arXiv 2505.09388 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference qwen2025qwen3: title matches",
+  "ok": true,
+  "detail": "Qwen3 Technical Report | Qwen3 Technical Report"
+ },
+ {
+  "name": "reference qwen2025qwen3: first author matches",
+  "ok": true,
+  "detail": "Yang | ['An Yang', 'Anfeng Li']"
+ },
+ {
+  "name": "reference qwen2025qwen3: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2025-05-14"
+ },
+ {
+  "name": "reference radford2019language: non-arXiv entry has a saved web record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference radford2019language: title and year match the web record",
+  "ok": true,
+  "detail": "Language Models are Unsupervised Multitask Learners | Language Models are Unsupervised Multitask Learners"
+ },
+ {
+  "name": "reference rai2025interference: arXiv 2507.00322 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference rai2025interference: title matches",
+  "ok": true,
+  "detail": "Failure by Interference: Language Models Make Balanced Parentheses Errors When Faulty Mechanisms Overshadow Sound Ones | Failure by Interference: Language Models Make Balanced Parentheses Errors When Faulty Mechanisms Overshadow Sound Ones"
+ },
+ {
+  "name": "reference rai2025interference: first author matches",
+  "ok": true,
+  "detail": "Rai | ['Daking Rai', 'Samuel Miller']"
+ },
+ {
+  "name": "reference rai2025interference: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2025-06-30"
+ },
+ {
+  "name": "reference saji2025romanlens: arXiv 2502.07424 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference saji2025romanlens: title matches",
+  "ok": true,
+  "detail": "{RomanLens}: The Role Of Latent Romanization In Multilinguality In {LLMs} | RomanLens: The Role Of Latent Romanization In Multilinguality In LLMs"
+ },
+ {
+  "name": "reference saji2025romanlens: first author matches",
+  "ok": true,
+  "detail": "Saji | ['Alan Saji', 'Jaavid Aktar Husain']"
+ },
+ {
+  "name": "reference saji2025romanlens: year 2025 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2025-02-11"
+ },
+ {
+  "name": "reference sharma2026dyck: arXiv 2604.22128 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference sharma2026dyck: title matches",
+  "ok": true,
+  "detail": "Dissociating Decodability and Causal Use in Bracket-Sequence Transformers | Dissociating Decodability and Causal Use in Bracket-Sequence Transformers"
+ },
+ {
+  "name": "reference sharma2026dyck: first author matches",
+  "ok": true,
+  "detail": "Sharma | ['Aryan Sharma', 'Cutter Dawes']"
+ },
+ {
+  "name": "reference sharma2026dyck: year 2026 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2026-04-24"
+ },
+ {
+  "name": "reference singh2024tokenization: arXiv 2402.14903 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference singh2024tokenization: title matches",
+  "ok": true,
+  "detail": "Tokenization counts: the impact of tokenization on arithmetic in frontier {LLMs} | Tokenization counts: the impact of tokenization on arithmetic in frontier LLMs"
+ },
+ {
+  "name": "reference singh2024tokenization: first author matches",
+  "ok": true,
+  "detail": "Singh | ['Aaditya K. Singh', 'DJ Strouse']"
+ },
+ {
+  "name": "reference singh2024tokenization: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-02-22"
+ },
+ {
+  "name": "reference stolfo2023arithmetic: arXiv 2305.15054 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference stolfo2023arithmetic: title matches",
+  "ok": true,
+  "detail": "A Mechanistic Interpretation of Arithmetic Reasoning in Language Models using Causal Mediation Analysis | A Mechanistic Interpretation of Arithmetic Reasoning in Language Models using Causal Mediation Analysis"
+ },
+ {
+  "name": "reference stolfo2023arithmetic: first author matches",
+  "ok": true,
+  "detail": "Stolfo | ['Alessandro Stolfo', 'Yonatan Belinkov']"
+ },
+ {
+  "name": "reference stolfo2023arithmetic: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-05-24"
+ },
+ {
+  "name": "reference todd2024function: arXiv 2310.15213 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference todd2024function: title matches",
+  "ok": true,
+  "detail": "Function Vectors in Large Language Models | Function Vectors in Large Language Models"
+ },
+ {
+  "name": "reference todd2024function: first author matches",
+  "ok": true,
+  "detail": "Todd | ['Eric Todd', 'Millicent L. Li']"
+ },
+ {
+  "name": "reference todd2024function: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-10-23"
+ },
+ {
+  "name": "reference turner2023steering: arXiv 2308.10248 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference turner2023steering: title matches",
+  "ok": true,
+  "detail": "Steering Language Models With Activation Engineering | Steering Language Models With Activation Engineering"
+ },
+ {
+  "name": "reference turner2023steering: first author matches",
+  "ok": true,
+  "detail": "Turner | ['Alexander Matt Turner', 'Lisa Thiergart']"
+ },
+ {
+  "name": "reference turner2023steering: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-08-20"
+ },
+ {
+  "name": "reference wang2023ioi: arXiv 2211.00593 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference wang2023ioi: title matches",
+  "ok": true,
+  "detail": "Interpretability in the Wild: a Circuit for Indirect Object Identification in {GPT-2} small | Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small"
+ },
+ {
+  "name": "reference wang2023ioi: first author matches",
+  "ok": true,
+  "detail": "Wang | ['Kevin Wang', 'Alexandre Variengien']"
+ },
+ {
+  "name": "reference wang2023ioi: year 2023 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2022-11-01"
+ },
+ {
+  "name": "reference wendler2024llamas: arXiv 2402.10588 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference wendler2024llamas: title matches",
+  "ok": true,
+  "detail": "Do {Llamas} Work in {English}? {On} the Latent Language of Multilingual Transformers | Do Llamas Work in English? On the Latent Language of Multilingual Transformers"
+ },
+ {
+  "name": "reference wendler2024llamas: first author matches",
+  "ok": true,
+  "detail": "Wendler | ['Chris Wendler', 'Veniamin Veselovsky']"
+ },
+ {
+  "name": "reference wendler2024llamas: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2024-02-16"
+ },
+ {
+  "name": "reference xu2026selectivity: arXiv 2606.05378 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference xu2026selectivity: title matches",
+  "ok": true,
+  "detail": "Pattern Selectivity is Not Task-Causal Structure: A Cross-Architecture Mechanistic Study of Composed-Task Circuits in {1B}-Class Language Models | Pattern Selectivity is Not Task-Causal Structure: A Cross-Architecture Mechanistic Study of Composed-Task Circuits in 1B-Class Language Models"
+ },
+ {
+  "name": "reference xu2026selectivity: first author matches",
+  "ok": true,
+  "detail": "Xu | ['Yongzhong Xu']"
+ },
+ {
+  "name": "reference xu2026selectivity: year 2026 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2026-06-03"
+ },
+ {
+  "name": "reference yao2021bounded: arXiv 2105.11115 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference yao2021bounded: title matches",
+  "ok": true,
+  "detail": "Self-Attention Networks Can Process Bounded Hierarchical Languages | Self-Attention Networks Can Process Bounded Hierarchical Languages"
+ },
+ {
+  "name": "reference yao2021bounded: first author matches",
+  "ok": true,
+  "detail": "Yao | ['Shunyu Yao', 'Binghui Peng']"
+ },
+ {
+  "name": "reference yao2021bounded: year 2021 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2021-05-24"
+ },
+ {
+  "name": "reference zhang2024patching: arXiv 2309.16042 in the saved record",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reference zhang2024patching: title matches",
+  "ok": true,
+  "detail": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods | Towards Best Practices of Activation Patching in Language Models: Metrics and Methods"
+ },
+ {
+  "name": "reference zhang2024patching: first author matches",
+  "ok": true,
+  "detail": "Zhang | ['Fred Zhang', 'Neel Nanda']"
+ },
+ {
+  "name": "reference zhang2024patching: year 2024 is the first version's or a venue year",
+  "ok": true,
+  "detail": "2023-09-27"
+ }
+]

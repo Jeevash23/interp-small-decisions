@@ -1,0 +1,78 @@
+algeria-geo Attribution & Data Notices
+========================================
+
+Software & Core Library:
+------------------------
+The code and software library implementation of algeria-geo are licensed under
+the MIT License (see LICENSE). Copyright (c) 2026 test-bit-sys.
+
+
+Data Sources & Third-Party Licences:
+------------------------------------
+
+1. Administrative Boundaries, Codes, and Names
+   Transcribed from official legislative texts and executive decrees published in
+   the Official Gazette of the People's Democratic Republic of Algeria (Journal
+   officiel de la République algérienne démocratique et populaire), with foundational
+   transcription referenced from djazairdev/wilayas.
+
+2. Postal Codes and Coordinates Compilation (GeoAlgeria)
+   Commune postal codes and municipality geographic coordinates are derived from
+   the GeoAlgeria project (https://github.com/yasserstudio/geoalgeria).
+
+   Copyright (c) 2025-2026 Yasser's studio (https://yasser.studio)
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+3. OpenStreetMap-Derived Coordinates (ODbL 1.0)
+   323 of the 1,541 commune center coordinates were derived from OpenStreetMap
+   administrative relations (admin_level=8) via GeoAlgeria and are made available
+   under the Open Database License (ODbL) 1.0:
+   © OpenStreetMap contributors.
+
+   These coordinates are subject to the ODbL and are NOT released under CC0.
+   Any redistributed derived database incorporating these coordinates must comply
+   with the ODbL share-alike and attribution requirements.
+
+   For terms, see:
+   - https://www.openstreetmap.org/copyright
+   - https://opendatacommons.org/licenses/odbl/1-0/
+
+4. Wilaya Vector Maps and Geometries (SVG and GeoJSON)
+   The 69-wilaya administrative boundary geometries, SVG vector paths, and
+   GeoJSON features are derived from OpenStreetMap administrative relations
+   (Web Mercator projection) via the Algeria69WilayaMap project
+   (https://github.com/chemsallioua/Algeria69WilayaMap).
+
+   Copyright (c) 2026 Algeria Map SVG Project
+   Licensed under the MIT License:
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   Boundary source data: © OpenStreetMap contributors under the Open Database
+   License (ODbL) 1.0 (https://www.openstreetmap.org/copyright).
+

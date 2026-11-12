@@ -1,0 +1,5 @@
+{
+ "qwen3-17b": {"PREV": ["L0H2", "L1H6"], "CUR": ["L0H3", "L0H7"]},
+ "smollm2-17b": {"PREV": ["L0H6", "L0H8"]},
+ "gemma4-e2b": {"PREV": ["L0H4"]}
+}

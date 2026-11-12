@@ -1,0 +1,18 @@
+Claude for Commerce examples
+Copyright 2026 Shopify Inc.
+
+This repository builds on Anthropic's commerce-agents blueprint
+(https://github.com/anthropics/commerce-agents), licensed under the
+Apache License, Version 2.0.
+
+- vendor/demo_common/, vendor/web-shared/, and vendor/skills/ are carried from a
+  pre-release snapshot of that repository, with three small local edits: the listing
+  route in vendor/demo_common/merchant.py is declared {listing_id:path} so ids with
+  slashes (Shopify gids) match, and the .env hints in vendor/demo_common/merchant.py
+  and storefront.py drop the blueprint's examples/ path prefix, which this repository
+  does not use. Copyright 2026 Anthropic PBC.
+- The blueprint's core packages (commerce-common, shopping-agent, merchant-agent)
+  are not part of this repository; requirements.txt installs them from Anthropic's
+  repository at a pinned commit.
+- vendor/pyproject.toml and the example directories (storefront/, merchant/) are
+  Shopify-authored. Copyright 2026 Shopify Inc.

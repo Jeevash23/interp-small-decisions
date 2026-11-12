@@ -1,0 +1,44 @@
+% Layout copied from the source paper by scripts/extract_tables.py; numbers are \nv macros.
+\begin{table}[H]
+\centering\footnotesize
+\caption{Round 2: the frozen predictions and their held-out outcome. $u$ is the unit vector of the capitals direction $d$; U, L and A are the upper-case, lower-case and context-only passages, and $D=\log p(U)-\log p(L_c)$ as in \cref{tab:d5-head}. Held-out values are point estimates with 95\% intervals from 2{,}000 bootstrap resamples of articles. ``Random'' gives the extreme of the twenty matched random sets. The last column gives the exploration values (\qbig{} / \gm{}). Every prediction passed in both models.}
+\label{tab:d5-preds2}
+\begin{tabularx}{\textwidth}{@{}l Y l l l l@{}}
+\toprule
+ & Measure & Threshold & \qbig{} & \gm{} & Exploration \\
+\midrule
+W1 & Writers' writes along $u$ moved: upper-case top-1 & $\le 0.30$ & \DRQI{W_named_upper} & \DRGI{W_named_upper} & \DXQ{W_named_upper} / \DXG{W_named_upper} \\
+ & \dots\ same word in either case & $\ge 0.55$ & \DRQI{W_named_same_word} & \DRGI{W_named_same_word} & \DXQ{W_named_same_word} / \DXG{W_named_same_word} \\
+ & \dots\ random sets, lowest upper-case top-1 & $\ge 0.85$ & \DRQ{W_random_upper.min} & \DRG{W_random_upper.min} & \DXQ{W_random_upper.min} / \DXG{W_random_upper.min} \\
+R1 & Add $d$ at $\ell$: flips to capitals & $\ge 0.80$ & \DRQI{R_none_flip} & \DRGI{R_none_flip} & \DXQ{R_none_flip} / \DXG{R_none_flip} \\
+ & \dots\ readers frozen & $\le 0.20$ & \DRQI{R_named_flip} & \DRGI{R_named_flip} & \DXQ{R_named_flip} / \DXG{R_named_flip} \\
+ & \dots\ random sets frozen, lowest & see note & \DRQ{R_random_flip.min} & \DRG{R_random_flip.min} & \DXQ{R_random_flip.min} / \DXG{R_random_flip.min} \\
+\addlinespace
+C1 & Carriers patched in A: excess along $u$ removed & $\ge 0.60$ & \DRQI{CA_named_proj_removed} & \DRGI{CA_named_proj_removed} & \DXQ{CA_named_proj_removed} / \DXG{CA_named_proj_removed} \\
+ & \dots\ excess $D$ removed & $\ge 0.30$ & \DRQI{CA_named_D_removed} & \DRGI{CA_named_D_removed} & \DXQ{CA_named_D_removed} / \DXG{CA_named_D_removed} \\
+ & \dots\ random sets, highest & see note & \DRQ{CA_random_proj_removed.max} & \DRG{CA_random_proj_removed.max} & \DXQ{CA_random_proj_removed.max} / \DXG{CA_random_proj_removed.max} \\
+C2 & Carriers patched in U: upper-case top-1 & $\le 0.60$ & \DRQI{CU_named_upper} & \DRGI{CU_named_upper} & \DXQ{CU_named_upper} / \DXG{CU_named_upper} \\
+ & \dots\ random sets, lowest & $\ge 0.90$ & \DRQ{CU_random_upper.min} & \DRG{CU_random_upper.min} & \DXQ{CU_random_upper.min} / \DXG{CU_random_upper.min} \\
+C3 & \hd{17}{6} alone in A: excess removed (above every random head) & $\ge 0.20$ & \DRQI{L17H6_proj_removed} & & \DXQ{L17H6_proj_removed} \\
+C4 & Local carrier: attention on the last eight words & $\ge 0.60$ & \DRQI{attn_L17H6_recent8} & \DRGI{attn_L14H7_recent8} & \DXQ{attn_L17H6_recent8} / \DXG{attn_L14H7_recent8} \\
+ & Broad carrier: the same & $\le 0.50$ & \DRQI{attn_L19H0_recent8} & \DRGI{attn_L24H6_recent8} & \DXQ{attn_L19H0_recent8} / \DXG{attn_L24H6_recent8} \\
+\addlinespace
+E1 & Edit changes the word where real capitals do & see note & \DRQI{E_change_if_up_changes} & \DRGI{E_change_if_up_changes} & \DXQ{E_change_if_up_changes} / \DXG{E_change_if_up_changes} \\
+ & \dots\ where they do not & see note & \DRQI{E_change_if_up_keeps} & \DRGI{E_change_if_up_keeps} & \DXQ{E_change_if_up_keeps} / \DXG{E_change_if_up_keeps} \\
+ & Changed word in the lower-case top 5 & $\ge 0.40$ & \DRQI{E_changed_in_lower_top5} & \DRGI{E_changed_in_lower_top5} & \DXQ{E_changed_in_lower_top5} / \DXG{E_changed_in_lower_top5} \\
+E2 & Word change, capitals need $\ge 1$ extra token & see note & \DRQI{E_change_extra1p} & \DRGI{E_change_extra1p} & \DXQ{E_change_extra1p} / \DXG{E_change_extra1p} \\
+ & \dots\ no extra token & see note & \DRQI{E_change_extra0} & \DRGI{E_change_extra0} & \DXQ{E_change_extra0} / \DXG{E_change_extra0} \\
+\addlinespace
+A1 & Acronyms: remove $d$, still all capitals & $\ge 0.85$ & \DRQI{A_acr_rm_keeps} & \DRGI{A_acr_rm_keeps} & \DXQ{A_acr_rm_keeps} / \DXG{A_acr_rm_keeps} \\
+ & \dots\ remove $r$ & $\ge 0.90$ & \DRQI{A_acr_rm_rand_keeps} & \DRGI{A_acr_rm_rand_keeps} & \DXQ{A_acr_rm_rand_keeps} / \DXG{A_acr_rm_rand_keeps} \\
+A2 & Initial capitals: remove $d$, still capitalised & $\ge 0.90$ & \DRQI{A_init_rm_keeps} & \DRGI{A_init_rm_keeps} & \DXQ{A_init_rm_keeps} / \DXG{A_init_rm_keeps} \\
+ & \dots\ remove $r$ & $\ge 0.95$ & \DRQI{A_init_rm_rand_keeps} & \DRGI{A_init_rm_rand_keeps} & \DXQ{A_init_rm_rand_keeps} / \DXG{A_init_rm_rand_keeps} \\
+A3 & Headings in capitals: remove $d$, still all capitals & $\le 0.85$ & \DRQI{A_head_rm_keeps} & \DRGI{A_head_rm_keeps} & \DXQ{A_head_rm_keeps} / \DXG{A_head_rm_keeps} \\
+ & \dots\ remove $r$ & $\ge 0.95$ & \DRQI{A_head_rm_rand_keeps} & \DRGI{A_head_rm_rand_keeps} & \DXQ{A_head_rm_rand_keeps} / \DXG{A_head_rm_rand_keeps} \\
+A4 & Excess along $u$ inside the heading (share of the gap) & $\ge 0.40$ & \DRQI{A_head_inside_excess} & \DRGI{A_head_inside_excess} & \DXQ{A_head_inside_excess} / \DXG{A_head_inside_excess} \\
+ & \dots\ at the first word after it & $\le 0.25$ & \DRQI{A_head_after_excess} & \DRGI{A_head_after_excess} & \DXQ{A_head_after_excess} / \DXG{A_head_after_excess} \\
+ & \dots\ top-1 all capitals there & $\le 0.10$ & \DRQI{A_head_after_allcaps_top} & \DRGI{A_head_after_allcaps_top} & \DXQ{A_head_after_allcaps_top} / \DXG{A_head_after_allcaps_top} \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\raggedright Note. R1: every random set at least the unfrozen flip rate minus 0.15. C1: every random set at most the named value minus 0.25. E1: the two change rates differ by at least 0.30. E2: they differ by at least 0.10.
+\end{table}
